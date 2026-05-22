@@ -1,0 +1,42 @@
+window-rule {
+  geometry-corner-radius 12
+  clip-to-geometry true
+}
+
+input {
+    keyboard {
+        xkb { }
+    }
+    mouse {
+        accel-speed 0.1
+        accel-profile "flat"
+    }
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@144.013"
+    scale 1.0
+}
+
+cursor {
+    xcursor-theme "capitaine-cursors"
+    xcursor-size 24
+}
+
+spawn-at-startup "lxqt-policykit-agent"
+spawn-at-startup "noctalia-shell"
+
+binds {
+	Super+T { spawn "kitty"; }
+	Super+Space { spawn "fuzzel"; }
+
+	Super+Q { close-window; }
+	Super+Shift+Q { quit; }
+	Super+Left { focus-column-left; }
+	Super+Right { focus-column-right; }
+	Super+Up { focus-window-up; }
+
+	Super+Shift+Left { move-column-left; }
+	Super+Shift+Right { move-column-right; }	
+	
+}

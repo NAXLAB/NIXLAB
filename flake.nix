@@ -10,9 +10,14 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
+  hjem = {
+    url = "github:feel-co/hjem";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+  noctalia = {
+     url = "github:noctalia-dev/noctalia-shell";
+    inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -21,7 +26,8 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
-	./noctalia.nix
+	      ./noctalia.nix
+        inputs.hjem.nixosModules.default
       ];
     };
   };

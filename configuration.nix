@@ -88,7 +88,7 @@
   "d /etc/nixos 0755 nax wheel -"
 ];
 
-  programs.bash.shellAliases = {
+  environment.shellAliases = {
   nx = "sudo nano /etc/nixos/configuration.nix";
   ns = "cd /etc/nixos";
   cfg = "cd /home/nax/.config"; 
@@ -126,9 +126,8 @@
 	lxqt.lxqt-policykit #Root access policykit
   capitaine-cursors #Cursor Icons
   nemo #File Manager
-  tilix #Terminal
+  kitty #Terminal
   vscodium #Dev environment
-  hjem #Home manager
 
   nano # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 
@@ -143,6 +142,22 @@ environment.variables = {
 fonts.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
 ];
+
+
+hjem.users.nax = {
+  directory = config.users.users.nax.home;
+  files = {
+
+    ".gitconfig".source = ./nax/git/config;
+
+    ".config/niri/config.kdl".source = ./nax/niri/config.kdl;
+    
+    ".config/noctalia/settings.json".source = ./nax/noctalia/settings.json;
+    ".config/noctalia/colors.json".source = ./nax/noctalia/colors.json;
+    ".config/noctalia/colorschemes".source = ./nax/noctalia/colorschemes;
+
+  };
+};
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

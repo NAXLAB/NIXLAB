@@ -1,0 +1,5 @@
+[user]
+    name = NAX LAB
+    email = jamesmcdowell@naxlab.net
+[init]
+    defaultBranch = main
