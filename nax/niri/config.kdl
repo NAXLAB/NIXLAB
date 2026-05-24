@@ -1,3 +1,6 @@
+spawn-at-startup "lxqt-policykit-agent"
+spawn-at-startup "noctalia-shell"
+
 window-rule {
   geometry-corner-radius 12
   clip-to-geometry true
@@ -23,20 +26,14 @@ cursor {
     xcursor-size 24
 }
 
-spawn-at-startup "lxqt-policykit-agent"
-spawn-at-startup "noctalia-shell"
-
 binds {
-	Super+T { spawn "kitty"; }
-	Super+Space { spawn "fuzzel"; }
+	Super+T { spawn "console"; }
+    Super+F { spawn "nautilus";}
 
-	Super+Q { close-window; }
-	Super+Shift+Q { quit; }
 	Super+Left { focus-column-left; }
 	Super+Right { focus-column-right; }
 	Super+Up { focus-window-up; }
 
 	Super+Shift+Left { move-column-left; }
 	Super+Shift+Right { move-column-right; }	
-	
 }

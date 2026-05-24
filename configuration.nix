@@ -13,6 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  
 
   swapDevices = [{
   device = "/swapfile";
@@ -20,8 +21,8 @@
 }];
 
   networking.hostName = "zaigomaat"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -42,6 +43,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+  
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
@@ -84,33 +86,81 @@
     ];
   };
 
-  systemd.tmpfiles.rules = [
+fileSystems."/mnt/zaigomaat" = {
+  device = "//192.168.88.202/zaigomaat";
+  fsType = "cifs";
+  options = [
+    "noauto"
+    "x-systemd.automount"
+    "x-systemd.idle-timeout=60"
+    "x-systemd.device-timeout=5s"
+    "x-systemd.mount-timeout=5s"
+    "_netdev"
+    "credentials=/etc/nixos/secrets/smb"
+    "uid=1000"
+    "gid=1000"
+  ];
+};
+
+systemd.settings.Manager = {
+  DefaultTimeoutStopSec = "10s";
+};
+
+systemd.tmpfiles.rules = [
   "d /etc/nixos 0755 nax wheel -"
+  "d /mnt/zaigomaat 0755 nax wheel -"
+  "d /home/nax/Desktop 0755 nax users -"
+  "d /home/nax/Downloads 0755 nax users -"
+  "L /home/nax/Archives - - - - /mnt/zaigomaat/Archives"
+  "L /home/nax/Documents - - - - /mnt/zaigomaat/Documents"
+  "L /home/nax/Fonts - - - - /mnt/zaigomaat/Fonts"
+  "L /home/nax/Music - - - - /mnt/zaigomaat/Music"
+  "L /home/nax/Photos - - - - /mnt/zaigomaat/Photos"
+  "L /home/nax/Torrents - - - - /mnt/zaigomaat/Torrents"
 ];
 
   environment.shellAliases = {
   nx = "sudo nano /etc/nixos/configuration.nix";
   ns = "cd /etc/nixos";
-  cfg = "cd /home/nax/.config"; 
+  cfg = "cd /home/nax/.config";
   switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
   build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 
   };
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # Display and Login Options
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    settings = {
+      Theme = {
+        CursorTheme = "capitaine-cursors";
+        CursorSize = "24";
+      };
+    };
+  };
+
+  #Gnome Services as a fallback
+  services.displayManager.defaultSession = "niri";
+  services.desktopManager.gnome.enable = true;
+  services.gnome.core-apps.enable = false;
+  services.gnome.core-developer-tools.enable = false;
+  services.gnome.games.enable = false;
+  environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
+
   # Install Modules
   programs.firefox.enable = true;
   programs.niri.enable = true;
   programs.zsh.enable = true;
+  programs.starship.enable = true;
   programs.dconf.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  #Nix Package manager
   environment.systemPackages = with pkgs; [
 	git #version control
-  git-cola #git manager
 	curl #data transfer utility
 	xwayland-satellite #Wayland integration
 	wl-clipboard  #Clipboard 
@@ -125,13 +175,27 @@
 	xdg-utils #Desktop app rendering utils
 	lxqt.lxqt-policykit #Root access policykit
   capitaine-cursors #Cursor Icons
-  nemo #File Manager
-  kitty #Terminal
   vscodium #Dev environment
+  fastfetch #meme terminal widget
+  crosspipe #Audo patch bay
+  cifs-utils #smb client utilities
+  samba #smb client
 
-  nano # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  # GNOME Apps
+  nautilus
+  gnome-console      # Console
+  gnome-calculator   # Calculator
+  gnome-control-center # Settings - probably already comes with gnome
+  evince             # Document viewer
+  resources          # Resources (system monitor)
+  gnome-text-editor  # Text editor
+  gnome-font-viewer   # Fonts
+  gnome-characters    # Characters
+  baobab              # Disk usage (Disk Usage Analyzer)
+  loupe               # Image viewer (modern GNOME image viewer)
+  gnome-music         # Music
 
-  ];
+];
 
 environment.variables = {
   XCURSOR_THEME = "capitaine-cursors";
@@ -144,9 +208,19 @@ fonts.packages = with pkgs; [
 ];
 
 
+
+#Declare Home Folders
+environment.etc."xdg/user-dirs.conf".text = ''
+  enabled=False
+'';
+
+#Hjem
 hjem.users.nax = {
+  enable = true;
   directory = config.users.users.nax.home;
   files = {
+
+    ".config/user-dirs.dirs".source = ./nax/xdg/user-dirs.dirs;
 
     ".gitconfig".source = ./nax/git/config;
 
@@ -155,9 +229,10 @@ hjem.users.nax = {
     ".config/noctalia/settings.json".source = ./nax/noctalia/settings.json;
     ".config/noctalia/colors.json".source = ./nax/noctalia/colors.json;
     ".config/noctalia/colorschemes".source = ./nax/noctalia/colorschemes;
-
+    ".zshrc".source = ./nax/zsh/zshrc;
   };
 };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -169,8 +244,9 @@ hjem.users.nax = {
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
+
+  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
