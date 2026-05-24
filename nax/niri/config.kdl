@@ -55,5 +55,5 @@ binds {
 
 }
     
-
+spawn-at-startup "bash" "-c" "sleep 2 && qs -c noctalia-shell ipc call lockScreen lock"
 

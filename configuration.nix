@@ -129,23 +129,14 @@ build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 
 };
 
-# Allow unfree packages
-nixpkgs.config.allowUnfree = true;
-
-# Display and Login Options
-services.displayManager.sddm = {
+# Noctalia as Login
+services.displayManager.defaultSession = "niri";
+services.displayManager.autoLogin = {
   enable = true;
-  wayland.enable = true;
-  settings = {
-    Theme = {
-      CursorTheme = "capitaine-cursors";
-       CursorSize = "24";
-     };
-   };
+  user = "nax";
 };
 
 #Gnome Services as a fallback
-services.displayManager.defaultSession = "niri";
 services.desktopManager.gnome.enable = true;
 services.gnome.core-apps.enable = false;
 services.gnome.core-developer-tools.enable = false;
@@ -169,6 +160,7 @@ programs.dconf.enable = true;
 	nwg-look #GTK settings 
 	swayidle #idle screen
 	swaylock #lockscreen
+  waybar # Alternative Bar
 	playerctl #media player utility
 	mako #Notification Daemon
 	xdg-utils #Desktop app rendering utils
@@ -183,19 +175,22 @@ programs.dconf.enable = true;
   slurp #select area screenshot
   discord #Discord
 
-  # GNOME Apps
-  nautilus
-  gnome-console      # Console
-  gnome-calculator   # Calculator
-  gnome-control-center # Settings - probably already comes with gnome
-  evince             # Document viewer
-  resources          # Resources (system monitor)
-  gnome-text-editor  # Text editor
-  gnome-font-viewer   # Fonts
-  gnome-characters    # Characters
-  baobab              # Disk usage (Disk Usage Analyzer)
-  loupe               # Image viewer (modern GNOME image viewer)
-  gnome-music         # Music
+# GNOME Apps
+nautilus
+gnome-console      # Console
+gnome-calculator   # Calculator
+gnome-control-center # Settings - probably already comes with gnome
+evince             # Document viewer
+resources          # Resources (system monitor)
+gnome-text-editor  # Text editor
+gnome-font-viewer   # Fonts
+gnome-characters    # Characters
+baobab              # Disk usage (Disk Usage Analyzer)
+loupe               # Image viewer (modern GNOME image viewer)
+gnome-music         # Music
+
+# Allow unfree packages
+nixpkgs.config.allowUnfree = true;
 
 ];
 
