@@ -82,6 +82,8 @@
     ];
   };
 
+
+#SMB share (soo, physical drive connection)
 fileSystems."/mnt/zaigomaat" = {
   device = "//192.168.88.202/zaigomaat";
   fsType = "cifs";
@@ -95,12 +97,11 @@ fileSystems."/mnt/zaigomaat" = {
     "credentials=/etc/nixos/secrets/smb"
     "uid=1000"
     "gid=1000"
+    "x-systemd.requires=network-online.target"
+    "x-systemd.stop-timeout=5s"  # force unmount after 5 seconds
   ];
 };
 
-systemd.settings.Manager = {
-  DefaultTimeoutStopSec = "10s";
-};
 
 systemd.tmpfiles.rules = [
   "d /etc/nixos 0755 nax wheel -"
@@ -120,17 +121,16 @@ systemd.tmpfiles.rules = [
   "L /home/nax/.config/noctalia/colorschemes - - - - /etc/nixos/nax/noctalia/colorschemes"
 ];
 
+# Aliases for Terminal Commands
 environment.shellAliases = {
 nx = "sudo nano /etc/nixos/configuration.nix";
 ns = "cd /etc/nixos";
-cfg = "cd /home/nax/.config";
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 
 };
 
 # Noctalia as Login
-services.displayManager.defaultSession = "niri";
 services.displayManager.autoLogin = {
   enable = true;
   user = "nax";
@@ -175,24 +175,24 @@ programs.dconf.enable = true;
   slurp #select area screenshot
   discord #Discord
 
-# GNOME Apps
-nautilus
-gnome-console      # Console
-gnome-calculator   # Calculator
-gnome-control-center # Settings - probably already comes with gnome
-evince             # Document viewer
-resources          # Resources (system monitor)
-gnome-text-editor  # Text editor
-gnome-font-viewer   # Fonts
-gnome-characters    # Characters
-baobab              # Disk usage (Disk Usage Analyzer)
-loupe               # Image viewer (modern GNOME image viewer)
-gnome-music         # Music
+  # GNOME Apps
+  nautilus           # File Manager
+  gnome-console      # Console
+  gnome-calculator   # Calculator
+  gnome-control-center # Settings - probably already comes with gnome
+  evince             # Document viewer
+  resources          # Resources (system monitor)
+  gnome-text-editor  # Text editor
+  gnome-font-viewer   # Fonts
+  gnome-characters    # Characters
+  baobab              # Disk usage (Disk Usage Analyzer)
+  loupe               # Image viewer (modern GNOME image viewer)
+  gnome-music         # Music
+
+];
 
 # Allow unfree packages
 nixpkgs.config.allowUnfree = true;
-
-];
 
 environment.variables = {
   XCURSOR_THEME = "capitaine-cursors";
