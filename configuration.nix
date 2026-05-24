@@ -82,8 +82,13 @@
     ];
   };
 
-  # Autologin
-    services.getty.autologinUser = "nax";
+#Disable Automatic Home Folders
+environment.etc."xdg/user-dirs.conf".text = ''
+  enabled=False
+'';
+
+# Autologin
+  services.getty.autologinUser = "nax";
 
 #SMB share (soon, physical drive connection)
 fileSystems."/mnt/zaigomaat" = {
@@ -106,7 +111,7 @@ fileSystems."/mnt/zaigomaat" = {
 
 
 systemd.tmpfiles.rules = [
-  
+
   "d /etc/nixos 0755 nax wheel -"
   "d /mnt/zaigomaat 0755 nax wheel -"
 
@@ -147,12 +152,16 @@ services.gnome.core-developer-tools.enable = false;
 services.gnome.games.enable = false;
 environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
 
+#Flatpak
+services.flatpak.enable = true;
+
 # Install Modules
 programs.firefox.enable = true;
 programs.niri.enable = true;
 programs.zsh.enable = true;
 programs.starship.enable = true;
 programs.dconf.enable = true;
+
 
   #Nix Package manager
   environment.systemPackages = with pkgs; [
@@ -192,6 +201,8 @@ programs.dconf.enable = true;
   baobab              # Disk usage (Disk Usage Analyzer)
   loupe               # Image viewer (modern GNOME image viewer)
   gnome-music         # Music
+  gnome-software
+  flatpak
 
 ];
 
@@ -208,10 +219,7 @@ fonts.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
 ];
 
-#Disable Automatic Home Folders
-environment.etc."xdg/user-dirs.conf".text = ''
-  enabled=False
-'';
+
 
 #Hjem
 hjem.users.nax = {
@@ -225,37 +233,20 @@ hjem.users.nax = {
 
     ".config/niri/config.kdl".source = ./nax/niri/config.kdl;
     
+    ".zshrc".source = ./nax/zsh/zshrc;
+
+    ".zprofile".source = ./nax/zsh/zprofile;
+
+    ".config/fastfetch/config.jsonc".source = ./nax/fastfetch/config.jsonc;
+
     #".config/noctalia/settings.json".source = ./nax/noctalia/settings.json;
     #".config/noctalia/colors.json".source = ./nax/noctalia/colors.json;
     #".config/noctalia/colorschemes".source = ./nax/noctalia/colorschemes;
     
-    ".zshrc".source = ./nax/zsh/zshrc;
-
-    ".config/fastfetch/config.jsonc".source = ./nax/fastfetch/config.jsonc;
 
   };
 };
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-
-
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
