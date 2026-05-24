@@ -6,6 +6,15 @@ window-rule {
   clip-to-geometry true
 }
 
+layout {
+    gaps 12  // gap between windows and screen edges
+    focus-ring {
+        width 2
+        active-color "#0077FF"
+        inactive-color "#49495B"
+    }
+}
+
 input {
     keyboard {
         xkb { }
@@ -21,14 +30,19 @@ output "HDMI-A-1" {
     scale 1.0
 }
 
+
+
 cursor {
     xcursor-theme "capitaine-cursors"
     xcursor-size 24
 }
 
+// Make the backdrop Dark.
+overview {
+    backdrop-color "#15161A"
+}
+
 binds {
-	Super+T { spawn "console"; }
-    Super+F { spawn "nautilus";}
 
 	Super+Left { focus-column-left; }
 	Super+Right { focus-column-right; }
@@ -36,4 +50,10 @@ binds {
 
 	Super+Shift+Left { move-column-left; }
 	Super+Shift+Right { move-column-right; }	
+
+    Super+shift+S { spawn "sh" "-c" "grim -g \"$(slurp)\" - | wl-copy"; }
+
 }
+    
+
+

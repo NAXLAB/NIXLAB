@@ -18,7 +18,7 @@
   swapDevices = [{
   device = "/swapfile";
   size = 32768; # 32GB in MB
-}];
+  }];
 
   networking.hostName = "zaigomaat"; # Define your hostname.
 
@@ -43,8 +43,6 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -68,12 +66,10 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
-    #media-session.enable = true;
+    # media-session.enable = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -111,52 +107,57 @@ systemd.tmpfiles.rules = [
   "d /mnt/zaigomaat 0755 nax wheel -"
   "d /home/nax/Desktop 0755 nax users -"
   "d /home/nax/Downloads 0755 nax users -"
+
   "L /home/nax/Archives - - - - /mnt/zaigomaat/Archives"
   "L /home/nax/Documents - - - - /mnt/zaigomaat/Documents"
   "L /home/nax/Fonts - - - - /mnt/zaigomaat/Fonts"
   "L /home/nax/Music - - - - /mnt/zaigomaat/Music"
   "L /home/nax/Photos - - - - /mnt/zaigomaat/Photos"
   "L /home/nax/Torrents - - - - /mnt/zaigomaat/Torrents"
+
+  "L /home/nax/.config/noctalia/colors.json - - - - /etc/nixos/nax/noctalia/colors.json"
+  "L /home/nax/.config/noctalia/settings.json - - - - /etc/nixos/nax/noctalia/settings.json"
+  "L /home/nax/.config/noctalia/colorschemes - - - - /etc/nixos/nax/noctalia/colorschemes"
 ];
 
-  environment.shellAliases = {
-  nx = "sudo nano /etc/nixos/configuration.nix";
-  ns = "cd /etc/nixos";
-  cfg = "cd /home/nax/.config";
-  switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
-  build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
+environment.shellAliases = {
+nx = "sudo nano /etc/nixos/configuration.nix";
+ns = "cd /etc/nixos";
+cfg = "cd /home/nax/.config";
+switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
+build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 
-  };
+};
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+# Allow unfree packages
+nixpkgs.config.allowUnfree = true;
 
-  # Display and Login Options
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-    settings = {
-      Theme = {
-        CursorTheme = "capitaine-cursors";
-        CursorSize = "24";
-      };
-    };
-  };
+# Display and Login Options
+services.displayManager.sddm = {
+  enable = true;
+  wayland.enable = true;
+  settings = {
+    Theme = {
+      CursorTheme = "capitaine-cursors";
+       CursorSize = "24";
+     };
+   };
+};
 
-  #Gnome Services as a fallback
-  services.displayManager.defaultSession = "niri";
-  services.desktopManager.gnome.enable = true;
-  services.gnome.core-apps.enable = false;
-  services.gnome.core-developer-tools.enable = false;
-  services.gnome.games.enable = false;
-  environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
+#Gnome Services as a fallback
+services.displayManager.defaultSession = "niri";
+services.desktopManager.gnome.enable = true;
+services.gnome.core-apps.enable = false;
+services.gnome.core-developer-tools.enable = false;
+services.gnome.games.enable = false;
+environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
 
-  # Install Modules
-  programs.firefox.enable = true;
-  programs.niri.enable = true;
-  programs.zsh.enable = true;
-  programs.starship.enable = true;
-  programs.dconf.enable = true;
+# Install Modules
+programs.firefox.enable = true;
+programs.niri.enable = true;
+programs.zsh.enable = true;
+programs.starship.enable = true;
+programs.dconf.enable = true;
 
   #Nix Package manager
   environment.systemPackages = with pkgs; [
@@ -165,8 +166,6 @@ systemd.tmpfiles.rules = [
 	xwayland-satellite #Wayland integration
 	wl-clipboard  #Clipboard 
 	cliphist #Clipboard history
-	grim #Screenshot 
-	slurp #Select region screenshot
 	nwg-look #GTK settings 
 	swayidle #idle screen
 	swaylock #lockscreen
@@ -180,6 +179,9 @@ systemd.tmpfiles.rules = [
   crosspipe #Audo patch bay
   cifs-utils #smb client utilities
   samba #smb client
+  grim #screenshot
+  slurp #select area screenshot
+  discord #Discord
 
   # GNOME Apps
   nautilus
@@ -207,9 +209,7 @@ fonts.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
 ];
 
-
-
-#Declare Home Folders
+#Disable Automatic Home Folders
 environment.etc."xdg/user-dirs.conf".text = ''
   enabled=False
 '';
@@ -226,10 +226,14 @@ hjem.users.nax = {
 
     ".config/niri/config.kdl".source = ./nax/niri/config.kdl;
     
-    ".config/noctalia/settings.json".source = ./nax/noctalia/settings.json;
-    ".config/noctalia/colors.json".source = ./nax/noctalia/colors.json;
-    ".config/noctalia/colorschemes".source = ./nax/noctalia/colorschemes;
+    #".config/noctalia/settings.json".source = ./nax/noctalia/settings.json;
+    #".config/noctalia/colors.json".source = ./nax/noctalia/colors.json;
+    #".config/noctalia/colorschemes".source = ./nax/noctalia/colorschemes;
+    
     ".zshrc".source = ./nax/zsh/zshrc;
+
+    ".config/fastfetch/config.jsonc".source = ./nax/fastfetch/config.jsonc;
+
   };
 };
 

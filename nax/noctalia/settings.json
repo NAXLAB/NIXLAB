@@ -18,6 +18,19 @@
         "ignoreMouseInput": false,
         "overviewLayer": true,
         "pinnedApps": [
+            "firefox",
+            "codium",
+            "org.gnome.Nautilus",
+            "org.gnome.Console",
+            "org.gnome.Music",
+            "org.gnome.TextEditor",
+            "net.nokyan.Resources",
+            "org.gnome.Calculator",
+            "org.gnome.Characters",
+            "io.github.dp0sk.Crosspipe",
+            "org.gnome.Evince",
+            "discord",
+            "org.gnome.Loupe"
         ],
         "position": "bottom_left",
         "screenshotAnnotationTool": "",
@@ -25,7 +38,7 @@
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "alacritty -e",
-        "viewMode": "list"
+        "viewMode": "grid"
     },
     "audio": {
         "mprisBlacklist": [
@@ -255,7 +268,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Rosey AMOLED",
+        "predefinedScheme": "NAXLAB",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -271,7 +284,7 @@
                 "id": "shortcuts-card"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "audio-card"
             },
             {
@@ -279,11 +292,11 @@
                 "id": "brightness-card"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "weather-card"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "media-sysmon-card"
             }
         ],
@@ -335,7 +348,7 @@
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "dockType": "floating",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 1,
         "groupApps": false,
         "groupClickAction": "cycle",
@@ -367,7 +380,7 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
-        "avatarImage": "/home/nax/.face",
+        "avatarImage": "/home/nax/Documents/Projects/NAX LAB/nax flat black.png",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -653,7 +666,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/nax/Pictures/Wallpapers",
+        "directory": "/home/nax/Archives/Wallpapers/NAX",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -684,7 +697,7 @@
             "pixelate",
             "honeycomb"
         ],
-        "useOriginalImages": false,
+        "useOriginalImages": true,
         "useSolidColor": false,
         "useWallhaven": false,
         "viewMode": "single",
