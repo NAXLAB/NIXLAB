@@ -82,8 +82,10 @@
     ];
   };
 
+  # Autologin
+    services.getty.autologinUser = "nax";
 
-#SMB share (soo, physical drive connection)
+#SMB share (soon, physical drive connection)
 fileSystems."/mnt/zaigomaat" = {
   device = "//192.168.88.202/zaigomaat";
   fsType = "cifs";
@@ -104,8 +106,10 @@ fileSystems."/mnt/zaigomaat" = {
 
 
 systemd.tmpfiles.rules = [
+  
   "d /etc/nixos 0755 nax wheel -"
   "d /mnt/zaigomaat 0755 nax wheel -"
+
   "d /home/nax/Desktop 0755 nax users -"
   "d /home/nax/Downloads 0755 nax users -"
 
