@@ -1,7 +1,11 @@
 spawn-at-startup "lxqt-policykit-agent"
 spawn-at-startup "noctalia-shell"
-spawn-at-startup "bash" "-c" "sleep 2 && qs -c noctalia-shell ipc call lockScreen lock"
+//spawn-at-startup "bash" "-c" "until noctalia-shell ipc call lockScreen lock 2>/dev/null; do sleep 0.5; done"
 
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -11,6 +15,16 @@ hotkey-overlay {
 window-rule {
   geometry-corner-radius 12
   clip-to-geometry true
+}
+
+gestures {
+     hot-corners {
+        // off
+        top-left
+        // top-right
+        // bottom-left
+        // bottom-right
+    }
 }
 
 layout {
@@ -39,6 +53,10 @@ input {
     }
 }
 
+clipboard {
+    disable-primary
+}
+
 output "HDMI-A-1" {
     mode "1920x1080@144.013"
     scale 1.0
@@ -63,12 +81,8 @@ binds {
 	Super+Shift+Left { move-column-left; }
 	Super+Shift+Right { move-column-right; }	
 
-    Super+T { spawn "gnome-console"; }
-    Super+Shift+Q { quit; }
-    Super+F { spawn "nautilus";}
-
     Super+shift+S { spawn "sh" "-c" "grim -g \"$(slurp)\" - | wl-copy"; }
 
-    Super+Shift+Space { maximize-column; }
+    Super+Space { maximize-column; }
 }
 

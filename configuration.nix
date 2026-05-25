@@ -10,10 +10,11 @@
       ./hardware-configuration.nix
     ];
 
+  nix.settings.experimental-features = [ "flakes" "nix-command" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
 
   swapDevices = [{
   device = "/swapfile";
@@ -87,9 +88,6 @@ environment.etc."xdg/user-dirs.conf".text = ''
   enabled=False
 '';
 
-# Autologin
-  services.getty.autologinUser = "nax";
-
 #SMB share (soon, physical drive connection)
 fileSystems."/mnt/zaigomaat" = {
   device = "//192.168.88.202/zaigomaat";
@@ -139,21 +137,23 @@ build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 
 };
 
-# Noctalia as Login
-services.displayManager.autoLogin = {
-  enable = true;
-  user = "nax";
+# Autologin Noctalia
+# services.displayManager.autoLogin = {
+#  enable = true;
+#  user = "nax";
+#};
+# services.getty.autologinUser = "nax";
+
+#Enable Gnome as a fallback
+services = {
+  displayManager.gdm.enable = true;
+  desktopManager.gnome.enable = true;
+  gnome.core-apps.enable = false;
+  gnome.core-developer-tools.enable = false;
+  gnome.games.enable = false;
 };
 
-#Gnome Services as a fallback
-services.desktopManager.gnome.enable = true;
-services.gnome.core-apps.enable = false;
-services.gnome.core-developer-tools.enable = false;
-services.gnome.games.enable = false;
-environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
 
-#Flatpak
-services.flatpak.enable = true;
 
 # Install Modules
 programs.firefox.enable = true;
@@ -186,7 +186,8 @@ programs.dconf.enable = true;
   samba #smb client
   grim #screenshot
   slurp #select area screenshot
-  discord #Discord
+  onlyoffice-desktopeditors #office
+
 
   # GNOME Apps
   nautilus           # File Manager
@@ -201,8 +202,6 @@ programs.dconf.enable = true;
   baobab              # Disk usage (Disk Usage Analyzer)
   loupe               # Image viewer (modern GNOME image viewer)
   gnome-music         # Music
-  gnome-software
-  flatpak
 
 ];
 
@@ -218,35 +217,6 @@ environment.variables = {
 fonts.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
 ];
-
-
-
-#Hjem
-hjem.users.nax = {
-  enable = true;
-  directory = config.users.users.nax.home;
-  files = {
-
-    ".config/user-dirs.dirs".source = ./nax/xdg/user-dirs.dirs;
-
-    ".gitconfig".source = ./nax/git/config;
-
-    ".config/niri/config.kdl".source = ./nax/niri/config.kdl;
-    
-    ".zshrc".source = ./nax/zsh/zshrc;
-
-    ".zprofile".source = ./nax/zsh/zprofile;
-
-    ".config/fastfetch/config.jsonc".source = ./nax/fastfetch/config.jsonc;
-
-    #".config/noctalia/settings.json".source = ./nax/noctalia/settings.json;
-    #".config/noctalia/colors.json".source = ./nax/noctalia/colors.json;
-    #".config/noctalia/colorschemes".source = ./nax/noctalia/colorschemes;
-    
-
-  };
-};
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
