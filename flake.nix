@@ -6,7 +6,6 @@
     extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
   };
 
-
   inputs = {
 
   nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -25,8 +24,9 @@
     nixosConfigurations.zaigomaat = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
+        
         ./configuration.nix
-	      ./nax/noctalia/noctalia.nix
+
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

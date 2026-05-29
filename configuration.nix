@@ -83,11 +83,6 @@
     ];
   };
 
-#Disable Automatic Home Folders
-environment.etc."xdg/user-dirs.conf".text = ''
-  enabled=False
-'';
-
 #SMB share (soon, physical drive connection)
 fileSystems."/mnt/zaigomaat" = {
   device = "//192.168.88.202/zaigomaat";
@@ -155,6 +150,12 @@ programs.dconf.enable = true;
 
 
   #Nix Package manager
+
+  environment.systemPackages = [
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    pkgs.quickshell
+  ];
+
   environment.systemPackages = with pkgs; [
 	git #version control
 	curl #data transfer utility
