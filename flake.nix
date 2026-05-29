@@ -27,6 +27,7 @@
 
         ./configuration.nix
         ./noctalia/noctalia.nix
+        ./gnome/gnome.nix
 
         home-manager.nixosModules.home-manager
         {

@@ -150,15 +150,10 @@ programs.dconf.enable = true;
 
 
   #Nix Package manager
-
-  environment.systemPackages = [
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    pkgs.quickshell
-  ];
-
   environment.systemPackages = with pkgs; [
 	git #version control
 	curl #data transfer utility
+  samba #smb client
 	xwayland-satellite #Wayland integration
 	wl-clipboard  #Clipboard 
 	cliphist #Clipboard history
@@ -175,25 +170,9 @@ programs.dconf.enable = true;
   fastfetch #meme terminal widget
   crosspipe #Audo patch bay
   cifs-utils #smb client utilities
-  samba #smb client
   grim #screenshot
   slurp #select area screenshot
   onlyoffice-desktopeditors #office
-
-
-  # GNOME Apps
-  nautilus           # File Manager
-  gnome-console      # Console
-  gnome-calculator   # Calculator
-  gnome-control-center # Settings - probably already comes with gnome
-  evince             # Document viewer
-  resources          # Resources (system monitor)
-  gnome-text-editor  # Text editor
-  gnome-font-viewer   # Fonts
-  gnome-characters    # Characters
-  baobab              # Disk usage (Disk Usage Analyzer)
-  loupe               # Image viewer (modern GNOME image viewer)
-  gnome-music         # Music
 
 ];
 
