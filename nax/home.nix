@@ -5,7 +5,7 @@
   home.stateVersion = "25.11";
 
   home.file = {
-    ".config/user-dirs.dirs".source = ./xdg/user-dirs.dirs;
+    ".config/user-dirs.dirs".source = ./xdg/user-dirs;
     ".gitconfig".source = ./git/config;
     ".config/niri/config.kdl".source = ./niri/config.kdl;
     ".zshrc".source = ./zsh/zshrc;

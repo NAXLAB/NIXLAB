@@ -1,6 +1,5 @@
 spawn-at-startup "lxqt-policykit-agent"
 spawn-at-startup "noctalia-shell"
-//spawn-at-startup "bash" "-c" "until noctalia-shell ipc call lockScreen lock 2>/dev/null; do sleep 0.5; done"
 
 debug {
   // Allows notification actions and window activation from Noctalia.

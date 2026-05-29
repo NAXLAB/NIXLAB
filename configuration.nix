@@ -6,7 +6,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware-configuration.nix
     ];
 
@@ -137,13 +137,6 @@ build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 
 };
 
-# Autologin Noctalia
-# services.displayManager.autoLogin = {
-#  enable = true;
-#  user = "nax";
-#};
-# services.getty.autologinUser = "nax";
-
 #Enable Gnome as a fallback
 services = {
   displayManager.gdm.enable = true;
@@ -152,8 +145,6 @@ services = {
   gnome.core-developer-tools.enable = false;
   gnome.games.enable = false;
 };
-
-
 
 # Install Modules
 programs.firefox.enable = true;

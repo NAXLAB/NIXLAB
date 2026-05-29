@@ -26,7 +26,7 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
-	      ./noctalia.nix
+	      ./nax/noctalia/noctalia.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
