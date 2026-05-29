@@ -24,8 +24,9 @@
     nixosConfigurations.zaigomaat = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        
+
         ./configuration.nix
+        ./noctalia/noctalia.nix
 
         home-manager.nixosModules.home-manager
         {
