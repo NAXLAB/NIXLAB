@@ -73,9 +73,15 @@ overview {
 
 binds {
 
+    Mod+T { spawn "gnome-terminal"; }
+    Mod+F { spawn "nautilus"; }
+
+    Mod+Shift+Q { quit; }
+
 	Super+Left { focus-column-left; }
 	Super+Right { focus-column-right; }
 	Super+Up { focus-window-up; }
+    Super+Down { focus-window-down; }
 
 	Super+Shift+Left { move-column-left; }
 	Super+Shift+Right { move-column-right; }	

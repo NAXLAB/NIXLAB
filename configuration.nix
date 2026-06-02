@@ -11,6 +11,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ./fancontrol.nix
     ];
 
   # Bootloader.
@@ -24,10 +25,8 @@
 
   networking.hostName = "zaigomaat"; # Define your hostname.
 
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  #Fan Configuration
+
   
   #NixOS Services for Niri/Noctalia
   hardware.bluetooth.enable = true;
@@ -105,7 +104,7 @@ fileSystems."/mnt/zaigomaat" = {
 
 systemd.tmpfiles.rules = [
 
-  "d /etc/nixos 0755 nax wheel -"
+  "d /etc/nixos 0775 nax wheel -"
   "d /mnt/zaigomaat 0755 nax wheel -"
 
   "d /home/nax/Desktop 0755 nax users -"
@@ -163,6 +162,10 @@ stylix.enable = true;
   grim #screenshot
   slurp #select area screenshot
   onlyoffice-desktopeditors #office
+  ungoogled-chromium #chrome
+  p7zip #Archive Manager
+  discord #discord
+  fanctl #fan control
 
 ];
 

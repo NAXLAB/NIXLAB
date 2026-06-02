@@ -4,12 +4,6 @@
   home.homeDirectory = "/home/nax";
   home.stateVersion = "25.11";
 
-  #Disable middle click paste
-  services.cliphist = {
-  enable = true;
-  allowImages = true; # optional
-  extraOptions = [];
-};
 
   xdg.userDirs = {
     enable = true;
@@ -28,7 +22,6 @@
     ".gitconfig".source = ./git/config;
     ".config/niri/config.kdl".source = ./niri/config.kdl;
     ".zshrc".source = ./zsh/zshrc;
-    ".zprofile".source = ./zsh/zprofile;
     ".config/fastfetch/config.jsonc".source = ./fastfetch/config.jsonc;
   };
 }

@@ -1,5 +1,0 @@
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = "1" ]; then
-  export XDG_CURRENT_DESKTOP=niri
-  export XDG_SESSION_TYPE=wayland
-  exec dbus-run-session niri
-fi
