@@ -615,7 +615,7 @@
     "ui": {
         "boxBorderEnabled": false,
         "fontDefault": "Liberation Sans",
-        "fontDefaultScale": 1,
+        "fontDefaultScale": 0.9,
         "fontFixed": "JetBrainsMono Nerd Font Mono",
         "fontFixedScale": 0.9,
         "panelBackgroundOpacity": 0.93,
@@ -627,7 +627,7 @@
         "translucentWidgets": true
     },
     "wallpaper": {
-        "automationEnabled": false,
+        "automationEnabled": true,
         "directory": "/home/nax/Archives/Wallpapers/NAX",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
@@ -639,25 +639,20 @@
         "linkLightAndDarkWallpapers": false,
         "monitorDirectories": [
         ],
-        "overviewBlur": 0.4,
-        "overviewEnabled": false,
+        "overviewBlur": 0.6,
+        "overviewEnabled": true,
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
-        "randomIntervalSec": 300,
+        "randomIntervalSec": 36000,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
-        "skipStartupTransition": true,
+        "skipStartupTransition": false,
         "solidColor": "#1a1a2e",
         "sortOrder": "name",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
-            "fade",
-            "disc",
-            "stripes",
-            "wipe",
-            "pixelate",
-            "honeycomb"
+            "fade"
         ],
         "useOriginalImages": true,
         "useSolidColor": false,

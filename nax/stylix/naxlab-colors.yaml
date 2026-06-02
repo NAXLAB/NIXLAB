@@ -1,0 +1,18 @@
+scheme: "NAX Lab"
+author: "nax"
+base00: "15161A" # background
+base01: "222228" # lighter background
+base02: "353540" # selection background
+base03: "7A7A8F" # comments / inactive
+base04: "D1D0DF" # dark foreground
+base05: "EBEBF5" # foreground
+base06: "F2F2F7" # light foreground
+base07: "FFFFFF" # bright white
+base08: "FF4833" # red
+base09: "FF8000" # orange
+base0A: "FF9900" # yellow
+base0B: "00BA7F" # green
+base0C: "00DDB8" # cyan
+base0D: "0070F0" # blue
+base0E: "6236FF" # magenta
+base0F: "FF274B" # pink

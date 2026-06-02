@@ -5,12 +5,13 @@
 { config, pkgs, ... }:
 
 {
+
+  nix.settings.experimental-features = [ "flakes" "nix-command" ];
+
   imports =
     [ 
       ./hardware-configuration.nix
     ];
-
-  nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -102,7 +103,6 @@ fileSystems."/mnt/zaigomaat" = {
   ];
 };
 
-
 systemd.tmpfiles.rules = [
 
   "d /etc/nixos 0755 nax wheel -"
@@ -111,16 +111,16 @@ systemd.tmpfiles.rules = [
   "d /home/nax/Desktop 0755 nax users -"
   "d /home/nax/Downloads 0755 nax users -"
 
-  "L /home/nax/Archives - - - - /mnt/zaigomaat/Archives"
-  "L /home/nax/Documents - - - - /mnt/zaigomaat/Documents"
-  "L /home/nax/Fonts - - - - /mnt/zaigomaat/Fonts"
-  "L /home/nax/Music - - - - /mnt/zaigomaat/Music"
-  "L /home/nax/Photos - - - - /mnt/zaigomaat/Photos"
-  "L /home/nax/Torrents - - - - /mnt/zaigomaat/Torrents"
+  "L+ /home/nax/Archives - - - - /mnt/zaigomaat/Archives"
+  "L+ /home/nax/Documents - - - - /mnt/zaigomaat/Documents"
+  "L+ /home/nax/Fonts - - - - /mnt/zaigomaat/Fonts"
+  "L+ /home/nax/Music - - - - /mnt/zaigomaat/Music"
+  "L+ /home/nax/Photos - - - - /mnt/zaigomaat/Photos"
+  "L+ /home/nax/Torrents - - - - /mnt/zaigomaat/Torrents"
 
-  "L /home/nax/.config/noctalia/colors.json - - - - /etc/nixos/nax/noctalia/colors.json"
-  "L /home/nax/.config/noctalia/settings.json - - - - /etc/nixos/nax/noctalia/settings.json"
-  "L /home/nax/.config/noctalia/colorschemes - - - - /etc/nixos/nax/noctalia/colorschemes"
+  "L+ /home/nax/.config/noctalia/colors.json - - - - /etc/nixos/nax/noctalia/colors.json"
+  "L+ /home/nax/.config/noctalia/settings.json - - - - /etc/nixos/nax/noctalia/settings.json"
+  "L+ /home/nax/.config/noctalia/colorschemes - - - - /etc/nixos/nax/noctalia/colorschemes"
 ];
 
 # Aliases for Terminal Commands
@@ -129,16 +129,6 @@ nx = "sudo nano /etc/nixos/configuration.nix";
 ns = "cd /etc/nixos";
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
-
-};
-
-#Enable Gnome as a fallback
-services = {
-  displayManager.gdm.enable = true;
-  desktopManager.gnome.enable = true;
-  gnome.core-apps.enable = false;
-  gnome.core-developer-tools.enable = false;
-  gnome.games.enable = false;
 };
 
 # Install Modules
@@ -148,6 +138,7 @@ programs.zsh.enable = true;
 programs.starship.enable = true;
 programs.dconf.enable = true;
 
+stylix.enable = true;
 
   #Nix Package manager
   environment.systemPackages = with pkgs; [
@@ -157,7 +148,6 @@ programs.dconf.enable = true;
 	xwayland-satellite #Wayland integration
 	wl-clipboard  #Clipboard 
 	cliphist #Clipboard history
-	nwg-look #GTK settings 
 	swayidle #idle screen
 	swaylock #lockscreen
   waybar # Alternative Bar
@@ -168,7 +158,7 @@ programs.dconf.enable = true;
   capitaine-cursors #Cursor Icons
   vscodium #Dev environment
   fastfetch #meme terminal widget
-  crosspipe #Audo patch bay
+  crosspipe #Audio patch bay
   cifs-utils #smb client utilities
   grim #screenshot
   slurp #select area screenshot
