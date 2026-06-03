@@ -1,10 +1,6 @@
 {
-  description = "NixOS configuration with Noctalia";
+  description = "ZaiGoMaat";
 
-  nixConfig = {
-    extra-substituters = [ "https://noctalia.cachix.org" ];
-    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
-  };
 
   inputs = {
 
@@ -36,7 +32,7 @@
         ./nax/stylix/stylix.nix
 
         stylix.nixosModules.stylix
-        
+
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
