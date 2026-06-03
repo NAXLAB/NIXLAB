@@ -1,16 +1,13 @@
 { pkgs, inputs, ... }:
 {
 
-  nixConfig = {
-    extra-substituters = [ "https://noctalia.cachix.org" ];
-    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
-  };
-
+  #Install Noctalia & Quickshell
   environment.systemPackages = [
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.quickshell
   ];
 
+  #Start Noctalia as a system service
   systemd.user.services.noctalia-shell = {
     description = "Noctalia Shell";
     after = [ "graphical-session.target" ];
@@ -20,6 +17,7 @@
       ExecStart = "${inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default}/bin/noctalia-shell";
       Restart = "on-failure";
       RestartSec = 3;
+      Environment = "PATH=/run/current-system/sw/bin:/usr/bin:/bin";
     };
   };
 

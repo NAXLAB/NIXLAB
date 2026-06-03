@@ -169,8 +169,7 @@ stylix.enable = true;
   discord #discord
   fan2go #fan control
   openrgb #rgb control
-  amberol #music
-
+  figma-agent #figma helper
 ];
 
 # Allow unfree packages
