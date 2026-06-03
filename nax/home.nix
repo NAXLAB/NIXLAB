@@ -4,7 +4,6 @@
   home.homeDirectory = "/home/nax";
   home.stateVersion = "25.11";
 
-
   xdg.userDirs = {
     enable = true;
     createDirectories = false;

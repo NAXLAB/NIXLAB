@@ -26,6 +26,7 @@
     baobab                  # Disk usage (Disk Usage Analyzer)
     loupe                   # Image viewer (modern GNOME image viewer)
     gnome-music             # Music
-    nwg-look                #GTK settings 
+    nwg-look                #GTK settings
+    gnome-tweaks            #Gnome Tweaks
   ];
 }

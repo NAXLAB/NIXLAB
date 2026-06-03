@@ -11,7 +11,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ./fancontrol.nix
+      #./fancontrol.nix
     ];
 
   # Bootloader.
@@ -25,13 +25,13 @@
 
   networking.hostName = "zaigomaat"; # Define your hostname.
 
-  #Fan Configuration
-
-  
-  #NixOS Services for Niri/Noctalia
+  #NixOS Services for Niri
   hardware.bluetooth.enable = true;
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
+  
+  #Allow Electron Apps to be managed by Niri
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -104,7 +104,7 @@ fileSystems."/mnt/zaigomaat" = {
 
 systemd.tmpfiles.rules = [
 
-  "d /etc/nixos 0775 nax wheel -"
+  "Z /etc/nixos - nax wheel - -"
   "d /mnt/zaigomaat 0755 nax wheel -"
 
   "d /home/nax/Desktop 0755 nax users -"
@@ -116,6 +116,7 @@ systemd.tmpfiles.rules = [
   "L+ /home/nax/Music - - - - /mnt/zaigomaat/Music"
   "L+ /home/nax/Photos - - - - /mnt/zaigomaat/Photos"
   "L+ /home/nax/Torrents - - - - /mnt/zaigomaat/Torrents"
+
 
   "L+ /home/nax/.config/noctalia/colors.json - - - - /etc/nixos/nax/noctalia/colors.json"
   "L+ /home/nax/.config/noctalia/settings.json - - - - /etc/nixos/nax/noctalia/settings.json"
@@ -136,6 +137,7 @@ programs.niri.enable = true;
 programs.zsh.enable = true;
 programs.starship.enable = true;
 programs.dconf.enable = true;
+programs.coolercontrol.enable = true;
 
 stylix.enable = true;
 
@@ -165,7 +167,9 @@ stylix.enable = true;
   ungoogled-chromium #chrome
   p7zip #Archive Manager
   discord #discord
-  fanctl #fan control
+  fan2go #fan control
+  openrgb #rgb control
+  amberol #music
 
 ];
 
