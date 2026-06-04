@@ -33,9 +33,9 @@
         ./configuration.nix
         ./nax/noctalia/noctalia.nix
         ./nax/gnome/gnome.nix
-        ./nax/stylix/stylix.nix
 
-        stylix.nixosModules.stylix
+        #./nax/stylix/stylix.nix
+        # stylix.nixosModules.stylix
 
         home-manager.nixosModules.home-manager
         {

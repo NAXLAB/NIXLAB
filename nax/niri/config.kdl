@@ -25,7 +25,13 @@ gestures {
     }
 }
 
+layer-rule {
+  match namespace="^noctalia-wallpaper*"
+  place-within-backdrop true
+}
+
 layout {
+    background-color "transparent"
     gaps 12  // gap between windows and screen edges
     focus-ring {
         width 2
@@ -42,6 +48,8 @@ layout {
         // bottom 64
     }
 }
+
+
 
 input {
     keyboard {
@@ -74,14 +82,17 @@ cursor {
 // Make the backdrop Dark.
 overview {
     backdrop-color "#15161A"
+    workspace-shadow {
+        off
+     }
 }
 
 binds {
 
-    Mod+T { spawn "gnome-console"; }
-    Mod+F { spawn "nautilus"; }
+    Super+T { spawn "kgx"; }
+    Super+F { spawn "nautilus"; }
 
-    Mod+Shift+Q { quit; }
+    Super+Shift+Q { quit; }
 
 	Super+Left { focus-column-left; }
 	Super+Right { focus-column-right; }
