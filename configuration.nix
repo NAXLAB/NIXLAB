@@ -172,6 +172,7 @@ programs.coolercontrol.enable = true;
   figma-agent #figma helper
   vesktop #Discord
   papirus-icon-theme #Icon Packs
+  la-capitaine-icon-theme
   dislocker #Bitlocker encryption manager
   inputs.agenix.packages.${pkgs.system}.default
 ];

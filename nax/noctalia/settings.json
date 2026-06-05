@@ -217,7 +217,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "NAXLAB",
+        "predefinedScheme": "Mine",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -639,7 +639,7 @@
     },
     "wallpaper": {
         "automationEnabled": true,
-        "directory": "/home/nax/Archives/Wallpapers/NAX",
+        "directory": "/etc/nixos/nax/noctalia/wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
