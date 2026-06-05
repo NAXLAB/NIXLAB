@@ -49,9 +49,8 @@ layout {
     }
 }
 
-
-
 input {
+
     keyboard {
         xkb { }
     }
@@ -59,8 +58,8 @@ input {
         accel-speed 0.1
         accel-profile "flat"
     }
-}
 
+}
 
 output "DP-2" {
     mode "1920x1080@143.855"
@@ -89,7 +88,7 @@ overview {
 
 binds {
 
-    Super+T { spawn "kgx"; }
+    Super+T { spawn "kgx"; } 
     Super+F { spawn "nautilus"; }
 
     Super+Shift+Q { quit; }
@@ -102,7 +101,7 @@ binds {
 	Super+Shift+Left { move-column-left; }
 	Super+Shift+Right { move-column-right; }	
 
-    Super+shift+S { spawn "sh" "-c" "grim -g \"$(slurp)\" - | wl-copy"; }
+    Shift+Super+S { spawn "sh" "-c" "grim -g \"$(slurp -b 0E0F11B3 -c 0070F0FF -s 0E0F1133 -w 2)\" - | wl-copy"; }
 
     Super+Space { maximize-column; }
 }

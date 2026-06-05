@@ -26,6 +26,9 @@
     ".config/fastfetch/config.jsonc".source = ./fastfetch/config.jsonc;
   };
 
+  programs.bash.shellAliases = {
+    slurp = "slurp -b 1B1F28CC -c CDD6F4FF -s 1B1F28AA -B 1B1F28CC";
+  };
 
   #Declare GTK Theme
   gtk = {

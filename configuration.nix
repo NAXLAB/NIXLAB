@@ -11,7 +11,6 @@
   imports =
     [ 
       ./hardware-configuration.nix
-
     ];
 
   # Bootloader.
@@ -110,13 +109,12 @@ systemd.tmpfiles.rules = [
   "d /home/nax/Desktop 0755 nax users -"
   "d /home/nax/Downloads 0755 nax users -"
 
-  "L+ /home/nax/Archives - - - - /mnt/zaigomaat/Archives"
-  "L+ /home/nax/Documents - - - - /mnt/zaigomaat/Documents"
-  "L+ /home/nax/Fonts - - - - /mnt/zaigomaat/Fonts"
-  "L+ /home/nax/Music - - - - /mnt/zaigomaat/Music"
-  "L+ /home/nax/Photos - - - - /mnt/zaigomaat/Photos"
-  "L+ /home/nax/Torrents - - - - /mnt/zaigomaat/Torrents"
-
+  "L+ /home/nax/Archives - - - - /run/media/nax/X DRIVE/Archives"
+  "L+ /home/nax/Documents - - - - /run/media/nax/X DRIVE/Documents"
+  "L+ /home/nax/Fonts - - - - /run/media/nax/X DRIVE/Fonts"
+  "L+ /home/nax/Music - - - - /run/media/nax/X DRIVE/Music"
+  "L+ /home/nax/Photos - - - - /run/media/nax/X DRIVE/Photos"
+  "L+ /home/nax/Torrents - - - - /run/media/nax/X DRIVE/Torrents"
 
   "L+ /home/nax/.config/noctalia/colors.json - - - - /etc/nixos/nax/noctalia/colors.json"
   "L+ /home/nax/.config/noctalia/settings.json - - - - /etc/nixos/nax/noctalia/settings.json"
@@ -125,8 +123,6 @@ systemd.tmpfiles.rules = [
 
 # Aliases for Terminal Commands
 environment.shellAliases = {
-nx = "sudo nano /etc/nixos/configuration.nix";
-ns = "cd /etc/nixos";
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 };
@@ -149,7 +145,6 @@ programs.coolercontrol.enable = true;
 	cliphist #Clipboard history
 	swayidle #idle screen
 	swaylock #lockscreen
-  waybar # Alternative Bar
 	playerctl #media player utility
 	mako #Notification Daemon
 	xdg-utils #Desktop app rendering utils
@@ -161,13 +156,13 @@ programs.coolercontrol.enable = true;
   cifs-utils #smb client utilities
   grim #screenshot
   slurp #select area screenshot
-  onlyoffice-desktopeditors #office
   ungoogled-chromium #chrome
   p7zip #Archive Manager
-  discord #discord
   fan2go #fan control
   openrgb #rgb control
   figma-agent #figma helper
+  vesktop #Discord
+  papirus-icon-theme #Icon Packs
 ];
 
 # Allow unfree packages
@@ -182,10 +177,12 @@ environment.variables = {
 fonts.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
   nerd-fonts.iosevka
+  fira-code
+  geist-font
 ];
 
-fonts.fontconfig.defaultFonts.sansSerif = [ "Inter" "Iosevka Nerd Font" ];
-fonts.fontconfig.defaultFonts.monospace = [ "Iosevka Nerd Font Mono" ];
+fonts.fontconfig.defaultFonts.sansSerif = [ "Geist" ];
+fonts.fontconfig.defaultFonts.monospace = [ "Fira Code" ];
 
 system.stateVersion = "25.11"; #test
 

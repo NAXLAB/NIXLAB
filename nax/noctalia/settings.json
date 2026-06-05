@@ -26,7 +26,10 @@
             "org.gnome.Calculator",
             "org.gnome.Characters",
             "discord",
-            "chromium-browser"
+            "chromium-browser",
+            "org.coolercontrol.CoolerControl",
+            "org.gnome.Music",
+            "vesktop"
         ],
         "position": "bottom_left",
         "screenshotAnnotationTool": "",
@@ -261,6 +264,17 @@
                 },
                 {
                     "id": "NoctaliaPerformance"
+                },
+                {
+                    "enableOnStateLogic": false,
+                    "generalTooltipText": "",
+                    "icon": "heart",
+                    "id": "CustomButton",
+                    "onClicked": "",
+                    "onMiddleClicked": "",
+                    "onRightClicked": "",
+                    "showExecTooltip": true,
+                    "stateChecksJson": "[]"
                 }
             ],
             "right": [
@@ -625,22 +639,22 @@
     },
     "wallpaper": {
         "automationEnabled": true,
-        "directory": "/home/nax/Archives/Wallpapers/NAX",
+        "directory": "/home/nax/Archives/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
         ],
         "fillColor": "#000000",
-        "fillMode": "crop",
+        "fillMode": "stretch",
         "hideWallpaperFilenames": false,
         "linkLightAndDarkWallpapers": false,
         "monitorDirectories": [
         ],
         "overviewBlur": 0.6,
-        "overviewEnabled": false,
+        "overviewEnabled": true,
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
-        "randomIntervalSec": 36000,
+        "randomIntervalSec": 30000,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
         "skipStartupTransition": true,
@@ -654,7 +668,7 @@
         "useOriginalImages": true,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "single",
+        "viewMode": "browse",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",

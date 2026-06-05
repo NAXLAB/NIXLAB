@@ -3,7 +3,7 @@
   services = {
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-    gnome.core-apps.enable = true;
+    gnome.core-apps.enable = false;
     gnome.core-developer-tools.enable = false;
     gnome.games.enable = false;
   };
@@ -19,7 +19,6 @@
     gnome-calculator        # Calculator
     gnome-control-center    # Settings - probably already comes with gnome
     resources               # Resources (system monitor)
-    gnome-text-editor       # Text editor
     gnome-font-viewer       # Fonts
     gnome-characters        # Characters
     baobab                  # Disk usage (Disk Usage Analyzer)
