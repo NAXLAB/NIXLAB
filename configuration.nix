@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs,... }:
 
 {
 
@@ -11,6 +11,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+
     ];
 
   # Bootloader.
@@ -22,19 +23,29 @@
   size = 32768; # 32GB in MB
   }];
 
-  networking.hostName = "zaigomaat"; # Define your hostname.
-
-  #NixOS Services for Niri
+  #Sysetm & Hardware Services
   hardware.bluetooth.enable = true;
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
+  services.openssh.enable = true;
+  services.printing.enable = true;
+
+  services.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
   
   #Allow Electron Apps to be managed by Niri
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+  networking.hostName = "zaigomaat"; # Define your hostname.
+  
   # Policy Configuration
   security.polkit.enable = true;  
 
@@ -55,23 +66,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    # media-session.enable = true;
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nax = {
     shell = pkgs.zsh;
@@ -82,7 +76,7 @@
     ];
   };
 
-#SMB share (soon, physical drive connection)
+#SMB share
 fileSystems."/mnt/zaigomaat" = {
   device = "//192.168.88.202/zaigomaat";
   fsType = "cifs";
@@ -93,7 +87,7 @@ fileSystems."/mnt/zaigomaat" = {
     "x-systemd.device-timeout=5s"
     "x-systemd.mount-timeout=5s"
     "_netdev"
-    "credentials=/etc/nixos/secrets/smb"
+    "credentials=/run/agenix/smb"
     "uid=1000"
     "gid=1000"
     "x-systemd.requires=network-online.target"
@@ -101,24 +95,33 @@ fileSystems."/mnt/zaigomaat" = {
   ];
 };
 
+age.secrets.smb = {
+  file = ./secrets/smb.age;
+  mode = "400";
+};
+
+#File System Config
 systemd.tmpfiles.rules = [
 
+  #etc/nixos owned by nax
   "Z /etc/nixos - nax wheel - -"
+
+  #Mount ZaigoMaat SMB share and give nax access
   "d /mnt/zaigomaat 0755 nax wheel -"
 
+  #Mount X Drive 
+  "d /mnt/xdrive 0755 nax users -"
+  "d /mnt/xdrive-fuse 0755 root root -"
+
+  #Create desktop folders manually
   "d /home/nax/Desktop 0755 nax users -"
   "d /home/nax/Downloads 0755 nax users -"
-
   "L+ /home/nax/Archives - - - - /run/media/nax/X DRIVE/Archives"
   "L+ /home/nax/Documents - - - - /run/media/nax/X DRIVE/Documents"
   "L+ /home/nax/Fonts - - - - /run/media/nax/X DRIVE/Fonts"
   "L+ /home/nax/Music - - - - /run/media/nax/X DRIVE/Music"
   "L+ /home/nax/Photos - - - - /run/media/nax/X DRIVE/Photos"
   "L+ /home/nax/Torrents - - - - /run/media/nax/X DRIVE/Torrents"
-
-  "L+ /home/nax/.config/noctalia/colors.json - - - - /etc/nixos/nax/noctalia/colors.json"
-  "L+ /home/nax/.config/noctalia/settings.json - - - - /etc/nixos/nax/noctalia/settings.json"
-  "L+ /home/nax/.config/noctalia/colorschemes - - - - /etc/nixos/nax/noctalia/colorschemes"
 ];
 
 # Aliases for Terminal Commands
@@ -127,6 +130,10 @@ switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 };
 
+
+# Allow unfree packages
+nixpkgs.config.allowUnfree = true;
+
 # Install Modules
 programs.firefox.enable = true;
 programs.niri.enable = true;
@@ -134,6 +141,8 @@ programs.zsh.enable = true;
 programs.starship.enable = true;
 programs.dconf.enable = true;
 programs.coolercontrol.enable = true;
+
+
 
   #Nix Package manager
   environment.systemPackages = with pkgs; [
@@ -163,10 +172,9 @@ programs.coolercontrol.enable = true;
   figma-agent #figma helper
   vesktop #Discord
   papirus-icon-theme #Icon Packs
+  dislocker #Bitlocker encryption manager
+  inputs.agenix.packages.${pkgs.system}.default
 ];
-
-# Allow unfree packages
-nixpkgs.config.allowUnfree = true;
 
 environment.variables = {
   XCURSOR_THEME = "capitaine-cursors";

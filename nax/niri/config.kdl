@@ -13,6 +13,9 @@ hotkey-overlay {
 window-rule {
   geometry-corner-radius 12
   clip-to-geometry true
+  shadow {
+    off
+  }
 }
 
 gestures {
@@ -86,6 +89,8 @@ overview {
      }
 }
 
+
+
 binds {
 
     Super+T { spawn "kgx"; } 
@@ -101,8 +106,12 @@ binds {
 	Super+Shift+Left { move-column-left; }
 	Super+Shift+Right { move-column-right; }	
 
-    Shift+Super+S { spawn "sh" "-c" "grim -g \"$(slurp -b 0E0F11B3 -c 0070F0FF -s 0E0F1133 -w 2)\" - | wl-copy"; }
+    //Shift+Super+S { spawn "sh" "-c" "grim -g \"$(slurp -b 0E0F11B3 -c 0070F0FF -s 0E0F1133 -w 2)\" - | wl-copy"; }
+    Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11B3 -c 0070F0FF -s 0E0F1133 -w 2)\" - | wl-copy"; }
+
 
     Super+Space { maximize-column; }
+
+
 }
 

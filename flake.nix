@@ -8,7 +8,11 @@
 
   inputs = {
 
-  nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    agenix.url = "github:ryantm/agenix";
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -20,7 +24,7 @@
     };
   };
 
- outputs = inputs@{ self, nixpkgs, home-manager, stylix, ... }: {
+ outputs = inputs@{ self, nixpkgs, agenix, home-manager, ... }: {
     nixosConfigurations.zaigomaat = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
@@ -28,7 +32,9 @@
         ./configuration.nix
         ./nax/noctalia/noctalia.nix
         ./nax/gnome/gnome.nix
-        ./nax/icons/icons.nix
+        #./nax/icons/icons.nix
+
+        agenix.nixosModules.default
 
         home-manager.nixosModules.home-manager
         {

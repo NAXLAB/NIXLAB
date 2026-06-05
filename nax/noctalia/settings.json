@@ -639,7 +639,7 @@
     },
     "wallpaper": {
         "automationEnabled": true,
-        "directory": "/home/nax/Archives/Wallpapers",
+        "directory": "/home/nax/Archives/Wallpapers/NAX",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -650,9 +650,9 @@
         "linkLightAndDarkWallpapers": false,
         "monitorDirectories": [
         ],
-        "overviewBlur": 0.6,
+        "overviewBlur": 0,
         "overviewEnabled": true,
-        "overviewTint": 0.6,
+        "overviewTint": 0,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 30000,
         "setWallpaperOnAllMonitors": true,
@@ -668,7 +668,7 @@
         "useOriginalImages": true,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "browse",
+        "viewMode": "single",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
