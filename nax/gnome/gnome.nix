@@ -18,14 +18,13 @@
     gnome-console           # Console
     gnome-calculator        # Calculator
     gnome-control-center    # Settings - probably already comes with gnome
-    resources               # Resources (system monitor)
     gnome-font-viewer       # Fonts
     gnome-characters        # Characters
     baobab                  # Disk usage (Disk Usage Analyzer)
     loupe                   # Image viewer (modern GNOME image viewer)
-    gnome-music             # Music
     nwg-look                #GTK settings
-    gnome-tweaks            #Gnome Tweaks
+    refine                  #More Gnome Tweaks
+    gdm-settings            #Customize Gnome Login Manager
   ];
 
 }

@@ -1,11 +1,12 @@
 { config, pkgs, ... }:
 {
 
-
   home.username = "nax";
   home.homeDirectory = "/home/nax";
   home.stateVersion = "25.11";
 
+
+  #App compatibility with symlinked home folders
   xdg.userDirs = {
     enable = true;
     createDirectories = false;
@@ -69,6 +70,7 @@
 services.mako = {
   enable = true;
   settings.font = "Iosevka Nerd Font 11";
+  settings.default-timeout = "2000";
 };
 
 #GTK Compatibility

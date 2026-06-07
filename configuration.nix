@@ -1,35 +1,43 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, inputs,... }:
 
 {
 
-  nix.settings.experimental-features = [ "flakes" "nix-command" ];
+nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
   imports =
     [ 
       ./hardware-configuration.nix
-
     ];
+
+  #Motherboard Kernel Modules
+  boot.kernelModules = [
+    "nct6775" 
+    "nct6687"
+  ];
+
+  boot.extraModulePackages = [
+    config.boot.kernelPackages.nct6687d
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  swapDevices = [{
-  device = "/swapfile";
-  size = 32768; # 32GB in MB
-  }];
+  #Swapfile
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 32768; # 32GB in MB
+    }
+  ];
 
-  #Sysetm & Hardware Services
-  hardware.bluetooth.enable = true;
+  #System & Hardware Services
   services.power-profiles-daemon.enable = true;
+  hardware.bluetooth.enable = true;
   services.upower.enable = true;
-  services.openssh.enable = true;
   services.printing.enable = true;
 
+  #Audio Services
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -44,12 +52,13 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "zaigomaat"; # Define your hostname.
+  networking.hostName = "zaigomaat";
+  services.openssh.enable = true;
   
   # Policy Configuration
   security.polkit.enable = true;  
 
-  # Set your time zone.
+ #Time Zone
   time.timeZone = "America/New_York";
 
   # Select internationalisation properties.
@@ -76,32 +85,32 @@
     ];
   };
 
-#SMB share
-fileSystems."/mnt/zaigomaat" = {
-  device = "//192.168.88.202/zaigomaat";
-  fsType = "cifs";
-  options = [
-    "noauto"
-    "x-systemd.automount"
-    "x-systemd.idle-timeout=60"
-    "x-systemd.device-timeout=5s"
-    "x-systemd.mount-timeout=5s"
-    "_netdev"
-    "credentials=/run/agenix/smb"
-    "uid=1000"
-    "gid=1000"
-    "x-systemd.requires=network-online.target"
-    "x-systemd.stop-timeout=5s"  # force unmount after 5 seconds
-  ];
-};
+  #SMB share
+  fileSystems."/mnt/zaigomaat" = {
+    device = "//192.168.88.202/zaigomaat";
+    fsType = "cifs";
+    options = [
+      "noauto"
+      "x-systemd.automount"
+      "x-systemd.idle-timeout=60"
+      "x-systemd.device-timeout=5s"
+      "x-systemd.mount-timeout=5s"
+      "_netdev"
+      "credentials=/run/agenix/smb"
+      "uid=1000"
+      "gid=1000"
+      "x-systemd.requires=network-online.target"
+      "x-systemd.stop-timeout=5s"  # force unmount after 5 seconds
+    ];
+  };
 
-age.secrets.smb = {
-  file = ./secrets/smb.age;
-  mode = "400";
-};
+  age.secrets.smb = {
+    file = ./secrets/smb.age;
+    mode = "400";
+  };
 
-#File System Config
-systemd.tmpfiles.rules = [
+  #File System Config
+  systemd.tmpfiles.rules = [
 
   #etc/nixos owned by nax
   "Z /etc/nixos - nax wheel - -"
@@ -157,7 +166,6 @@ programs.coolercontrol.enable = true;
 	playerctl #media player utility
 	mako #Notification Daemon
 	xdg-utils #Desktop app rendering utils
-	lxqt.lxqt-policykit #Root access policykit
   capitaine-cursors #Cursor Icons
   vscodium #Dev environment
   fastfetch #meme terminal widget
@@ -169,12 +177,28 @@ programs.coolercontrol.enable = true;
   p7zip #Archive Manager
   fan2go #fan control
   openrgb #rgb control
-  figma-agent #figma helper
   vesktop #Discord
   papirus-icon-theme #Icon Packs
   la-capitaine-icon-theme
   dislocker #Bitlocker encryption manager
+  gapless #Music
+  signal-desktop #Signal Messages
+  freecad #Design
+  impression #Bootable Media Utility
+  mission-center #System Monitoring
+  parabolic #Media Downloader
+  upscaler #Image Upscale
+  upscayl #Image Upscale
+  planify #Planner & Notes
+  cine #Video Player
+  newsflash #news
+  concessio #file permissions
+
+  #recordbox is broken rn but an update might fix it
+
   inputs.agenix.packages.${pkgs.system}.default
+  #lxqt.lxqt-policykit #Root access policykit
+  polkit_gnome #Gnome Polkit
 ];
 
 environment.variables = {
@@ -188,10 +212,8 @@ fonts.packages = with pkgs; [
   nerd-fonts.iosevka
   fira-code
   geist-font
-];
 
-fonts.fontconfig.defaultFonts.sansSerif = [ "Geist" ];
-fonts.fontconfig.defaultFonts.monospace = [ "Fira Code" ];
+];
 
 system.stateVersion = "25.11"; #test
 

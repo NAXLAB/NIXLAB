@@ -29,7 +29,8 @@
             "chromium-browser",
             "org.coolercontrol.CoolerControl",
             "org.gnome.Music",
-            "vesktop"
+            "vesktop",
+            "com.github.neithern.g4music"
         ],
         "position": "bottom_left",
         "screenshotAnnotationTool": "",
@@ -217,7 +218,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Mine",
+        "predefinedScheme": "NAXLAB",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -651,7 +652,7 @@
         "monitorDirectories": [
         ],
         "overviewBlur": 0,
-        "overviewEnabled": true,
+        "overviewEnabled": false,
         "overviewTint": 0,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 30000,
@@ -663,7 +664,6 @@
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
-            "fade"
         ],
         "useOriginalImages": true,
         "useSolidColor": false,

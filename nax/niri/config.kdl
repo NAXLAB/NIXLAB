@@ -104,7 +104,7 @@ binds {
 	Super+Shift+Right { move-column-right; }	
 
     //Shift+Super+S { spawn "sh" "-c" "grim -g \"$(slurp -b 0E0F11B3 -c 0070F0FF -s 0E0F1133 -w 2)\" - | wl-copy"; }
-    Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11B3 -c 0070F0FF -s 0E0F1133 -w 2)\" - | wl-copy"; }
+    Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
 
 
     Super+Space { maximize-column; }
