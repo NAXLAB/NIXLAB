@@ -31,28 +31,32 @@
     slurp = "slurp -b 1B1F28CC -c CDD6F4FF -s 1B1F28AA -B 1B1F28CC";
   };
 
-  #Declare GTK Theme
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
-    };
-    font = {
-      name = "Inter";
-      package = pkgs.inter;
-      size = 11;
-    };
+#Declare GTK Theme
+gtk = {
+  enable = true;
+  theme = {
+    name = "Adwaita-dark";
+    package = pkgs.gnome-themes-extra;
   };
-
-  dconf.settings = {
-  "org/gnome/desktop/interface" = {
-    color-scheme = "prefer-dark";
-    font-name = "Inter 11";
-    document-font-name = "Inter 11";
-    monospace-font-name = "Iosevka Nerd Font Mono 11";
+  font = {
+    name = "Adwaita Sans Light";
+    size = 11;
+    package = pkgs.adwaita-fonts;  # whatever package provides it
+  };
+  gtk3.extraConfig = {
+    gtk-application-prefer-dark-theme = true;
+  };
+  gtk4.extraConfig = {
+    gtk-application-prefer-dark-theme = true;
   };
 };
+
+dconf.settings."org/gnome/desktop/interface" = {
+  color-scheme = "prefer-dark";
+  document-font-name = "Inter 11";
+  monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
+};
+
 
 services.mako = {
   enable = true;

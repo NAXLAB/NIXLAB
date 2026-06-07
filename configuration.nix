@@ -139,7 +139,6 @@ switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 };
 
-
 # Allow unfree packages
 nixpkgs.config.allowUnfree = true;
 
@@ -150,8 +149,6 @@ programs.zsh.enable = true;
 programs.starship.enable = true;
 programs.dconf.enable = true;
 programs.coolercontrol.enable = true;
-
-
 
   #Nix Package manager
   environment.systemPackages = with pkgs; [
@@ -169,7 +166,7 @@ programs.coolercontrol.enable = true;
   parabolic                         #Media Downloader
   crosspipe                         #Audio patch bay
   signal-desktop                    #Signal Messages
-  gapless                           #Music
+  nocturne                          #Music
   gnome-characters                  # Characters
   loupe                             # Image viewer (modern GNOME image viewer)
                                     #recordbox is broken rn but an update might fix it
@@ -192,13 +189,15 @@ programs.coolercontrol.enable = true;
   xdg-utils                         #Desktop app rendering utils
   mako                              #Notification Daemon
   polkit_gnome                      #Gnome Polkit
-  refine                   #More Gnome Tweaks
+  refine                            #More Gnome Tweaks
   gdm-settings                      #Customize Gnome Login Manager
-  
+  xdg-desktop-portal-gnome          #Desktop Portal
+
   #Themes
   papirus-icon-theme                #Icon Packs
   la-capitaine-icon-theme           #Icon Packs
-  capitaine-cursors                 #Cursor Icons
+  whitesur-icon-theme               #Icon Packs
+  capitaine-cursors                 #Cursor Packs
 
   #System Utilities
   concessio                         #file permissions 
@@ -212,10 +211,8 @@ programs.coolercontrol.enable = true;
   samba                             #smb client
   playerctl                         #media player utility
   xdg-desktop-portal-gnome          #App Compatibility portal
+  polkit_gnome                      #Policykit
   inputs.agenix.packages.${pkgs.system}.default
-
-
-
   #lxqt.lxqt-policykit #Root access policykit
 
 ];
@@ -227,10 +224,12 @@ environment.variables = {
 };
 
 fonts.packages = with pkgs; [
+
   nerd-fonts.jetbrains-mono
   nerd-fonts.iosevka
   fira-code
   geist-font
+  noto-fonts
 
 ];
 

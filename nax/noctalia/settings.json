@@ -24,13 +24,11 @@
             "org.gnome.Console",
             "net.nokyan.Resources",
             "org.gnome.Calculator",
-            "org.gnome.Characters",
             "discord",
             "chromium-browser",
-            "org.coolercontrol.CoolerControl",
             "org.gnome.Music",
             "vesktop",
-            "com.github.neithern.g4music"
+            "com.jeffser.Nocturne"
         ],
         "position": "bottom_left",
         "screenshotAnnotationTool": "",

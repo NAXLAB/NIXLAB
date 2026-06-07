@@ -32,7 +32,7 @@
         ./configuration.nix
         ./nax/noctalia/noctalia.nix
         ./nax/gnome/gnome.nix
-        #./nax/icons/icons.nix
+        ./nax/coolercontrol.nix
 
         agenix.nixosModules.default
 
