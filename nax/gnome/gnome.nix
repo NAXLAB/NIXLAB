@@ -14,17 +14,8 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    nautilus                # File Manager
-    gnome-console           # Console
-    gnome-calculator        # Calculator
-    gnome-control-center    # Settings - probably already comes with gnome
-    gnome-font-viewer       # Fonts
-    gnome-characters        # Characters
-    baobab                  # Disk usage (Disk Usage Analyzer)
-    loupe                   # Image viewer (modern GNOME image viewer)
-    nwg-look                #GTK settings
-    refine                  #More Gnome Tweaks
-    gdm-settings            #Customize Gnome Login Manager
+    gnome-control-center     # Settings
+    gnome-font-viewer        # Fonts
   ];
 
 }

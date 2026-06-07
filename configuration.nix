@@ -155,50 +155,69 @@ programs.coolercontrol.enable = true;
 
   #Nix Package manager
   environment.systemPackages = with pkgs; [
-	git #version control
-	curl #data transfer utility
-  samba #smb client
-	xwayland-satellite #Wayland integration
-	wl-clipboard  #Clipboard 
-	cliphist #Clipboard history
-	swayidle #idle screen
-	swaylock #lockscreen
-	playerctl #media player utility
-	mako #Notification Daemon
-	xdg-utils #Desktop app rendering utils
-  capitaine-cursors #Cursor Icons
-  vscodium #Dev environment
-  fastfetch #meme terminal widget
-  crosspipe #Audio patch bay
-  cifs-utils #smb client utilities
-  grim #screenshot
-  slurp #select area screenshot
-  ungoogled-chromium #chrome
-  p7zip #Archive Manager
-  fan2go #fan control
-  openrgb #rgb control
-  vesktop #Discord
-  papirus-icon-theme #Icon Packs
-  la-capitaine-icon-theme
-  dislocker #Bitlocker encryption manager
-  gapless #Music
-  signal-desktop #Signal Messages
-  freecad #Design
-  impression #Bootable Media Utility
-  mission-center #System Monitoring
-  parabolic #Media Downloader
-  upscaler #Image Upscale
-  upscayl #Image Upscale
-  planify #Planner & Notes
-  cine #Video Player
-  newsflash #news
-  concessio #file permissions
+	
+  #Apps
+  nautilus                           # File Manager
+  gnome-console                     # Console
+  gnome-calculator                  # Calculator
+  baobab                            # Disk usage (Disk Usage Analyzer)
+  ungoogled-chromium                #chrome
+  planify                           #Planner & Notes
+  cine                              #Video Player
+  mission-center                    #System Monitoring
+  vesktop                           #Discord
+  parabolic                         #Media Downloader
+  crosspipe                         #Audio patch bay
+  signal-desktop                    #Signal Messages
+  gapless                           #Music
+  gnome-characters                  # Characters
+  loupe                             # Image viewer (modern GNOME image viewer)
+                                    #recordbox is broken rn but an update might fix it
 
-  #recordbox is broken rn but an update might fix it
+  #Design Apps
+  freecad                           #Design
+  upscaler                          #Image Upscale
+  upscayl                           #Image Upscale
 
+  #Dev Utilities
+  git                               #Version Control
+  vscodium                          #Dev environment
+  fastfetch                         #meme terminal widget 
+  impression                        #Bootable Media Utility                      
+
+  #Desktop Utilities
+  xwayland-satellite                #Wayland integration
+	wl-clipboard                      #Clipboard 
+  cliphist                          #Clipboard history
+  xdg-utils                         #Desktop app rendering utils
+  mako                              #Notification Daemon
+  polkit_gnome                      #Gnome Polkit
+  refine                   #More Gnome Tweaks
+  gdm-settings                      #Customize Gnome Login Manager
+  
+  #Themes
+  papirus-icon-theme                #Icon Packs
+  la-capitaine-icon-theme           #Icon Packs
+  capitaine-cursors                 #Cursor Icons
+
+  #System Utilities
+  concessio                         #file permissions 
+  fan2go                            #fan control
+  openrgb                           #rgb control
+  p7zip                             #Archive Manager
+  grim                              #screenshot
+  slurp                             #select area screenshot
+  cifs-utils                        #smb client utilities
+	curl                              #data transfer utility
+  samba                             #smb client
+  playerctl                         #media player utility
+  xdg-desktop-portal-gnome          #App Compatibility portal
   inputs.agenix.packages.${pkgs.system}.default
+
+
+
   #lxqt.lxqt-policykit #Root access policykit
-  polkit_gnome #Gnome Polkit
+
 ];
 
 environment.variables = {
