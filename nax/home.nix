@@ -57,11 +57,17 @@ dconf.settings."org/gnome/desktop/interface" = {
   monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
 };
 
-
 services.mako = {
   enable = true;
-  settings.font = "Iosevka Nerd Font 11";
-  settings.default-timeout = "2000";
+  settings = {
+    font = "Inter 11";
+    default-timeout = "4000";
+    on-button-right = "dismiss";
+    background-color = "#353540";
+    border-color = "#353540";
+    padding = "12,16,12,16";
+    border-radius = "16";
+  };
 };
 
 #GTK Compatibility

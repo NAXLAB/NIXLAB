@@ -28,7 +28,10 @@
             "chromium-browser",
             "org.gnome.Music",
             "vesktop",
-            "com.jeffser.Nocturne"
+            "com.jeffser.Nocturne",
+            "io.github.alainm23.planify",
+            "io.missioncenter.MissionCenter",
+            "signal"
         ],
         "position": "bottom_left",
         "screenshotAnnotationTool": "",
@@ -330,9 +333,10 @@
         ],
         "onlySameOutput": true,
         "pinnedApps": [
+            "codium",
             "org.gnome.Nautilus",
             "firefox",
-            "codium"
+            "com.jeffser.Nocturne"
         ],
         "pinnedStatic": false,
         "position": "bottom",

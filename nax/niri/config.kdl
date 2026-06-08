@@ -1,4 +1,6 @@
-spawn-at-startup "lxqt-policykit-agent"
+//spawn-at-startup "lxqt-policykit-agent"
+spawn-at-startup "polkit-gnomem"
+spawn-at-startup "waybar"
 
 debug {
   // Allows notification actions and window activation from Noctalia.
@@ -15,14 +17,6 @@ window-rule {
   clip-to-geometry true
 }
 
-window-rule {
-    match app-id="gnome-calculator"
-    open-floating true
-    default-column-width { fixed 300; }
-    default-window-height { fixed 600; }
-}
-
-
 gestures {
      hot-corners {
         // off
@@ -34,14 +28,19 @@ gestures {
 }
 
 layer-rule {
-  match namespace="^noctalia-wallpaper*"
-  place-within-backdrop true
+    match namespace="^noctalia-wallpaper*"
+    place-within-backdrop true
+    opacity 0.5
+
 }
+
+    
 
 layout {
     background-color "transparent"
     gaps 12  // gap between windows and screen edges
     focus-ring {
+        off
         width 2
         active-color "#0077FF"
         inactive-color "#49495B"
@@ -94,8 +93,6 @@ overview {
      }
 }
 
-
-
 binds {
 
     Super+T { spawn "kgx"; } 
@@ -114,8 +111,8 @@ binds {
     //Shift+Super+S { spawn "sh" "-c" "grim -g \"$(slurp -b 0E0F11B3 -c 0070F0FF -s 0E0F1133 -w 2)\" - | wl-copy"; }
     Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
 
-
     Super+Space { maximize-column; }
+    Super+Shift+Space { maximize-window-to-edges; }
 
 
 }

@@ -192,6 +192,7 @@ programs.coolercontrol.enable = true;
   refine                            #More Gnome Tweaks
   gdm-settings                      #Customize Gnome Login Manager
   xdg-desktop-portal-gnome          #Desktop Portal
+  waybar                            #Bar
 
   #Themes
   papirus-icon-theme                #Icon Packs
@@ -212,6 +213,7 @@ programs.coolercontrol.enable = true;
   playerctl                         #media player utility
   xdg-desktop-portal-gnome          #App Compatibility portal
   polkit_gnome                      #Policykit
+  libnotify                         #Notification Test Utility
   inputs.agenix.packages.${pkgs.system}.default
   #lxqt.lxqt-policykit #Root access policykit
 
