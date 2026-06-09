@@ -137,6 +137,7 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
 environment.shellAliases = {
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
+update = "sudo nixos-rebuild switch --upgrade";
 };
 
 # Allow unfree packages

@@ -57,7 +57,7 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0,
         "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
@@ -357,7 +357,7 @@
         "clockFormat": "hh\\nmm",
         "clockStyle": "digital",
         "compactLockScreen": true,
-        "dimmerOpacity": 0.3,
+        "dimmerOpacity": 0,
         "enableBlurBehind": false,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
@@ -400,7 +400,7 @@
         "passwordChars": true,
         "radiusRatio": 0.9,
         "reverseScroll": false,
-        "scaleRatio": 1,
+        "scaleRatio": 0.9500000000000001,
         "screenRadiusRatio": 0.9,
         "shadowDirection": "bottom",
         "shadowOffsetX": 0,
@@ -409,7 +409,7 @@
         "showHibernateOnLockScreen": false,
         "showScreenCorners": true,
         "showSessionButtonsOnLockScreen": true,
-        "smoothScrollEnabled": true,
+        "smoothScrollEnabled": false,
         "telemetryEnabled": true
     },
     "hooks": {

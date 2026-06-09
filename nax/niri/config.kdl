@@ -41,7 +41,7 @@ layout {
     gaps 12  // gap between windows and screen edges
     focus-ring {
         off
-        width 2
+        width 1
         active-color "#0077FF"
         inactive-color "#49495B"
     }
