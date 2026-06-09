@@ -8,23 +8,29 @@
 
   inputs = {
 
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
-
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
- outputs = inputs@{ self, nixpkgs, agenix, home-manager, ... }: {
+ outputs = inputs@{ self, nixpkgs, agenix, home-manager, quickshell, ... }: {
     nixosConfigurations.zaigomaat = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [

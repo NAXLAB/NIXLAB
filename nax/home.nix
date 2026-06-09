@@ -5,7 +5,6 @@
   home.homeDirectory = "/home/nax";
   home.stateVersion = "25.11";
 
-
   #App compatibility with symlinked home folders
   xdg.userDirs = {
     enable = true;
@@ -58,17 +57,17 @@ dconf.settings."org/gnome/desktop/interface" = {
 };
 
 services.mako = {
-  enable = true;
-  settings = {
-    font = "Inter 11";
-    default-timeout = "4000";
-    on-button-right = "dismiss";
-    background-color = "#353540";
-    border-color = "#353540";
-    padding = "12,16,12,16";
-    border-radius = "16";
+    enable = true;
+    settings = {
+      font = "Inter 11";
+      default-timeout = 4000;
+      on-button-right = "dismiss";
+      background-color = "#353540";
+      border-color = "#353540";
+      padding = "12,16,12,16";
+      border-radius = 16;
+    };
   };
-};
 
 #GTK Compatibility
 xdg.userDirs.setSessionVariables = true;

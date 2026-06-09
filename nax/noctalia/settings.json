@@ -14,7 +14,7 @@
         "enableSessionSearch": false,
         "enableSettingsSearch": false,
         "enableWindowsSearch": false,
-        "iconMode": "tabler",
+        "iconMode": "native",
         "ignoreMouseInput": false,
         "overviewLayer": true,
         "pinnedApps": [
@@ -31,7 +31,8 @@
             "com.jeffser.Nocturne",
             "io.github.alainm23.planify",
             "io.missioncenter.MissionCenter",
-            "signal"
+            "signal",
+            "org.gnome.World.Iotas"
         ],
         "position": "bottom_left",
         "screenshotAnnotationTool": "",

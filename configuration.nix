@@ -154,33 +154,51 @@ programs.coolercontrol.enable = true;
   environment.systemPackages = with pkgs; [
 	
   #Apps
-  nautilus                           # File Manager
+  mission-center                    #System Monitoring
+  nautilus                          # File Manager
   gnome-console                     # Console
   gnome-calculator                  # Calculator
   baobab                            # Disk usage (Disk Usage Analyzer)
   ungoogled-chromium                #chrome
   planify                           #Planner & Notes
   cine                              #Video Player
-  mission-center                    #System Monitoring
   vesktop                           #Discord
   parabolic                         #Media Downloader
   crosspipe                         #Audio patch bay
   signal-desktop                    #Signal Messages
   nocturne                          #Music
-  gnome-characters                  # Characters
-  loupe                             # Image viewer (modern GNOME image viewer)
+  loupe                             #Image viewer (modern GNOME image viewer)
+  apostrophe                        #Simple Text Editor
+  dialect                           #Translation Tool
+  lmstudio                          #Language Model Studio
+  citations                         #Bibliography
+  gnome-clocks                      #Clocks
+  exercise-timer                    #Timer App
+  fragments                         #Torrent Client
+  iotas                             #Notes
+  valuta                            #Currency Translation
                                     #recordbox is broken rn but an update might fix it
+  #Toys
+  keypunch                          #Typing Test
+  binary                            #Number Base Math tool
+  gnome-graphs                      #Create graphs
+  fretboard                         #Guitar chords app
+  gnome-characters                  #Characters
 
   #Design Apps
   freecad                           #Design
   upscaler                          #Image Upscale
   upscayl                           #Image Upscale
+  emblem                            #App icon maker
+  gnome-decoder                     #Create QR Codes
+  eyedropper                        #Color Picker
+  elastic                           #Design Spring Animations
 
   #Dev Utilities
   git                               #Version Control
   vscodium                          #Dev environment
-  fastfetch                         #meme terminal widget 
-  impression                        #Bootable Media Utility                      
+  fastfetch                         #meme terminal widget    
+  quickshell                        #App and Widget Maker                  
 
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
@@ -193,6 +211,9 @@ programs.coolercontrol.enable = true;
   gdm-settings                      #Customize Gnome Login Manager
   xdg-desktop-portal-gnome          #Desktop Portal
   waybar                            #Bar
+  gradia                            #Annotate screenshots
+  junction                          #App Picker
+
 
   #Themes
   papirus-icon-theme                #Icon Packs

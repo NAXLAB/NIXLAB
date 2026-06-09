@@ -1,6 +1,6 @@
 //spawn-at-startup "lxqt-policykit-agent"
 spawn-at-startup "polkit-gnomem"
-spawn-at-startup "waybar"
+//spawn-at-startup "waybar"
 
 debug {
   // Allows notification actions and window activation from Noctalia.
