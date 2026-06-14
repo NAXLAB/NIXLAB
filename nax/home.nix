@@ -21,10 +21,10 @@
 
   home.file = {
     ".gitconfig".source                     = ./git/config;
-    ".config/niri/config.kdl".source        = ./niri/config.kdl;
     ".zshrc".source                         = ./zsh/zshrc;
     ".config/fastfetch/config.jsonc".source = ./fastfetch/config.jsonc;
     #".config/quickshell/shell.qml".source   = ./shell/shell.qml;
+    #".config/niri/config.kdl".source        = ./niri/config.kdl;
   };
 
 #Declare GTK Theme

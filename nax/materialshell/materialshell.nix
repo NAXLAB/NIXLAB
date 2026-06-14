@@ -7,8 +7,9 @@
     package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     systemd = {
-        enable = true;             # Systemd service for auto-start
-        restartIfChanged = true;   # Auto-restart dms.service when dms-shell changes
+    enable = true;
+    restartIfChanged = true;
+    target = "niri.service";
     };
   
     # Core features

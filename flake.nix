@@ -64,6 +64,7 @@
           ./nax/coolercontrol/coolercontrol.nix
           ./nax/shell/shell.nix
           ./nax/materialshell/materialshell.nix
+          ./nax/niri/niri.nix
           #./nax/noctalia/noctalia.nix
           #./nax/flatpak/flatpak.nix
 

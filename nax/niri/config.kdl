@@ -1,11 +1,11 @@
+spawn-at-startup "polkit-gnome"
 //spawn-at-startup "lxqt-policykit-agent"
-spawn-at-startup "polkit-gnomem"
 //spawn-at-startup "waybar"
 
-debug {
+//debug {
   // Allows notification actions and window activation from Noctalia.
-  honor-xdg-activation-with-invalid-serial
-}
+  //honor-xdg-activation-with-invalid-serial
+//}
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -19,20 +19,29 @@ window-rule {
 
 gestures {
      hot-corners {
-        // off
         top-left
-        // top-right
-        // bottom-left
-        // bottom-right
     }
 }
 
-layer-rule {
-    match namespace="^noctalia-wallpaper*"
-    place-within-backdrop true
-    opacity 0.5
+//layer-rule {
+//    match namespace="^noctalia-wallpaper*"
+ //   place-within-backdrop true
+//    opacity 0.5
+//}
 
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
 }
+
+environment {
+  XDG_CURRENT_DESKTOP "niri"
+  QT_QPA_PLATFORM "wayland"
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+}
+
 layout {
     background-color "transparent"
 
@@ -118,3 +127,8 @@ binds {
 
 }
 
+// Add to the end of ~/.config/niri/config.kdl
+//include "dms/colors.kdl"
+//include "dms/layout.kdl"
+//include "dms/alttab.kdl"
+//include "dms/binds.kdl"

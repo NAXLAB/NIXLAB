@@ -35,7 +35,7 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
   services.power-profiles-daemon.enable = true;
   hardware.bluetooth.enable = true;
   services.upower.enable = true;
-  services.printing.enable = true;
+  #services.printing.enable = true;
 
   #Audio Services
   services.pulseaudio.enable = false;
@@ -153,7 +153,7 @@ programs.coolercontrol.enable = true;
   environment.systemPackages = with pkgs; [
 	
   #Apps
-  mission-center                    #System Monitoring
+  #mission-center                    #System Monitoring
   nautilus                          # File Manager
   gnome-console                     # Console
   gnome-calculator                  # Calculator
@@ -177,7 +177,6 @@ programs.coolercontrol.enable = true;
   iotas                             #Notes
   valuta                            #Currency Translation
   onlyoffice-desktopeditors         #Office Suite
-  teams-for-linux
 
                                     #recordbox is broken rn but an update might fix it
   #Games
@@ -218,9 +217,8 @@ programs.coolercontrol.enable = true;
   refine                            #More Gnome Tweaks
   gdm-settings                      #Customize Gnome Login Manager
   xdg-desktop-portal-gnome          #Desktop Portal
-  waybar                            #Bar
-  gradia                            #Annotate screenshots
   junction                          #App Picker
+  walker                            #Launcher
 
   #Themes
   papirus-icon-theme                #Icon Packs
