@@ -33,18 +33,17 @@ layer-rule {
     opacity 0.5
 
 }
-
-    
-
 layout {
     background-color "transparent"
-    gaps 12  // gap between windows and screen edges
+
     focus-ring {
         off
         width 1
         active-color "#0077FF"
         inactive-color "#49495B"
     }
+
+    gaps 12  // gap between windows and screen edges
 
     default-column-width { proportion 0.5; }
 
@@ -54,18 +53,20 @@ layout {
         // top 64
         // bottom 64
     }
+    insert-hint {
+        color "#F2F2F740"
+    }
 }
 
 input {
-
     keyboard {
         xkb { }
     }
+
     mouse {
         accel-speed 0.1
         accel-profile "flat"
     }
-
 }
 
 output "DP-2" {
@@ -108,8 +109,8 @@ binds {
 	Super+Shift+Left { move-column-left; }
 	Super+Shift+Right { move-column-right; }	
 
-    //Shift+Super+S { spawn "sh" "-c" "grim -g \"$(slurp -b 0E0F11B3 -c 0070F0FF -s 0E0F1133 -w 2)\" - | wl-copy"; }
     Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
+    Super+S { screenshot-screen; }
 
     Super+Space { maximize-column; }
     Super+Shift+Space { maximize-window-to-edges; }

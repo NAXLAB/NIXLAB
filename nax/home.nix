@@ -19,16 +19,12 @@
     videos = null;
   };
 
-
   home.file = {
-    ".gitconfig".source = ./git/config;
-    ".config/niri/config.kdl".source = ./niri/config.kdl;
-    ".zshrc".source = ./zsh/zshrc;
+    ".gitconfig".source                     = ./git/config;
+    ".config/niri/config.kdl".source        = ./niri/config.kdl;
+    ".zshrc".source                         = ./zsh/zshrc;
     ".config/fastfetch/config.jsonc".source = ./fastfetch/config.jsonc;
-  };
-
-  programs.bash.shellAliases = {
-    slurp = "slurp -b 1B1F28CC -c CDD6F4FF -s 1B1F28AA -B 1B1F28CC";
+    #".config/quickshell/shell.qml".source   = ./shell/shell.qml;
   };
 
 #Declare GTK Theme
@@ -37,11 +33,6 @@ gtk = {
   theme = {
     name = "Adwaita-dark";
     package = pkgs.gnome-themes-extra;
-  };
-  font = {
-    name = "Adwaita Sans Light";
-    size = 11;
-    package = pkgs.adwaita-fonts;  # whatever package provides it
   };
   gtk3.extraConfig = {
     gtk-application-prefer-dark-theme = true;
@@ -53,14 +44,22 @@ gtk = {
 
 dconf.settings."org/gnome/desktop/interface" = {
   color-scheme = "prefer-dark";
-  document-font-name = "Inter 11";
+  font-name = "SF Pro Display 11";
   monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
 };
+
+xdg.configFile."gtk-4.0/gtk-dark.css".text = ''
+
+'';
+
+#GTK Compatibility
+xdg.userDirs.setSessionVariables = true;
+gtk.gtk4.theme = config.gtk.theme;
 
 services.mako = {
     enable = true;
     settings = {
-      font = "Inter 11";
+      font = "SF";
       default-timeout = 4000;
       on-button-right = "dismiss";
       background-color = "#353540";
@@ -70,7 +69,22 @@ services.mako = {
     };
   };
 
-#GTK Compatibility
-xdg.userDirs.setSessionVariables = true;
+
+
+xdg.desktopEntries.figma = {
+  name = "Figma";
+  exec = ''chromium --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"'';
+  icon = "chromium";
+  type = "Application";
+};
+
+systemd.user.services.figma-agent = {
+  Unit.Description = "Figma Agent";
+  Install.WantedBy = [ "default.target" ];
+  Service = {
+    ExecStart = "${pkgs.figma-agent}/bin/figma-agent";
+    Restart = "on-failure";
+  };
+};
 
 }

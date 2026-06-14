@@ -15,7 +15,7 @@
 
   environment.systemPackages = with pkgs; [
     gnome-control-center     # Settings
-    gnome-font-viewer        # Fonts
+    gnome-software
   ];
 
 }

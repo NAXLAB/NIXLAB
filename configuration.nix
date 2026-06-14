@@ -118,10 +118,6 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
   #Mount ZaigoMaat SMB share and give nax access
   "d /mnt/zaigomaat 0755 nax wheel -"
 
-  #Mount X Drive 
-  "d /mnt/xdrive 0755 nax users -"
-  "d /mnt/xdrive-fuse 0755 root root -"
-
   #Create desktop folders manually
   "d /home/nax/Desktop 0755 nax users -"
   "d /home/nax/Downloads 0755 nax users -"
@@ -131,13 +127,15 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
   "L+ /home/nax/Music - - - - /run/media/nax/X DRIVE/Music"
   "L+ /home/nax/Photos - - - - /run/media/nax/X DRIVE/Photos"
   "L+ /home/nax/Torrents - - - - /run/media/nax/X DRIVE/Torrents"
+
+  #Connect font folder to X Drive
+  "L+ /home/nax/.local/share/fonts - - - - /run/media/nax/X DRIVE/Fonts"
 ];
 
 # Aliases for Terminal Commands
 environment.shellAliases = {
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
-update = "sudo nixos-rebuild switch --upgrade";
 };
 
 # Allow unfree packages
@@ -178,28 +176,37 @@ programs.coolercontrol.enable = true;
   fragments                         #Torrent Client
   iotas                             #Notes
   valuta                            #Currency Translation
+  onlyoffice-desktopeditors         #Office Suite
+  teams-for-linux
+
                                     #recordbox is broken rn but an update might fix it
-  #Toys
+  #Games
   keypunch                          #Typing Test
   binary                            #Number Base Math tool
   gnome-graphs                      #Create graphs
   fretboard                         #Guitar chords app
   gnome-characters                  #Characters
+  concessio                         #file permission toy
 
   #Design Apps
-  freecad                           #Design
+  freecad                           #3D Design
   upscaler                          #Image Upscale
   upscayl                           #Image Upscale
   emblem                            #App icon maker
   gnome-decoder                     #Create QR Codes
   eyedropper                        #Color Picker
   elastic                           #Design Spring Animations
+  gnome-font-viewer                 #Fonts
+  figma-agent                       #Figma Font Helper
+  penpot-desktop                    #UI/UX Design
 
   #Dev Utilities
   git                               #Version Control
   vscodium                          #Dev environment
   fastfetch                         #meme terminal widget    
-  quickshell                        #App and Widget Maker                  
+  quickshell                        #App and Widget Maker      
+  docker                            #Hosting
+  docker-client                     #Hosting            
 
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
@@ -215,7 +222,6 @@ programs.coolercontrol.enable = true;
   gradia                            #Annotate screenshots
   junction                          #App Picker
 
-
   #Themes
   papirus-icon-theme                #Icon Packs
   la-capitaine-icon-theme           #Icon Packs
@@ -223,10 +229,8 @@ programs.coolercontrol.enable = true;
   capitaine-cursors                 #Cursor Packs
 
   #System Utilities
-  concessio                         #file permissions 
   fan2go                            #fan control
   openrgb                           #rgb control
-  p7zip                             #Archive Manager
   grim                              #screenshot
   slurp                             #select area screenshot
   cifs-utils                        #smb client utilities
@@ -236,8 +240,8 @@ programs.coolercontrol.enable = true;
   xdg-desktop-portal-gnome          #App Compatibility portal
   polkit_gnome                      #Policykit
   libnotify                         #Notification Test Utility
-  inputs.agenix.packages.${pkgs.system}.default
-  #lxqt.lxqt-policykit #Root access policykit
+
+  inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
 ];
 
@@ -253,10 +257,10 @@ fonts.packages = with pkgs; [
   nerd-fonts.iosevka
   fira-code
   geist-font
-  noto-fonts
 
 ];
 
-system.stateVersion = "25.11"; #test
+#Do not change this number for reasons I don't understand.
+system.stateVersion = "25.11";
 
 }

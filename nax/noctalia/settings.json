@@ -30,9 +30,9 @@
             "vesktop",
             "com.jeffser.Nocturne",
             "io.github.alainm23.planify",
-            "io.missioncenter.MissionCenter",
             "signal",
-            "org.gnome.World.Iotas"
+            "org.gnome.World.Iotas",
+            "Penpot"
         ],
         "position": "bottom_left",
         "screenshotAnnotationTool": "",
