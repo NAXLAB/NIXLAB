@@ -1,8 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
 
+    #Enable DMS Nixos module and supply package via flakes
     programs.dms-shell = {
     enable = true;
+    package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     systemd = {
         enable = true;             # Systemd service for auto-start
