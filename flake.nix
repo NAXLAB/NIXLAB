@@ -7,11 +7,22 @@
     nixpkgs.url                   = "github:nixos/nixpkgs/nixos-unstable";
 
     #Agenix
-    agenix.url                    = "github:ryantm/agenix";
-    agenix.inputs.nixpkgs.follows = "nixpkgs";
+    agenix = {
+      url                         = "github:ryantm/agenix";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
+    #DankMaterialShell
+    dms = {
+      url                         = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
 
     #Flatpak
-    nix-flatpak.url               = "github:gmodena/nix-flatpak/?ref=latest";
+    nix-flatpak = {
+      url                         = "github:gmodena/nix-flatpak/?ref=latest";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
 
     #Home Manager
     home-manager = {
@@ -31,16 +42,9 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    #MaterialShell
-    dms = {
-      url                         = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows      = "nixpkgs";
-    };
-
   };
 
   outputs = inputs@  { 
-
     self,
     nixpkgs,
     agenix,
@@ -49,34 +53,35 @@
     nix-flatpak,
     dms,
     ...
-
-  }:{ nixosConfigurations.zaigomaat = nixpkgs.lib.nixosSystem {
-
-        specialArgs = {
-          inherit inputs;
-        };
-
-        modules = [
-
-          ./configuration.nix
-
-          ./nax/gnome/gnome.nix
-          ./nax/coolercontrol/coolercontrol.nix
-          ./nax/shell/shell.nix
-          ./nax/materialshell/materialshell.nix
-          ./nax/niri/niri.nix
-          #./nax/noctalia/noctalia.nix
-          #./nax/flatpak/flatpak.nix
-
-          agenix.nixosModules.default
-          nix-flatpak.nixosModules.nix-flatpak
-
-          home-manager.nixosModules.home-manager{
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.nax = ./nax/home.nix;  
-          }
-        ];
+  }:
+  
+  {
+    nixosConfigurations.zaigomaat = nixpkgs.lib.nixosSystem{
+      specialArgs = {
+        inherit inputs;
       };
+
+      modules = [
+        ./configuration.nix
+        ./nax/niri/niri.nix
+
+        ./nax/shell/shell.nix
+        ./nax/coolercontrol/coolercontrol.nix
+        ./nax/materialshell/materialshell.nix
+
+         agenix.nixosModules.default
+         nix-flatpak.nixosModules.nix-flatpak
+
+        home-manager.nixosModules.home-manager{
+          home-manager.useGlobalPkgs   = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.nax       = ./nax/home.nix;  
+        }
+
+        #./nax/gnome/gnome.nix
+        #./nax/noctalia/noctalia.nix
+        #./nax/flatpak/flatpak.nix
+      ];
     };
+  };
 }
