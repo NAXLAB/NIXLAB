@@ -97,6 +97,7 @@ cursor {
 
 // Make the backdrop Dark.
 overview {
+    zoom 0.7
     backdrop-color "#15161A"
     workspace-shadow {
         off

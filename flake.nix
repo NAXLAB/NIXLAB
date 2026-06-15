@@ -64,6 +64,7 @@
       modules = [
         ./configuration.nix
         ./nax/niri/niri.nix
+        ./nax/gnome/gnome.nix
 
         ./nax/shell/shell.nix
         ./nax/coolercontrol/coolercontrol.nix
@@ -78,7 +79,6 @@
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
-        #./nax/gnome/gnome.nix
         #./nax/noctalia/noctalia.nix
         #./nax/flatpak/flatpak.nix
       ];
