@@ -13,7 +13,7 @@
     download = "${config.home.homeDirectory}/Downloads";
     music = "${config.home.homeDirectory}/Music";
     documents = "${config.home.homeDirectory}/Documents";
-    pictures = "${config.home.homeDirectory}/Photos";
+    pictures = "${config.home.homeDirectory}/Pictures";
     templates = null;
     publicShare = null;
     videos = null;
@@ -28,6 +28,7 @@
   };
 
 #Declare GTK Theme
+/*
 gtk = {
   enable = true;
   theme = {
@@ -41,6 +42,7 @@ gtk = {
     gtk-application-prefer-dark-theme = true;
   };
 };
+*/
 
 dconf.settings."org/gnome/desktop/interface" = {
   color-scheme = "prefer-dark";
@@ -48,14 +50,11 @@ dconf.settings."org/gnome/desktop/interface" = {
   monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
 };
 
-xdg.configFile."gtk-4.0/gtk-dark.css".text = ''
-
-'';
-
 #GTK Compatibility
 xdg.userDirs.setSessionVariables = true;
 gtk.gtk4.theme = config.gtk.theme;
 
+/*
 services.mako = {
     enable = true;
     settings = {
@@ -68,7 +67,7 @@ services.mako = {
       border-radius = 16;
     };
   };
-
+*/
 
 
 xdg.desktopEntries.figma = {

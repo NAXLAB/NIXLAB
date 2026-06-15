@@ -85,6 +85,9 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
     ];
   };
 
+  #Autologin Nax
+  services.getty.autologinUser = "nax";
+
   #SMB share
   fileSystems."/mnt/zaigomaat" = {
     device = "//192.168.88.202/zaigomaat";
@@ -125,7 +128,7 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
   "L+ /home/nax/Documents - - - - /run/media/nax/X DRIVE/Documents"
   "L+ /home/nax/Fonts - - - - /run/media/nax/X DRIVE/Fonts"
   "L+ /home/nax/Music - - - - /run/media/nax/X DRIVE/Music"
-  "L+ /home/nax/Photos - - - - /run/media/nax/X DRIVE/Photos"
+  "L+ /home/nax/Pictures - - - - /run/media/nax/X DRIVE/Photos"
   "L+ /home/nax/Torrents - - - - /run/media/nax/X DRIVE/Torrents"
 
   #Connect font folder to X Drive
@@ -212,7 +215,7 @@ programs.coolercontrol.enable = true;
 	wl-clipboard                      #Clipboard 
   cliphist                          #Clipboard history
   xdg-utils                         #Desktop app rendering utils
-  mako                              #Notification Daemon
+  #mako                              #Notification Daemon
   polkit_gnome                      #Gnome Polkit
   refine                            #More Gnome Tweaks
   gdm-settings                      #Customize Gnome Login Manager

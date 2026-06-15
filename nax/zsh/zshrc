@@ -4,6 +4,11 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
+
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec niri-session
+fi
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/nax/.zshrc'
 autoload -Uz compinit
