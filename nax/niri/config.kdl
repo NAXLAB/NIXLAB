@@ -23,11 +23,13 @@ gestures {
     }
 }
 
-//layer-rule {
-//    match namespace="^noctalia-wallpaper*"
- //   place-within-backdrop true
-//    opacity 0.5
-//}
+animations {
+
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=1500 epsilon=0.00001
+    }
+}
+
 
 layer-rule {
     match namespace="^quickshell$"
@@ -97,12 +99,14 @@ cursor {
 
 // Make the backdrop Dark.
 overview {
-    zoom 0.7
+    zoom 0.5
     backdrop-color "#15161A"
     workspace-shadow {
         off
      }
 }
+
+
 
 binds {
 
@@ -125,6 +129,8 @@ binds {
     Super+Space { maximize-column; }
     Super+Shift+Space { maximize-window-to-edges; }
 
+    Super+L { spawn "dms" "ipc" "call" "lock" "lock"; }
+
 
 }
 
@@ -132,4 +138,4 @@ binds {
 //include "dms/colors.kdl"
 //include "dms/layout.kdl"
 //include "dms/alttab.kdl"
-//include "dms/binds.kdl"
+//sinclude "dms/binds.kdl"

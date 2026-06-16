@@ -14,7 +14,7 @@
 
     #DankMaterialShell
     dms = {
-      url                         = "github:AvengeMedia/DankMaterialShell/stable";
+      url                         = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
@@ -27,12 +27,6 @@
     #Home Manager
     home-manager = {
       url                         = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows      = "nixpkgs";
-    };
-
-    #Noctalia Shell
-    noctalia = {
-      url                         = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
@@ -64,11 +58,11 @@
       modules = [
         ./configuration.nix
         ./nax/niri/niri.nix
-        ./nax/gnome/gnome.nix
+        ./nax/materialshell/materialshell.nix
 
         ./nax/shell/shell.nix
         ./nax/coolercontrol/coolercontrol.nix
-        ./nax/materialshell/materialshell.nix
+
 
          agenix.nixosModules.default
          nix-flatpak.nixosModules.nix-flatpak
@@ -78,8 +72,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.nax       = ./nax/home.nix;  
         }
-
-        #./nax/noctalia/noctalia.nix
+        #./nax/gnome/gnome.nix
         #./nax/flatpak/flatpak.nix
       ];
     };

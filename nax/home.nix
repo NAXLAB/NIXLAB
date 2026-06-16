@@ -26,7 +26,9 @@
     #".config/quickshell/shell.qml".source   = ./shell/shell.qml;
     #".config/niri/config.kdl".source        = ./niri/config.kdl;
   };
-
+  
+  home.packages = [ pkgs.adwaita-icon-theme ];
+  
 #Declare GTK Theme
 /*
 gtk = {

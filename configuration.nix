@@ -209,26 +209,28 @@ programs.coolercontrol.enable = true;
   vscodium                          #Dev environment
   fastfetch                         #meme terminal widget    
   quickshell                        #App and Widget Maker      
-  docker                            #Hosting
-  docker-client                     #Hosting            
+  docker                            #container host
+  docker-client                     #container host    
+  github-desktop                    #git repository management
 
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
 	wl-clipboard                      #Clipboard 
   cliphist                          #Clipboard history
   xdg-utils                         #Desktop app rendering utils
-  #mako                              #Notification Daemon
   polkit_gnome                      #Gnome Polkit
   refine                            #More Gnome Tweaks
   gdm-settings                      #Customize Gnome Login Manager
   xdg-desktop-portal-gnome          #Desktop Portal
   junction                          #App Picker
   walker                            #Launcher
+  github-desktop
 
   #Themes
   papirus-icon-theme                #Icon Packs
   la-capitaine-icon-theme           #Icon Packs
   whitesur-icon-theme               #Icon Packs
+  adwaita-icon-theme                #Icon Packs
   capitaine-cursors                 #Cursor Packs
 
   #System Utilities
