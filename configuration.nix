@@ -2,115 +2,82 @@
 
 {
 
-nix.settings.experimental-features = [ "flakes" "nix-command" ];
-
-  imports =
-    [ 
-      ./hardware-configuration.nix
-    ];
-
-  #Motherboard Kernel Modules
-  boot.kernelModules = [
-    "nct6775" 
-    "nct6687"
-  ];
-
-  boot.extraModulePackages = [
-    config.boot.kernelPackages.nct6687d
-  ];
+  nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
   # Bootloader.
-  boot.loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-  };
+  boot.loader = 
+    {
+        systemd-boot.enable = true;
+        efi.canTouchEfiVariables = true;
+    };
 
   #Swapfile
-  swapDevices = [
-    {
-      device = "/swapfile";
-      size = 32768; # 32GB in MB
-    }
-  ];
+  swapDevices = 
+    [
+      {
+        device = "/swapfile";
+        size = 32768; # 32GB in MB
+      }
+    ];
 
   #System & Hardware Services
   services.power-profiles-daemon.enable = true;
-  hardware.bluetooth.enable = true;
-  services.upower.enable = true;
-  #services.printing.enable = true;
+  hardware.bluetooth.enable             = false;
+  services.upower.enable                = true;
+  services.printing.enable              = false;
 
   #Audio Services
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+  services.pulseaudio.enable  = false;
+  security.rtkit.enable       = true;
+  services.pipewire = 
+    {
+      enable = true;
+      pulse.enable = true;
+      alsa = 
+        {
+          enable = true;
+          support32Bit = true;
+        };
+    };
 
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-  networking.hostName = "zaigomaat";
-  services.openssh.enable = true;
+  #Enable networking
+  networking.networkmanager.enable  = true;
+  networking.hostName               = "zaigomaat";
+  services.openssh.enable           = true;
   
-  # Policy Configuration
+  #Policy Configuration
   security.polkit.enable = true;  
 
- #Time Zone
+  #Time Zone
   time.timeZone = "America/New_York";
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
+  #Select internationalisation properties.
+  i18n.defaultLocale        = "en_US.UTF-8";
+  i18n.extraLocaleSettings  = 
+    {
+      LC_ADDRESS        = "en_US.UTF-8";
+      LC_IDENTIFICATION = "en_US.UTF-8";
+      LC_MEASUREMENT    = "en_US.UTF-8";
+      LC_MONETARY       = "en_US.UTF-8";
+      LC_NAME           = "en_US.UTF-8";
+      LC_NUMERIC        = "en_US.UTF-8";
+      LC_PAPER          = "en_US.UTF-8";
+      LC_TELEPHONE      = "en_US.UTF-8";
+      LC_TIME           = "en_US.UTF-8";
+    };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.nax = {
-    shell = pkgs.zsh;
-    isNormalUser = true;
-    description = "Nax Lab";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
-  };
-
-  #Autologin Nax
-  services.getty.autologinUser = "nax";
-
-  #SMB share
-  age.secrets.smb = {
-    file = ./secrets/smb.age;
-    mode = "400";
-  };
-  
-  fileSystems."/mnt/zaigomaat" = {
-    device = "//192.168.88.202/zaigomaat";
-    fsType = "cifs";
-    options = [
-      "noauto"
-      "x-systemd.automount"
-      "x-systemd.idle-timeout=60"
-      "x-systemd.device-timeout=5s"
-      "x-systemd.mount-timeout=5s"
-      "_netdev"
-      "credentials=/run/agenix/smb"
-      "uid=1000"
-      "gid=1000"
-      "x-systemd.requires=network-online.target"
-      "x-systemd.stop-timeout=5s"  # force unmount after 5 seconds
-    ];
-  };
+  users.users.nax = 
+    {
+      shell         = pkgs.zsh;
+      isNormalUser  = true;
+      description   = "Nax Lab";
+      packages      = with pkgs; [];
+      extraGroups   = 
+        [ 
+          "networkmanager"
+          "wheel"
+        ];
+    };
 
   #File System Config
   systemd.tmpfiles.rules = [
@@ -136,6 +103,8 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
   #Connect font folder to X Drive
   "L+ /home/nax/.local/share/fonts - - - - /run/media/nax/xdrive/Fonts"
 ];
+
+
 
 # Aliases for Terminal Commands
 environment.shellAliases = {

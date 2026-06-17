@@ -1,6 +1,9 @@
 { pkgs, inputs, ... }:
 {
 
+    #Autologin Nax
+    services.getty.autologinUser = "nax";
+
     #Enable DMS Nixos module and supply package via flakes
     programs.dms-shell = {
     enable = true;

@@ -1,4 +1,5 @@
 {
+
   description = "ZaiGoMaat";
 
   inputs = {
@@ -21,7 +22,6 @@
     #Flatpak
     nix-flatpak = {
       url                         = "github:gmodena/nix-flatpak/?ref=latest";
-      inputs.nixpkgs.follows      = "nixpkgs";
     };
 
     #Home Manager
@@ -51,30 +51,34 @@
   
   {
     nixosConfigurations.zaigomaat = nixpkgs.lib.nixosSystem{
+
       specialArgs = {
         inherit inputs;
       };
 
       modules = [
+
+        ./hardware-configuration.nix
         ./configuration.nix
         ./nax/niri/niri.nix
         ./nax/materialshell/materialshell.nix
         ./nax/coolercontrol/coolercontrol.nix
         ./xdrive.nix
-
-
-
-         agenix.nixosModules.default
-         nix-flatpak.nixosModules.nix-flatpak
+        ./stax.nixb
 
         home-manager.nixosModules.home-manager{
           home-manager.useGlobalPkgs   = true;
           home-manager.useUserPackages = true;
           home-manager.users.nax       = ./nax/home.nix;  
         }
+
+        agenix.nixosModules.default
+        nix-flatpak.nixosModules.nix-flatpak
+
         # ./nax/shell/shell.nix
         #./nax/gnome/gnome.nix
         #./nax/flatpak/flatpak.nix
+
       ];
     };
   };
