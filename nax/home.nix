@@ -27,24 +27,6 @@
     #".config/niri/config.kdl".source        = ./niri/config.kdl;
   };
   
-  home.packages = [ pkgs.adwaita-icon-theme ];
-  
-#Declare GTK Theme
-/*
-gtk = {
-  enable = true;
-  theme = {
-    name = "Adwaita-dark";
-    package = pkgs.gnome-themes-extra;
-  };
-  gtk3.extraConfig = {
-    gtk-application-prefer-dark-theme = true;
-  };
-  gtk4.extraConfig = {
-    gtk-application-prefer-dark-theme = true;
-  };
-};
-*/
 
 dconf.settings."org/gnome/desktop/interface" = {
   color-scheme = "prefer-dark";

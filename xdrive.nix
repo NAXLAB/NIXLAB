@@ -2,14 +2,16 @@
 
 {
 
-#Mount X Drive NTFS
-"d /mnt/xdrive 0755 nax wheel -"
-"d /mnt/.dislocker-sda2 0755 root root -"
+systemd.tmpfiles.rules = [
+    #Mount X Drive NTFS
+    "d /mnt/xdrive 0755 nax wheel -"
+    "d /mnt/.dislocker-sda2 0755 root root -"
+];
 
 #System utilities for encrypted NTFS Drive
 environment.systemPackages = with pkgs; [
-  dislocker
-  ntfs3g
+    dislocker
+    ntfs3g
 ];
 
 #Declare the agenix secret for X Drive
@@ -55,7 +57,7 @@ systemd.mounts = [{
   options   =   "defaults,uid=1000,gid=1,umask=022,loop,allow_other";
   after     = [ "dislocker-sda2.service" ];
   requires  = [ "dislocker-sda2.service" ];
-  wantedBy  = [ "multi-user.target" ];
+  wantedBy  = [ "multi-user.target"      ];
 }];
 
 }
