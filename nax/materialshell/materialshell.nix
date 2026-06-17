@@ -4,6 +4,10 @@
     #Autologin Nax
     services.getty.autologinUser = "nax";
 
+    environment.systemPackages = with pkgs; [
+        dsearch   #dms file search
+    ];
+
     #Enable DMS Nixos module and supply package via flakes
     programs.dms-shell = {
     enable = true;
@@ -14,6 +18,8 @@
     restartIfChanged = true;
     target = "niri.service";
     };
+
+
   
     # Core features
     enableSystemMonitoring = true;     # System monitoring widgets (dgop)

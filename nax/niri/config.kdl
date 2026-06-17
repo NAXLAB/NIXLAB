@@ -65,7 +65,7 @@ layout {
         // bottom 64
     }
     insert-hint {
-        color "#7295FF80"
+        color "#7295FF60"
     }
 }
 
@@ -126,11 +126,8 @@ binds {
     Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
     Super+S { screenshot-screen; }
 
-    Super+Space { maximize-column; }
-    Super+Shift+Space { maximize-window-to-edges; }
-
-    Super+L { spawn "dms" "ipc" "call" "lock" "lock"; }
-
+    //Super+Space { maximize-column; }
+    //Super+Shift+Space { maximize-window-to-edges; }
 
 }
 
@@ -138,4 +135,4 @@ binds {
 //include "dms/colors.kdl"
 //include "dms/layout.kdl"
 //include "dms/alttab.kdl"
-//sinclude "dms/binds.kdl"
+include "dms/binds.kdl"

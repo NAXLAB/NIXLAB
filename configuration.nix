@@ -157,7 +157,6 @@ programs.coolercontrol.enable = true;
   iotas                             #Notes
   valuta                            #Currency Translation
 
-                                    #recordbox is broken rn but an update might fix it
   #Games
   keypunch                          #Typing Test
   binary                            #Number Base Math tool
