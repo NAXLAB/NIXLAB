@@ -48,6 +48,14 @@
   #Policy Configuration
   security.polkit.enable = true;  
 
+   #Miscellaneous desktop environment dependencies
+  environment.variables = 
+    {
+      XCURSOR_THEME = "capitaine-cursors";
+      XCURSOR_SIZE = "24";
+      MOZ_ENABLE_WAYLAND = "1";
+    };
+
   #Time Zone
   time.timeZone = "America/New_York";
 
@@ -104,8 +112,6 @@
   "L+ /home/nax/.local/share/fonts - - - - /run/media/nax/xdrive/Fonts"
 ];
 
-
-
 # Aliases for Terminal Commands
 environment.shellAliases = {
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
@@ -161,7 +167,6 @@ programs.coolercontrol.enable = true;
   concessio                         #file permission toy
 
   #Design Apps
-  freecad                           #3D Design
   upscaler                          #Image Upscale
   upscayl                           #Image Upscale
   emblem                            #App icon maker
@@ -171,6 +176,7 @@ programs.coolercontrol.enable = true;
   gnome-font-viewer                 #Fonts
   figma-agent                       #Figma Font Helper
   penpot-desktop                    #UI/UX Design
+  #freecad                          #3D Design
 
   #Dev Utilities
   git                               #Version Control
@@ -217,12 +223,6 @@ programs.coolercontrol.enable = true;
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
 ];
-
-environment.variables = {
-  XCURSOR_THEME = "capitaine-cursors";
-  XCURSOR_SIZE = "24";
-  MOZ_ENABLE_WAYLAND = "1";
-};
 
 fonts.packages = with pkgs; [
 

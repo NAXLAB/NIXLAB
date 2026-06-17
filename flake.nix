@@ -64,7 +64,7 @@
         ./nax/materialshell/materialshell.nix
         ./nax/coolercontrol/coolercontrol.nix
         ./xdrive.nix
-        ./stax.nixb
+        ./stax.nix
 
         home-manager.nixosModules.home-manager{
           home-manager.useGlobalPkgs   = true;
