@@ -1,4 +1,4 @@
-{ config, pkgs, inputs,... }:
+{ config, pkgs, inputs, ... }:
 
 {
 
@@ -48,9 +48,7 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  
-  #Allow Electron Apps to be managed by Niri
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -91,6 +89,11 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
   services.getty.autologinUser = "nax";
 
   #SMB share
+  age.secrets.smb = {
+    file = ./secrets/smb.age;
+    mode = "400";
+  };
+  
   fileSystems."/mnt/zaigomaat" = {
     device = "//192.168.88.202/zaigomaat";
     fsType = "cifs";
@@ -109,32 +112,29 @@ nix.settings.experimental-features = [ "flakes" "nix-command" ];
     ];
   };
 
-  age.secrets.smb = {
-    file = ./secrets/smb.age;
-    mode = "400";
-  };
-
   #File System Config
   systemd.tmpfiles.rules = [
 
   #etc/nixos owned by nax
   "Z /etc/nixos - nax wheel - -"
 
-  #Mount ZaigoMaat SMB share and give nax access
+  #Mount ZaigoMaat SMB share
   "d /mnt/zaigomaat 0755 nax wheel -"
 
   #Create desktop folders manually
   "d /home/nax/Desktop 0755 nax users -"
   "d /home/nax/Downloads 0755 nax users -"
-  "L+ /home/nax/Archives - - - - /run/media/nax/X DRIVE/Archives"
-  "L+ /home/nax/Documents - - - - /run/media/nax/X DRIVE/Documents"
-  "L+ /home/nax/Fonts - - - - /run/media/nax/X DRIVE/Fonts"
-  "L+ /home/nax/Music - - - - /run/media/nax/X DRIVE/Music"
-  "L+ /home/nax/Pictures - - - - /run/media/nax/X DRIVE/Photos"
-  "L+ /home/nax/Torrents - - - - /run/media/nax/X DRIVE/Torrents"
+
+  #Symlink Desktop folders to X Drive
+  "L+ /home/nax/Archives - - - - /mnt/xdrive/Archives"
+  "L+ /home/nax/Documents - - - - /mnt/xdrive/Documents"
+  "L+ /home/nax/Fonts - - - - /mnt/xdrive/Fonts"
+  "L+ /home/nax/Music - - - - /mnt/xdrive/Music"
+  "L+ /home/nax/Pictures - - - - /mnt/xdrive/Photos"
+  "L+ /home/nax/Torrents - - - - /mnt/xdrive/Torrents"
 
   #Connect font folder to X Drive
-  "L+ /home/nax/.local/share/fonts - - - - /run/media/nax/X DRIVE/Fonts"
+  "L+ /home/nax/.local/share/fonts - - - - /run/media/nax/xdrive/Fonts"
 ];
 
 # Aliases for Terminal Commands
@@ -181,7 +181,6 @@ programs.coolercontrol.enable = true;
   fragments                         #Torrent Client
   iotas                             #Notes
   valuta                            #Currency Translation
-  onlyoffice-desktopeditors         #Office Suite
 
                                     #recordbox is broken rn but an update might fix it
   #Games
@@ -212,6 +211,7 @@ programs.coolercontrol.enable = true;
   docker                            #container host
   docker-client                     #container host    
   github-desktop                    #git repository management
+  libnotify                         #Notification Test Utility
 
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
@@ -244,7 +244,6 @@ programs.coolercontrol.enable = true;
   playerctl                         #media player utility
   xdg-desktop-portal-gnome          #App Compatibility portal
   polkit_gnome                      #Policykit
-  libnotify                         #Notification Test Utility
 
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 

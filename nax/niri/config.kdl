@@ -65,7 +65,7 @@ layout {
         // bottom 64
     }
     insert-hint {
-        color "#F2F2F740"
+        color "#7295FF80"
     }
 }
 

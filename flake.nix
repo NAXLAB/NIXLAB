@@ -59,9 +59,9 @@
         ./configuration.nix
         ./nax/niri/niri.nix
         ./nax/materialshell/materialshell.nix
-
-        ./nax/shell/shell.nix
         ./nax/coolercontrol/coolercontrol.nix
+        ./xdrive.nix
+
 
 
          agenix.nixosModules.default
@@ -72,6 +72,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.nax       = ./nax/home.nix;  
         }
+        # ./nax/shell/shell.nix
         #./nax/gnome/gnome.nix
         #./nax/flatpak/flatpak.nix
       ];
