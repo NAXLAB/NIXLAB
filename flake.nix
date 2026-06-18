@@ -19,11 +19,6 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    #Flatpak
-    nix-flatpak = {
-      url                         = "github:gmodena/nix-flatpak/?ref=latest";
-    };
-
     #Home Manager
     home-manager = {
       url                         = "github:nix-community/home-manager";
@@ -34,6 +29,11 @@
     quickshell = {
       url                         = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
+    #Flatpak
+    nix-flatpak = {
+      url                         = "github:gmodena/nix-flatpak/?ref=latest";
     };
 
   };
@@ -61,10 +61,12 @@
         ./hardware-configuration.nix
         ./configuration.nix
         ./nax/niri/niri.nix
+        ./nax/niri/niri-sidebar/niri-sidebar.nix
         ./nax/materialshell/materialshell.nix
         ./nax/coolercontrol/coolercontrol.nix
         ./xdrive.nix
         ./stax.nix
+
 
         home-manager.nixosModules.home-manager{
           home-manager.useGlobalPkgs   = true;

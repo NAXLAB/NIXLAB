@@ -133,7 +133,6 @@ programs.coolercontrol.enable = true;
   environment.systemPackages = with pkgs; [
 	
   #Apps
-  #mission-center                    #System Monitoring
   nautilus                          # File Manager
   gnome-console                     # Console
   gnome-calculator                  # Calculator
@@ -156,6 +155,7 @@ programs.coolercontrol.enable = true;
   fragments                         #Torrent Client
   iotas                             #Notes
   valuta                            #Currency Translation
+  #mission-center                    #System Monitoring
 
   #Games
   keypunch                          #Typing Test
