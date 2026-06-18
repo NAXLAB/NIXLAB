@@ -64,8 +64,8 @@
         ./nax/niri/niri-sidebar/niri-sidebar.nix
         ./nax/materialshell/materialshell.nix
         ./nax/coolercontrol/coolercontrol.nix
-        ./xdrive.nix
-        ./stax.nix
+        ./nax/drives/xdrive.nix
+        ./nax/drives/stax.nix
 
 
         home-manager.nixosModules.home-manager{

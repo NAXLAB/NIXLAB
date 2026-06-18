@@ -7,7 +7,7 @@
 {
     age.secrets.smb = 
     {
-        file = ./secrets/smb.age;
+        file = ../secrets/smb.age;
         mode = "400";
     };
   

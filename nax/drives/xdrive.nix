@@ -2,6 +2,11 @@
 
 {
 
+ #Declare the agenix secret for X Drive
+  age.secrets.xdrive = {
+    file = ../secrets/xdrive.age;
+  };
+
   systemd.tmpfiles.rules = [
       #Mount X Drive NTFS
       "d /mnt/xdrive 0755 nax wheel -"
@@ -13,11 +18,6 @@
       dislocker
       ntfs3g
   ];
-
-  #Declare the agenix secret for X Drive
-  age.secrets.xdrive = {
-    file = ./secrets/xdrive.age;
-  };
 
   #Decrypt X Drive
   systemd.services.dislocker-sda2 = {
