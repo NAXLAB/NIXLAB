@@ -126,6 +126,18 @@ binds {
     Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
     Super+S { screenshot-screen; }
 
+    // Toggle the focused window into/out of the sidebar
+    Super+W { spawn-sh "/run/current-system/sw/bin/niri-sidebar toggle-window"; }
+
+    // Toggle sidebar visibility (hide/show)
+    Super+Shift+W { spawn-sh "/run/current-system/sw/bin/niri-sidebar toggle-visibility"; }
+
+    // Flip the order of the sidebar
+    //Mod+Ctrl+S { spawn-sh "flip"; }
+
+    // Force reorder (useful if something gets misaligned manually)
+    //Mod+Alt+R { spawn-sh "reorder"; }
+
     //Super+Space { maximize-column; }
     //Super+Shift+Space { maximize-window-to-edges; }
 

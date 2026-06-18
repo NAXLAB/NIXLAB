@@ -17,7 +17,7 @@
             owner = "Vigintillionn";
             repo = "niri-sidebar";
             rev = "main";
-            hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+            hash = "sha256-MYP1ZiwV9+yJhl0zpuri6NQkQHlaYZjGBhXpZEaPZyI=";
         };
 
         cargoLock.lockFile = ./Cargo.lock;
