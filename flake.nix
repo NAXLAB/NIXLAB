@@ -66,6 +66,7 @@
         ./nax/coolercontrol/coolercontrol.nix
         ./nax/drives/xdrive.nix
         ./nax/drives/stax.nix
+        ./nax/firefox/firefox.nix
 
 
         home-manager.nixosModules.home-manager{
@@ -78,7 +79,7 @@
         nix-flatpak.nixosModules.nix-flatpak
 
         # ./nax/shell/shell.nix
-        #./nax/gnome/gnome.nix
+        ./nax/gnome/gnome.nix
         #./nax/flatpak/flatpak.nix
 
       ];

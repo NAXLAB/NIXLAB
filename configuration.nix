@@ -146,7 +146,6 @@ programs.coolercontrol.enable = true;
   signal-desktop                    # Signal Messages
   nocturne                          # Music
   loupe                             # Image viewer (modern GNOME image viewer)
-  apostrophe                        # Simple Text Editor
   dialect                           # Translation Tool
   lmstudio                          # Language Model Studio
   citations                         # Bibliography
@@ -155,6 +154,8 @@ programs.coolercontrol.enable = true;
   fragments                         # Torrent Client
   iotas                             # Notes
   valuta                            # Currency Translation
+  pdfstudio2024                     # df Reader
+  pdfstudioviewer                   # Pdf Reader
 
   #Games
   keypunch                          #Typing Test
@@ -188,26 +189,21 @@ programs.coolercontrol.enable = true;
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
   xdg-desktop-portal-gnome          #App Compatibility portal
-	wl-clipboard                      #Clipboard 
-  cliphist                          #Clipboard history
   xdg-utils                         #Desktop app rendering utils
   refine                            #More Gnome Tweaks
-  gdm-settings                      #Customize Gnome Login Manager
-  xdg-desktop-portal-gnome          #Desktop Portal
-  junction                          #App Picker
   walker                            #Launcher
-  grsync                            #Rsync GUI wrapper
-  rsync                             #File Sync
-  pdfstudio2024                     #Pdf Reader
-  pdfstudioviewer                   #Pdf Reader
+  wl-clipboard                      #Clipboard 
+  cliphist                          #Clipboard history
   grim                              #screenshot
   slurp                             #select area screenshot
+  gvfs                              #Gnome Filesystem Compatibility
 
   #System Utilities
   fan2go                            #fan control
   openrgb                           #rgb control
 	curl                              #data transfer utility
-
+  grsync                            #Rsync GUI wrapper
+  rsync                             #File Sync
   playerctl                         #media player utility
   syncthing                         #FileSync
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management

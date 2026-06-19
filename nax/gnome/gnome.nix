@@ -1,12 +1,11 @@
 { pkgs, ... }:
 {
   services = {
-    displayManager.gdm.enable = true;
+    displayManager.gdm.enable = false;
     desktopManager.gnome.enable = true;
     gnome.core-apps.enable = false;
     gnome.core-developer-tools.enable = false;
     gnome.games.enable = false;
-
     gnome.gnome-keyring.enable = true;
   };
 
