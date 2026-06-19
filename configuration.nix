@@ -137,25 +137,24 @@ programs.coolercontrol.enable = true;
   gnome-console                     # Console
   gnome-calculator                  # Calculator
   baobab                            # Disk usage (Disk Usage Analyzer)
-  ungoogled-chromium                #chrome
-  planify                           #Planner & Notes
-  cine                              #Video Player
-  vesktop                           #Discord
-  parabolic                         #Media Downloader
-  crosspipe                         #Audio patch bay
-  signal-desktop                    #Signal Messages
-  nocturne                          #Music
-  loupe                             #Image viewer (modern GNOME image viewer)
-  apostrophe                        #Simple Text Editor
-  dialect                           #Translation Tool
-  lmstudio                          #Language Model Studio
-  citations                         #Bibliography
-  gnome-clocks                      #Clocks
-  exercise-timer                    #Timer App
-  fragments                         #Torrent Client
-  iotas                             #Notes
-  valuta                            #Currency Translation
-  #mission-center                    #System Monitoring
+  ungoogled-chromium                # chrome
+  planify                           # Planner & Notes
+  cine                              # Video Player
+  vesktop                           # Discord
+  parabolic                         # Media Downloader
+  crosspipe                         # Audio patch bay
+  signal-desktop                    # Signal Messages
+  nocturne                          # Music
+  loupe                             # Image viewer (modern GNOME image viewer)
+  apostrophe                        # Simple Text Editor
+  dialect                           # Translation Tool
+  lmstudio                          # Language Model Studio
+  citations                         # Bibliography
+  gnome-clocks                      # Clocks
+  exercise-timer                    # Timer App
+  fragments                         # Torrent Client
+  iotas                             # Notes
+  valuta                            # Currency Translation
 
   #Games
   keypunch                          #Typing Test
@@ -175,7 +174,6 @@ programs.coolercontrol.enable = true;
   gnome-font-viewer                 #Fonts
   figma-agent                       #Figma Font Helper
   penpot-desktop                    #UI/UX Design
-  #freecad                          #3D Design
 
   #Dev Utilities
   git                               #Version Control
@@ -189,16 +187,30 @@ programs.coolercontrol.enable = true;
 
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
+  xdg-desktop-portal-gnome          #App Compatibility portal
 	wl-clipboard                      #Clipboard 
   cliphist                          #Clipboard history
   xdg-utils                         #Desktop app rendering utils
-  polkit_gnome                      #Gnome Polkit
   refine                            #More Gnome Tweaks
   gdm-settings                      #Customize Gnome Login Manager
   xdg-desktop-portal-gnome          #Desktop Portal
   junction                          #App Picker
   walker                            #Launcher
-  github-desktop
+  grsync                            #Rsync GUI wrapper
+  rsync                             #File Sync
+  pdfstudio2024                     #Pdf Reader
+  pdfstudioviewer                   #Pdf Reader
+  grim                              #screenshot
+  slurp                             #select area screenshot
+
+  #System Utilities
+  fan2go                            #fan control
+  openrgb                           #rgb control
+	curl                              #data transfer utility
+
+  playerctl                         #media player utility
+  syncthing                         #FileSync
+  inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
   #Themes
   papirus-icon-theme                #Icon Packs
@@ -206,20 +218,6 @@ programs.coolercontrol.enable = true;
   whitesur-icon-theme               #Icon Packs
   adwaita-icon-theme                #Icon Packs
   capitaine-cursors                 #Cursor Packs
-
-  #System Utilities
-  fan2go                            #fan control
-  openrgb                           #rgb control
-  grim                              #screenshot
-  slurp                             #select area screenshot
-  cifs-utils                        #smb client utilities
-	curl                              #data transfer utility
-  samba                             #smb client
-  playerctl                         #media player utility
-  xdg-desktop-portal-gnome          #App Compatibility portal
-  polkit_gnome                      #Policykit
-
-  inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
 ];
 

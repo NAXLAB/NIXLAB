@@ -5,12 +5,18 @@
 }:
 
 {
+
+    environment.systemPackages = with pkgs; [
+        samba
+        cifs-utils
+    ];
+
     age.secrets.smb = 
     {
         file = ../secrets/smb.age;
         mode = "400";
     };
-  
+
     fileSystems."/mnt/zaigomaat" = 
     {
         device = "//192.168.88.202/zaigomaat";
