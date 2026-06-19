@@ -66,7 +66,6 @@
         ./nax/coolercontrol/coolercontrol.nix
         ./nax/drives/xdrive.nix
         ./nax/drives/stax.nix
-        ./nax/firefox/firefox.nix
 
 
         home-manager.nixosModules.home-manager{

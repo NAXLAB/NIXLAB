@@ -11,6 +11,8 @@
         efi.canTouchEfiVariables = true;
     };
 
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+
   #Swapfile
   swapDevices = 
     [
@@ -156,6 +158,7 @@ programs.coolercontrol.enable = true;
   valuta                            # Currency Translation
   pdfstudio2024                     # df Reader
   pdfstudioviewer                   # Pdf Reader
+  nordpass                          #Password Manager
 
   #Games
   keypunch                          #Typing Test
@@ -164,6 +167,7 @@ programs.coolercontrol.enable = true;
   fretboard                         #Guitar chords app
   gnome-characters                  #Characters
   concessio                         #file permission toy
+  steam                    #steam
 
   #Design Apps
   upscaler                          #Image Upscale

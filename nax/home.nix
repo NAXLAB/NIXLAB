@@ -10,6 +10,10 @@
   home.homeDirectory  = "/home/nax";
   home.stateVersion   = "25.11";
 
+  imports = [
+    ./firefox/firefox.nix
+  ];
+
   #GTK Compatibility
   xdg.userDirs.setSessionVariables = true;
   gtk.gtk4.theme = config.gtk.theme;
@@ -42,7 +46,7 @@
     dconf.settings."org/gnome/desktop/interface" = 
     {
       color-scheme        = "prefer-dark";
-      font-name           = "SF Pro Display 11";
+      font-name           = "Adwaita Sans";
       monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
     };
 

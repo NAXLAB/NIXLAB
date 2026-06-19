@@ -1,4 +1,8 @@
-{ config, pkgs, ... }:
+{ 
+  config,
+  pkgs,
+  ...
+}:
 
 {
 
@@ -7,8 +11,9 @@
     file = ../secrets/xdrive.age;
   };
 
+  #Mount X Drive NTFS
   systemd.tmpfiles.rules = [
-      #Mount X Drive NTFS
+
       "d /mnt/xdrive 0755 nax wheel -"
       "d /mnt/.dislocker-sda2 0755 root root -"
   ];
