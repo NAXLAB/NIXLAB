@@ -6,6 +6,7 @@ programs.firefox = {
   profiles.default = {
     # "default" becomes the profile name home-manager manages
     isDefault = true;
+    search.force = true;
 
 userChrome = ''
   

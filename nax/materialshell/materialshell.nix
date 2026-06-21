@@ -42,5 +42,6 @@ systemd.tmpfiles.rules =
     "L+ /home/nax/.config/niri/dms/outputs.kdl - - - - /etc/nixos/nax/materialshell/outputs.kdl"
     "L+ /home/nax/.config/niri/dms/windowrules.kdl - - - - /etc/nixos/nax/materialshell/windowrules.kdl"
     "L+ /home/nax/.config/niri/dms/wpblur.kdl - - - - /etc/nixos/nax/materialshell/wpblur.kdl"
+    "L+ /home/nax/.config/DankMaterialShell/themes/naxlab - - - - /etc/nixos/nax/themes/naxlab"
 ];
 }

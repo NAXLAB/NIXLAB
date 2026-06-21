@@ -2,7 +2,22 @@
 
 {
     # Enable flatpak (standard NixOS option)
-    services.flatpak.enable = true;
+    services.flatpak = {
+        enable = true;
+        packages = [
+            {
+                appId = "org.gnome.gitlab.cheywood.Pulp";
+                origin = "flathub";
+            }
+        ];
+        
+        update.auto = {
+            enable = true;
+            onCalendar = "weekly";
+        };
+    };
+
+
 
     # nix-flatpak extends services.flatpak with these extra options:
     services.flatpak.remotes = [

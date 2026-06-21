@@ -1,4 +1,3 @@
-spawn-at-startup "polkit-gnome"
 //spawn-at-startup "lxqt-policykit-agent"
 //spawn-at-startup "waybar"
 

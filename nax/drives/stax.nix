@@ -5,7 +5,6 @@
 }:
 
 {
-
     environment.systemPackages = with pkgs; [
         samba
         cifs-utils
@@ -31,6 +30,9 @@
             "uid=1000"
             "gid=1000"
             "x-systemd.requires=network-online.target"
+            "x-systemd.after=network-online.target" 
+            "noauto"
+            "x-systemd.automount"
         ];
     };
 }

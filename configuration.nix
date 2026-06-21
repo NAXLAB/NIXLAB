@@ -118,6 +118,9 @@
 environment.shellAliases = {
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
+
+pkgs = "sudo nixos-rebuild switch --upgrade";
+flake = "sudo nix flake update"; 
 };
 
 # Allow unfree packages
@@ -125,11 +128,17 @@ nixpkgs.config.allowUnfree = true;
 
 # Install Modules
 programs.firefox.enable = true;
-programs.niri.enable = true;
 programs.zsh.enable = true;
 programs.starship.enable = true;
 programs.dconf.enable = true;
 programs.coolercontrol.enable = true;
+
+# /etc/nixos/configuration.nix
+services.syncthing = 
+  {
+    enable = true;
+    openDefaultPorts = true;
+  };
 
   #Nix Package manager
   environment.systemPackages = with pkgs; [
@@ -206,10 +215,7 @@ programs.coolercontrol.enable = true;
   fan2go                            #fan control
   openrgb                           #rgb control
 	curl                              #data transfer utility
-  grsync                            #Rsync GUI wrapper
-  rsync                             #File Sync
   playerctl                         #media player utility
-  syncthing                         #FileSync
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
   #Themes

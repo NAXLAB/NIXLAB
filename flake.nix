@@ -51,8 +51,9 @@
   
   {
     nixosConfigurations.zaigomaat = nixpkgs.lib.nixosSystem{
-
-      specialArgs = {
+      
+      specialArgs = 
+      {
         inherit inputs;
       };
 
@@ -61,26 +62,25 @@
         ./hardware-configuration.nix
         ./configuration.nix
         ./nax/niri/niri.nix
-        ./nax/niri/niri-sidebar/niri-sidebar.nix
         ./nax/materialshell/materialshell.nix
         ./nax/coolercontrol/coolercontrol.nix
         ./nax/drives/xdrive.nix
         ./nax/drives/stax.nix
+        ./nax/gnome/gnome.nix
+        ./nax/flatpak/flatpak.nix
+        ./nax/goodsync/goodsync.nix
+        agenix.nixosModules.default
+        nix-flatpak.nixosModules.nix-flatpak
 
-
-        home-manager.nixosModules.home-manager{
+        home-manager.nixosModules.home-manager
+        {
           home-manager.useGlobalPkgs   = true;
           home-manager.useUserPackages = true;
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
-        agenix.nixosModules.default
-        nix-flatpak.nixosModules.nix-flatpak
-
         # ./nax/shell/shell.nix
-        ./nax/gnome/gnome.nix
-        #./nax/flatpak/flatpak.nix
-
+        #./nax/niri/niri-sidebar/niri-sidebar.nix
       ];
     };
   };

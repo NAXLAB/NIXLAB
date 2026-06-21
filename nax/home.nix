@@ -8,7 +8,7 @@
 
   home.username       = "nax";
   home.homeDirectory  = "/home/nax";
-  home.stateVersion   = "25.11";
+  home.stateVersion   = "26.11";
 
   imports = [
     ./firefox/firefox.nix
@@ -46,7 +46,7 @@
     dconf.settings."org/gnome/desktop/interface" = 
     {
       color-scheme        = "prefer-dark";
-      font-name           = "Adwaita Sans";
+      font-name           = "Adwaita";
       monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
     };
 
