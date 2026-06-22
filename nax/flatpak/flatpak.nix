@@ -5,10 +5,7 @@
     services.flatpak = {
         enable = true;
         packages = [
-            {
-                appId = "org.gnome.gitlab.cheywood.Pulp";
-                origin = "flathub";
-            }
+
         ];
         
         update.auto = {
@@ -16,7 +13,6 @@
             onCalendar = "weekly";
         };
     };
-
 
 
     # nix-flatpak extends services.flatpak with these extra options:

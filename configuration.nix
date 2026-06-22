@@ -22,6 +22,7 @@
       }
     ];
 
+
   #System & Hardware Services
   services.power-profiles-daemon.enable = true;
   hardware.bluetooth.enable             = false;
@@ -84,6 +85,7 @@
       packages      = with pkgs; [];
       extraGroups   = 
         [ 
+          "i2c"
           "networkmanager"
           "wheel"
         ];
@@ -133,12 +135,24 @@ programs.starship.enable = true;
 programs.dconf.enable = true;
 programs.coolercontrol.enable = true;
 
+
+services.hardware.openrgb = {
+  enable = true;
+  motherboard = "amd"; # or "amd" — sets the right i2c kernel modules
+};
+
 # /etc/nixos/configuration.nix
 services.syncthing = 
   {
     enable = true;
     openDefaultPorts = true;
   };
+
+programs.gamemode.enable = true;
+
+programs.steam = {
+  enable = true;
+};
 
   #Nix Package manager
   environment.systemPackages = with pkgs; [
@@ -165,7 +179,6 @@ services.syncthing =
   fragments                         # Torrent Client
   iotas                             # Notes
   valuta                            # Currency Translation
-  nordpass                          #Password Manager
 
   #Games
   keypunch                          #Typing Test
@@ -174,7 +187,6 @@ services.syncthing =
   fretboard                         #Guitar chords app
   gnome-characters                  #Characters
   concessio                         #file permission toy
-  steam                    #steam
 
   #Design Apps
   upscaler                          #Image Upscale
@@ -211,7 +223,6 @@ services.syncthing =
 
   #System Utilities
   fan2go                            #fan control
-  openrgb                           #rgb control
 	curl                              #data transfer utility
   playerctl                         #media player utility
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
