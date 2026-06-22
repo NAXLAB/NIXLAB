@@ -38,11 +38,8 @@
       ".gitconfig".source                       = ./git/config;
       ".zshrc".source                           = ./zsh/zshrc;
       ".config/fastfetch/config.jsonc".source   = ./fastfetch/config.jsonc;
-      #".config/quickshell/shell.qml".source    = ./shell/shell.qml;
-      #".config/niri/config.kdl".source         = ./niri/config.kdl;
     };
   
-
     dconf.settings."org/gnome/desktop/interface" = 
     {
       color-scheme        = "prefer-dark";

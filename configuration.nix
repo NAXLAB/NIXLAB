@@ -165,8 +165,6 @@ services.syncthing =
   fragments                         # Torrent Client
   iotas                             # Notes
   valuta                            # Currency Translation
-  pdfstudio2024                     # df Reader
-  pdfstudioviewer                   # Pdf Reader
   nordpass                          #Password Manager
 
   #Games
