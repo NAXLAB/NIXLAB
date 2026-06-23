@@ -46,7 +46,7 @@ stdenv.mkDerivation
 
             makeWrapper $out/bin/.gs-server-unwrapped $out/bin/gs-server \
             --add-flags "/resources=$out/share/goodsync" \
-            --add-flags '/profile=$HOME/.config/goodsync'         
+            --add-flags '/profile=$HOME/.config/goodsync'
             
         '';
 

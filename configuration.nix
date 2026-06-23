@@ -113,7 +113,7 @@
   "L+ /home/nax/Torrents - - - - /mnt/xdrive/Torrents"
 
   #Connect font folder to X Drive
-  "L+ /home/nax/.local/share/fonts - - - - /run/media/nax/xdrive/Fonts"
+  "L+ /home/nax/.local/share/fonts - - - - /mnt/xdrive/Fonts"
 ];
 
 # Aliases for Terminal Commands
@@ -179,11 +179,11 @@ programs.steam = {
   fragments                         # Torrent Client
   iotas                             # Notes
   valuta                            # Currency Translation
+  gapless                           # Music
 
   #Games
   keypunch                          #Typing Test
   binary                            #Number Base Math tool
-  gnome-graphs                      #Create graphs
   fretboard                         #Guitar chords app
   gnome-characters                  #Characters
   concessio                         #file permission toy
@@ -225,6 +225,7 @@ programs.steam = {
   fan2go                            #fan control
 	curl                              #data transfer utility
   playerctl                         #media player utility
+  unixtools.netstat                 #Network monitor
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
   #Themes
