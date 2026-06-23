@@ -33,5 +33,47 @@ in {
     };
   };
 
+  systemd.services.goodsync-runner = 
+  {
+  description = "GoodSync Job Runner";
+  wantedBy    = [ "multi-user.target" ];
+  after       = [ "network.target" "goodsync.service" ];
+
+  serviceConfig = 
+    {
+        User      = "nax";
+        Group     = "users";
+        ExecStart = "${gspkg}/bin/gsync /runner";
+        Restart   = "on-failure";
+    };
+
+};
+
+    #Declare Sync Job
+    systemd.services.zaigomaat-sync = {
+  description = "GoodSync: declare xdrive <-> zaigomaat sync job";
+  wantedBy    = [ "multi-user.target" ];
+  after       = [ "goodsync.service" "goodsync-runner.service" ];
+  requires    = [ "goodsync-runner.service" ];
+
+  # Run once at boot to create/update the job definition, then exit.
+  serviceConfig = 
+    {
+        Type  = "oneshot";
+        User  = "nax";          # same user as goodsync-runner
+        Group = "users";
+        SuccessExitStatus = [ 255 ];
+        ExecStart = ''
+        ${gspkg}/bin/gsync \
+            job "zaigomaat-sync" \
+            /f1=file:///mnt/xdrive \
+            /f2=file:///mnt/zaigomaat \
+            /dir=2way \
+            /on-file-change=sync \
+            /limit-changes=100
+        '';
+    };
+};
+
   environment.systemPackages = [ gspkg ];
 }
