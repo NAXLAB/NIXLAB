@@ -16,37 +16,37 @@ in {
     "d /etc/goodsync/server 0775 goodsync goodsync -"
   ];
 
-  systemd.services.goodsync = {
-    description = "GoodSync Server";
-    wantedBy    = [ "multi-user.target" ];
-    after       = [ "network.target" ];
+systemd.services.goodsync = {
+  description = "GoodSync Server";
+  wantedBy    = [ "multi-user.target" ];
+  after       = [ "network.target" ];
 
-    serviceConfig = {
-      User        = "goodsync";
-      Group       = "goodsync";
-      Environment = "GS_OS_SERVER_PROFILE=/etc/goodsync";
-      ExecStartPre = "${gspkg}/bin/gsync /generate-local-server-user /etc/goodsync/server";
-      ExecStart   = "${gspkg}/bin/.gs-server-unwrapped"
-                    + " /resources=${gspkg}/share/goodsync"
-                    + " /profile=/etc/goodsync/server";
-      Restart     = "on-failure";
-    };
+  serviceConfig = {
+    User        = "goodsync";
+    Group       = "goodsync";
+    Environment = "GS_OS_SERVER_PROFILE=/etc/goodsync";
+    ExecStartPre = "${gspkg}/bin/gsync /generate-local-server-user /etc/goodsync/server";
+    ExecStart   = "${gspkg}/bin/.gs-server-unwrapped"
+                  + " /resources=${gspkg}/share/goodsync"
+                  + " /profile=/etc/goodsync/server";
+    Restart     = "on-failure";
   };
+};
 
-  systemd.services.goodsync-runner = 
-  {
+#Runner watches for file changes
+systemd.services.goodsync-runner = {
   description = "GoodSync Job Runner";
   wantedBy    = [ "multi-user.target" ];
-  after       = [ "network.target" "goodsync.service" ];
+  after       = [ "network.target" "goodsync.service" "mnt-xdrive.mount" "mnt-zaigomaat.mount" ];
+  wants       = [ "mnt-xdrive.mount" "mnt-zaigomaat.mount" ];
 
-  serviceConfig = 
-    {
-        User      = "nax";
-        Group     = "users";
-        ExecStart = "${gspkg}/bin/gsync /runner";
-        Restart   = "on-failure";
-    };
-
+  serviceConfig = {
+    User      = "nax";
+    Group     = "users";
+    ExecStart = "${gspkg}/bin/gsync /runner";
+    Restart   = "on-failure";
+    RestartSec = "10s";
+  };
 };
 
     #Declare Sync Job
@@ -62,7 +62,7 @@ in {
         Type  = "oneshot";
         User  = "nax";          # same user as goodsync-runner
         Group = "users";
-        SuccessExitStatus = [ 255 ];
+        SuccessExitStatus = [ 255 ]; #Exit Status 255 is interpreted as an error by default, but is actually fine and should be accepted.
         ExecStart = ''
         ${gspkg}/bin/gsync \
             job "zaigomaat-sync" \

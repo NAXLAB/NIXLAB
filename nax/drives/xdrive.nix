@@ -56,13 +56,14 @@
 
   #Mount decrypted X Drive
   systemd.mounts = [{
-    what      =   "/mnt/.dislocker-sda2/dislocker-file";
-    where     =   "/mnt/xdrive";
-    type      =   "ntfs-3g";
-    options   =   "defaults,uid=1000,gid=1,umask=022,loop,allow_other";
-    after     = [ "dislocker-sda2.service" ];
-    requires  = [ "dislocker-sda2.service" ];
-    wantedBy  = [ "multi-user.target"      ];
+    what     = "/mnt/.dislocker-sda2/dislocker-file";
+    where    = "/mnt/xdrive";
+    type     = "ntfs-3g";
+    options  = "defaults,uid=1000,gid=1,umask=022,loop,allow_other";
+    after    = [ "dislocker-sda2.service" ];
+    requires = [ "dislocker-sda2.service" ];
+    wantedBy = [ "multi-user.target" ];
+    unitConfig.DefaultDependencies = "no";
   }];
 
 }

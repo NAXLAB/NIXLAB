@@ -22,17 +22,30 @@
         fsType = "cifs";
         options = 
         [
+            "credentials=/run/agenix/smb"
+
             "x-systemd.device-timeout=5s"
             "x-systemd.mount-timeout=5s"
             "x-systemd.stop-timeout=5s"
-            "_netdev"
-            "credentials=/run/agenix/smb"
+
             "uid=1000"
             "gid=1000"
+
             "x-systemd.requires=network-online.target"
             "x-systemd.after=network-online.target" 
-            "noauto"
+
             "x-systemd.automount"
+            "_netdev"
+            "noauto"
+
         ];
     };
+
+    systemd.automounts = [{
+    where = "/mnt/zaigomaat";
+    automountConfig.TimeoutIdleSec = "0";
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
+  }];
+
 }
