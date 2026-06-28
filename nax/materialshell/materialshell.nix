@@ -1,7 +1,6 @@
 { pkgs, inputs, ... }:
 {
 
-
 #Autologin Nax
 services.getty.autologinUser = "nax";
  
@@ -42,6 +41,10 @@ systemd.tmpfiles.rules =
     "L+ /home/nax/.config/niri/dms/outputs.kdl - - - - /etc/nixos/nax/materialshell/outputs.kdl"
     "L+ /home/nax/.config/niri/dms/windowrules.kdl - - - - /etc/nixos/nax/materialshell/windowrules.kdl"
     "L+ /home/nax/.config/niri/dms/wpblur.kdl - - - - /etc/nixos/nax/materialshell/wpblur.kdl"
+
+    "L+ /home/nax/.config/gtk-3.0/gtk.css - - - - /etc/nixos/nax/materialshell/dank-colors.css"
+    "L+ /home/nax/.config/gtk-4.0/dank-colors.css - - - - /etc/nixos/nax/materialshell/dank-colors.css"
+
     "L+ /home/nax/.config/DankMaterialShell/themes/naxlab - - - - /etc/nixos/nax/themes/naxlab"
 ];
 }

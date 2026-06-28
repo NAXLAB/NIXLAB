@@ -23,21 +23,14 @@
         options = 
         [
             "credentials=/run/agenix/smb"
-
-            "x-systemd.device-timeout=5s"
-            "x-systemd.mount-timeout=5s"
+            "x-systemd.device-timeout=30s"
+            "x-systemd.mount-timeout=30s"
             "x-systemd.stop-timeout=5s"
-
             "uid=1000"
             "gid=1000"
-
-            "x-systemd.requires=network-online.target"
-            "x-systemd.after=network-online.target" 
-
-            "x-systemd.automount"
             "_netdev"
-            "noauto"
-
+            "x-systemd.requires=network-online.target"
+            "x-systemd.after=network-online.target"
         ];
     };
 

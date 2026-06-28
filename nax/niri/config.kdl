@@ -6,6 +6,7 @@
   //honor-xdg-activation-with-invalid-serial
 //}
 
+
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
@@ -147,3 +148,4 @@ binds {
 //include "dms/layout.kdl"
 //include "dms/alttab.kdl"
 include "dms/binds.kdl"
+include "dms/cursor.kdl"

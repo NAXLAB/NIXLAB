@@ -27,7 +27,22 @@
   services.power-profiles-daemon.enable = true;
   hardware.bluetooth.enable             = false;
   services.upower.enable                = true;
-  services.printing.enable              = false;
+
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.brlaser ];
+  };
+
+  hardware.printers = {
+    ensurePrinters = [
+      {
+        name = "Brother-HL-L2300D";
+        deviceUri = "usb://Brother/HL-L2300D%20series?serial=U63878J5N186821";
+        model = "drv:///brlaser.drv/brl2300d.ppd";
+      }
+    ];
+    ensureDefaultPrinter = "Brother-HL-L2300D";
+  };
 
   #Audio Services
   services.pulseaudio.enable  = false;
@@ -48,14 +63,14 @@
   networking.hostName               = "zaigomaat";
   services.openssh.enable           = true;
   
+
+  
   #Policy Configuration
   security.polkit.enable = true;  
 
    #Miscellaneous desktop environment dependencies
   environment.variables = 
     {
-      XCURSOR_THEME = "capitaine-cursors";
-      XCURSOR_SIZE = "24";
       MOZ_ENABLE_WAYLAND = "1";
     };
 
@@ -138,8 +153,20 @@ programs.coolercontrol.enable = true;
 
 services.hardware.openrgb = {
   enable = true;
-  motherboard = "amd"; # or "amd" — sets the right i2c kernel modules
+  motherboard = "amd";
 };
+
+systemd.user.services.openrgb-profile = {
+  description = "Load OpenRGB profile";
+  wantedBy = [ "graphical-session.target" ];
+  after = [ "graphical-session.target" ];
+  serviceConfig = {
+    Type = "oneshot";
+    ExecStart = "${pkgs.openrgb}/bin/openrgb --profile \"naxlab\"";
+    RemainAfterExit = true;
+  };
+};
+
 
 # /etc/nixos/configuration.nix
 services.syncthing = 
@@ -149,6 +176,11 @@ services.syncthing =
   };
 
 programs.gamemode.enable = true;
+
+programs.appimage = {
+  enable = true;
+  binfmt = true;  # makes AppImages run directly without appimage-run prefix
+};
 
 programs.steam = {
   enable = true;
@@ -180,6 +212,11 @@ programs.steam = {
   iotas                             # Notes
   valuta                            # Currency Translation
   gapless                           # Music
+  xournalpp                         #Pdf Editor
+  nicotine-plus                     #soulseek music sharing
+  freecad
+  wine
+  inkscape
 
   #Games
   keypunch                          #Typing Test

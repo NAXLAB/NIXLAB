@@ -25,7 +25,10 @@ systemd.services.goodsync = {
     User        = "goodsync";
     Group       = "goodsync";
     Environment = "GS_OS_SERVER_PROFILE=/etc/goodsync";
-    ExecStartPre = "${gspkg}/bin/gsync /generate-local-server-user /etc/goodsync/server";
+    ExecStartPre = "${pkgs.bash}/bin/bash -c '"
+  + "if [ ! -f /etc/goodsync/server/settings.tix ]; then "
+  + "${gspkg}/bin/gsync /generate-local-server-user /etc/goodsync/server; "
+  + "fi'";
     ExecStart   = "${gspkg}/bin/.gs-server-unwrapped"
                   + " /resources=${gspkg}/share/goodsync"
                   + " /profile=/etc/goodsync/server";
@@ -37,15 +40,17 @@ systemd.services.goodsync = {
 systemd.services.goodsync-runner = {
   description = "GoodSync Job Runner";
   wantedBy    = [ "multi-user.target" ];
-  after       = [ "network.target" "goodsync.service" "mnt-xdrive.mount" "mnt-zaigomaat.mount" ];
-  wants       = [ "mnt-xdrive.mount" "mnt-zaigomaat.mount" ];
+  after = [ "goodsync.service" "mnt-xdrive.mount" "mnt-zaigomaat.mount" ];
+  requires = [ "mnt-xdrive.mount" "mnt-zaigomaat.mount" ];
 
   serviceConfig = {
-    User      = "nax";
-    Group     = "users";
+    User       = "nax";
+    Group      = "users";
     ExecStart = "${gspkg}/bin/gsync /runner";
-    Restart   = "on-failure";
+    Restart   = "always";
     RestartSec = "10s";
+    KillMode       = "process";
+    TimeoutStopSec = "5s";
   };
 };
 
@@ -54,7 +59,6 @@ systemd.services.goodsync-runner = {
   description = "GoodSync: declare xdrive <-> zaigomaat sync job";
   wantedBy    = [ "multi-user.target" ];
   after       = [ "goodsync.service" "goodsync-runner.service" ];
-  requires    = [ "goodsync-runner.service" ];
 
   # Run once at boot to create/update the job definition, then exit.
   serviceConfig = 
@@ -64,13 +68,15 @@ systemd.services.goodsync-runner = {
         Group = "users";
         SuccessExitStatus = [ 255 ]; #Exit Status 255 is interpreted as an error by default, but is actually fine and should be accepted.
         ExecStart = ''
-        ${gspkg}/bin/gsync \
+          ${gspkg}/bin/gsync \
             job "zaigomaat-sync" \
             /f1=file:///mnt/xdrive \
             /f2=file:///mnt/zaigomaat \
             /dir=2way \
             /on-file-change=sync \
-            /limit-changes=100
+            /on-folder-connect=sync \
+            /auto-unattended=yes \
+            /limit-changes=20
         '';
     };
 };

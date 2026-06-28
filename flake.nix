@@ -69,6 +69,8 @@
         ./nax/gnome/gnome.nix
         ./nax/flatpak/flatpak.nix
         ./nax/goodsync/goodsync.nix
+        ./nax/figma/figma-desktop.nix
+
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
 

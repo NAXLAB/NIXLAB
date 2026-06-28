@@ -4,5 +4,6 @@
 // ! PLACE YOUR CUSTOM CONFIGURATION ELSEWHERE !
 
 cursor {
-    xcursor-size 14
+    xcursor-theme "capitaine-cursors"
+    xcursor-size 32
 }

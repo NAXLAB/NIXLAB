@@ -16,7 +16,24 @@
 
   #GTK Compatibility
   xdg.userDirs.setSessionVariables = true;
-  gtk.gtk4.theme = config.gtk.theme;
+
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "adw-gtk3";
+      package = pkgs.adw-gtk3;
+    };
+
+    gtk4 = {
+      theme = config.gtk.theme;
+      extraCss = ''
+        @import url("dank-colors.css");
+      '';
+    };
+
+  };
+
 
   #App compatibility with symlinked home folders
   xdg.userDirs =
@@ -43,30 +60,8 @@
     dconf.settings."org/gnome/desktop/interface" = 
     {
       color-scheme        = "prefer-dark";
-      font-name           = "Adwaita";
+      font-name           = "SF Pro Display 11";
       monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
     };
-
-  xdg.desktopEntries.figma = 
-    {
-      name = "Figma";
-      exec = ''chromium --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"'';
-      icon = "chromium";
-      type = "Application";
-    };
-
-systemd.user.services.figma-agent = 
-  {
-    Unit.Description = "Figma Agent";
-    Install.WantedBy = 
-      [ 
-        "default.target"
-      ];
-
-    Service = {
-      ExecStart = "${pkgs.figma-agent}/bin/figma-agent";
-      Restart   = "on-failure";
-    };
-  };
 
 }
