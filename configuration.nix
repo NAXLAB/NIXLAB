@@ -228,7 +228,6 @@ programs.steam = {
   #Design Apps
   upscaler                          #Image Upscale
   upscayl                           #Image Upscale
-  emblem                            #App icon maker
   gnome-decoder                     #Create QR Codes
   eyedropper                        #Color Picker
   elastic                           #Design Spring Animations
@@ -267,8 +266,6 @@ programs.steam = {
 
   #Themes
   papirus-icon-theme                #Icon Packs
-  la-capitaine-icon-theme           #Icon Packs
-  whitesur-icon-theme               #Icon Packs
   adwaita-icon-theme                #Icon Packs
   capitaine-cursors                 #Cursor Packs
 

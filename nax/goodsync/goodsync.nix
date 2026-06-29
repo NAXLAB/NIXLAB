@@ -77,6 +77,7 @@ systemd.services.goodsync-runner = {
             /on-folder-connect=sync \
             /auto-unattended=yes \
             /limit-changes=20
+            /exclude=\steamapps\compatdata
         '';
     };
 };

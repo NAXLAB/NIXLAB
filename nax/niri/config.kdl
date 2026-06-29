@@ -80,6 +80,7 @@ input {
     }
 }
 
+/*
 output "DP-2" {
     mode "1920x1080@143.855"
     scale 1.0
@@ -96,6 +97,8 @@ cursor {
     xcursor-theme "capitaine-cursors"
     xcursor-size 24
 }
+
+*/
 
 // Make the backdrop Dark.
 overview {
@@ -149,3 +152,5 @@ binds {
 //include "dms/alttab.kdl"
 include "dms/binds.kdl"
 include "dms/cursor.kdl"
+
+include "dms/outputs.kdl"

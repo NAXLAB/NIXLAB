@@ -70,10 +70,10 @@
         ./nax/flatpak/flatpak.nix
         ./nax/goodsync/goodsync.nix
         ./nax/figma/figma-desktop.nix
+        ./nax/openrgb/openrgb.nix
 
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
-
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs   = true;

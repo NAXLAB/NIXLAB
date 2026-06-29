@@ -9,10 +9,15 @@ let
     };
   };
 
+  xdg.mime.defaultApplications = 
+    {
+      "x-scheme-handler/figma" = "figma-desktop.desktop";
+    };
+
 figma-desktop-entry = pkgs.makeDesktopItem {
   name = "figma-desktop";
   desktopName = "Figma";
-  exec = "env FIGMA_USE_WAYLAND=1 figma-desktop %U";  # <--
+  exec = "env FIGMA_USE_WAYLAND=1 figma-desktop %u";
   icon = "figma";
   comment = "Figma Desktop";
   categories = [ "Graphics" ];
