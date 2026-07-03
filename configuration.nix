@@ -2,6 +2,10 @@
 
 {
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "pnpm-10.29.2"
+  ];
+
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
   # Bootloader.
@@ -214,9 +218,11 @@ programs.steam = {
   gapless                           # Music
   xournalpp                         #Pdf Editor
   nicotine-plus                     #soulseek music sharing
-  freecad
-  wine
-  inkscape
+  freecad                           #3D Design
+  wine                              #Run Windows apps
+  inkscape                          #2D Design 
+  krita                             #Raster Design
+  obs-studio                        #Screen Recording
 
   #Games
   keypunch                          #Typing Test
