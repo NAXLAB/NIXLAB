@@ -2,8 +2,11 @@
 
 {
 
+  #Need to figure this out. I think DMS needed it to compile.
   nixpkgs.config.permittedInsecurePackages = [
     "pnpm-10.29.2"
+    "electron-40.10.5"
+  
   ];
 
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
@@ -205,7 +208,7 @@ programs.steam = {
   parabolic                         # Media Downloader
   crosspipe                         # Audio patch bay
   signal-desktop                    # Signal Messages
-  nocturne                          # Music
+  #nocturne                          # Music
   loupe                             # Image viewer (modern GNOME image viewer)
   dialect                           # Translation Tool
   lmstudio                          # Language Model Studio
@@ -218,11 +221,11 @@ programs.steam = {
   gapless                           # Music
   xournalpp                         #Pdf Editor
   nicotine-plus                     #soulseek music sharing
-  freecad                           #3D Design
   wine                              #Run Windows apps
   inkscape                          #2D Design 
   krita                             #Raster Design
   obs-studio                        #Screen Recording
+  bazaar                            #Flatpak App store
 
   #Games
   keypunch                          #Typing Test

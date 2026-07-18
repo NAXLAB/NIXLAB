@@ -68,7 +68,6 @@
         ./nax/drives/stax.nix
         ./nax/gnome/gnome.nix
         ./nax/flatpak/flatpak.nix
-        ./nax/goodsync/goodsync.nix
         ./nax/figma/figma-desktop.nix
         ./nax/openrgb/openrgb.nix
 
@@ -83,6 +82,7 @@
 
         # ./nax/shell/shell.nix
         #./nax/niri/niri-sidebar/niri-sidebar.nix
+        #./nax/goodsync/goodsync.nix
       ];
     };
   };

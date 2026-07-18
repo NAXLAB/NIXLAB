@@ -8,7 +8,10 @@ in {
     isSystemUser = true;
     group        = "goodsync";
     home         = "/etc/goodsync";
+
+
   };
+
   users.groups.goodsync = {};
 
   systemd.tmpfiles.rules = [
@@ -43,19 +46,20 @@ systemd.services.goodsync-runner = {
   after = [ "goodsync.service" "mnt-xdrive.mount" "mnt-zaigomaat.mount" ];
   requires = [ "mnt-xdrive.mount" "mnt-zaigomaat.mount" ];
 
-  serviceConfig = {
-    User       = "nax";
-    Group      = "users";
-    ExecStart = "${gspkg}/bin/gsync /runner";
-    Restart   = "always";
-    RestartSec = "10s";
-    KillMode       = "process";
-    TimeoutStopSec = "5s";
-  };
+  serviceConfig = 
+    {
+      User            = "nax";
+      Group           = "users";
+      ExecStart       = "${gspkg}/bin/gsync /runner";
+      Restart         = "always";
+      RestartSec      = "10s";
+      KillMode        = "process";
+      TimeoutStopSec  = "5s";
+    };
 };
 
-    #Declare Sync Job
-    systemd.services.zaigomaat-sync = {
+  #Declare Sync Job
+  systemd.services.zaigomaat-sync = {
   description = "GoodSync: declare xdrive <-> zaigomaat sync job";
   wantedBy    = [ "multi-user.target" ];
   after       = [ "goodsync.service" "goodsync-runner.service" ];
