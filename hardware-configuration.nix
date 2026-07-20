@@ -23,6 +23,8 @@
       "sd_mod"
     ];
 
+  boot.kernelParams = [ "amd_iommu=on" ];
+
   boot.kernelModules = 
     [
       "kvm-amd"

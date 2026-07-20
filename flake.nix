@@ -81,7 +81,6 @@
         }
 
         # ./nax/shell/shell.nix
-        #./nax/niri/niri-sidebar/niri-sidebar.nix
         #./nax/goodsync/goodsync.nix
       ];
     };

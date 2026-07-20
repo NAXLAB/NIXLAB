@@ -22,6 +22,7 @@
   environment.systemPackages = with pkgs; [
       dislocker
       ntfs3g
+      udisks2
   ];
 
   #Decrypt X Drive

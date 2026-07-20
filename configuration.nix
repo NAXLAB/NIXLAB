@@ -6,7 +6,6 @@
   nixpkgs.config.permittedInsecurePackages = [
     "pnpm-10.29.2"
     "electron-40.10.5"
-  
   ];
 
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
@@ -19,6 +18,8 @@
     };
 
     boot.kernelPackages = pkgs.linuxPackages_latest;
+
+    
 
   #Swapfile
   swapDevices = 
@@ -70,8 +71,6 @@
   networking.hostName               = "zaigomaat";
   services.openssh.enable           = true;
   
-
-  
   #Policy Configuration
   security.polkit.enable = true;  
 
@@ -110,6 +109,8 @@
           "i2c"
           "networkmanager"
           "wheel"
+          "libvirt" 
+          "qemu-libvirtd"
         ];
     };
 
@@ -158,6 +159,7 @@ programs.dconf.enable = true;
 programs.coolercontrol.enable = true;
 
 
+#Install OpenRGB
 services.hardware.openrgb = {
   enable = true;
   motherboard = "amd";
@@ -193,6 +195,8 @@ programs.steam = {
   enable = true;
 };
 
+programs.kdeconnect.enable = true;
+
   #Nix Package manager
   environment.systemPackages = with pkgs; [
 	
@@ -208,7 +212,6 @@ programs.steam = {
   parabolic                         # Media Downloader
   crosspipe                         # Audio patch bay
   signal-desktop                    # Signal Messages
-  #nocturne                          # Music
   loupe                             # Image viewer (modern GNOME image viewer)
   dialect                           # Translation Tool
   lmstudio                          # Language Model Studio
@@ -218,14 +221,15 @@ programs.steam = {
   fragments                         # Torrent Client
   iotas                             # Notes
   valuta                            # Currency Translation
-  gapless                           # Music
-  xournalpp                         #Pdf Editor
-  nicotine-plus                     #soulseek music sharing
+  xournalpp                         # Pdf Editor
+  nicotine-plus                     # soulseek music sharing
   wine                              #Run Windows apps
   inkscape                          #2D Design 
   krita                             #Raster Design
   obs-studio                        #Screen Recording
   bazaar                            #Flatpak App store
+  dopamine
+  gnome-boxes
 
   #Games
   keypunch                          #Typing Test

@@ -41,4 +41,8 @@
     wants = [ "network-online.target" ];
   }];
 
+  services.udev.extraRules = ''
+  SUBSYSTEM=="block", ENV{ID_FS_UUID}=="cbf23126-f4aa-4938-b32b-ad21a09ca681", ENV{UDISKS_IGNORE}="1"
+'';
+
 }
