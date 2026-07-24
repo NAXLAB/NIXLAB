@@ -17,9 +17,7 @@
         efi.canTouchEfiVariables = true;
     };
 
-    boot.kernelPackages = pkgs.linuxPackages_latest;
-
-    
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   #Swapfile
   swapDevices = 
@@ -29,7 +27,6 @@
         size = 32000; # 64GB in MB
       }
     ];
-
 
   #System & Hardware Services
   services.power-profiles-daemon.enable = true;
@@ -41,6 +38,8 @@
     drivers = [ pkgs.brlaser ];
   };
 
+
+
   hardware.printers = {
     ensurePrinters = [
       {
@@ -51,6 +50,8 @@
     ];
     ensureDefaultPrinter = "Brother-HL-L2300D";
   };
+
+  
 
   #Audio Services
   services.pulseaudio.enable  = false;
@@ -74,7 +75,15 @@
   #Policy Configuration
   security.polkit.enable = true;  
 
-   #Miscellaneous desktop environment dependencies
+environment.etc."libinput/local-overrides.quirks".text = ''
+  [Logitech G502 Wheel Quirk]
+  MatchVendor=0x046D
+  MatchProduct=0x407F
+  MatchUdevType=mouse
+  AttrEventCode=-REL_WHEEL_HI_RES;-REL_HWHEEL_HI_RES;
+'';
+
+  #Miscellaneous desktop environment dependencies
   environment.variables = 
     {
       MOZ_ENABLE_WAYLAND = "1";
@@ -176,12 +185,12 @@ systemd.user.services.openrgb-profile = {
   };
 };
 
-programs.gamemode.enable = true;
-
 programs.appimage = {
   enable = true;
   binfmt = true;  # makes AppImages run directly without appimage-run prefix
 };
+
+programs.gamemode.enable = true;
 
 programs.steam = {
   enable = true;
@@ -221,7 +230,8 @@ programs.kdeconnect.enable = true;
   obs-studio                        #Screen Recording
   bazaar                            #Flatpak App store
   dopamine                          #Music
-  telegram-desktop                          #Messaging
+  telegram-desktop                  #Messaging
+  libreoffice
   
 
   #Games
@@ -239,7 +249,7 @@ programs.kdeconnect.enable = true;
   elastic                           #Design Spring Animations
   gnome-font-viewer                 #Fonts
   penpot-desktop                    #UI/UX Design
-  (pkgs.callPackage ./nax/figma/figma-test.nix { })
+  (pkgs.callPackage ./nax/figma/figma-desktop.nix { })
 
   #Dev Utilities
   git                               #Version Control
@@ -262,13 +272,16 @@ programs.kdeconnect.enable = true;
   grim                              #screenshot
   slurp                             #select area screenshot
   gvfs                              #Gnome Filesystem Compatibility
+  solaar                            #Mouse Compatibility
 
   #System Utilities
   fan2go                            #fan control
 	curl                              #data transfer utility
   playerctl                         #media player utility
   unixtools.netstat                 #Network monitor
-  rclone                            #Sync Software
+  libinput                          #input monitoring
+  evtest                            #input monitoring
+
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
   #Themes

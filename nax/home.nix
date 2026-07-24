@@ -34,7 +34,6 @@
 
   };
 
-
   #App compatibility with symlinked home folders
   xdg.userDirs =
     {
