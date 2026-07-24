@@ -82,14 +82,6 @@
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
-        ({ pkgs, ... }: {
-          environment.systemPackages = [ 
-            (pkgs.callPackage ./nax/figma/figma-desktop.nix { })
-            ];
-        })
-
-        
-
         #./nax/figma/figma-desktop.nix
         # ./nax/shell/shell.nix
         #./nax/goodsync/goodsync.nix

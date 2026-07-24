@@ -176,14 +176,6 @@ systemd.user.services.openrgb-profile = {
   };
 };
 
-
-# /etc/nixos/configuration.nix
-services.syncthing = 
-  {
-    enable = true;
-    openDefaultPorts = true;
-  };
-
 programs.gamemode.enable = true;
 
 programs.appimage = {
@@ -230,6 +222,7 @@ programs.kdeconnect.enable = true;
   bazaar                            #Flatpak App store
   dopamine                          #Music
   telegram-desktop                          #Messaging
+  
 
   #Games
   keypunch                          #Typing Test
@@ -245,8 +238,8 @@ programs.kdeconnect.enable = true;
   eyedropper                        #Color Picker
   elastic                           #Design Spring Animations
   gnome-font-viewer                 #Fonts
-  figma-agent                       #Figma Font Helper
   penpot-desktop                    #UI/UX Design
+  (pkgs.callPackage ./nax/figma/figma-test.nix { })
 
   #Dev Utilities
   git                               #Version Control
