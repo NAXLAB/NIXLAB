@@ -29,6 +29,7 @@
             "uid=1000"
             "gid=1000"
             "_netdev"
+            "noauto" 
             "x-systemd.requires=network-online.target"
             "x-systemd.after=network-online.target"
         ];
@@ -36,6 +37,7 @@
 
     systemd.automounts = [{
     where = "/mnt/zaigomaat";
+    wantedBy = [ "multi-user.target" ];
     automountConfig.TimeoutIdleSec = "0";
     after = [ "network-online.target" ];
     wants = [ "network-online.target" ];

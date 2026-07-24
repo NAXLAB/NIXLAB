@@ -19,7 +19,6 @@
 
   environment.systemPackages = with pkgs; [
     gnome-control-center     # Settings
-    gnome-software           # Gnome Package Manager
   ];
 
 

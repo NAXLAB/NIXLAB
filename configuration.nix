@@ -228,8 +228,8 @@ programs.kdeconnect.enable = true;
   krita                             #Raster Design
   obs-studio                        #Screen Recording
   bazaar                            #Flatpak App store
-  dopamine
-  gnome-boxes
+  dopamine                          #Music
+  telegram-desktop                          #Messaging
 
   #Games
   keypunch                          #Typing Test
@@ -275,6 +275,7 @@ programs.kdeconnect.enable = true;
 	curl                              #data transfer utility
   playerctl                         #media player utility
   unixtools.netstat                 #Network monitor
+  rclone                            #Sync Software
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
   #Themes

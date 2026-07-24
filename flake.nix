@@ -61,6 +61,7 @@
 
         ./hardware-configuration.nix
         ./configuration.nix
+        ./nax/shortcuts/shortcuts.nix
         ./nax/niri/niri.nix
         ./nax/materialshell/materialshell.nix
         ./nax/coolercontrol/coolercontrol.nix
@@ -68,8 +69,9 @@
         ./nax/drives/stax.nix
         ./nax/gnome/gnome.nix
         ./nax/flatpak/flatpak.nix
-        ./nax/figma/figma-desktop.nix
+
         ./nax/openrgb/openrgb.nix
+        ./nax/mtsync/mtsync.nix
 
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
@@ -80,6 +82,15 @@
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
+        ({ pkgs, ... }: {
+          environment.systemPackages = [ 
+            (pkgs.callPackage ./nax/figma/figma-desktop.nix { })
+            ];
+        })
+
+        
+
+        #./nax/figma/figma-desktop.nix
         # ./nax/shell/shell.nix
         #./nax/goodsync/goodsync.nix
       ];
