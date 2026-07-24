@@ -1787,7 +1787,7 @@
             "y": 0
         },
         "greyscale_tray_icon": false,
-        "language": "default",
+        "language": "System Default",
         "minimize_on_close": false
     }
 }

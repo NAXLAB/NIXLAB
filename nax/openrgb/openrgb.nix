@@ -1,13 +1,9 @@
 { pkgs, inputs, ... }:
 
 {
-
-systemd.tmpfiles.rules = 
-[
-
-    "L+ /home/nax/.config/openRGB/naxlab.orp - - - - /etc/nixos/nax/openrgb/naxlab.orp"
-    "L+ /home/nax/.config/openRGB/openRGB.json - - - - /etc/nixos/nax/openrgb/openRGB.json"
-
-];
-
+  systemd.tmpfiles.rules = [
+    "d /home/nax/.config/OpenRGB 0755 nax users - -"
+    "L+ /home/nax/.config/OpenRGB/naxlab.orp - - - - /etc/nixos/nax/openrgb/naxlab.orp"
+    "L+ /home/nax/.config/OpenRGB/OpenRGB.json - - - - /etc/nixos/nax/openrgb/OpenRGB.json"
+  ];
 }
