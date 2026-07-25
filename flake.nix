@@ -61,6 +61,7 @@
 
         ./hardware-configuration.nix
         ./configuration.nix
+        ./packages.nix
         ./nax/shortcuts/shortcuts.nix
         ./nax/niri/niri.nix
         ./nax/materialshell/materialshell.nix
@@ -69,9 +70,9 @@
         ./nax/drives/stax.nix
         ./nax/gnome/gnome.nix
         ./nax/flatpak/flatpak.nix
-
         ./nax/openrgb/openrgb.nix
         ./nax/mtsync/mtsync.nix
+        ./nax/boxes/boxes.nix
 
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
