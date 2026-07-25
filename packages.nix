@@ -1,6 +1,12 @@
   { config, pkgs, inputs, ... }:
 
 {
+
+  #Need to figure this out. I think DMS needed it to compile.
+  nixpkgs.config.permittedInsecurePackages = [
+    "pnpm-10.29.2"
+    "electron-40.10.5"
+  ];
   
   #Nix Package manager
   environment.systemPackages = with pkgs; [
@@ -94,6 +100,24 @@
   capitaine-cursors                 #Cursor Packs
 
 ];
+
+# Install Modules
+programs.firefox.enable = true;
+programs.zsh.enable = true;
+programs.starship.enable = true;
+programs.dconf.enable = true;
+programs.coolercontrol.enable = true;
+
+programs.steam = {
+  enable = true;
+};
+
+programs.kdeconnect.enable = true;
+
+programs.appimage = {
+  enable = true;
+  binfmt = true;  # makes AppImages run directly without appimage-run prefix
+};
 
 fonts.packages = with pkgs; [
 

@@ -2,12 +2,7 @@
 
 {
 
-  #Need to figure this out. I think DMS needed it to compile.
-  nixpkgs.config.permittedInsecurePackages = [
-    "pnpm-10.29.2"
-    "electron-40.10.5"
-  ];
-
+  #Enable flakes & nix-command
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
   # Bootloader.
@@ -33,12 +28,12 @@
   hardware.bluetooth.enable             = false;
   services.upower.enable                = true;
 
+
+  #Printing
   services.printing = {
     enable = true;
     drivers = [ pkgs.brlaser ];
   };
-
-
 
   hardware.printers = {
     ensurePrinters = [
@@ -51,9 +46,7 @@
     ensureDefaultPrinter = "Brother-HL-L2300D";
   };
 
-  
-
-  #Audio Services
+  #Audio
   services.pulseaudio.enable  = false;
   security.rtkit.enable       = true;
   services.pipewire = 
@@ -67,27 +60,21 @@
         };
     };
 
-  #Enable networking
+  #Networking
   networking.networkmanager.enable  = true;
-  networking.hostName               = "zaigomaat";
   services.openssh.enable           = true;
+  networking.hostName               = "zaigomaat";
   
-  #Policy Configuration
-  security.polkit.enable = true;  
 
-environment.etc."libinput/local-overrides.quirks".text = ''
-  [Logitech G502 Wheel Quirk]
-  MatchVendor=0x046D
-  MatchProduct=0x407F
-  MatchUdevType=mouse
-  AttrEventCode=-REL_WHEEL_HI_RES;-REL_HWHEEL_HI_RES;
-'';
 
-  #Miscellaneous desktop environment dependencies
-  environment.variables = 
-    {
-      MOZ_ENABLE_WAYLAND = "1";
-    };
+  #Mouse Compatibility
+  environment.etc."libinput/local-overrides.quirks".text = ''
+    [Logitech G502 Wheel Quirk]
+    MatchVendor=0x046D
+    MatchProduct=0x407F
+    MatchUdevType=mouse
+    AttrEventCode=-REL_WHEEL_HI_RES;-REL_HWHEEL_HI_RES;
+  '';
 
   #Time Zone
   time.timeZone = "America/New_York";
@@ -107,6 +94,7 @@ environment.etc."libinput/local-overrides.quirks".text = ''
       LC_TIME           = "en_US.UTF-8";
     };
 
+  #User Profile
   users.users.nax = 
     {
       shell         = pkgs.zsh;
@@ -155,50 +143,23 @@ build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 
 pkgs = "sudo nixos-rebuild switch --upgrade";
 flake = "sudo nix flake update"; 
+
 };
+
+#Policy Kit
+security.polkit.enable = true;  
 
 # Allow unfree packages
 nixpkgs.config.allowUnfree = true;
 
-# Install Modules
-programs.firefox.enable = true;
-programs.zsh.enable = true;
-programs.starship.enable = true;
-programs.dconf.enable = true;
-programs.coolercontrol.enable = true;
-
-
-#Install OpenRGB
-services.hardware.openrgb = {
-  enable = true;
-  motherboard = "amd";
-};
-
-systemd.user.services.openrgb-profile = {
-  description = "Load OpenRGB profile";
-  wantedBy = [ "graphical-session.target" ];
-  after = [ "graphical-session.target" ];
-  serviceConfig = {
-    Type = "oneshot";
-    ExecStart = "${pkgs.openrgb}/bin/openrgb --profile \"naxlab\"";
-    RemainAfterExit = true;
-  };
-};
-
-programs.appimage = {
-  enable = true;
-  binfmt = true;  # makes AppImages run directly without appimage-run prefix
-};
-
 programs.gamemode.enable = true;
 
-programs.steam = {
-  enable = true;
-};
 
-programs.kdeconnect.enable = true;
-
-
+#Miscellaneous desktop environment dependencies
+environment.variables = 
+  {
+    MOZ_ENABLE_WAYLAND = "1";
+  };
 
 #Do not change this number for reasons I don't understand.
 system.stateVersion = "25.11";

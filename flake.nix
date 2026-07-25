@@ -72,7 +72,10 @@
         ./nax/flatpak/flatpak.nix
         ./nax/openrgb/openrgb.nix
         ./nax/mtsync/mtsync.nix
-        ./nax/boxes/boxes.nix
+
+        #./nax/figma/figma-desktop.nix
+        # ./nax/shell/shell.nix
+        #./nax/goodsync/goodsync.nix
 
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
@@ -83,9 +86,7 @@
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
-        #./nax/figma/figma-desktop.nix
-        # ./nax/shell/shell.nix
-        #./nax/goodsync/goodsync.nix
+
       ];
     };
   };
