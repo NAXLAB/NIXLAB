@@ -1,9 +1,12 @@
 { pkgs, inputs, ... }:
 {
 
-#Autologin Nax
-services.getty.autologinUser = "nax";
- 
+services.displayManager.dms-greeter = {
+  enable = true;
+  compositor.name = "niri";
+  configHome = "/home/nax";
+};
+
 #Enable DMS Nixos module and supply package via flakes
 programs.dms-shell = 
     {
@@ -20,7 +23,6 @@ programs.dms-shell =
     # Core features
     enableSystemMonitoring = true;     # System monitoring widgets (dgop)
     enableVPN = true;                  # VPN management widget
-    enableCalendarEvents = true;       # Calendar integration (khal)
     enableClipboardPaste = true;       # Pasting from the clipboard history (wtype)
     #enableDynamicTheming = true;       # Wallpaper-based theming (matugen)
     #enableAudioWavelength = true;      # Audio visualizer (cava)

@@ -15,7 +15,7 @@
 
     #DankMaterialShell
     dms = {
-      url                         = "github:AvengeMedia/DankMaterialShell";
+      url                         = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 

@@ -7,5 +7,4 @@ binds {
     Mod+V hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
     Super+Escape hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Super+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
-    Mod+C { center-column; }
 }

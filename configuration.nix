@@ -23,6 +23,12 @@
       }
     ];
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   #System & Hardware Services
   services.power-profiles-daemon.enable = true;
   hardware.bluetooth.enable             = false;
@@ -138,11 +144,14 @@
 
 # Aliases for Terminal Commands
 environment.shellAliases = {
+
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
 
 pkgs = "sudo nixos-rebuild switch --upgrade";
 flake = "sudo nix flake update"; 
+
+garbage = "sudo nix-collect-garbage -d";
 
 };
 
