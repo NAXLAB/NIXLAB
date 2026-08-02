@@ -12,6 +12,7 @@
 
   imports = [
     ./firefox/firefox.nix
+    ./discord/discord.nix
   ];
 
   #GTK Compatibility
@@ -62,6 +63,11 @@
       font-name           = "SF Pro Display 11";
       monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
     };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk3"; # make Qt apps follow GTK theme
+  };
 
 
 

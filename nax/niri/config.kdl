@@ -70,7 +70,7 @@ input {
     mouse {
         accel-speed 0.1
         accel-profile "flat"
-        scroll-factor 2.0
+        scroll-factor 1.5
     }
 }
 
@@ -95,9 +95,9 @@ cursor {
 */
 
 // Make the backdrop Dark.
+
 overview {
-    zoom 0.5
-    backdrop-color "#15161A"
+    zoom 0.4
     workspace-shadow {
         off
      }
@@ -123,12 +123,6 @@ binds {
     Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
     Super+S { screenshot-screen; }
 
-    // Toggle the focused window into/out of the sidebar
-    Super+W { spawn-sh "/run/current-system/sw/bin/niri-sidebar toggle-window"; }
-
-    // Toggle sidebar visibility (hide/show)
-    Super+Shift+W { spawn-sh "/run/current-system/sw/bin/niri-sidebar toggle-visibility"; }
-
     // Flip the order of the sidebar
     //Mod+Ctrl+S { spawn-sh "flip"; }
 
@@ -146,5 +140,4 @@ binds {
 //include "dms/alttab.kdl"
 include "dms/binds.kdl"
 include "dms/cursor.kdl"
-
 include "dms/outputs.kdl"

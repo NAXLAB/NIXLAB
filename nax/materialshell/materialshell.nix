@@ -1,10 +1,14 @@
 { pkgs, inputs, ... }:
 {
 
-services.displayManager.dms-greeter = {
+services.greetd = {
   enable = true;
-  compositor.name = "niri";
-  configHome = "/home/nax";
+  settings = {
+    default_session = {
+      command = "niri-session";
+      user = "nax";
+    };
+  };
 };
 
 #Enable DMS Nixos module and supply package via flakes
@@ -33,20 +37,21 @@ environment.systemPackages = with pkgs;
     dsearch   #dms file search
 ];
 
-systemd.tmpfiles.rules = 
-[
-    "L+ /home/nax/.config/niri/dms/alttab.kdl - - - - /etc/nixos/nax/materialshell/alttab.kdl"
-    "L+ /home/nax/.config/niri/dms/binds.kdl - - - - /etc/nixos/nax/materialshell/binds.kdl"
-    "L+ /home/nax/.config/niri/dms/colors.kdl - - - - /etc/nixos/nax/materialshell/colors.kdl"
-    "L+ /home/nax/.config/niri/dms/cursor.kdl - - - - /etc/nixos/nax/materialshell/cursor.kdl"
-    "L+ /home/nax/.config/niri/dms/layout.kdl - - - - /etc/nixos/nax/materialshell/layout.kdl"
-    "L+ /home/nax/.config/niri/dms/outputs.kdl - - - - /etc/nixos/nax/materialshell/outputs.kdl"
-    "L+ /home/nax/.config/niri/dms/windowrules.kdl - - - - /etc/nixos/nax/materialshell/windowrules.kdl"
-    "L+ /home/nax/.config/niri/dms/wpblur.kdl - - - - /etc/nixos/nax/materialshell/wpblur.kdl"
+systemd.tmpfiles.rules = [
+  #Symlink MaterialShell files to home
+  "L+ /home/nax/.config/niri/dms/alttab.kdl - - - - /etc/nixos/nax/materialshell/alttab.kdl"
+  "L+ /home/nax/.config/niri/dms/binds.kdl - - - - /etc/nixos/nax/materialshell/binds.kdl"
+  "L+ /home/nax/.config/niri/dms/colors.kdl - - - - /etc/nixos/nax/materialshell/colors.kdl"
+  "L+ /home/nax/.config/niri/dms/cursor.kdl - - - - /etc/nixos/nax/materialshell/cursor.kdl"
+  "L+ /home/nax/.config/niri/dms/layout.kdl - - - - /etc/nixos/nax/materialshell/layout.kdl"
+  "L+ /home/nax/.config/niri/dms/outputs.kdl - - - - /etc/nixos/nax/materialshell/outputs.kdl"
+  "L+ /home/nax/.config/niri/dms/windowrules.kdl - - - - /etc/nixos/nax/materialshell/windowrules.kdl"
+  "L+ /home/nax/.config/niri/dms/wpblur.kdl - - - - /etc/nixos/nax/materialshell/wpblur.kdl"
 
-    "L+ /home/nax/.config/gtk-3.0/gtk.css - - - - /etc/nixos/nax/materialshell/dank-colors.css"
-    "L+ /home/nax/.config/gtk-4.0/dank-colors.css - - - - /etc/nixos/nax/materialshell/dank-colors.css"
+  "L+ /home/nax/.config/gtk-3.0/gtk.css - - - - /etc/nixos/nax/materialshell/dank-colors.css"
+  "L+ /home/nax/.config/gtk-4.0/dank-colors.css - - - - /etc/nixos/nax/materialshell/dank-colors.css"
 
-    "L+ /home/nax/.config/DankMaterialShell/themes/naxlab - - - - /etc/nixos/nax/themes/naxlab"
+  "L+ /home/nax/.config/DankMaterialShell/settings.json - - - - /etc/nixos/nax/materialshell/settings.json"
+  "L+ /home/nax/.config/DankMaterialShell/themes/naxlab - - - - /etc/nixos/nax/themes/materialshell"
 ];
 }

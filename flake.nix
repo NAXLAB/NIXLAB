@@ -35,19 +35,27 @@
     nix-flatpak = {
       url                         = "github:gmodena/nix-flatpak/?ref=latest";
     };
+    
+    #Nautilus My Computer
+    nautilus-my-computer = {
+      url                         = "github:yannmasoch/nautilus-my-computer?dir=packaging/nix";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
 
   };
 
-  outputs = inputs@  { 
-    self,
-    nixpkgs,
-    agenix,
-    home-manager,
-    quickshell,
-    nix-flatpak,
-    dms,
-    ...
-  }:
+  outputs = inputs@  
+    { 
+      self,
+      nixpkgs,
+      agenix,
+      home-manager,
+      quickshell,
+      nix-flatpak,
+      dms,
+      nautilus-my-computer,
+      ...
+    }:
   
   {
     nixosConfigurations.zaigomaat = nixpkgs.lib.nixosSystem{
@@ -55,6 +63,7 @@
       specialArgs = 
       {
         inherit inputs;
+        colors = import ./nax/themes/base16.nix;
       };
 
       modules = [
@@ -71,11 +80,12 @@
         ./nax/gnome/gnome.nix
         ./nax/flatpak/flatpak.nix
         ./nax/openrgb/openrgb.nix
-        ./nax/mtsync/mtsync.nix
+        ./nax/tty/tty.nix
 
         #./nax/figma/figma-desktop.nix
         # ./nax/shell/shell.nix
         #./nax/goodsync/goodsync.nix
+        #./nax/mtsync/mtsync.nix
 
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak

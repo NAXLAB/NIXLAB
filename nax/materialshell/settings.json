@@ -422,19 +422,6 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
-  "bluetoothDevicePins": {},
-  "audioInputDevicePins": {
-    "preferredInput": [
-      "alsa_input.usb-Yamaha_Corporation_Steinberg_UR12-00.analog-stereo"
-    ]
-  },
-  "audioOutputDevicePins": {
-    "preferredOutput": [
-      "alsa_output.usb-Yamaha_Corporation_Steinberg_UR12-00.analog-stereo"
-    ]
-  },
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -522,7 +509,7 @@
   "lockScreenShowPasswordField": true,
   "lockScreenShowMediaPlayer": false,
   "lockScreenPowerOffMonitorsOnLock": false,
-  "lockAtStartup": false,
+  "lockAtStartup": true,
   "enableFprint": false,
   "maxFprintTries": 15,
   "enableU2f": false,
@@ -575,7 +562,8 @@
     "reboot",
     "poweroff",
     "lock",
-    "restart"
+    "restart",
+    "logout"
   ],
   "powerMenuDefaultAction": "poweroff",
   "powerMenuGridLayout": false,
@@ -963,5 +951,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": -1,
-  "configVersion": 12
+  "configVersion": 13
 }

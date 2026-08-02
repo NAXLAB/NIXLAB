@@ -10,5 +10,4 @@ zstyle :compinstall filename '/home/nax/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
 fastfetch

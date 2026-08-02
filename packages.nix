@@ -84,6 +84,7 @@
   gvfs                              #Gnome Filesystem Compatibility
   solaar                            #Mouse Compatibility
 
+
   #System Utilities
   fan2go                            #fan control
 	curl                              #data transfer utility
@@ -91,7 +92,6 @@
   unixtools.netstat                 #Network monitor
   libinput                          #input monitoring
   evtest                            #input monitoring
-
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
   #Themes
@@ -125,6 +125,7 @@ fonts.packages = with pkgs; [
   nerd-fonts.iosevka
   fira-code
   geist-font
+  iosevka
 
 ];
 

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   services = {
     displayManager.gdm.enable = false;
@@ -16,11 +16,5 @@
     gnome-tour
     gnome-user-docs
   ];
-
-  environment.systemPackages = with pkgs; [
-    gnome-control-center     # Settings
-  ];
-
-
 
 }
