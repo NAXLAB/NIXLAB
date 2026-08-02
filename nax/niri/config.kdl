@@ -16,6 +16,7 @@ gestures {
     }
 }
 
+
 animations {
 
     overview-open-close {
@@ -73,6 +74,8 @@ input {
         scroll-factor 1.5
     }
 }
+
+
 
 /*
 output "DP-2" {

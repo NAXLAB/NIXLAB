@@ -126,7 +126,7 @@
       "width": 50
     },
     {
-      "id": "darkMode",
+      "id": "doNotDisturb",
       "enabled": true,
       "width": 50
     },
@@ -295,7 +295,7 @@
   "rememberLastQuery": false,
   "rememberLastMode": true,
   "spotlightSectionViewModes": {
-    "apps": "list"
+    "apps": "grid"
   },
   "appDrawerSectionViewModes": {
     "apps": "list"
@@ -482,7 +482,7 @@
   "dockBorderColor": "surfaceText",
   "dockBorderOpacity": 0.08,
   "dockBorderThickness": 1,
-  "dockIsolateDisplays": false,
+  "dockIsolateDisplays": true,
   "dockLauncherEnabled": true,
   "dockLauncherLogoMode": "dank",
   "dockLauncherLogoCustomPath": "/home/nax/Desktop/rest.png",

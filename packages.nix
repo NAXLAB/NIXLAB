@@ -64,8 +64,7 @@
   #Dev Utilities
   git                               #Version Control
   vscodium                          #Dev environment
-  fastfetch                         #meme terminal widget    
-  quickshell                        #App and Widget Maker      
+  fastfetch                         #meme terminal widget         
   docker                            #container host
   docker-client                     #container host    
   github-desktop                    #git repository management

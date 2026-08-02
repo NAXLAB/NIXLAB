@@ -83,7 +83,7 @@
         ./nax/tty/tty.nix
 
         #./nax/figma/figma-desktop.nix
-        # ./nax/shell/shell.nix
+         ./nax/shell/shell.nix
         #./nax/goodsync/goodsync.nix
         #./nax/mtsync/mtsync.nix
 

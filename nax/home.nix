@@ -19,12 +19,14 @@
   xdg.userDirs.setSessionVariables = true;
 
 
-  gtk = {
-    enable = true;
-    theme = {
-      name = "adw-gtk3";
-      package = pkgs.adw-gtk3;
-    };
+  gtk = 
+    {
+      enable  = true;
+      theme   = 
+        {
+          name    = "adw-gtk3";
+          package = pkgs.adw-gtk3;
+        };
 
     gtk4 = {
       theme = config.gtk.theme;
@@ -32,7 +34,11 @@
         @import url("dank-colors.css");
       '';
     };
+  };
 
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk3"; # make Qt apps follow GTK theme
   };
 
   #App compatibility with symlinked home folders
@@ -64,10 +70,6 @@
       monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
     };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "gtk3"; # make Qt apps follow GTK theme
-  };
 
 
 

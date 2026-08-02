@@ -1,4 +1,15 @@
+// shell.qml
+//
+// Entrypoint
+
+//@ pragma IconTheme Papirus-Dark
+
 import Quickshell
 import QtQuick
-import QtQuick.Layouts
 
+Scope {
+    id: root
+
+    LauncherBar {}
+    // SystemBar {}
+}

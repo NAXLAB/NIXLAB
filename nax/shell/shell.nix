@@ -1,9 +1,14 @@
-{ ... }:
+# shell.nix
+{ inputs, pkgs, ... }:
+
 
 {
+  environment.systemPackages = [
+    inputs.quickshell.packages.${pkgs.system}.default
+  ];
 
   systemd.tmpfiles.rules = [
-    "L+ /home/nax/.config/quickshell/shell.qml - - - - /etc/nixos/nax/shell/shell.qml"
+    "L+ /home/nax/.config/quickshell - - - - /etc/nixos/nax/shell"
   ];
 
 }
