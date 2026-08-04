@@ -5,7 +5,7 @@
     services.flatpak = {
         enable = true;
         packages = [
-
+            "io.github.flattool.Warehouse"
         ];
         
         update.auto = {

@@ -60,6 +60,8 @@
   elastic                           #Design Spring Animations
   gnome-font-viewer                 #Fonts
   penpot-desktop                    #UI/UX Design
+  prusa-slicer
+  pinta
   (pkgs.callPackage ./nax/figma/figma-desktop.nix { })
 
   #Dev Utilities
@@ -70,6 +72,8 @@
   docker-client                     #container host    
   github-desktop                    #git repository management
   libnotify                         #Notification Test Utility
+  lufus                             #Format Drives
+  
 
   #Desktop Utilities
   xwayland-satellite                #Wayland integration

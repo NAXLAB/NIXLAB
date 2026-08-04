@@ -67,6 +67,25 @@ stdenv.mkDerivation {
   dontConfigure = true;
   dontBuild = true;
 
+  # The tarball ships its managed .dll assemblies (PE/COFF, not ELF) with
+  # the executable bit set, which is an artifact of how `dotnet publish`
+  # writes them out. Everything is installed under $out/lib/noctis, which
+  # falls inside stdenv's default stripDebugList ("lib", "bin", etc), so
+  # without this, the default fixupPhase runs `strip` against those DLLs
+  # as if they were native binaries and corrupts their PE headers --
+  # manifesting at runtime as "incorrect format" / 0x8007000B when
+  # CoreCLR tries to load System.Private.CoreLib.dll. The bundled native
+  # .so files are already pre-stripped upstream, so nothing is lost here.
+  dontStrip = true;
+
+  # libcoreclrtraceptprovider.so links against liblttng-ust for optional
+  # LTTng tracing support. CoreCLR handles its absence gracefully at
+  # runtime (tracing is just unavailable) -- but autoPatchelfHook treats
+  # every DT_NEEDED as mandatory unless told otherwise, so tell it this
+  # one's fine to leave unresolved rather than pulling in lttng-ust just
+  # to satisfy a feature nothing here uses.
+  autoPatchelfIgnoreMissingDeps = [ "liblttng-ust.so.0" ];
+
   nativeBuildInputs = [
     autoPatchelfHook
     makeWrapper

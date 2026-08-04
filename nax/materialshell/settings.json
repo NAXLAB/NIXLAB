@@ -472,7 +472,7 @@
   "dockGroupByApp": false,
   "dockRestoreSpecialWorkspaceOnClick": false,
   "dockOpenOnOverview": false,
-  "dockPosition": 1,
+  "dockPosition": 0,
   "dockSpacing": 10,
   "dockBottomGap": -24,
   "dockMargin": 6,
