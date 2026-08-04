@@ -42,6 +42,7 @@
   dopamine                          #Music
   telegram-desktop                  #Messaging
   libreoffice
+  (pkgs.callPackage ./nax/noctis/package.nix {})
   
 
   #Games

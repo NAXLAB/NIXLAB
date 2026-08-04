@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "gavindi";
     repo = "MtSync";
     tag = finalAttrs.version;
-    hash = "sha256-CvKa5q5ODJx0w+jH80QgF0f7j/UIB6HJI3Eb6ywP53g=";
+    hash = "";
   };
 
   strictDeps = true;
