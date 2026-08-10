@@ -1,6 +1,8 @@
 { pkgs, inputs, ... }:
 
 {
+
+  programs.coolercontrol.enable = true;
   
   systemd.tmpfiles.rules = [
     "d /etc/coolercontrol"

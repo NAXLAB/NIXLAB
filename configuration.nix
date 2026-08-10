@@ -162,8 +162,6 @@ security.polkit.enable = true;
 # Allow unfree packages
 nixpkgs.config.allowUnfree = true;
 
-programs.gamemode.enable = true;
-
 #Miscellaneous desktop environment dependencies
 environment.variables = 
   {

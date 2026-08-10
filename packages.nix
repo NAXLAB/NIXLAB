@@ -110,8 +110,8 @@ programs.firefox.enable = true;
 programs.zsh.enable = true;
 programs.starship.enable = true;
 programs.dconf.enable = true;
-programs.coolercontrol.enable = true;
 
+programs.gamemode.enable = true;
 programs.steam = {
   enable = true;
 };
