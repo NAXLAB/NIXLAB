@@ -71,8 +71,6 @@
   services.openssh.enable           = true;
   networking.hostName               = "zaigomaat";
   
-
-
   #Mouse Compatibility
   environment.etc."libinput/local-overrides.quirks".text = ''
     [Logitech G502 Wheel Quirk]
@@ -109,6 +107,7 @@
       packages      = with pkgs; [];
       extraGroups   = 
         [ 
+          "lab"
           "i2c"
           "networkmanager"
           "wheel"
@@ -152,6 +151,8 @@ pkgs = "sudo nixos-rebuild switch --upgrade";
 flake = "sudo nix flake update"; 
 
 garbage = "sudo nix-collect-garbage -d";
+
+loginfix = "sudo systemctl restart greetd.service";
 
 };
 

@@ -42,7 +42,6 @@
   dopamine                          #Music
   telegram-desktop                  #Messaging
   libreoffice
-  (pkgs.callPackage ./nax/noctis/package.nix {})
   
 
   #Games
@@ -73,6 +72,7 @@
   github-desktop                    #git repository management
   libnotify                         #Notification Test Utility
   lufus                             #Format Drives
+  qmk                               #Keyboard Programming
   
 
   #Desktop Utilities

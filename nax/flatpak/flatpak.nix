@@ -6,6 +6,9 @@
         enable = true;
         packages = [
             "io.github.flattool.Warehouse"
+            "com.surfshark.Surfshark"
+
+
         ];
         
         update.auto = {

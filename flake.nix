@@ -36,11 +36,6 @@
       url                         = "github:gmodena/nix-flatpak/?ref=latest";
     };
     
-    #Nautilus My Computer
-    nautilus-my-computer = {
-      url                         = "github:yannmasoch/nautilus-my-computer?dir=packaging/nix";
-      inputs.nixpkgs.follows      = "nixpkgs";
-    };
 
   };
 
@@ -53,7 +48,6 @@
       quickshell,
       nix-flatpak,
       dms,
-      nautilus-my-computer,
       ...
     }:
   
