@@ -159,16 +159,6 @@
       "width": 50
     },
     {
-      "id": "doNotDisturb",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "nightMode",
-      "enabled": true,
-      "width": 50
-    },
-    {
       "id": "diskUsage",
       "enabled": true,
       "width": 50,
@@ -190,11 +180,6 @@
       "width": 50
     },
     {
-      "id": "colorPicker",
-      "enabled": true,
-      "width": 50
-    },
-    {
       "id": "audioInput",
       "enabled": true,
       "width": 50
@@ -211,6 +196,11 @@
     },
     {
       "id": "volumeSlider",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "doNotDisturb",
       "enabled": true,
       "width": 50
     }
@@ -362,7 +352,7 @@
     },
     {
       "id": "media",
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "wallpaper",

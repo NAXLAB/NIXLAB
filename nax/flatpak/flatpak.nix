@@ -5,10 +5,20 @@
     services.flatpak = {
         enable = true;
         packages = [
-            "io.github.flattool.Warehouse"
-            "com.surfshark.Surfshark"
-
-
+            "io.github.flattool.Warehouse"      #Manage Flatpaks
+            "com.surfshark.Surfshark"           #VPN
+            "io.github.josephmawa.Gauge"        #Unit Conversion
+            "org.gnome.Boxes"                   #Virtual Machines
+            "io.github.gaheldev.Millisecond"    #Reduce System Latency
+            "se.sjoerd.lockpicker"              #Reverse engineer Hash codes
+            "com.usebottles.bottles"            #Windows App Compatibility Layer
+            "space.gaiasky.GaiaSky"             #Interactive Space Map
+            "page.codeberg.censor.Censor"       #PDF Editor
+            "org.gnome.gitlab.ilhooq.Bookup"    #Markdown Editor
+            "com.odnoyko.valot"                 #Time Tracker
+            "net.codelogistics.letters"         #Simple Word Processor
+            "de.scrylab.ScryLab"                #Data Analytics
+            "com.github.tchx84.Flatseal"        #Manage Flatpak Permissions
         ];
         
         update.auto = {

@@ -17,11 +17,14 @@ Item {
         id: launchHitbox
         hoverEnabled: true
 
-        width: parent.width + 4
-        height: parent.height + 4
-
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        anchors.left: parent.left
+        anchors.leftMargin: -4
+        anchors.bottomMargin: -4
+        anchors.topMargin: -4
+        anchors.rightMargin: -4
 
         onClicked: root.clicked()
 

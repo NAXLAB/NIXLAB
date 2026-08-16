@@ -34,14 +34,18 @@
   valuta                            # Currency Translation
   xournalpp                         # Pdf Editor
   nicotine-plus                     # soulseek music sharing
-  wine                              #Run Windows apps
   inkscape                          #2D Design 
   krita                             #Raster Design
   obs-studio                        #Screen Recording
   bazaar                            #Flatpak App store
   dopamine                          #Music
   telegram-desktop                  #Messaging
-  libreoffice
+  libreoffice                       #Office Suite
+  wpsoffice                         #Office Suite
+  gelly                             #Jellyfin Music Client
+  plattenalbum                      #Simple Music Player
+  ollama                            #Ollama LLM App
+  flowtime                          #Timer
   
 
   #Games
@@ -87,6 +91,7 @@
   slurp                             #select area screenshot
   gvfs                              #Gnome Filesystem Compatibility
   solaar                            #Mouse Compatibility
+  sunshine                          #Remote Desktop Host
 
 
   #System Utilities

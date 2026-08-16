@@ -113,6 +113,7 @@
           "wheel"
           "libvirt" 
           "qemu-libvirtd"
+          "audio"
         ];
     };
 
