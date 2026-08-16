@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 {
 
 services.greetd = {
@@ -15,7 +15,7 @@ systemd.services.greetd = {
   after = [ "systemd-udev-settle.service" ];
   wants = [ "systemd-udev-settle.service" ];
   serviceConfig = {
-    Restart = "on-failure";
+    Restart = lib.mkForce "on-failure";
     RestartSec = 1;
   };
 };
