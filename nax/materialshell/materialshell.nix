@@ -11,6 +11,15 @@ services.greetd = {
   };
 };
 
+systemd.services.greetd = {
+  after = [ "systemd-udev-settle.service" ];
+  wants = [ "systemd-udev-settle.service" ];
+  serviceConfig = {
+    Restart = "on-failure";
+    RestartSec = 1;
+  };
+};
+
 #Enable DMS Nixos module and supply package via flakes
 programs.dms-shell = 
     {

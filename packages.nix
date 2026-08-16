@@ -44,8 +44,8 @@
   wpsoffice                         #Office Suite
   gelly                             #Jellyfin Music Client
   plattenalbum                      #Simple Music Player
-  ollama                            #Ollama LLM App
   flowtime                          #Timer
+  bookup                            #Markdown Notes
   
 
   #Games
@@ -63,8 +63,9 @@
   elastic                           #Design Spring Animations
   gnome-font-viewer                 #Fonts
   penpot-desktop                    #UI/UX Design
-  prusa-slicer
-  pinta
+  prusa-slicer                      #3D Print Utility
+  pinta                             #Raster Design
+  exhibit                           #View 3D Models
   (pkgs.callPackage ./nax/figma/figma-desktop.nix { })
 
   #Dev Utilities

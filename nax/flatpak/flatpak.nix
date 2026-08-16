@@ -14,11 +14,11 @@
             "com.usebottles.bottles"            #Windows App Compatibility Layer
             "space.gaiasky.GaiaSky"             #Interactive Space Map
             "page.codeberg.censor.Censor"       #PDF Editor
-            "org.gnome.gitlab.ilhooq.Bookup"    #Markdown Editor
             "com.odnoyko.valot"                 #Time Tracker
             "net.codelogistics.letters"         #Simple Word Processor
             "de.scrylab.ScryLab"                #Data Analytics
             "com.github.tchx84.Flatseal"        #Manage Flatpak Permissions
+            "io.github.nokse22.ultimate-tic-tac-toe" #Tic-Tac-Toe Game"
         ];
         
         update.auto = {
