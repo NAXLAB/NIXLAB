@@ -6,36 +6,34 @@ import Quickshell.Widgets
 
 Item {
     id: root
-
     Layout.preferredWidth: 64
     Layout.fillHeight: true
 
     signal clicked()
 
-    // Hitbox extends by 4px
+    // Extends 4px toward the top-left only -- that's the one direction
+    // where a real gap (and real window surface, per LauncherBar.qml)
+    // actually exists. Extending right/bottom too wouldn't cause a bug,
+    // but there's no gap there for it to usefully reach.
     MouseArea {
         id: launchHitbox
         hoverEnabled: true
 
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        anchors.right: parent.right
-        anchors.left: parent.left
-        anchors.leftMargin: -4
-        anchors.bottomMargin: -4
-        anchors.topMargin: -4
-        anchors.rightMargin: -4
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+            margins: -4
+        }
 
         onClicked: root.clicked()
 
         Image {
-            source: parent.containsMouse ? "assets/launch-hover.svg" : "assets/launch.svg"
-
+            id: launchImage
+            source: launchHitbox.containsMouse ? "assets/launch-hover.svg" : "assets/launch.svg"
             width: 22
             height: 22
-
-            sourceSize: Qt.size(22, 22)
-
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
         }

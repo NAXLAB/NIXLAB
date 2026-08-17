@@ -22,8 +22,8 @@ Item {
 
     signal rightClicked()
 
-    readonly property bool running: AppLauncher.isRunning(root.desktopId)
-    readonly property bool active: AppLauncher.isActive(root.desktopId)
+    readonly property bool running: AppLaunchScript.isRunning(root.desktopId)
+    readonly property bool active: AppLaunchScript.isActive(root.desktopId)
 
     // Attached Layout properties -- works whether this is placed directly
     // in a RowLayout, or as a Repeater delegate inside one.
@@ -45,15 +45,14 @@ Item {
             if (mouse.button === Qt.RightButton)
                 root.rightClicked();
             else
-                AppLauncher.launchOrFocus(root.desktopId);
+                AppLaunchScript.launchOrFocus(root.desktopId);
         }
 
         IconImage {
             id: icon
             anchors.centerIn: parent
             implicitSize: root.iconSize
-            opacity: root.running ? 1.0 : 0.5
-            source: AppLauncher.iconPath(root.desktopId, root.fallbackIcon)
+            source: AppLaunchScript.iconPath(root.desktopId, root.fallbackIcon)
 
             Behavior on opacity { NumberAnimation { duration: 100 } }
         }

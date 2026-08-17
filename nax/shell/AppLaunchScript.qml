@@ -1,4 +1,4 @@
-// AppLauncher.qml
+// AppLaunchScript.qml
 pragma Singleton
 
 import Quickshell
@@ -6,7 +6,7 @@ import Quickshell.Wayland   // ToplevelManager / Toplevel (zwlr-foreign-toplevel
 
 // Single source of truth for "how do I launch or focus an app" across
 // the whole shell. Lives in the project root next to shell.qml, so
-// every neighboring file can reference it directly as `AppLauncher`
+// every neighboring file can reference it directly as `AppLaunchScript`
 // with no import -- same as the Quickshell docs' Time.qml pattern.
 //
 // Widgets (AppButton, a future bigger start-menu tile, a taskbar, etc.)

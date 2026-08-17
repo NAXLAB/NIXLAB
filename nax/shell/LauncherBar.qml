@@ -16,18 +16,13 @@ Scope {
             required property var modelData
             screen: modelData
 
-            implicitWidth: dockBar.width
-            implicitHeight: dockBar.height
+            implicitWidth: dockBar.x + dockBar.width
+            implicitHeight: dockBar.y + dockBar.height
             color: "transparent"
 
             anchors {
                 top: true
                 left: true
-                    }
-
-            margins {
-                top: 4
-                left: 4
                     }
 
             //Black Rectangle Background
@@ -37,11 +32,16 @@ Scope {
                 width: launchColumn.implicitWidth
                 height: launchColumn.implicitHeight
 
+                anchors { 
+                    top: parent.top; 
+                    left: parent.left; 
+                    margins: 4 
+                    }
+
                 radius: 8
 
                 color: "#0e0f11"
 
-                // Default to rest.
                 state: "rest"
 
                 //State Handling for the bar
