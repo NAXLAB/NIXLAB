@@ -21,6 +21,7 @@
       disableMinSize = false;
       disableSmoothScroll = false;
       spellCheckLanguages = [ "en-US" "en" ];
+
       css = ''
         :root {
           --custom-app-top-bar-height: 0px !important;
@@ -30,5 +31,6 @@
         display: none !important;
         }
       '';
+      
     };
 }

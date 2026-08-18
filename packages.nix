@@ -46,6 +46,9 @@
   plattenalbum                      #Simple Music Player
   flowtime                          #Timer
   bookup                            #Markdown Notes
+  pdfarranger                       #PDF Editor
+  euphonica                         #MPD Music Client
+  mpd                               #Music Daemon
   
 
   #Games

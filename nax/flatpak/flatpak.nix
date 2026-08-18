@@ -19,6 +19,7 @@
             "de.scrylab.ScryLab"                #Data Analytics
             "com.github.tchx84.Flatseal"        #Manage Flatpak Permissions
             "io.github.nokse22.ultimate-tic-tac-toe" #Tic-Tac-Toe Game"
+            "io.github.weiteck.Lyricade"        #Manage Song Lyrics
         ];
         
         update.auto = {

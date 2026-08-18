@@ -29,6 +29,26 @@
   "controlCenterShowMicPercent": true,
   "controlCenterWidgets": [
     {
+      "id": "inputVolumeSlider",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "volumeSlider",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "audioInput",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "audioOutput",
+      "enabled": true,
+      "width": 50
+    },
+    {
       "id": "wifi",
       "enabled": true,
       "width": 50
@@ -56,26 +76,6 @@
     },
     {
       "id": "builtin_vpn",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "audioInput",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "audioOutput",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "inputVolumeSlider",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "volumeSlider",
       "enabled": true,
       "width": 50
     },
