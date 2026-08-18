@@ -4,9 +4,6 @@
 #   mkdir ~/.mpd
 #   ~/.mpd/mpd.conf  (db_file, state_file, pulse audio_output "Music")
 #   systemctl --user enable --now mpd.socket
-#
-# Import this from your home-manager config, e.g. in home.nix:
-#   imports = [ ./mpd/mpd.nix ];
 
 { config, pkgs, ... }:
 

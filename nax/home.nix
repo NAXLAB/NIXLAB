@@ -13,7 +13,6 @@
   imports = [
     ./firefox/firefox.nix
     ./discord/discord.nix
-    ./mpd/mpd.nix
   ];
 
   #GTK Compatibility

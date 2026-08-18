@@ -47,10 +47,7 @@
   flowtime                          #Timer
   bookup                            #Markdown Notes
   pdfarranger                       #PDF Editor
-  euphonica                         #MPD Music Client
-  mpd                               #Music Daemon
   
-
   #Games
   keypunch                          #Typing Test
   binary                            #Number Base Math tool
@@ -82,7 +79,6 @@
   lufus                             #Format Drives
   qmk                               #Keyboard Programming
   
-
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
   xdg-desktop-portal-gnome          #App Compatibility portal
