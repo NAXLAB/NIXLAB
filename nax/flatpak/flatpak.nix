@@ -1,7 +1,6 @@
 { ... }:
 
 {
-    # Enable flatpak (standard NixOS option)
     services.flatpak = {
         enable = true;
         packages = [
@@ -13,13 +12,14 @@
             "se.sjoerd.lockpicker"              #Reverse engineer Hash codes
             "com.usebottles.bottles"            #Windows App Compatibility Layer
             "space.gaiasky.GaiaSky"             #Interactive Space Map
-            "page.codeberg.censor.Censor"       #PDF Editor
             "com.odnoyko.valot"                 #Time Tracker
             "net.codelogistics.letters"         #Simple Word Processor
             "de.scrylab.ScryLab"                #Data Analytics
             "com.github.tchx84.Flatseal"        #Manage Flatpak Permissions
             "io.github.nokse22.ultimate-tic-tac-toe" #Tic-Tac-Toe Game"
             "io.github.weiteck.Lyricade"        #Manage Song Lyrics
+            "org.gnome.Builder"                 #Build Gnome Apps
+            "re.sonny.Workbench"                #Build Gnome Apps
         ];
         
         update.auto = {
@@ -28,8 +28,6 @@
         };
     };
 
-
-    # nix-flatpak extends services.flatpak with these extra options:
     services.flatpak.remotes = [
         {
             name = "flathub";

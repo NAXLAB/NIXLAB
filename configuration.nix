@@ -14,7 +14,7 @@
         efi.canTouchEfiVariables = true;
     };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_7_1;
 
   #Swapfile
   swapDevices = 
@@ -149,13 +149,9 @@ environment.shellAliases = {
 
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
-
 pkgs = "sudo nixos-rebuild switch --upgrade";
 flake = "sudo nix flake update"; 
-
 garbage = "sudo nix-collect-garbage -d";
-
-loginfix = "sudo systemctl restart greetd.service";
 
 };
 

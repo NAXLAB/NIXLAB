@@ -11,3 +11,23 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 fastfetch
+
+AI() {
+  local t=false
+  case "${1:-}" in -t|--think) t=true; shift;; esac      # -t / --think = allow thinking
+  local prompt="$*"
+
+  curl -s http://localhost:1234/api/v1/chat \
+    -H 'Content-Type: application/json' \
+    -d "$(jq -n --arg i "$prompt" --argjson t "$t" \
+          '{model:"qwen/qwen3.8-27b",
+            system_prompt:"You are a concise terminal helper. Answer in plain text, one line, no code fences.",
+            input:$i,
+            think:$t}')" \
+  | jq -r '[ .[] | select(.type=="message") | .content ]
+           | join(" ")
+           | gsub("[\n\t]+";" ")
+           | gsub("\\s+";" ")
+           | gsub("^ | $";"")'
+}
+

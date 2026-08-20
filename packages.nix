@@ -32,7 +32,6 @@
   fragments                         # Torrent Client
   iotas                             # Notes
   valuta                            # Currency Translation
-  xournalpp                         # Pdf Editor
   nicotine-plus                     # soulseek music sharing
   inkscape                          #2D Design 
   krita                             #Raster Design
@@ -78,6 +77,7 @@
   libnotify                         #Notification Test Utility
   lufus                             #Format Drives
   qmk                               #Keyboard Programming
+  inspector
   
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
