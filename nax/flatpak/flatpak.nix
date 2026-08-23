@@ -21,7 +21,7 @@
             "org.gnome.Builder"                 #Build Gnome Apps
             "re.sonny.Workbench"                #Build Gnome Apps
         ];
-        
+
         update.auto = {
             enable = true;
             onCalendar = "weekly";

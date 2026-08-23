@@ -42,7 +42,6 @@
   libreoffice                       #Office Suite
   wpsoffice                         #Office Suite
   gelly                             #Jellyfin Music Client
-  plattenalbum                      #Simple Music Player
   flowtime                          #Timer
   bookup                            #Markdown Notes
   pdfarranger                       #PDF Editor
@@ -77,7 +76,8 @@
   libnotify                         #Notification Test Utility
   lufus                             #Format Drives
   qmk                               #Keyboard Programming
-  inspector
+  inspector                         #Gnome App Debugger
+  code-cursor                       #Dev Environment
   
   #Desktop Utilities
   xwayland-satellite                #Wayland integration

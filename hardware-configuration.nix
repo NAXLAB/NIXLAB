@@ -33,6 +33,11 @@
       "i2c-dev"
     ];
 
+  boot.extraModulePackages = 
+    [
+      config.boot.kernelPackages.nct6687d
+    ];
+
   boot.initrd.kernelModules =
     [ 
       "amdgpu"
@@ -48,10 +53,7 @@
 		    ];
     };
 
-  boot.extraModulePackages = 
-    [
-      config.boot.kernelPackages.nct6687d
-    ];
+
 
   fileSystems."/" =
     {

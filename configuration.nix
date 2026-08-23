@@ -5,7 +5,7 @@
   #Enable flakes & nix-command
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
-
+  boot.kernelPackages = pkgs.linuxPackages_7_1;
 
   # Bootloader
   boot.loader = 
@@ -13,8 +13,6 @@
         systemd-boot.enable = true;
         efi.canTouchEfiVariables = true;
     };
-
-  boot.kernelPackages = pkgs.linuxPackages_7_1;
 
   #Swapfile
   swapDevices = 
@@ -26,9 +24,9 @@
     ];
 
   nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
+    automatic   = true;
+    dates       = "weekly";
+    options     = "--delete-older-than 7d";
   };
 
   #System & Hardware Services
@@ -106,7 +104,7 @@
       shell         = pkgs.zsh;
       isNormalUser  = true;
       description   = "Nax Lab";
-      packages      = with pkgs; [];
+      #packages      = with pkgs; [];
       extraGroups   = 
         [ 
           "lab"
