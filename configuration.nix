@@ -19,7 +19,7 @@
     [
       {
         device = "/swapfile";
-        size = 32000; # 64GB in MB
+        size = 32000; # 32GB in MB
       }
     ];
 

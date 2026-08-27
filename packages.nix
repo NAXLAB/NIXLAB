@@ -1,12 +1,6 @@
   { config, pkgs, inputs, ... }:
 
 {
-
-  #Need to figure this out. I think DMS needed it to compile.
-  nixpkgs.config.permittedInsecurePackages = [
-    "pnpm-10.29.2"
-    "electron-40.10.5"
-  ];
   
   #Nix Package manager
   environment.systemPackages = with pkgs; [
@@ -17,7 +11,6 @@
   gnome-calculator                  # Calculator
   baobab                            # Disk usage (Disk Usage Analyzer)
   ungoogled-chromium                # chrome
-  planify                           # Planner & Notes
   cine                              # Video Player
   vesktop                           # Discord
   parabolic                         # Media Downloader
@@ -40,7 +33,6 @@
   dopamine                          #Music
   telegram-desktop                  #Messaging
   libreoffice                       #Office Suite
-  wpsoffice                         #Office Suite
   gelly                             #Jellyfin Music Client
   flowtime                          #Timer
   bookup                            #Markdown Notes
@@ -49,7 +41,6 @@
   #Games
   keypunch                          #Typing Test
   binary                            #Number Base Math tool
-  fretboard                         #Guitar chords app
   gnome-characters                  #Characters
   concessio                         #file permission toy
 
@@ -77,7 +68,6 @@
   lufus                             #Format Drives
   qmk                               #Keyboard Programming
   inspector                         #Gnome App Debugger
-  code-cursor                       #Dev Environment
   
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
@@ -115,13 +105,13 @@ programs.firefox.enable = true;
 programs.zsh.enable = true;
 programs.starship.enable = true;
 programs.dconf.enable = true;
+programs.kdeconnect.enable = true;
 
 programs.gamemode.enable = true;
 programs.steam = {
   enable = true;
-};
+}; 
 
-programs.kdeconnect.enable = true;
 
 programs.appimage = {
   enable = true;
