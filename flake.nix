@@ -76,7 +76,7 @@
         ./nax/openrgb/openrgb.nix
         ./nax/tty/tty.nix
 
-         ./nax/shell/shell.nix
+        ./nax/shell/shell.nix
         #./nax/goodsync/goodsync.nix
         #./nax/mtsync/mtsync.nix
 

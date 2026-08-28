@@ -91,7 +91,7 @@
   unixtools.netstat                 #Network monitor
   libinput                          #input monitoring
   evtest                            #input monitoring
-  inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
+  inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.defa #Secret Management
 
   #Themes
   papirus-icon-theme                #Icon Packs

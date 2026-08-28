@@ -53,8 +53,6 @@
 		    ];
     };
 
-
-
   fileSystems."/" =
     {
       device = "/dev/disk/by-uuid/f5e59efc-35ce-42d7-b754-e953a93f43c6";

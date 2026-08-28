@@ -16,7 +16,6 @@
             "net.codelogistics.letters"         #Simple Word Processor
             "de.scrylab.ScryLab"                #Data Analytics
             "com.github.tchx84.Flatseal"        #Manage Flatpak Permissions
-            "io.github.nokse22.ultimate-tic-tac-toe" #Tic-Tac-Toe Game"
             "io.github.weiteck.Lyricade"        #Manage Song Lyrics
             "org.gnome.Builder"                 #Build Gnome Apps
             "re.sonny.Workbench"                #Build Gnome Apps
