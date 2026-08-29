@@ -15,7 +15,7 @@ systemd.services.greetd = {
   after = [ "systemd-udev-settle.service" ];
   wants = [ "systemd-udev-settle.service" ];
   serviceConfig = {
-    Restart = lib.mkForce "on-failure";
+    Restart = lib.mkForce "always";
     RestartSec = 1;
   };
 };
@@ -37,8 +37,6 @@ programs.dms-shell =
     enableSystemMonitoring = true;     # System monitoring widgets (dgop)
     enableVPN = true;                  # VPN management widget
     enableClipboardPaste = true;       # Pasting from the clipboard history (wtype)
-    #enableDynamicTheming = true;       # Wallpaper-based theming (matugen)
-    #enableAudioWavelength = true;      # Audio visualizer (cava)
     };
 
 environment.systemPackages = with pkgs; 
