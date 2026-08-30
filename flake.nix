@@ -77,8 +77,7 @@
         ./nax/tty/tty.nix
 
         ./nax/shell/shell.nix
-        #./nax/goodsync/goodsync.nix
-        #./nax/mtsync/mtsync.nix
+
 
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
