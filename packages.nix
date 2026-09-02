@@ -24,10 +24,7 @@
   exercise-timer                    # Timer App
   fragments                         # Torrent Client
   iotas                             # Notes
-  valuta                            # Currency Translation
   nicotine-plus                     # soulseek music sharing
-  inkscape                          #2D Design 
-  krita                             #Raster Design
   obs-studio                        #Screen Recording
   bazaar                            #Flatpak App store
   dopamine                          #Music
@@ -37,6 +34,7 @@
   flowtime                          #Timer
   bookup                            #Markdown Notes
   pdfarranger                       #PDF Editor
+  gnome-text-editor                 #Text Editor
   
   #Games
   keypunch                          #Typing Test
@@ -49,12 +47,12 @@
   upscayl                           #Image Upscale
   gnome-decoder                     #Create QR Codes
   eyedropper                        #Color Picker
-  elastic                           #Design Spring Animations
   gnome-font-viewer                 #Fonts
   penpot-desktop                    #UI/UX Design
   prusa-slicer                      #3D Print Utility
-  pinta                             #Raster Design
   exhibit                           #View 3D Models
+  inkscape                          #2D Design 
+  krita                             #Raster Design
   (pkgs.callPackage ./nax/figma/figma-desktop.nix { })
 
   #Dev Utilities
@@ -83,14 +81,9 @@
   solaar                            #Mouse Compatibility
   sunshine                          #Remote Desktop Host
 
-
   #System Utilities
-  fan2go                            #fan control
 	curl                              #data transfer utility
-  playerctl                         #media player utility
   unixtools.netstat                 #Network monitor
-  libinput                          #input monitoring
-  evtest                            #input monitoring
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 
   #Themes
@@ -100,7 +93,7 @@
 
 ];
 
-# Install Modules
+# Nixos Modules
 programs.firefox.enable = true;
 programs.zsh.enable = true;
 programs.starship.enable = true;
@@ -111,7 +104,6 @@ programs.gamemode.enable = true;
 programs.steam = {
   enable = true;
 }; 
-
 
 programs.appimage = {
   enable = true;

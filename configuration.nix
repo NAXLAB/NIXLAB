@@ -7,6 +7,8 @@
 
   boot.kernelPackages = pkgs.linuxPackages_7_1;
 
+  services.journald.storage = "persistent";
+
   # Bootloader
   boot.loader = 
     {

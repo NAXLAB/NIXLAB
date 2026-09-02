@@ -13,8 +13,12 @@ systemd.user.services.openrgb-profile = {
   after = [ "graphical-session.target" ];
   serviceConfig = {
     Type = "oneshot";
-    ExecStart = "${pkgs.openrgb}/bin/openrgb --profile \"naxlab\"";
     RemainAfterExit = true;
+    ExecStart = "${pkgs.openrgb}/bin/openrgb --profile naxlab";
+    Restart = "on-failure";
+    RestartSec = 2;
+    StartLimitIntervalSec = 60;
+    StartLimitBurst = 15;
   };
 };
 
