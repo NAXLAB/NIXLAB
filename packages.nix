@@ -35,6 +35,7 @@
   bookup                            #Markdown Notes
   pdfarranger                       #PDF Editor
   gnome-text-editor                 #Text Editor
+  snapshot                          #webcam
   
   #Games
   keypunch                          #Typing Test
@@ -64,7 +65,6 @@
   github-desktop                    #git repository management
   libnotify                         #Notification Test Utility
   lufus                             #Format Drives
-  qmk                               #Keyboard Programming
   inspector                         #Gnome App Debugger
   
   #Desktop Utilities
@@ -104,11 +104,6 @@ programs.gamemode.enable = true;
 programs.steam = {
   enable = true;
 }; 
-
-programs.appimage = {
-  enable = true;
-  binfmt = true;  # makes AppImages run directly without appimage-run prefix
-};
 
 fonts.packages = with pkgs; [
 

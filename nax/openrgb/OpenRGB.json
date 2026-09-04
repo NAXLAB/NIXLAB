@@ -2,14 +2,14 @@
     "AutoStart": {
         "client": "localhost:6742",
         "custom": "",
-        "enabled": false,
+        "enabled": true,
         "host": "0.0.0.0",
         "port": "6742",
-        "profile": "",
+        "profile": "naxlab",
         "setclient": false,
         "setcustom": false,
-        "setminimized": false,
-        "setprofile": false,
+        "setminimized": true,
+        "setprofile": true,
         "setserver": false,
         "setserverhost": false,
         "setserverport": false
@@ -2057,7 +2057,6 @@
         "theme": "Dark"
     },
     "UserInterface": {
-        "RunZoneChecks": false,
         "autoload_profiles": {
             "exit_profile": {
                 "enabled": false,
@@ -2082,6 +2081,7 @@
         },
         "greyscale_tray_icon": false,
         "language": "System Default",
-        "minimize_on_close": false
+        "minimize_on_close": false,
+        "run_zone_checks": false
     }
 }

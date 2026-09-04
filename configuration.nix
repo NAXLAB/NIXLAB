@@ -5,7 +5,7 @@
   #Enable flakes & nix-command
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
-  boot.kernelPackages = pkgs.linuxPackages_7_1;
+  boot.kernelPackages = pkgs.linuxPackages_7_2;
 
   services.journald.storage = "persistent";
 
@@ -152,7 +152,6 @@ environment.shellAliases = {
 
 switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
 build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
-pkgs = "sudo nixos-rebuild switch --upgrade";
 flake = "sudo nix flake update"; 
 garbage = "sudo nix-collect-garbage -d";
 

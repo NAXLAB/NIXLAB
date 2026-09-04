@@ -87,8 +87,10 @@
   ],
   "showWorkspacePadding": true,
   "workspaceDragReorder": false,
+  "workspaceFollowFocus": true,
   "showOccupiedWorkspacesOnly": true,
-  "workspaceUnfocusedColorMode": "custom",
+  "workspaceOccupiedColorMode": "primaryContainer",
+  "workspaceUnfocusedColorMode": "s",
   "workspaceUnfocusedCustomColor": "#30ffffff",
   "workspaceFocusedBorderThickness": 3,
   "scrollTitleEnabled": false,
@@ -117,7 +119,7 @@
     },
     {
       "id": "weather",
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "media",
@@ -158,6 +160,8 @@
   "textRenderQuality": 4,
   "notificationSummaryFontSize": 14,
   "notificationBodyFontSize": 12,
+  "soundsEnabled": false,
+  "soundNewNotification": false,
   "soundVolumeChanged": false,
   "batteryCriticalNotificationType": 0,
   "terminalsAlwaysDark": true,
@@ -201,6 +205,9 @@
   "notificationCustomAnimationDuration": 140,
   "notificationHistoryMaxCount": 20,
   "notificationFocusedMonitor": true,
+  "dankIslandUseOverlayLayer": true,
+  "dankIslandOuterGap": 0,
+  "dankIslandHorizontalOffset": 1,
   "osdPowerProfileEnabled": true,
   "powerMenuActions": [
     "reboot",
@@ -249,21 +256,9 @@
           "enabled": true
         },
         {
-          "id": "notificationButton",
-          "enabled": true
-        },
-        {
-          "id": "clipboard",
-          "enabled": true
-        },
-        {
           "id": "spacer",
           "enabled": true,
           "size": 20
-        },
-        {
-          "id": "nixMonitor",
-          "enabled": true
         },
         {
           "id": "cpuTemp",
@@ -314,10 +309,19 @@
           ]
         },
         {
+          "id": "spacer",
+          "enabled": true,
+          "size": 20
+        },
+        {
           "id": "clock",
           "enabled": true,
           "clockCompactMode": false,
           "clockDateOrder": "dateFirst"
+        },
+        {
+          "id": "powerMenuButton",
+          "enabled": true
         }
       ],
       "spacing": 0,
@@ -325,7 +329,7 @@
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 0,
-      "squareCorners": true,
+      "squareCorners": false,
       "noBackground": false,
       "maximizeWidgetIcons": false,
       "maximizeWidgetText": false,
@@ -360,7 +364,10 @@
       "shadowColorMode": "text",
       "shadowCustomColor": "#000000",
       "clickThrough": false,
-      "useOverlayLayer": false
+      "useOverlayLayer": false,
+      "attachToScreenEdge": true,
+      "hoverPopouts": false,
+      "hoverPopoutDelay": 0
     }
   ],
   "desktopClockCustomColor": {
@@ -465,7 +472,9 @@
   },
   "clipboardVisibleEntryActions": [],
   "frameThickness": 2,
-  "frameRounding": 16,
+  "frameRounding": 0,
   "frameBarSize": 44,
-  "configVersion": 16
+  "frameMode": "separate",
+  "frameBarInsetPadding": 3,
+  "configVersion": 17
 }

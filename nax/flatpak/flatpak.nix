@@ -15,6 +15,8 @@
             "io.github.weiteck.Lyricade"        #Manage Song Lyrics
             "org.gnome.Builder"                 #Build Gnome Apps
             "re.sonny.Workbench"                #Build Gnome Apps
+            "io.github.nate_xyz.Resonance"      #Music Player
+            "io.github.shonebinu.Brief"         #Command Line Cheatsheets
 
             #"space.gaiasky.GaiaSky"             #Interactive Space Map
             #"de.scrylab.ScryLab"                #Data Analytics
