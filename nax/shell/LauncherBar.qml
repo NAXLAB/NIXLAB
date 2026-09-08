@@ -35,7 +35,7 @@ Scope {
                 anchors { 
                     top: parent.top; 
                     left: parent.left; 
-                    margins: 4 
+                    margins: 4
                     }
 
                 radius: 8
@@ -66,7 +66,7 @@ Scope {
                 width: implicitWidth
                 height: implicitHeight
 
-                    //App Icon Shelf 
+                    //Icon Shelf 
                     Item {
                         id: shelf
                         Layout.fillWidth: true
@@ -112,6 +112,7 @@ Scope {
                                     onRightClicked: { /* context menu: quit, etc. */ }
                                 }
                             }
+                            
 
                     }
 

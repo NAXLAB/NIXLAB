@@ -9,6 +9,9 @@
     gnome.gnome-keyring.enable = true;
   };
 
+  #Policy Kit
+  security.polkit.enable = true;  
+
   #Manage Keyring
   programs.seahorse.enable = true;
 

@@ -160,8 +160,6 @@
   "textRenderQuality": 4,
   "notificationSummaryFontSize": 14,
   "notificationBodyFontSize": 12,
-  "soundsEnabled": false,
-  "soundNewNotification": false,
   "soundVolumeChanged": false,
   "batteryCriticalNotificationType": 0,
   "terminalsAlwaysDark": true,
@@ -242,10 +240,6 @@
       "leftWidgets": [
         {
           "id": "launcherButton",
-          "enabled": true
-        },
-        {
-          "id": "workspaceSwitcher",
           "enabled": true
         }
       ],
@@ -473,8 +467,8 @@
   "clipboardVisibleEntryActions": [],
   "frameThickness": 2,
   "frameRounding": 0,
-  "frameBarSize": 44,
-  "frameMode": "separate",
+  "frameOpacity": 0.06,
+  "frameBarSize": 27,
   "frameBarInsetPadding": 3,
   "configVersion": 17
 }

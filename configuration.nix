@@ -7,7 +7,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_7_2;
 
-  services.journald.storage = "persistent";
+  services.journald.settings.Journal.Storage = "persistent";
 
   # Bootloader
   boot.loader = 
@@ -25,26 +25,19 @@
       }
     ];
 
-  nix.gc = {
-    automatic   = true;
-    dates       = "weekly";
-    options     = "--delete-older-than 7d";
-  };
-
   #System & Hardware Services
-  systemd.services.systemd-rfkill.enable = false;
-  services.power-profiles-daemon.enable = true;
-  hardware.bluetooth.enable             = false;
-  services.upower.enable                = true;
+  systemd.services.systemd-rfkill.enable  = false;
+  services.power-profiles-daemon.enable   = true;
+  hardware.bluetooth.enable               = false;
+  services.upower.enable                  = true;
 
 
   #Printing
   services.printing = {
-    enable = true;
-    drivers = [ pkgs.brlaser ];
-    browsed.enable = false;
+    enable          = true;
+    drivers         = [ pkgs.brlaser ];
+    browsed.enable  = false;
   };
-
 
   hardware.printers = {
     ensurePrinters = [
@@ -119,6 +112,7 @@
           "libvirt" 
           "qemu-libvirtd"
           "audio"
+          "docker"
         ];
     };
 
@@ -156,12 +150,6 @@ flake = "sudo nix flake update";
 garbage = "sudo nix-collect-garbage -d";
 
 };
-
-#Policy Kit
-security.polkit.enable = true;  
-
-# Allow unfree packages
-nixpkgs.config.allowUnfree = true;
 
 #Miscellaneous desktop environment dependencies
 environment.variables = 

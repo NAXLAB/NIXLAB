@@ -1,9 +1,23 @@
   { config, pkgs, inputs, ... }:
 
 {
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree    = true;
+
+  # Nixos Modules
+  programs.firefox.enable       = true;
+  programs.zsh.enable           = true;
+  programs.starship.enable      = true;
+  programs.dconf.enable         = true;
+  programs.kdeconnect.enable    = true;
+  programs.gamemode.enable      = true;
+  programs.steam.enable         = true;
+  virtualisation.docker.enable  = true;
+  hardware.keyboard.qmk.enable  = true;
   
   #Nix Package manager
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages    = with pkgs; [
 	
   #Apps
   nautilus                          # File Manager
@@ -19,7 +33,6 @@
   loupe                             # Image viewer (modern GNOME image viewer)
   dialect                           # Translation Tool
   lmstudio                          # Language Model Studio
-  citations                         # Bibliography
   gnome-clocks                      # Clocks
   exercise-timer                    # Timer App
   fragments                         # Torrent Client
@@ -39,9 +52,7 @@
   
   #Games
   keypunch                          #Typing Test
-  binary                            #Number Base Math tool
   gnome-characters                  #Characters
-  concessio                         #file permission toy
 
   #Design Apps
   upscaler                          #Image Upscale
@@ -60,12 +71,11 @@
   git                               #Version Control
   vscodium                          #Dev environment
   fastfetch                         #meme terminal widget         
-  docker                            #container host
-  docker-client                     #container host    
   github-desktop                    #git repository management
   libnotify                         #Notification Test Utility
   lufus                             #Format Drives
   inspector                         #Gnome App Debugger
+  qmk                               #QMK keyboard
   
   #Desktop Utilities
   xwayland-satellite                #Wayland integration
@@ -92,18 +102,6 @@
   capitaine-cursors                 #Cursor Packs
 
 ];
-
-# Nixos Modules
-programs.firefox.enable = true;
-programs.zsh.enable = true;
-programs.starship.enable = true;
-programs.dconf.enable = true;
-programs.kdeconnect.enable = true;
-
-programs.gamemode.enable = true;
-programs.steam = {
-  enable = true;
-}; 
 
 fonts.packages = with pkgs; [
 
