@@ -11,9 +11,16 @@ services.greetd = {
   };
 };
 
+systemd.paths.opengl-driver-ready = {
+  wantedBy = [ "greetd.service" ];
+  pathConfig = {
+    PathExists = "/run/opengl-driver/lib/gbm/dri_gbm.so";
+  };
+};
+
 systemd.services.greetd = {
-  after = [ "display-manager.service" ];
-  wants = [ "display-manager.service" ];
+  after = [ "opengl-driver-ready.path" ];
+  wants = [ "opengl-driver-ready.path" ];
   serviceConfig = {
     Restart = lib.mkForce "always";
     RestartSec = 1;

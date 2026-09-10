@@ -1,0 +1,3 @@
+if [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && ! pgrep -x niri >/dev/null; then
+  exec niri-session
+fi

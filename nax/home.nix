@@ -60,6 +60,7 @@
     {
       ".gitconfig".source                       = ./git/config;
       ".zshrc".source                           = ./zsh/zshrc;
+      ".zprofile".source                        = ./zsh/zprofile;
       ".config/fastfetch/config.jsonc".source   = ./fastfetch/config.jsonc;
     };
   
