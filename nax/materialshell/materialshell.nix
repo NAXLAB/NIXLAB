@@ -1,6 +1,6 @@
 { config, pkgs, inputs, lib, ... }:
 {
-
+/*
 services.greetd = {
   enable = true;
   settings = {
@@ -12,13 +12,14 @@ services.greetd = {
 };
 
 systemd.services.greetd = {
-  after = [ "systemd-udev-settle.service" ];
-  wants = [ "systemd-udev-settle.service" ];
+  after = [ "display-manager.service" ];
+  wants = [ "display-manager.service" ];
   serviceConfig = {
     Restart = lib.mkForce "always";
     RestartSec = 1;
   };
 };
+*/
 
 #Enable DMS Nixos module and supply package via flakes
 programs.dms-shell = 

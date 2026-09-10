@@ -195,7 +195,6 @@
   "lockScreenShowDate": false,
   "lockScreenShowProfileImage": false,
   "lockScreenShowMediaPlayer": false,
-  "lockAtStartup": true,
   "lockScreenNotificationMode": 3,
   "notificationTimeoutNormal": 10000,
   "notificationCompactMode": true,
@@ -203,9 +202,6 @@
   "notificationCustomAnimationDuration": 140,
   "notificationHistoryMaxCount": 20,
   "notificationFocusedMonitor": true,
-  "dankIslandUseOverlayLayer": true,
-  "dankIslandOuterGap": 0,
-  "dankIslandHorizontalOffset": 1,
   "osdPowerProfileEnabled": true,
   "powerMenuActions": [
     "reboot",
@@ -470,5 +466,5 @@
   "frameOpacity": 0.06,
   "frameBarSize": 27,
   "frameBarInsetPadding": 3,
-  "configVersion": 17
+  "configVersion": 18
 }
