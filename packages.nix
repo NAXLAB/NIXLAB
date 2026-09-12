@@ -65,6 +65,7 @@
   exhibit                           #View 3D Models
   inkscape                          #2D Design 
   krita                             #Raster Design
+  blender                           #3D Design
   (pkgs.callPackage ./nax/figma/figma-desktop.nix { })
 
   #Dev Utilities
