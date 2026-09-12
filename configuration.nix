@@ -151,12 +151,6 @@ garbage = "sudo nix-collect-garbage -d";
 
 };
 
-#Miscellaneous desktop environment dependencies
-environment.variables = 
-  {
-    MOZ_ENABLE_WAYLAND = "1";
-  };
-
 #Do not change this number for reasons I don't understand.
 system.stateVersion = "25.11";
 

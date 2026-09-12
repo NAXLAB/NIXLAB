@@ -1,32 +1,6 @@
 { config, pkgs, inputs, lib, ... }:
 {
-/*
-services.greetd = {
-  enable = true;
-  settings = {
-    default_session = {
-      command = "niri-session";
-      user = "nax";
-    };
-  };
-};
 
-systemd.paths.opengl-driver-ready = {
-  wantedBy = [ "greetd.service" ];
-  pathConfig = {
-    PathExists = "/run/opengl-driver/lib/gbm/dri_gbm.so";
-  };
-};
-
-systemd.services.greetd = {
-  after = [ "opengl-driver-ready.path" ];
-  wants = [ "opengl-driver-ready.path" ];
-  serviceConfig = {
-    Restart = lib.mkForce "always";
-    RestartSec = 1;
-  };
-};
-*/
 
 #Enable DMS Nixos module and supply package via flakes
 programs.dms-shell = 
