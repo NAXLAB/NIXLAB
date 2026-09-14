@@ -36,6 +36,11 @@
       url                         = "github:gmodena/nix-flatpak/?ref=latest";
     };
 
+    figma-desktop = {
+      url                         = "github:NAXLAB/figma-desktop-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
   };
 
   outputs = inputs@  
@@ -47,6 +52,7 @@
       quickshell,
       nix-flatpak,
       dms,
+      figma-desktop,
       ...
     }:
   
@@ -74,12 +80,13 @@
         ./nax/flatpak/flatpak.nix
         ./nax/openrgb/openrgb.nix
         ./nax/tty/tty.nix
-
         ./nax/shell/shell.nix
 
 
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
+
+        #Home Manager
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs   = true;
@@ -87,6 +94,12 @@
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
+        #Figma
+        {
+          environment.systemPackages = [
+            figma-desktop.packages.x86_64-linux.default
+          ];
+        }
 
       ];
     };

@@ -16,9 +16,7 @@ programs.dms-shell =
     };
 
     # Core features
-    enableSystemMonitoring = true;     # System monitoring widgets (dgop)
     enableVPN = true;                  # VPN management widget
-    enableClipboardPaste = true;       # Pasting from the clipboard history (wtype)
     };
 
 environment.systemPackages = with pkgs; 

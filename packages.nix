@@ -15,7 +15,7 @@
   programs.steam.enable         = true;
   virtualisation.docker.enable  = true;
   hardware.keyboard.qmk.enable  = true;
-  
+
   #Nix Package manager
   environment.systemPackages    = with pkgs; [
 	
@@ -59,7 +59,6 @@
   inkscape                          #2D Design 
   krita                             #Raster Design
   blender                           #3D Design
-  (pkgs.callPackage ./nax/figma/figma-desktop.nix { })
 
   #Dev Utilities
   git                               #Version Control
