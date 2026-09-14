@@ -2,6 +2,16 @@
 
 {
 
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.niri}/bin/niri-session";
+        user = "nax";
+      };
+    };
+  };
+
   programs.niri.enable = true;
 
   systemd.tmpfiles.rules = [

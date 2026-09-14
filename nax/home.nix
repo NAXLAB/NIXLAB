@@ -13,6 +13,7 @@
   imports = [
     ./firefox/firefox.nix
     ./discord/discord.nix
+    ./launcher/walker.nix
   ];
 
   #GTK Compatibility

@@ -34,28 +34,21 @@
   dialect                           # Translation Tool
   lmstudio                          # Language Model Studio
   gnome-clocks                      # Clocks
-  exercise-timer                    # Timer App
   fragments                         # Torrent Client
   iotas                             # Notes
   nicotine-plus                     # soulseek music sharing
-  obs-studio                        #Screen Recording
-  bazaar                            #Flatpak App store
-  dopamine                          #Music
-  telegram-desktop                  #Messaging
-  libreoffice                       #Office Suite
-  gelly                             #Jellyfin Music Client
-  flowtime                          #Timer
-  bookup                            #Markdown Notes
-  pdfarranger                       #PDF Editor
-  gnome-text-editor                 #Text Editor
-  snapshot                          #webcam
-  
-  #Games
-  keypunch                          #Typing Test
-  gnome-characters                  #Characters
+  obs-studio                        # Screen Recording
+  bazaar                            # Flatpak App store
+  dopamine                          # Music
+  telegram-desktop                  # Messaging
+  libreoffice                       # Office Suite
+  pdfarranger                       # PDF Editor
+  gnome-text-editor                 # Text Editor
+  snapshot                          # webcam
+  keypunch                          # Typing Test
+  gnome-characters                  # Characters
 
   #Design Apps
-  upscaler                          #Image Upscale
   upscayl                           #Image Upscale
   gnome-decoder                     #Create QR Codes
   eyedropper                        #Color Picker
@@ -83,7 +76,6 @@
   xdg-desktop-portal-gnome          #App Compatibility portal
   xdg-utils                         #Desktop app rendering utils
   refine                            #More Gnome Tweaks
-  walker                            #Launcher
   wl-clipboard                      #Clipboard 
   cliphist                          #Clipboard history
   grim                              #screenshot

@@ -1,4 +1,5 @@
-
+spawn-at-startup "elephant"
+spawn-at-startup "walker" "--gapplication-service"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -74,38 +75,12 @@ input {
     }
 }
 
-
-
-/*
-output "DP-2" {
-    mode "1920x1080@143.855"
-    scale 1.0
-    position x=0 y=0
-}
-
-output "DP-1" {
-    mode "1920x1080@143.855"
-    scale 1.0
-    position x=1920 y=0
-}
-
-cursor {
-    xcursor-theme "capitaine-cursors"
-    xcursor-size 24
-}
-
-*/
-
-// Make the backdrop Dark.
-
 overview {
     zoom 0.4
     workspace-shadow {
         off
      }
 }
-
-
 
 binds {
 
@@ -124,15 +99,6 @@ binds {
 
     Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
     Super+S { screenshot-screen; }
-
-    // Flip the order of the sidebar
-    //Mod+Ctrl+S { spawn-sh "flip"; }
-
-    // Force reorder (useful if something gets misaligned manually)
-    //Mod+Alt+R { spawn-sh "reorder"; }
-
-    //Super+Space { maximize-column; }
-    //Super+Shift+Space { maximize-window-to-edges; }
 
 }
 

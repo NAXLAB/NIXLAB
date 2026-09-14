@@ -198,6 +198,7 @@
   "lockScreenShowDate": false,
   "lockScreenShowProfileImage": false,
   "lockScreenShowMediaPlayer": false,
+  "lockAtStartup": true,
   "lockScreenNotificationMode": 3,
   "notificationTimeoutNormal": 10000,
   "notificationCompactMode": true,
