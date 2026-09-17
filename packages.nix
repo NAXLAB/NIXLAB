@@ -15,6 +15,7 @@
   programs.steam.enable         = true;
   virtualisation.docker.enable  = true;
   hardware.keyboard.qmk.enable  = true;
+  
 
   #Nix Package manager
   environment.systemPackages    = with pkgs; [
@@ -105,5 +106,26 @@ fonts.packages = with pkgs; [
   iosevka
 
 ];
+
+nix.settings.flake-registry = pkgs.writeTextFile {
+  name = "registry.json"; 
+    text = ''
+      {
+        "version": 2,
+        "flakes": [
+        {
+          "from": {
+            "id": "nixpkgs",
+            "type": "indirect"
+          },
+          "to": {
+            "type": "path",
+            "path": "${pkgs.path}"
+          }
+        }
+      ]
+    }
+  '';
+};
 
 }
