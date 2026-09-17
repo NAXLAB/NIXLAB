@@ -60,7 +60,6 @@
   inkscape                          #2D Design 
   krita                             #Raster Design
   blender                           #3D Design
-  plasticity                        #Parametric Design
 
   #Dev Utilities
   git                               #Version Control
