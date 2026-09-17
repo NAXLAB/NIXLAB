@@ -1,9 +1,10 @@
-spawn-at-startup "elephant"
-spawn-at-startup "walker" "--gapplication-service"
-
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
+}
+
+clipboard {
+    disable-primary
 }
 
 window-rule {
@@ -43,9 +44,6 @@ layout {
 
     focus-ring {
         off
-        width 1
-        active-color "#0077FF"
-        inactive-color "#49495B"
     }
 
     gaps 12  // gap between windows and screen edges

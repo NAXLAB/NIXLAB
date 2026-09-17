@@ -5,8 +5,6 @@
   #Enable flakes & nix-command
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
-  boot.kernelPackages = pkgs.linuxPackages_7_2;
-
   services.journald.settings.Journal.Storage = "persistent";
 
   # Bootloader

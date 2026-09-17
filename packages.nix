@@ -46,7 +46,8 @@
   gnome-text-editor                 # Text Editor
   snapshot                          # webcam
   keypunch                          # Typing Test
-  gnome-characters                  # Characters
+  gnome-characters                  # Emojis
+  gnome-tweaks                      # Gnome Tweaks
 
   #Design Apps
   upscayl                           #Image Upscale
@@ -59,6 +60,7 @@
   inkscape                          #2D Design 
   krita                             #Raster Design
   blender                           #3D Design
+  plasticity                        #Parametric Design
 
   #Dev Utilities
   git                               #Version Control

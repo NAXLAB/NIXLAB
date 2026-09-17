@@ -21,7 +21,7 @@ Scope {
             color: "transparent"
 
             anchors {
-                top: true
+                bottom: true
                 left: true
                     }
 
@@ -49,12 +49,12 @@ Scope {
                 State {
                     name: "rest"
                     PropertyChanges { target: shelf; visible: false }
-                    PropertyChanges { target: controls; visible: false }
+
                 },
                 State {
                     name: "launch"
                     PropertyChanges { target: shelf; visible: true }
-                    PropertyChanges { target: controls; visible: false }
+
                 }
             ]
 

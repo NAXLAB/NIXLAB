@@ -36,6 +36,7 @@
       url                         = "github:gmodena/nix-flatpak/?ref=latest";
     };
 
+
     figma-desktop = {
       url                         = "github:NAXLAB/figma-desktop-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
@@ -81,7 +82,7 @@
         ./nax/openrgb/openrgb.nix
         ./nax/tty/tty.nix
         ./nax/shell/shell.nix
-
+        ./nax/plasticity/plasticity.nix
 
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
