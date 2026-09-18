@@ -4,5 +4,4 @@ in
 {
   "xdrive.age".publicKeys     = [ zaigomaat ];
   "smb.age".publicKeys  = [ zaigomaat ];
-  "github.age".publicKeys = [ zaigomaat ];
 }
