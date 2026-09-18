@@ -103,7 +103,6 @@ fonts.packages = with pkgs; [
   nerd-fonts.iosevka
   fira-code
   geist-font
-  iosevka
 
 ];
 

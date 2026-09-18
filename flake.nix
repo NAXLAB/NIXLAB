@@ -83,7 +83,7 @@
         ./nax/tty/tty.nix
         ./nax/shell/shell.nix
         ./nax/plasticity/plasticity.nix
-
+        
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
         

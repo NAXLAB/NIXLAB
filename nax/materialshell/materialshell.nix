@@ -26,14 +26,12 @@ environment.systemPackages = with pkgs;
 
 systemd.tmpfiles.rules = [
   #Symlink MaterialShell files to home
-  "L+ /home/nax/.config/niri/dms/alttab.kdl - - - - /etc/nixos/nax/materialshell/alttab.kdl"
   "L+ /home/nax/.config/niri/dms/binds.kdl - - - - /etc/nixos/nax/materialshell/binds.kdl"
   "L+ /home/nax/.config/niri/dms/colors.kdl - - - - /etc/nixos/nax/materialshell/colors.kdl"
   "L+ /home/nax/.config/niri/dms/cursor.kdl - - - - /etc/nixos/nax/materialshell/cursor.kdl"
   "L+ /home/nax/.config/niri/dms/layout.kdl - - - - /etc/nixos/nax/materialshell/layout.kdl"
   "L+ /home/nax/.config/niri/dms/outputs.kdl - - - - /etc/nixos/nax/materialshell/outputs.kdl"
   "L+ /home/nax/.config/niri/dms/windowrules.kdl - - - - /etc/nixos/nax/materialshell/windowrules.kdl"
-  "L+ /home/nax/.config/niri/dms/wpblur.kdl - - - - /etc/nixos/nax/materialshell/wpblur.kdl"
 
   "L+ /home/nax/.config/gtk-4.0/dank-colors.css - - - - /etc/nixos/nax/materialshell/dank-colors.css"
 

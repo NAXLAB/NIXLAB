@@ -60,7 +60,7 @@ fan1 = { profile_uid = "f8ea113e-8b76-49aa-a0df-6f2bba6411df" }
 [device-settings.cd200bee3c961dce047197190f9cca45457a6e575a3f3aaf11fc6a68785161fa]
 ring = { lighting = { mode = "fixed", colors = [[255, 0, 0]] } }
 pump = { profile_uid = "4cf335e8-752f-4739-bb3b-5a3ea09742ed" }
-fan = { speed_fixed = 50 }
+fan = { speed_fixed = 60 }
 
 
 # A list of profiles to be used with each device's settings
