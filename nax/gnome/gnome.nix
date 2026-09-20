@@ -22,5 +22,10 @@
     gnome-tour
     gnome-user-docs
   ];
+  
+  xdg.portal = {
+  enable = true;
+  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+};
 
 }
