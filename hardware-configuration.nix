@@ -8,7 +8,7 @@
 
 {
 
-  boot.kernelPackages = pkgs.linuxPackages_7_2;
+  boot.kernelParams = [ "amd_iommu=on" ];
 
   boot.initrd.availableKernelModules = 
     [ 
@@ -19,8 +19,6 @@
       "usb_storage" 
       "sd_mod"
     ];
-
-  boot.kernelParams = [ "amd_iommu=on" ];
 
   boot.kernelModules = 
     [

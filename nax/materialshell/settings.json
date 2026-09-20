@@ -4,7 +4,6 @@
   "registryThemeVariants": {
     "gnomeAdwaita": "purple"
   },
-  "radiusStrength": 64,
   "clockFormat": "12h",
   "padHours12Hour": true,
   "animationDuration": 150,
@@ -186,6 +185,7 @@
   "audioVisualizerEnabled": false,
   "appIdSubstitutions": [],
   "clockDateFormat": "ddd d",
+  "appLauncherGridColumns": 5,
   "spotlightSectionViewModes": {
     "apps": "grid"
   },
@@ -194,6 +194,7 @@
   },
   "niriOverviewOverlayEnabled": false,
   "dankLauncherV2Size": "micro",
+  "dankLauncherV2ShowSourceBadges": false,
   "dankLauncherV2BorderThickness": 4,
   "dankLauncherV2ShowFooter": false,
   "launcherUseOverlayLayer": true,
@@ -233,7 +234,7 @@
     },
     {
       "id": "weather",
-      "w": 2,
+      "w": 1,
       "h": 1
     },
     {
@@ -243,12 +244,12 @@
     },
     {
       "id": "sysmon",
-      "w": 2,
+      "w": 1,
       "h": 1
     },
     {
       "id": "media",
-      "w": 2,
+      "w": 1,
       "h": 2
     }
   ],
@@ -260,7 +261,7 @@
       "albumArtAccent": false
     },
     "overview": {
-      "panelColumns": 5
+      "panelColumns": 4
     },
     "notifications": {
       "panelColumns": 3
@@ -314,6 +315,8 @@
   "matugenTemplateEmacs": false,
   "matugenTemplateZed": false,
   "notificationOverlayEnabled": true,
+  "notificationPopupBodyInvokesAction": true,
+  "modalDarkenBackground": false,
   "lockScreenShowTime": false,
   "lockScreenClockStyle": "vertical",
   "lockScreenShowDate": false,
@@ -505,7 +508,7 @@
       "attachToScreenEdge": true,
       "hoverPopouts": false,
       "hoverPopoutDelay": 0,
-      "followInterfaceStyle": true,
+      "followInterfaceStyle": false,
       "island": false
     }
   ],
@@ -586,8 +589,7 @@
   "clipboardVisibleEntryActions": [],
   "frameThickness": 2,
   "frameRounding": 0,
-  "frameOpacity": 0.06,
   "frameBarSize": 27,
   "frameBarInsetPadding": 3,
-  "configVersion": 27
+  "configVersion": 28
 }

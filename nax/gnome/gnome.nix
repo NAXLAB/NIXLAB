@@ -9,6 +9,9 @@
     gnome.gnome-keyring.enable = true;
   };
 
+  #Dconf
+  programs.dconf.enable = true;
+
   #Policy Kit
   security.polkit.enable = true;  
 

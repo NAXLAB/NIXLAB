@@ -7,6 +7,8 @@
 
   services.journald.settings.Journal.Storage = "persistent";
 
+  boot.kernelPackages = pkgs.linuxPackages_7_2;
+
   # Bootloader
   boot.loader = 
     {

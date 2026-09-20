@@ -36,7 +36,6 @@
       url                         = "github:gmodena/nix-flatpak/?ref=latest";
     };
 
-
     figma-desktop = {
       url                         = "github:NAXLAB/figma-desktop-flake";
       inputs.nixpkgs.follows      = "nixpkgs";

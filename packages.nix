@@ -10,7 +10,6 @@
   programs.zsh.enable           = true;
   programs.starship.enable      = true;
   programs.dconf.enable         = true;
-  programs.kdeconnect.enable    = true;
   programs.gamemode.enable      = true;
   programs.steam.enable         = true;
   virtualisation.docker.enable  = true;
@@ -68,7 +67,6 @@
   fastfetch                         #meme terminal widget         
   github-desktop                    #git repository management
   libnotify                         #Notification Test Utility
-  lufus                             #Format Drives
   inspector                         #Gnome App Debugger
   qmk                               #QMK keyboard
   
@@ -83,7 +81,6 @@
   slurp                             #select area screenshot
   gvfs                              #Gnome Filesystem Compatibility
   solaar                            #Mouse Compatibility
-  sunshine                          #Remote Desktop Host
 
   #System Utilities
 	curl                              #data transfer utility
