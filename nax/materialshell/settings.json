@@ -167,18 +167,6 @@
       "showMountPath": true,
       "w": 4,
       "h": 1
-    },
-    {
-      "id": "builtin_vpn",
-      "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "doNotDisturb",
-      "enabled": true,
-      "w": 4,
-      "h": 1
     }
   ],
   "scrollTitleEnabled": false,

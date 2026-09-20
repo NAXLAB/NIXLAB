@@ -189,7 +189,7 @@ disable = true
 
 [settings.f226946857a3141b80fefa0bae8de91cdba1c6eedf91d96ea7bef76ce88b4e90]
 name = "ASUS Aura LED Controller"
-disable = true
+disable = false
 
 [settings.f226946857a3141b80fefa0bae8de91cdba1c6eedf91d96ea7bef76ce88b4e90.channel_settings]
 
