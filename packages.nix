@@ -60,13 +60,12 @@
   inkscape                          #2D Design 
   krita                             #Raster Design
   blender                           #3D Design
+  darktable                         #Photo Editing
 
   #Dev Utilities
   git                               #Version Control
   vscodium                          #Dev environment
   fastfetch                         #meme terminal widget         
-  github-desktop                    #git repository management
-  libnotify                         #Notification Test Utility
   inspector                         #Gnome App Debugger
   qmk                               #QMK keyboard
   
