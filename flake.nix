@@ -82,7 +82,6 @@
         ./nax/tty/tty.nix
         ./nax/shell/shell.nix
         ./nax/plasticity/plasticity.nix
-        ./nax/music/sung/sung.nix
         
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
