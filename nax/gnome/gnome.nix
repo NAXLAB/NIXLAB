@@ -16,7 +16,7 @@
   security.polkit.enable = true;  
 
   #Manage Keyring
-  #programs.seahorse.enable = true;
+  programs.seahorse.enable = true;
 
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
