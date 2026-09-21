@@ -115,6 +115,8 @@
           "docker"
         ];
     };
+    
+  home-manager.backupFileExtension = "backup";
 
   #File System Config
   systemd.tmpfiles.rules = [

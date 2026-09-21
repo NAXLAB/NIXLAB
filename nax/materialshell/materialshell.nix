@@ -26,6 +26,8 @@ environment.systemPackages = with pkgs;
 
 systemd.tmpfiles.rules = [
   #Symlink MaterialShell files to home
+  "d /home/nax/.config/DankMaterialShell 0755 nax users -"
+  "d /home/nax/.config/DankMaterialShell/themes 0755 nax users -"
   "L+ /home/nax/.config/niri/dms/binds.kdl - - - - /etc/nixos/nax/materialshell/binds.kdl"
   "L+ /home/nax/.config/niri/dms/colors.kdl - - - - /etc/nixos/nax/materialshell/colors.kdl"
   "L+ /home/nax/.config/niri/dms/cursor.kdl - - - - /etc/nixos/nax/materialshell/cursor.kdl"
