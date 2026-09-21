@@ -15,7 +15,7 @@
   "fontFamily": "SF Pro Display",
   "monoFontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "displayFontFamily": "SF Pro Display",
-  "fontWeight": 600,
+  "fontWeight": 500,
   "textRenderQuality": 4,
   "lockScreenShowPowerActions": true,
   "powerMenuActions": [
