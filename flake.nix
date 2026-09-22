@@ -5,7 +5,7 @@
   inputs = {
 
     #Nix Packages
-    nixpkgs.url                   = "https://flakehub.com/f/DeterminateSystems/nixpkgs-weekly/0.1";
+    nixpkgs.url                   = "github:nixos/nixpkgs/nixos-unstable";
 
     #Agenix
     agenix = {

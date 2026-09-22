@@ -1,43 +1,38 @@
 { config, pkgs, inputs, lib, ... }:
 {
 
+    #Enable DMS Nixos module and supply package via flakes
+    programs.dms-shell = 
+        {
+            enable = true;
+            package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
+            systemd = 
+            {
+                enable = true;
+                restartIfChanged = true;
+                target = "niri.service";
+            };
+        };
 
-#Enable DMS Nixos module and supply package via flakes
-programs.dms-shell = 
-    {
-    enable = true;
-    package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    environment.systemPackages = with pkgs; 
+    [
+        dsearch   #dms file search
+    ];
 
-    systemd = 
-    {
-        enable = true;
-        restartIfChanged = true;
-        target = "niri.service";
-    };
+    systemd.tmpfiles.rules = [
+    #Symlink MaterialShell files to home
+    "d /home/nax/.config/DankMaterialShell 0755 nax users -"
+    "d /home/nax/.config/DankMaterialShell/themes 0755 nax users -"
+    "L+ /home/nax/.config/niri/dms/binds.kdl - - - - /etc/nixos/nax/materialshell/binds.kdl"
+    "L+ /home/nax/.config/niri/dms/colors.kdl - - - - /etc/nixos/nax/materialshell/colors.kdl"
+    "L+ /home/nax/.config/niri/dms/cursor.kdl - - - - /etc/nixos/nax/materialshell/cursor.kdl"
+    "L+ /home/nax/.config/niri/dms/layout.kdl - - - - /etc/nixos/nax/materialshell/layout.kdl"
+    "L+ /home/nax/.config/niri/dms/outputs.kdl - - - - /etc/nixos/nax/materialshell/outputs.kdl"
+    "L+ /home/nax/.config/niri/dms/windowrules.kdl - - - - /etc/nixos/nax/materialshell/windowrules.kdl"
 
-    # Core features
-    enableVPN = true;                  # VPN management widget
-    };
+    "L+ /home/nax/.config/gtk-4.0/dank-colors.css - - - - /etc/nixos/nax/materialshell/dank-colors.css"
 
-environment.systemPackages = with pkgs; 
-[
-    dsearch   #dms file search
-];
-
-systemd.tmpfiles.rules = [
-  #Symlink MaterialShell files to home
-  "d /home/nax/.config/DankMaterialShell 0755 nax users -"
-  "d /home/nax/.config/DankMaterialShell/themes 0755 nax users -"
-  "L+ /home/nax/.config/niri/dms/binds.kdl - - - - /etc/nixos/nax/materialshell/binds.kdl"
-  "L+ /home/nax/.config/niri/dms/colors.kdl - - - - /etc/nixos/nax/materialshell/colors.kdl"
-  "L+ /home/nax/.config/niri/dms/cursor.kdl - - - - /etc/nixos/nax/materialshell/cursor.kdl"
-  "L+ /home/nax/.config/niri/dms/layout.kdl - - - - /etc/nixos/nax/materialshell/layout.kdl"
-  "L+ /home/nax/.config/niri/dms/outputs.kdl - - - - /etc/nixos/nax/materialshell/outputs.kdl"
-  "L+ /home/nax/.config/niri/dms/windowrules.kdl - - - - /etc/nixos/nax/materialshell/windowrules.kdl"
-
-  "L+ /home/nax/.config/gtk-4.0/dank-colors.css - - - - /etc/nixos/nax/materialshell/dank-colors.css"
-
-  "L+ /home/nax/.config/DankMaterialShell/settings.json - - - - /etc/nixos/nax/materialshell/settings.json"
-  "L+ /home/nax/.config/DankMaterialShell/themes/naxlab - - - - /etc/nixos/nax/themes/materialshell"
-];
+    "L+ /home/nax/.config/DankMaterialShell/settings.json - - - - /etc/nixos/nax/materialshell/settings.json"
+    "L+ /home/nax/.config/DankMaterialShell/themes/naxlab - - - - /etc/nixos/nax/themes/materialshell"
+    ];
 }
