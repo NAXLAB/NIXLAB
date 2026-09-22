@@ -64,6 +64,12 @@
         };
     };
 
+  security.pam.loginLimits = [
+    { domain = "@audio"; item = "memlock"; type = "-"; value = "unlimited"; }
+    { domain = "@audio"; item = "rtprio"; type = "-"; value = "99"; }
+  ];
+
+
   #Networking
   networking.networkmanager.enable  = true;
   services.openssh.enable           = true;
@@ -116,7 +122,6 @@
         ];
     };
     
-  home-manager.backupFileExtension = "backup";
 
   #File System Config
   systemd.tmpfiles.rules = [

@@ -10,7 +10,6 @@
             "org.gnome.Boxes"                   #Virtual Machines
             "io.github.gaheldev.Millisecond"    #Reduce System Latency
             "com.usebottles.bottles"            #Windows App Compatibility Layer
-            "com.odnoyko.valot"                 #Time Tracker
             "com.github.tchx84.Flatseal"        #Manage Flatpak Permissions
             "io.github.weiteck.Lyricade"        #Manage Song Lyrics
             "org.gnome.Builder"                 #Build Gnome Apps

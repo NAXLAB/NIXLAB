@@ -15,7 +15,6 @@
   #Policy Kit
   security.polkit.enable = true;  
 
-  #Test
   #Manage Keyring
   programs.seahorse.enable = true;
 
@@ -23,10 +22,19 @@
     gnome-tour
     gnome-user-docs
   ];
-  
+    
   xdg.portal = {
-  enable = true;
-  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-};
+    enable = true;
+    extraPortals = [ 
+      pkgs.xdg-desktop-portal-gtk 
+      ];
+  };
+
+  systemd.tmpfiles.rules = [
+    "d /home/nax/.config/gtk-3.0 0755 nax users -"
+    "L+ /home/nax/.config/gtk-3.0/bookmarks - - - - /etc/nixos/nax/gnome/bookmarks"
+  ];
+
+
 
 }

@@ -40,7 +40,6 @@
   obs-studio                        # Screen Recording
   bazaar                            # Flatpak App store
   dopamine                          # Music
-  telegram-desktop                  # Messaging
   libreoffice                       # Office Suite
   pdfarranger                       # PDF Editor
   gnome-text-editor                 # Text Editor

@@ -46,9 +46,6 @@
     {
       enable            = true;
       createDirectories = false;
-      templates         = null;
-      publicShare       = null;
-      videos            = null;      
       desktop           = "${config.home.homeDirectory}/Desktop";
       download          = "${config.home.homeDirectory}/Downloads";
       music             = "${config.home.homeDirectory}/Music";
