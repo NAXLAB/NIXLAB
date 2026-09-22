@@ -8,7 +8,6 @@
   "padHours12Hour": true,
   "animationDuration": 150,
   "enableRippleEffects": false,
-  "blurBorderEnabled": false,
   "blurBorderOpacity": 0.42,
   "wallpaperFillMode": "Stretch",
   "lockDateFormat": "ddd d MMM yyyy",
