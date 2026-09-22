@@ -336,9 +336,6 @@
       "cursorHideTimeout": 0
     }
   },
-  "launcherLogoMode": "custom",
-  "launcherLogoCustomPath": "/home/nax/.config/DankMaterialShell/themes/naxlab/icons/rest.png",
-  "launcherLogoSizeOffset": -2,
   "notificationSummaryFontSize": 14,
   "notificationBodyFontSize": 12,
   "soundsEnabled": false,
@@ -401,7 +398,10 @@
       "leftWidgets": [
         {
           "id": "launcherButton",
-          "enabled": true
+          "enabled": true,
+          "launcherLogoMode": "custom",
+          "launcherLogoCustomPath": "/home/nax/.config/DankMaterialShell/themes/naxlab/icons/rest.png",
+          "launcherLogoSizeOffset": -2
         }
       ],
       "centerWidgets": [
@@ -640,5 +640,5 @@
   "frameRounding": 0,
   "frameBarSize": 27,
   "frameBarInsetPadding": 3,
-  "configVersion": 28
+  "configVersion": 29
 }
