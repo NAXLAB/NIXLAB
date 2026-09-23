@@ -63,6 +63,7 @@
 
   #Dev Utilities
   git                               #Version Control
+  gh                                #Github
   vscodium                          #Dev environment
   fastfetch                         #meme terminal widget         
   inspector                         #Gnome App Debugger

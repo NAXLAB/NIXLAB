@@ -4,6 +4,8 @@
   "registryThemeVariants": {
     "gnomeAdwaita": "purple"
   },
+  "radiusStrength": 52,
+  "fixedRadius": 13,
   "clockFormat": "12h",
   "padHours12Hour": true,
   "animationDuration": 150,
@@ -38,9 +40,9 @@
       "mode": "compact",
       "taskbarAlign": "center",
       "widgetExpansion": "popout",
-      "iconSize": 42,
+      "iconSize": 36,
       "spacing": 10,
-      "itemSpacing": 4,
+      "itemSpacing": 5,
       "margin": 6,
       "bottomGap": -24,
       "transparency": 1,
@@ -97,9 +99,10 @@
   "matugenSourceMode": "value",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
-  "widgetBackgroundColor": "primaryContainer",
+  "chipSurfaceColor": "sch",
+  "chipSurfaceNestedColor": "primaryContainer",
   "controlCenterTileColorMode": "primaryContainer",
-  "niriLayoutRadiusOverride": 16,
+  "niriLayoutRadiusOverride": 24,
   "firstDayOfWeek": 2,
   "showWeekNumber": true,
   "calendarBackend": "khal",
@@ -521,12 +524,12 @@
       "noBackground": false,
       "maximizeWidgetIcons": false,
       "maximizeWidgetText": false,
-      "widgetPadding": 12,
+      "widgetPadding": 16,
       "gothCornersEnabled": true,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 20,
       "borderEnabled": false,
-      "borderColor": "surfaceText",
+      "borderColor": "secondary",
       "borderOpacity": 1,
       "borderThickness": 1,
       "widgetOutlineEnabled": false,
@@ -556,64 +559,13 @@
       "hoverPopouts": false,
       "hoverPopoutDelay": 0,
       "followInterfaceStyle": false,
-      "island": false
-    }
-  ],
-  "desktopWidgetInstances": [
-    {
-      "id": "dw_1781903963664_j1f3eorrd",
-      "widgetType": "activateLinux",
-      "name": "Activate Linux Watermark",
-      "enabled": false,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "showOnOverlay": true,
-        "showOnOverview": false,
-        "showOnOverviewOnly": false,
-        "clickThrough": true,
-        "syncPositionAcrossScreens": true,
-        "firstLineSize": 23,
-        "secondLineSize": 13,
-        "customizeText": true,
-        "secondLine": "Go to \"My Subscriptions\" to activate Linux.",
-        "watermarkOpacity": 73
-      }
-    },
-    {
-      "id": "dw_1781904135830_vrqvdmkal",
-      "widgetType": "systemMonitor",
-      "name": "System Monitor",
-      "enabled": false,
-      "config": {
-        "showHeader": true,
-        "transparency": 0.36,
-        "colorMode": "primary",
-        "customColor": "#ffffff",
-        "showCpu": true,
-        "showCpuGraph": true,
-        "showCpuTemp": true,
-        "showGpuTemp": false,
-        "gpuPciId": "",
-        "showMemory": true,
-        "showMemoryGraph": true,
-        "showNetwork": true,
-        "showNetworkGraph": true,
-        "showDisk": true,
-        "showTopProcesses": false,
-        "topProcessCount": 3,
-        "topProcessSortBy": "cpu",
-        "layoutMode": "auto",
-        "graphInterval": 60,
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "showOnOverlay": true,
-        "clickThrough": true,
-        "showOnOverview": false
-      }
+      "island": false,
+      "surfaceColor": "default",
+      "barLengthMode": "full",
+      "barLengthPercent": 49,
+      "barInsetPadding": 12,
+      "widgetStyle": "segments",
+      "barLengthPadding": 0
     }
   ],
   "builtInPluginSettings": {
@@ -636,7 +588,7 @@
   "clipboardVisibleEntryActions": [],
   "frameThickness": 2,
   "frameRounding": 0,
-  "frameBarSize": 27,
+  "frameBarSize": 24,
   "frameBarInsetPadding": 3,
   "configVersion": 29
 }

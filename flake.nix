@@ -27,7 +27,7 @@
 
     #Quickshell
     quickshell = {
-      url                         = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      url                         = "git+https://git.outfoxxed.me/quickshell/quickshell/";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
@@ -38,6 +38,11 @@
 
     figma-desktop = {
       url                         = "github:NAXLAB/figma-desktop-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
+    mtsync = {
+      url                         = "github:NAXLAB/mtsync-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
@@ -53,6 +58,7 @@
       nix-flatpak,
       dms,
       figma-desktop,
+      mtsync,
       ...
     }:
   
@@ -98,6 +104,7 @@
         {
           environment.systemPackages = [
             figma-desktop.packages.x86_64-linux.default
+            inputs.mtsync.packages.x86_64-linux.default
           ];
         }
 
