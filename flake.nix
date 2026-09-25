@@ -41,8 +41,8 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    mtsync = {
-      url                         = "github:NAXLAB/mtsync-flake";
+    goodsync = {
+      url                         = "github:NAXLAB/goodsync-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
@@ -58,7 +58,7 @@
       nix-flatpak,
       dms,
       figma-desktop,
-      mtsync,
+      goodsync,
       ...
     }:
   
@@ -100,11 +100,17 @@
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
-        #Figma
+        goodsync.nixosModules.default
+          { services.goodsync = 
+            { 
+              enable = true; 
+              user = "nax"; 
+            }; 
+          }
+
         {
           environment.systemPackages = [
             figma-desktop.packages.x86_64-linux.default
-            inputs.mtsync.packages.x86_64-linux.default
           ];
         }
 

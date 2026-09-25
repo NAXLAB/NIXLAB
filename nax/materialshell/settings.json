@@ -99,6 +99,9 @@
   "matugenSourceMode": "value",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
+  "dmsWindowsFloatingSeeded": [
+    "niri"
+  ],
   "chipSurfaceColor": "sch",
   "chipSurfaceNestedColor": "primaryContainer",
   "controlCenterTileColorMode": "primaryContainer",
@@ -111,10 +114,10 @@
   "popoutAnimationDuration": 179,
   "modalAnimationDuration": 181,
   "motionEffect": 2,
-  "m3ElevationEnabled": false,
-  "m3ElevationIntensity": 26,
-  "m3ElevationOpacity": 2,
+  "m3ElevationIntensity": 50,
+  "m3ElevationOpacity": 50,
   "m3ElevationLightDirection": "autoBar",
+  "blurBorderSeeded": true,
   "focusRingEnabled": false,
   "focusRingWidth": 1,
   "controlCenterWidgets": [
@@ -571,7 +574,190 @@
       "barLengthPercent": 49,
       "barInsetPadding": 12,
       "widgetStyle": "flat",
-      "barLengthPadding": 0
+      "barLengthPadding": 0,
+      "widgetFollowInterfaceStyle": false
+    },
+    {
+      "id": "dot1790177799417",
+      "name": "Dot",
+      "enabled": false,
+      "position": 1,
+      "screenPreferences": [
+        "all"
+      ],
+      "showOnLastDisplay": true,
+      "leftWidgets": [
+        {
+          "id": "launcherButton",
+          "enabled": true,
+          "launcherLogoMode": "custom",
+          "launcherLogoCustomPath": "/home/nax/.config/DankMaterialShell/themes/naxlab/icons/rest.png",
+          "launcherLogoSizeOffset": -2
+        }
+      ],
+      "centerWidgets": [
+        {
+          "id": "mediaActivity",
+          "enabled": true
+        }
+      ],
+      "rightWidgets": [
+        {
+          "id": "privacyIndicator",
+          "enabled": true,
+          "privacyShowMicIcon": false,
+          "privacyShowCameraIcon": false,
+          "privacyShowScreenShareIcon": false
+        },
+        {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
+        {
+          "id": "cpuTemp",
+          "enabled": true,
+          "minimumWidth": true
+        },
+        {
+          "id": "gpuTemp",
+          "enabled": true,
+          "selectedGpuIndex": 0,
+          "pciId": "1002:7550",
+          "minimumWidth": true
+        },
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
+        {
+          "id": "controlCenterButton",
+          "enabled": true,
+          "showNetworkIcon": true,
+          "showBluetoothIcon": true,
+          "showAudioIcon": true,
+          "showAudioPercent": false,
+          "showVpnIcon": true,
+          "showBrightnessIcon": false,
+          "showBrightnessPercent": false,
+          "showMicIcon": false,
+          "showMicPercent": false,
+          "showBatteryIcon": false,
+          "showPrinterIcon": false,
+          "showScreenSharingIcon": true,
+          "showIdleInhibitorIcon": false,
+          "showDoNotDisturbIcon": false,
+          "controlCenterGroupOrder": [
+            "network",
+            "vpn",
+            "bluetooth",
+            "audio",
+            "microphone",
+            "brightness",
+            "battery",
+            "printer",
+            "screenSharing",
+            "idleInhibitor",
+            "doNotDisturb"
+          ]
+        },
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
+        {
+          "id": "separator",
+          "enabled": true
+        },
+        {
+          "id": "spacer",
+          "enabled": true,
+          "size": 5
+        },
+        {
+          "id": "clock",
+          "enabled": true,
+          "clockCompactMode": false,
+          "clockDateOrder": "dateFirst"
+        }
+      ],
+      "spacing": 0,
+      "innerPadding": 4,
+      "bottomGap": 0,
+      "transparency": 1,
+      "widgetTransparency": 0,
+      "squareCorners": true,
+      "noBackground": false,
+      "maximizeWidgetIcons": false,
+      "maximizeWidgetText": false,
+      "widgetPadding": 16,
+      "gothCornersEnabled": true,
+      "gothCornerRadiusOverride": false,
+      "gothCornerRadiusValue": 10,
+      "borderEnabled": false,
+      "borderColor": "secondary",
+      "borderOpacity": 1,
+      "borderThickness": 1,
+      "widgetOutlineEnabled": false,
+      "widgetOutlineColor": "surfaceText",
+      "widgetOutlineOpacity": 0.2,
+      "widgetOutlineThickness": 1,
+      "fontScale": 1.2,
+      "iconScale": 1,
+      "autoHide": false,
+      "autoHideDelay": 250,
+      "showOnWindowsOpen": false,
+      "openOnOverview": true,
+      "visible": true,
+      "popupGapsAuto": true,
+      "popupGapsManual": 20,
+      "maximizeDetection": false,
+      "scrollEnabled": true,
+      "scrollXBehavior": "workspace",
+      "scrollYBehavior": "workspace",
+      "shadowIntensity": 0,
+      "shadowOpacity": 60,
+      "shadowColorMode": "text",
+      "shadowCustomColor": "#000000",
+      "clickThrough": false,
+      "useOverlayLayer": false,
+      "attachToScreenEdge": false,
+      "hoverPopouts": false,
+      "hoverPopoutDelay": 0,
+      "followInterfaceStyle": false,
+      "island": false,
+      "surfaceColor": "default",
+      "barLengthMode": "full",
+      "barLengthPercent": 49,
+      "barInsetPadding": 12,
+      "widgetStyle": "flat",
+      "barLengthPadding": 0,
+      "dot": true,
+      "widgetFollowInterfaceStyle": false
     }
   ],
   "builtInPluginSettings": {
@@ -596,5 +782,5 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 4,
-  "configVersion": 29
+  "configVersion": 31
 }
