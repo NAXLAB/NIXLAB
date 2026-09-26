@@ -100,14 +100,13 @@
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
-        goodsync.nixosModules.default
-          { services.goodsync = 
-            { 
-              enable = true; 
-              user = "nax"; 
-            }; 
-          }
-
+  goodsync.nixosModules.default
+  {
+    services.goodsync = {
+      enable = true;
+      user = "nax";
+    };
+  }
         {
           environment.systemPackages = [
             figma-desktop.packages.x86_64-linux.default
