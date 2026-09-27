@@ -118,6 +118,7 @@
   "m3ElevationOpacity": 50,
   "m3ElevationLightDirection": "autoBar",
   "blurBorderSeeded": true,
+  "foregroundLayerTransparency": 0.5,
   "focusRingEnabled": false,
   "focusRingWidth": 1,
   "controlCenterWidgets": [
@@ -182,7 +183,7 @@
   "clockDateFormat": "ddd d",
   "appLauncherGridColumns": 5,
   "spotlightSectionViewModes": {
-    "apps": "list"
+    "apps": "grid"
   },
   "appDrawerSectionViewModes": {
     "apps": "grid"

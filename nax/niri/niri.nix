@@ -2,6 +2,8 @@
 
 {
 
+  programs.niri.enable = true;
+
   services.greetd = {
     enable = true;
     settings = {
@@ -12,7 +14,6 @@
     };
   };
 
-  programs.niri.enable = true;
 
   systemd.tmpfiles.rules = [
     "d /home/nax/.config/niri 0755 nax users -"
