@@ -18,6 +18,7 @@
   "fontWeight": 500,
   "textRenderQuality": 4,
   "lockScreenShowPowerActions": true,
+  "lockScreenFontFamily": "Bai Jamjuree Light",
   "powerMenuActions": [
     "reboot",
     "poweroff",
@@ -385,12 +386,9 @@
   "notificationOverlayEnabled": true,
   "notificationPopupBodyInvokesAction": true,
   "modalDarkenBackground": false,
-  "lockScreenShowTime": false,
-  "lockScreenClockStyle": "vertical",
   "lockScreenShowDate": false,
   "lockAtStartup": true,
   "lockPamExternallyManaged": true,
-  "lockScreenNotificationMode": 3,
   "notificationTimeoutLow": 3000,
   "notificationTimeoutNormal": 3000,
   "notificationTimeoutCritical": 3000,
@@ -405,7 +403,10 @@
     "wallpaper": [
       "all"
     ],
-    "osd": []
+    "osd": [],
+    "notepad": [
+      "all"
+    ]
   },
   "showOnLastDisplay": {
     "osd": true
