@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
+    dms-plugin-registry = {
+      url                         = "github:AvengeMedia/dms-plugin-registry";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
     #Home Manager
     home-manager = {
       url                         = "github:nix-community/home-manager";
@@ -57,6 +62,7 @@
       quickshell,
       nix-flatpak,
       dms,
+      dms-plugin-registry,
       figma-desktop,
       goodsync,
       ...
@@ -92,6 +98,7 @@
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
         
+        
         #Home Manager
         home-manager.nixosModules.home-manager
         {
@@ -100,13 +107,14 @@
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
-  goodsync.nixosModules.default
-  {
-    services.goodsync = {
-      enable = true;
-      user = "nax";
-    };
-  }
+        goodsync.nixosModules.default
+        {
+          services.goodsync = {
+            enable = true;
+            user = "nax";
+          };
+        }
+
         {
           environment.systemPackages = [
             figma-desktop.packages.x86_64-linux.default

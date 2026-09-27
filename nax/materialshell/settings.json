@@ -126,37 +126,41 @@
       "id": "inputVolumeSlider",
       "enabled": true,
       "w": 4,
-      "h": 1
+      "h": 1,
+      "col": 0,
+      "row": 0
     },
     {
       "id": "volumeSlider",
       "enabled": true,
       "w": 4,
-      "h": 1
+      "h": 1,
+      "col": 4,
+      "row": 0
     },
     {
       "id": "audioInput",
       "enabled": true,
       "w": 4,
-      "h": 1
+      "h": 1,
+      "col": 0,
+      "row": 1
     },
     {
       "id": "audioOutput",
       "enabled": true,
       "w": 4,
-      "h": 1
+      "h": 1,
+      "col": 4,
+      "row": 1
     },
     {
       "id": "wifi",
       "enabled": true,
       "w": 4,
-      "h": 1
-    },
-    {
-      "id": "bluetooth",
-      "enabled": true,
-      "w": 4,
-      "h": 1
+      "h": 1,
+      "col": 0,
+      "row": 2
     },
     {
       "id": "diskUsage",
@@ -165,7 +169,9 @@
       "mountPath": "/boot",
       "showMountPath": true,
       "w": 4,
-      "h": 1
+      "h": 1,
+      "col": 4,
+      "row": 3
     },
     {
       "id": "diskUsage",
@@ -173,6 +179,14 @@
       "instanceId": "mqg9eluah0ph0plak71whxu6n1z171",
       "mountPath": "/mnt/xdrive",
       "showMountPath": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 3
+    },
+    {
+      "id": "doNotDisturb",
+      "enabled": true,
       "w": 4,
       "h": 1
     }
@@ -203,6 +217,10 @@
       "enabled": true
     },
     {
+      "id": "wallpaper",
+      "enabled": true
+    },
+    {
       "id": "weather",
       "enabled": true
     },
@@ -211,16 +229,12 @@
       "enabled": false
     },
     {
-      "id": "wallpaper",
-      "enabled": true
+      "id": "notifications",
+      "enabled": false
     },
     {
       "id": "settings",
       "enabled": true
-    },
-    {
-      "id": "notifications",
-      "enabled": false
     }
   ],
   "dashCards": [

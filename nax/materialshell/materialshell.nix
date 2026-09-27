@@ -4,13 +4,16 @@
     #Enable DMS Nixos module and supply package via flakes
     programs.dms-shell = 
         {
-            enable = true;
+            enable  = true;
             package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
-            systemd = 
-            {
-                enable = true;
-                restartIfChanged = true;
-                target = "niri.service";
+            systemd = {
+                enable              = true;
+                restartIfChanged    = true;
+                target              = "niri.service";
+            };
+
+            plugins = {
+                nixPackageRunner.enable     = true;
             };
         };
 
@@ -18,6 +21,9 @@
     [
         dsearch   #dms file search
     ];
+
+    #Import DMS Plugin Module
+    imports = [ inputs.dms-plugin-registry.nixosModules.default ];
 
     systemd.tmpfiles.rules = [
     #Symlink MaterialShell files to home
