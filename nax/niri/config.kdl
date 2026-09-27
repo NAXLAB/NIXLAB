@@ -1,5 +1,4 @@
 hotkey-overlay {
-    // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
 }
 
@@ -46,7 +45,7 @@ layout {
         off
     }
 
-    gaps 12  // gap between windows and screen edges
+    gaps  8 // gap between windows and screen edges
 
     default-column-width { proportion 0.5; }
 
@@ -87,13 +86,7 @@ binds {
 
     Super+Shift+Q { quit; }
 
-	Super+Left { focus-column-left; }
-	Super+Right { focus-column-right; }
-	Super+Up { focus-window-up; }
-    Super+Down { focus-window-down; }
-
-	Super+Shift+Left { move-column-left; }
-	Super+Shift+Right { move-column-right; }	
+    Super+Return { maximize-column; }
 
     Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
     Super+S { screenshot-screen; }

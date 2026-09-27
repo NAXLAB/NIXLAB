@@ -4,7 +4,6 @@
   "registryThemeVariants": {
     "gnomeAdwaita": "purple"
   },
-  "radiusStrength": 52,
   "fixedRadius": 13,
   "clockFormat": "12h",
   "padHours12Hour": true,
@@ -102,10 +101,11 @@
   "dmsWindowsFloatingSeeded": [
     "niri"
   ],
-  "chipSurfaceColor": "sch",
-  "chipSurfaceNestedColor": "primaryContainer",
-  "controlCenterTileColorMode": "primaryContainer",
-  "niriLayoutRadiusOverride": 24,
+  "hostSurfaceColor": "sc",
+  "cardSurfaceColor": "sch",
+  "chipSurfaceColor": "primaryContainer",
+  "chipSurfaceNestedColor": "secondaryContainer",
+  "niriLayoutRadiusOverride": 30,
   "firstDayOfWeek": 2,
   "showWeekNumber": true,
   "calendarBackend": "khal",
@@ -182,7 +182,7 @@
   "clockDateFormat": "ddd d",
   "appLauncherGridColumns": 5,
   "spotlightSectionViewModes": {
-    "apps": "grid"
+    "apps": "list"
   },
   "appDrawerSectionViewModes": {
     "apps": "grid"
@@ -433,18 +433,8 @@
           "enabled": true
         },
         {
-          "id": "spacer",
-          "enabled": true,
-          "size": 5
-        },
-        {
           "id": "separator",
           "enabled": true
-        },
-        {
-          "id": "spacer",
-          "enabled": true,
-          "size": 5
         },
         {
           "id": "cpuTemp",
@@ -459,18 +449,8 @@
           "minimumWidth": true
         },
         {
-          "id": "spacer",
-          "enabled": true,
-          "size": 5
-        },
-        {
           "id": "separator",
           "enabled": true
-        },
-        {
-          "id": "spacer",
-          "enabled": true,
-          "size": 5
         },
         {
           "id": "controlCenterButton",
@@ -504,24 +484,15 @@
           ]
         },
         {
-          "id": "spacer",
-          "enabled": true,
-          "size": 5
-        },
-        {
           "id": "separator",
           "enabled": true
-        },
-        {
-          "id": "spacer",
-          "enabled": true,
-          "size": 5
         },
         {
           "id": "clock",
           "enabled": true,
           "clockCompactMode": false,
-          "clockDateOrder": "dateFirst"
+          "clockDateOrder": "timeFirst",
+          "clockNotificationBadge": false
         }
       ],
       "spacing": 0,
@@ -535,8 +506,8 @@
       "maximizeWidgetText": false,
       "widgetPadding": 16,
       "gothCornersEnabled": true,
-      "gothCornerRadiusOverride": false,
-      "gothCornerRadiusValue": 10,
+      "gothCornerRadiusOverride": true,
+      "gothCornerRadiusValue": 24,
       "borderEnabled": false,
       "borderColor": "secondary",
       "borderOpacity": 1,
@@ -569,7 +540,7 @@
       "hoverPopoutDelay": 0,
       "followInterfaceStyle": false,
       "island": false,
-      "surfaceColor": "default",
+      "surfaceColor": "s",
       "barLengthMode": "full",
       "barLengthPercent": 49,
       "barInsetPadding": 12,
