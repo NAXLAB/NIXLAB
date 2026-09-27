@@ -508,7 +508,7 @@
       "widgetPadding": 16,
       "gothCornersEnabled": true,
       "gothCornerRadiusOverride": true,
-      "gothCornerRadiusValue": 24,
+      "gothCornerRadiusValue": 32,
       "borderEnabled": false,
       "borderColor": "secondary",
       "borderOpacity": 1,
