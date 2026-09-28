@@ -125,17 +125,10 @@
   "focusRingWidth": 1,
   "controlCenterWidgets": [
     {
-      "id": "userCard",
+      "id": "header",
       "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "quickActions",
-      "enabled": true,
-      "w": 4,
+      "w": 8,
       "h": 1,
-      "buttonColor": "surfaceText",
       "actions": [
         {
           "id": "settings",
@@ -808,5 +801,5 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 4,
-  "configVersion": 32
+  "configVersion": 33
 }
