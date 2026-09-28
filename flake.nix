@@ -98,7 +98,6 @@
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
         
-        
         #Home Manager
         home-manager.nixosModules.home-manager
         {

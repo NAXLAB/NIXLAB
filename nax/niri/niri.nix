@@ -1,19 +1,7 @@
 { pkgs, inputs, ... }:
 
 {
-
   programs.niri.enable = true;
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.niri}/bin/niri-session";
-        user = "nax";
-      };
-    };
-  };
-
 
   systemd.tmpfiles.rules = [
     "d /home/nax/.config/niri 0755 nax users -"

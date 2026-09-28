@@ -17,6 +17,20 @@
             };
         };
 
+    #Autologin - Lockscreen handles security
+    services.greetd = {
+        enable = true;
+        settings = {
+        default_session = {
+            command = "${pkgs.niri}/bin/niri-session";
+            user = "nax";
+        };
+        };
+    };
+    
+    #Manage Keyring
+    security.pam.services.greetd.enableGnomeKeyring = true;
+
     environment.systemPackages = with pkgs; 
     [
         dsearch   #dms file search
