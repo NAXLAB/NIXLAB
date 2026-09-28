@@ -20,7 +20,7 @@ gestures {
 animations {
     overview-open-close {
         duration-ms 250
-        curve "cubic-bezier" 0.25 0.8 0.2 1
+        curve "cubic-bezier" 0.3 1.0 0.2 1
     }
 }
 

@@ -374,6 +374,10 @@
     },
     "clock": {
       "tone": ""
+    },
+    "sysmon": {
+      "tone": "secondary",
+      "temperature": false
     }
   },
   "iconThemeDark": "Adwaita",
