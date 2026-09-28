@@ -118,6 +118,7 @@
   "m3ElevationIntensity": 50,
   "m3ElevationOpacity": 50,
   "m3ElevationLightDirection": "autoBar",
+  "barElevationEnabled": false,
   "blurBorderSeeded": true,
   "foregroundLayerTransparency": 0.5,
   "focusRingEnabled": false,
