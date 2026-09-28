@@ -124,6 +124,37 @@
   "focusRingWidth": 1,
   "controlCenterWidgets": [
     {
+      "id": "userCard",
+      "enabled": true,
+      "w": 4,
+      "h": 1
+    },
+    {
+      "id": "quickActions",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "buttonColor": "surfaceText",
+      "actions": [
+        {
+          "id": "settings",
+          "enabled": true
+        },
+        {
+          "id": "edit",
+          "enabled": true
+        },
+        {
+          "id": "lock",
+          "enabled": true
+        },
+        {
+          "id": "power",
+          "enabled": true
+        }
+      ]
+    },
+    {
       "id": "inputVolumeSlider",
       "enabled": true,
       "w": 4,
@@ -247,44 +278,51 @@
       "row": 0
     },
     {
-      "id": "weather",
+      "id": "media",
       "w": 2,
-      "h": 1,
+      "h": 4,
       "col": 2,
       "row": 0
     },
     {
-      "id": "calendar",
-      "w": 3,
+      "id": "weather",
+      "w": 1,
       "h": 3,
       "col": 0,
       "row": 1
     },
     {
-      "id": "media",
+      "id": "cpu",
       "w": 1,
-      "h": 2,
-      "col": 3,
+      "h": 1,
+      "col": 1,
       "row": 1
+    },
+    {
+      "id": "memory",
+      "w": 1,
+      "h": 1,
+      "col": 1,
+      "row": 2
     },
     {
       "id": "network",
       "w": 1,
       "h": 1,
-      "col": 3,
+      "col": 1,
       "row": 3
     }
   ],
   "dashOptions": {
     "media": {
       "panelColumns": 3,
+      "artStyle": "square",
       "playerStyle": "material",
-      "lyrics": false,
-      "albumArtAccent": false
+      "animatedArt": true
     },
     "overview": {
-      "panelColumns": 4,
-      "panelRows": 4
+      "panelRows": 4,
+      "panelColumns": 4
     },
     "notifications": {
       "panelColumns": 3
@@ -769,5 +807,5 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 4,
-  "configVersion": 31
+  "configVersion": 32
 }
