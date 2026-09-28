@@ -322,9 +322,11 @@
       "panelColumns": 3
     },
     "wallpaper": {
-      "panelColumns": 3,
       "panelRows": 4,
-      "filename": false
+      "columns": 5,
+      "rows": 5,
+      "filename": false,
+      "layout": "carousel"
     },
     "weather": {
       "widgets": [
