@@ -75,6 +75,9 @@
       "showTrash": false,
       "trashFileManager": "default",
       "trashCustomCommand": "",
+      "magnification": false,
+      "magnificationScale": 130,
+      "magnificationProfile": "parabolic",
       "order": [],
       "widgets": [
         {
@@ -104,8 +107,9 @@
   ],
   "hostSurfaceColor": "sc",
   "cardSurfaceColor": "sch",
-  "chipSurfaceColor": "primaryContainer",
+  "chipSurfaceColor": "schh",
   "chipSurfaceNestedColor": "secondaryContainer",
+  "chipSurfaceNestedCustomColor": "#332d43",
   "niriLayoutRadiusOverride": 30,
   "firstDayOfWeek": 2,
   "showWeekNumber": true,
@@ -120,33 +124,40 @@
   "m3ElevationLightDirection": "autoBar",
   "barElevationEnabled": false,
   "blurBorderSeeded": true,
-  "foregroundLayerTransparency": 0.5,
   "focusRingEnabled": false,
   "focusRingWidth": 1,
   "controlCenterWidgets": [
     {
-      "id": "header",
+      "id": "user",
       "enabled": true,
-      "w": 8,
+      "w": 5,
       "h": 1,
-      "actions": [
-        {
-          "id": "settings",
-          "enabled": true
-        },
-        {
-          "id": "edit",
-          "enabled": true
-        },
-        {
-          "id": "lock",
-          "enabled": true
-        },
-        {
-          "id": "power",
-          "enabled": true
-        }
-      ]
+      "col": 0,
+      "row": 0
+    },
+    {
+      "id": "settings",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "col": 5,
+      "row": 0
+    },
+    {
+      "id": "lock",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "col": 6,
+      "row": 0
+    },
+    {
+      "id": "power",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "col": 7,
+      "row": 0
     },
     {
       "id": "inputVolumeSlider",
@@ -154,7 +165,7 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 0
+      "row": 4
     },
     {
       "id": "volumeSlider",
@@ -162,7 +173,7 @@
       "w": 4,
       "h": 1,
       "col": 4,
-      "row": 0
+      "row": 4
     },
     {
       "id": "audioInput",
@@ -170,7 +181,7 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 1
+      "row": 3
     },
     {
       "id": "audioOutput",
@@ -178,7 +189,7 @@
       "w": 4,
       "h": 1,
       "col": 4,
-      "row": 1
+      "row": 3
     },
     {
       "id": "wifi",
@@ -189,32 +200,12 @@
       "row": 2
     },
     {
-      "id": "diskUsage",
-      "enabled": true,
-      "instanceId": "mqh8x3ytjzhqrhfqzzkvzd7dnkpqzo",
-      "mountPath": "/boot",
-      "showMountPath": true,
-      "w": 4,
-      "h": 1,
-      "col": 4,
-      "row": 3
-    },
-    {
-      "id": "diskUsage",
-      "enabled": true,
-      "instanceId": "mqg9eluah0ph0plak71whxu6n1z171",
-      "mountPath": "/mnt/xdrive",
-      "showMountPath": true,
-      "w": 4,
-      "h": 1,
-      "col": 0,
-      "row": 3
-    },
-    {
       "id": "doNotDisturb",
       "enabled": true,
       "w": 4,
-      "h": 1
+      "h": 1,
+      "col": 4,
+      "row": 2
     }
   ],
   "scrollTitleEnabled": false,
@@ -380,6 +371,7 @@
       "temperature": false
     }
   },
+  "networkPreference": "ethernet",
   "iconThemeDark": "Adwaita",
   "cursorSettings": {
     "theme": "capitaine-cursors",
@@ -807,5 +799,5 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 4,
-  "configVersion": 33
+  "configVersion": 35
 }
