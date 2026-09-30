@@ -15,6 +15,9 @@
   #Policy Kit
   security.polkit.enable = true;  
 
+  #Manage Keyring
+  security.pam.services.greetd.enableGnomeKeyring = true;
+
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
     gnome-user-docs

@@ -12,10 +12,11 @@
   "blurBorderOpacity": 0.42,
   "wallpaperFillMode": "Stretch",
   "lockDateFormat": "ddd d MMM yyyy",
-  "fontFamily": "SF Pro Display",
+  "fontFamily": "SF Pro",
   "monoFontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "displayFontFamily": "SF Pro Display",
   "fontWeight": 500,
+  "textRenderType": 2,
   "textRenderQuality": 4,
   "lockScreenShowPowerActions": true,
   "lockScreenFontFamily": "Bai Jamjuree Light",
@@ -116,8 +117,8 @@
   "calendarBackend": "khal",
   "windSpeedUnit": "ms",
   "syncComponentAnimationSpeeds": false,
-  "popoutAnimationDuration": 179,
-  "modalAnimationDuration": 181,
+  "popoutAnimationDuration": 201,
+  "modalAnimationDuration": 201,
   "motionEffect": 2,
   "m3ElevationIntensity": 50,
   "m3ElevationOpacity": 50,
@@ -165,7 +166,7 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 4
+      "row": 3
     },
     {
       "id": "volumeSlider",
@@ -173,7 +174,7 @@
       "w": 4,
       "h": 1,
       "col": 4,
-      "row": 4
+      "row": 3
     },
     {
       "id": "audioInput",
@@ -181,7 +182,7 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 3
+      "row": 2
     },
     {
       "id": "audioOutput",
@@ -189,7 +190,7 @@
       "w": 4,
       "h": 1,
       "col": 4,
-      "row": 3
+      "row": 2
     },
     {
       "id": "wifi",
@@ -197,7 +198,7 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 2
+      "row": 1
     },
     {
       "id": "doNotDisturb",
@@ -205,7 +206,16 @@
       "w": 4,
       "h": 1,
       "col": 4,
-      "row": 2
+      "row": 1
+    },
+    {
+      "id": "runningApps",
+      "enabled": true,
+      "w": 7,
+      "h": 1,
+      "small": true,
+      "col": 0,
+      "row": 4
     }
   ],
   "scrollTitleEnabled": false,
@@ -222,7 +232,8 @@
   "niriOverviewOverlayEnabled": false,
   "dankLauncherV2Size": "micro",
   "dankLauncherV2ShowSourceBadges": false,
-  "dankLauncherV2BorderThickness": 4,
+  "dankLauncherV2BorderThickness": 6,
+  "dankLauncherV2BorderColor": "outline",
   "dankLauncherV2ShowFooter": false,
   "launcherUseOverlayLayer": true,
   "launcherStyle": "spotlight",
@@ -799,5 +810,5 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 4,
-  "configVersion": 35
+  "configVersion": 36
 }

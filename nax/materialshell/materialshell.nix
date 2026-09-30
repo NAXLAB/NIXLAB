@@ -28,8 +28,7 @@
         };
     };
     
-    #Manage Keyring
-    security.pam.services.greetd.enableGnomeKeyring = true;
+
 
     environment.systemPackages = with pkgs; 
     [
