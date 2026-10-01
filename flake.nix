@@ -83,6 +83,7 @@
         ./hardware-configuration.nix
         ./configuration.nix
         ./packages.nix
+        ./nax/audio.nix
         ./nax/shortcuts/shortcuts.nix
         ./nax/desktop/niri.nix
         ./nax/desktop/wayland.nix
@@ -96,6 +97,7 @@
         ./nax/tty/tty.nix
         ./nax/shell/shell.nix
         ./nax/plasticity/plasticity.nix
+        ./nax/printer.nix
         
         agenix.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
