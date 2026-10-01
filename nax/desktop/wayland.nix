@@ -14,7 +14,7 @@
       xdg-utils                         #Desktop app rendering utils
       refine                            #More Gnome Tweaks
       wl-clipboard                      #Clipboard 
-      wl-clip-persist                   #Wayland Clipboard Fuck you
+      wl-clip-persist                   #Wayland Clipboard utility
       grim                              #screenshot
       slurp                             #select area screenshot
       gvfs                              #Gnome Filesystem Compatibility

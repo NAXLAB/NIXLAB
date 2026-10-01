@@ -503,10 +503,6 @@
           "privacyShowScreenShareIcon": false
         },
         {
-          "id": "separator",
-          "enabled": true
-        },
-        {
           "id": "cpuTemp",
           "enabled": true,
           "minimumWidth": true
