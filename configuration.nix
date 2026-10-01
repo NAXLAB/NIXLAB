@@ -69,7 +69,6 @@
     { domain = "@audio"; item = "rtprio"; type = "-"; value = "99"; }
   ];
 
-
   #Networking
   networking.networkmanager = {
     enable = true;
