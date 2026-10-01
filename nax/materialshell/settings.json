@@ -131,7 +131,7 @@
     {
       "id": "user",
       "enabled": true,
-      "w": 5,
+      "w": 4,
       "h": 1,
       "col": 0,
       "row": 0
@@ -141,24 +141,27 @@
       "enabled": true,
       "w": 1,
       "h": 1,
-      "col": 5,
-      "row": 0
+      "col": 7,
+      "row": 0,
+      "small": true
     },
     {
       "id": "lock",
       "enabled": true,
       "w": 1,
       "h": 1,
-      "col": 6,
-      "row": 0
+      "col": 5,
+      "row": 0,
+      "small": true
     },
     {
       "id": "power",
       "enabled": true,
       "w": 1,
       "h": 1,
-      "col": 7,
-      "row": 0
+      "col": 4,
+      "row": 0,
+      "small": true
     },
     {
       "id": "inputVolumeSlider",
@@ -182,7 +185,8 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 2
+      "row": 2,
+      "small": true
     },
     {
       "id": "audioOutput",
@@ -197,25 +201,25 @@
       "enabled": true,
       "w": 4,
       "h": 1,
-      "col": 0,
-      "row": 1
-    },
-    {
-      "id": "doNotDisturb",
-      "enabled": true,
-      "w": 4,
-      "h": 1,
       "col": 4,
       "row": 1
     },
     {
-      "id": "runningApps",
+      "id": "builtin_vpn",
       "enabled": true,
-      "w": 7,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 1
+    },
+    {
+      "id": "edit",
+      "enabled": true,
+      "w": 1,
       "h": 1,
       "small": true,
-      "col": 0,
-      "row": 4
+      "col": 6,
+      "row": 0
     }
   ],
   "scrollTitleEnabled": false,

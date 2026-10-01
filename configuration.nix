@@ -71,7 +71,11 @@
 
 
   #Networking
-  networking.networkmanager.enable  = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = [ pkgs.networkmanager-openvpn ];
+  };
+  
   services.openssh.enable           = true;
   networking.hostName               = "zaigomaat";
   

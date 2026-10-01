@@ -5,7 +5,6 @@
         enable = true;
         packages = [
             "io.github.flattool.Warehouse"      #Manage Flatpaks
-            "com.surfshark.Surfshark"           #VPN
             "io.github.josephmawa.Gauge"        #Unit Conversion
             "org.gnome.Boxes"                   #Virtual Machines
             "io.github.gaheldev.Millisecond"    #Reduce System Latency
