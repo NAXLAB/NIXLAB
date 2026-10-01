@@ -84,7 +84,8 @@
         ./configuration.nix
         ./packages.nix
         ./nax/shortcuts/shortcuts.nix
-        ./nax/niri/niri.nix
+        ./nax/desktop/niri.nix
+        ./nax/desktop/wayland.nix
         ./nax/materialshell/materialshell.nix
         ./nax/coolercontrol/coolercontrol.nix
         ./nax/drives/xdrive.nix

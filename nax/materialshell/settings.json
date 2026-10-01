@@ -16,7 +16,6 @@
   "monoFontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "displayFontFamily": "SF Pro Display",
   "fontWeight": 500,
-  "textRenderType": 2,
   "textRenderQuality": 4,
   "lockScreenShowPowerActions": true,
   "lockScreenFontFamily": "Bai Jamjuree Light",
@@ -116,7 +115,6 @@
   "showWeekNumber": true,
   "calendarBackend": "khal",
   "windSpeedUnit": "ms",
-  "syncComponentAnimationSpeeds": false,
   "popoutAnimationDuration": 201,
   "modalAnimationDuration": 201,
   "motionEffect": 2,
@@ -143,7 +141,7 @@
       "h": 1,
       "col": 0,
       "row": 1,
-      "small": false
+      "small": true
     },
     {
       "id": "audioOutput",
@@ -503,10 +501,6 @@
           "privacyShowMicIcon": false,
           "privacyShowCameraIcon": false,
           "privacyShowScreenShareIcon": false
-        },
-        {
-          "id": "notificationButton",
-          "enabled": true
         },
         {
           "id": "separator",

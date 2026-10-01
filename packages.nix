@@ -1,4 +1,8 @@
-  { config, pkgs, inputs, ... }:
+{ config,
+  pkgs,
+  inputs,
+  ... 
+}:
 
 {
 
@@ -68,18 +72,6 @@
   fastfetch                         #meme terminal widget         
   inspector                         #Gnome App Debugger
   qmk                               #QMK keyboard
-  
-  #Desktop Utilities
-  xwayland-satellite                #Wayland integration
-  xdg-desktop-portal-gnome          #App Compatibility portal
-  xdg-utils                         #Desktop app rendering utils
-  refine                            #More Gnome Tweaks
-  wl-clipboard                      #Clipboard 
-  wl-clip-persist                   #Wayland Clipboard Fuck you
-  grim                              #screenshot
-  slurp                             #select area screenshot
-  gvfs                              #Gnome Filesystem Compatibility
-  solaar                            #Mouse Compatibility
 
   #System Utilities
 	curl                              #data transfer utility
@@ -100,6 +92,8 @@ fonts.packages = with pkgs; [
 
 ];
 
+
+#Disable Flake Registry from DeterminateSystems
 nix.settings.flake-registry = pkgs.writeTextFile {
   name = "registry.json"; 
     text = ''

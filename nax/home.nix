@@ -15,10 +15,6 @@
     ./discord/discord.nix
   ];
 
-  #GTK Compatibility
-  xdg.userDirs.setSessionVariables = true;
-
-
   gtk = 
     {
       enable  = true;
@@ -40,6 +36,10 @@
     enable = true;
     platformTheme.name = "gtk3"; # make Qt apps follow GTK theme
   };
+
+
+    #GTK Compatibility
+  xdg.userDirs.setSessionVariables = true;
 
   #App compatibility with symlinked home folders
   xdg.userDirs =
