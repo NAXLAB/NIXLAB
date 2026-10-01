@@ -129,55 +129,12 @@
   "focusRingWidth": 1,
   "controlCenterWidgets": [
     {
-      "id": "user",
-      "enabled": true,
-      "w": 4,
-      "h": 1,
-      "col": 0,
-      "row": 0
-    },
-    {
-      "id": "settings",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
-      "col": 7,
-      "row": 0,
-      "small": true
-    },
-    {
-      "id": "lock",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
-      "col": 5,
-      "row": 0,
-      "small": true
-    },
-    {
-      "id": "power",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
-      "col": 4,
-      "row": 0,
-      "small": true
-    },
-    {
       "id": "inputVolumeSlider",
       "enabled": true,
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 3
-    },
-    {
-      "id": "volumeSlider",
-      "enabled": true,
-      "w": 4,
-      "h": 1,
-      "col": 4,
-      "row": 3
+      "row": 2
     },
     {
       "id": "audioInput",
@@ -185,8 +142,8 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 2,
-      "small": true
+      "row": 1,
+      "small": false
     },
     {
       "id": "audioOutput",
@@ -194,23 +151,24 @@
       "w": 4,
       "h": 1,
       "col": 4,
-      "row": 2
+      "row": 1,
+      "small": false
     },
     {
       "id": "wifi",
       "enabled": true,
       "w": 4,
       "h": 1,
-      "col": 4,
-      "row": 1
+      "col": 0,
+      "row": 0
     },
     {
       "id": "builtin_vpn",
       "enabled": true,
       "w": 4,
       "h": 1,
-      "col": 0,
-      "row": 1
+      "col": 4,
+      "row": 0
     },
     {
       "id": "edit",
@@ -220,6 +178,62 @@
       "small": true,
       "col": 6,
       "row": 0
+    },
+    {
+      "id": "volumeSlider",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 4,
+      "row": 2,
+      "footerW": 4
+    },
+    {
+      "id": "power",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "col": 4,
+      "row": 0,
+      "small": true,
+      "footer": true,
+      "footerW": 1,
+      "footerEnd": true
+    },
+    {
+      "id": "lock",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "col": 5,
+      "row": 0,
+      "small": true,
+      "footer": true,
+      "footerW": 1,
+      "footerEnd": true
+    },
+    {
+      "id": "settings",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "col": 7,
+      "row": 0,
+      "small": true,
+      "footer": true,
+      "footerW": 1,
+      "footerEnd": true
+    },
+    {
+      "id": "user",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 0,
+      "footer": true,
+      "footerW": 4,
+      "background": true
     }
   ],
   "scrollTitleEnabled": false,
@@ -241,6 +255,7 @@
   "dankLauncherV2ShowFooter": false,
   "launcherUseOverlayLayer": true,
   "launcherStyle": "spotlight",
+  "avatarRing": "none",
   "spotlightBarShowModeChips": true,
   "dashTabPosition": "right",
   "dashTabs": [

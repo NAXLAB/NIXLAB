@@ -19,4 +19,17 @@
 
   };
 
+  #Clipboard configuration
+  systemd.user.services.wl-clip-persist = {
+    description   = "Persist Wayland clipboard";
+    partOf        = [ "graphical-session.target" ];
+    after         = [ "graphical-session.target" ];
+    wantedBy      = [ "graphical-session.target" ];
+    serviceConfig = 
+      {
+        ExecStart = "${pkgs.wl-clip-persist}/bin/wl-clip-persist --clipboard regular --write-timeout 5000 --ignore-event-on-error" ;
+        Restart   = "on-failure";
+      };
+  };
+
 }
