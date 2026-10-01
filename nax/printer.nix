@@ -1,7 +1,8 @@
   #printer.nix
-
+  
   { 
-    pkgs, 
+    pkgs,
+    config,
     inputs, 
     ...
   }:
