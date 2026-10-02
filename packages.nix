@@ -7,21 +7,21 @@
 {
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree    = true;
+  nixpkgs.config.allowUnfree      = true;
 
   # Nixos Modules
-  programs.firefox.enable       = true;
-  programs.zsh.enable           = true;
-  programs.starship.enable      = true;
-  programs.dconf.enable         = true;
-  programs.gamemode.enable      = true;
-  programs.steam.enable         = true;
-  virtualisation.docker.enable  = true;
-  hardware.keyboard.qmk.enable  = true;
+  programs.zsh.enable             = true;
+  programs.starship.enable        = true;
+  programs.dconf.enable           = true;
+  programs.gamemode.enable        = true;
+  programs.steam.enable           = true;
+  virtualisation.docker.enable    = true;
+  hardware.keyboard.qmk.enable    = true;
+  services.punktfunk.host.enable  = true;
   
 
   #Nix Package manager
-  environment.systemPackages    = with pkgs; [
+  environment.systemPackages      = with pkgs; [
 	
   #Apps
   nautilus                          # File Manager
@@ -74,9 +74,10 @@
   qmk                               #QMK keyboard
 
   #System Utilities
+  inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 	curl                              #data transfer utility
   unixtools.netstat                 #Network monitor
-  inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
+
 
   #Themes
   papirus-icon-theme                #Icon Packs
@@ -88,7 +89,6 @@
 fonts.packages = with pkgs; [
 
   nerd-fonts.jetbrains-mono
-  nerd-fonts.iosevka
 
 ];
 

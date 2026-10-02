@@ -141,7 +141,7 @@
       "h": 1,
       "col": 0,
       "row": 1,
-      "small": true
+      "small": false
     },
     {
       "id": "audioOutput",

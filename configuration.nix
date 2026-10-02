@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{ 
+  config,
+  pkgs,
+  inputs, 
+  ... 
+}:
 
 {
 
@@ -25,6 +30,26 @@
       }
     ];
 
+  #User Profile
+  users.users.nax = 
+    {
+      shell         = pkgs.zsh;
+      isNormalUser  = true;
+      description   = "Nax Lab";
+      #packages      = with pkgs; [];
+      extraGroups   = 
+        [ 
+          "lab"
+          "i2c"
+          "networkmanager"
+          "wheel"
+          "libvirt" 
+          "qemu-libvirtd"
+          "audio"
+          "docker"
+        ];
+    };
+
   #System & Hardware Services
   systemd.services.systemd-rfkill.enable  = false;
   services.power-profiles-daemon.enable   = true;
@@ -32,13 +57,12 @@
   services.upower.enable                  = true;
 
   #Networking
+  services.openssh.enable           = true;
+  networking.hostName               = "zaigomaat";
   networking.networkmanager = {
     enable = true;
     plugins = [ pkgs.networkmanager-openvpn ];
   };
-  
-  services.openssh.enable           = true;
-  networking.hostName               = "zaigomaat";
   
   #Mouse Compatibility
   environment.etc."libinput/local-overrides.quirks".text = ''
@@ -66,26 +90,6 @@
       LC_TELEPHONE      = "en_US.UTF-8";
       LC_TIME           = "en_US.UTF-8";
     };
-
-  #User Profile
-  users.users.nax = 
-    {
-      shell         = pkgs.zsh;
-      isNormalUser  = true;
-      description   = "Nax Lab";
-      #packages      = with pkgs; [];
-      extraGroups   = 
-        [ 
-          "lab"
-          "i2c"
-          "networkmanager"
-          "wheel"
-          "libvirt" 
-          "qemu-libvirtd"
-          "audio"
-          "docker"
-        ];
-    };
     
 
   #File System Config
@@ -112,10 +116,10 @@
 # Aliases for Terminal Commands
 environment.shellAliases = {
 
-switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
-build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
-flake = "sudo nix flake update"; 
-garbage = "sudo nix-collect-garbage -d";
+  switch = "sudo nixos-rebuild switch --flake /etc/nixos#zaigomaat";
+  build = "sudo nixos-rebuild build --flake /etc/nixos#zaigomaat";
+  flake = "sudo nix flake update"; 
+  garbage = "sudo nix-collect-garbage -d";
 
 };
 

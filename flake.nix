@@ -52,6 +52,10 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
+    punktfunk = {
+      url                         = "git+https://git.unom.io/unom/punktfunk";
+    };
+    
   };
 
   outputs = inputs@  
@@ -66,6 +70,7 @@
       dms-plugin-registry,
       figma-desktop,
       goodsync,
+      punktfunk,
       ...
     }:
   
@@ -80,28 +85,37 @@
 
       modules = [
 
+        #System
         ./hardware-configuration.nix
         ./configuration.nix
+
+        #Packages
         ./packages.nix
+        ./nax/flatpak/flatpak.nix
+        ./nax/plasticity/plasticity.nix
+        ./nax/screenshare.nix
+        nix-flatpak.nixosModules.nix-flatpak
+        figma-desktop.nixosModules.default
+        
+        #Hardware
         ./nax/audio.nix
-        ./nax/shortcuts/shortcuts.nix
+        ./nax/coolercontrol/coolercontrol.nix
+        ./nax/openrgb/openrgb.nix
+        ./nax/printer.nix
+
+        #Desktop
         ./nax/desktop/niri.nix
         ./nax/desktop/wayland.nix
+        ./nax/shortcuts/shortcuts.nix
         ./nax/materialshell/materialshell.nix
-        ./nax/coolercontrol/coolercontrol.nix
+        ./nax/gnome/gnome.nix
+
+        #Storage
+        goodsync.nixosModules.default 
         ./nax/drives/xdrive.nix
         ./nax/drives/stax.nix
-        ./nax/gnome/gnome.nix
-        ./nax/flatpak/flatpak.nix
-        ./nax/openrgb/openrgb.nix
-        ./nax/tty/tty.nix
-        ./nax/shell/shell.nix
-        ./nax/plasticity/plasticity.nix
-        ./nax/printer.nix
-        
-        agenix.nixosModules.default
-        nix-flatpak.nixosModules.nix-flatpak
-        
+        ./nax/drives/sync.nix
+
         #Home Manager
         home-manager.nixosModules.home-manager
         {
@@ -110,20 +124,12 @@
           home-manager.users.nax       = ./nax/home.nix;  
         }
 
-        goodsync.nixosModules.default
-        {
-          services.goodsync = {
-            enable = true;
-            user = "nax";
-          };
-        }
+        #Experiments
+        ./nax/labshell/shell.nix
 
-        {
-          environment.systemPackages = [
-            figma-desktop.packages.x86_64-linux.default
-          ];
-        }
-
+        #Themes
+        ./nax/tty/tty.nix
+        
       ];
     };
   };

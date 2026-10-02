@@ -38,7 +38,7 @@
   };
 
 
-    #GTK Compatibility
+  #GTK Compatibility
   xdg.userDirs.setSessionVariables = true;
 
   #App compatibility with symlinked home folders
@@ -66,8 +66,5 @@
       font-name           = "SF Pro Display 11";
       monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
     };
-
-
-
 
 }
