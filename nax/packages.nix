@@ -50,6 +50,7 @@
   keypunch                          # Typing Test
   gnome-characters                  # Emojis
   gnome-tweaks                      # Gnome Tweaks
+  mixxx                             # DJ Software
 
   #Design Apps
   upscayl                           #Image Upscale
@@ -73,10 +74,8 @@
   qmk                               #QMK keyboard
 
   #System Utilities
-  inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default #Secret Management
 	curl                              #data transfer utility
   unixtools.netstat                 #Network monitor
-
 
   #Themes
   papirus-icon-theme                #Icon Packs

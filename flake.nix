@@ -97,7 +97,7 @@
         inputs.agenix.nixosModules.default
 
         #Packages
-        ./packages.nix
+        ./nax/packages.nix
         ./nax/flatpak/flatpak.nix
         ./nax/plasticity/plasticity.nix
         nix-flatpak.nixosModules.nix-flatpak

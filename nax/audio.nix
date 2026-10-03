@@ -2,6 +2,7 @@
     pkgs,
     config,
     inputs, 
+    lib,
     ...
   }:
 
@@ -22,27 +23,23 @@
       };
 
 
-    imports = [ 
+    #Power Profile Management
+    services.power-profiles-daemon.enable = false;
+    powerManagement.cpuFreqGovernor = lib.mkForce "performance";
 
-      inputs.musnix.nixosModules.musnix
 
-    ];
 
     #Low Latency Configutation Tool
+    imports = [ 
+      inputs.musnix.nixosModules.musnix
+    ];
+
     musnix = {
-
       enable = true;
-
-      # Optional: real-time kernel (rebuilds your kernel)
-      #kernel.realtime = true;
-      #kernel.packages = pkgs.linuxPackages_latest;  # mainline >= 6.12 gets PREEMPT_RT natively
-
-      # Optional extras
       rtcqs.enable = true;               # analyzer that suggests audio-friendly tweaks
-      
-  };
+    };
 
-  #Audio Management Group
-  users.users.nax.extraGroups = [ "audio" ];
+    #Audio Management Group
+    users.users.nax.extraGroups = [ "audio" ];
 
   }

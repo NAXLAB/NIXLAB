@@ -9,7 +9,6 @@
 
     #System & Hardware Services
     systemd.services.systemd-rfkill.enable  = false;
-    services.power-profiles-daemon.enable   = true;
     hardware.bluetooth.enable               = false;
     services.upower.enable                  = true;
 
