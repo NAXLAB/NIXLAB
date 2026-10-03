@@ -22,20 +22,27 @@
       };
 
 
-    imports = 
-      [ 
-        inputs.musnix.nixosModules.musnix
-      ];
+    imports = [ 
 
+      inputs.musnix.nixosModules.musnix
 
-      
-
-    #Low level hardware control permissions for low latency audio optimization
-    /*
-    security.pam.loginLimits = [
-      { domain = "@audio"; item = "memlock"; type = "-"; value = "unlimited"; }
-      { domain = "@audio"; item = "rtprio"; type = "-"; value = "99"; }
     ];
-    */
+
+    #Low Latency Configutation Tool
+    musnix = {
+
+      enable = true;
+
+      # Optional: real-time kernel (rebuilds your kernel)
+      #kernel.realtime = true;
+      #kernel.packages = pkgs.linuxPackages_latest;  # mainline >= 6.12 gets PREEMPT_RT natively
+
+      # Optional extras
+      rtcqs.enable = true;               # analyzer that suggests audio-friendly tweaks
+      
+  };
+
+  #Audio Management Group
+  users.users.nax.extraGroups = [ "audio" ];
 
   }
