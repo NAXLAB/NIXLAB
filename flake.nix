@@ -52,8 +52,9 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    punktfunk = {
-      url                         = "git+https://git.unom.io/unom/punktfunk";
+     musnix  = { 
+      url                         = "github:musnix/musnix"; 
+      inputs.nixpkgs.follows      = "nixpkgs";
     };
     
   };
@@ -70,7 +71,7 @@
       dms-plugin-registry,
       figma-desktop,
       goodsync,
-      punktfunk,
+      musnix,
       ...
     }:
   
@@ -87,17 +88,23 @@
 
         #System
         ./hardware-configuration.nix
+        ./boot.nix
         ./configuration.nix
+        ./nax/screenshare.nix
+        ./nax/networking.nix
+        ./nax/user.nix
+        ./nax/shell/shell.nix
+        inputs.agenix.nixosModules.default
 
         #Packages
         ./packages.nix
         ./nax/flatpak/flatpak.nix
         ./nax/plasticity/plasticity.nix
-        ./nax/screenshare.nix
         nix-flatpak.nixosModules.nix-flatpak
         figma-desktop.nixosModules.default
         
         #Hardware
+        ./nax/hardware.nix
         ./nax/audio.nix
         ./nax/coolercontrol/coolercontrol.nix
         ./nax/openrgb/openrgb.nix
@@ -111,7 +118,6 @@
         ./nax/gnome/gnome.nix
 
         #Storage
-        goodsync.nixosModules.default 
         ./nax/drives/xdrive.nix
         ./nax/drives/stax.nix
         ./nax/drives/sync.nix
@@ -119,9 +125,9 @@
         #Home Manager
         home-manager.nixosModules.home-manager
         {
+          home-manager.users.nax       = ./nax/home.nix; 
           home-manager.useGlobalPkgs   = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.nax       = ./nax/home.nix;  
+          home-manager.useUserPackages = true; 
         }
 
         #Experiments

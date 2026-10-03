@@ -21,10 +21,21 @@
           };
       };
 
+
+    imports = 
+      [ 
+        inputs.musnix.nixosModules.musnix
+      ];
+
+
+      
+
     #Low level hardware control permissions for low latency audio optimization
+    /*
     security.pam.loginLimits = [
       { domain = "@audio"; item = "memlock"; type = "-"; value = "unlimited"; }
       { domain = "@audio"; item = "rtprio"; type = "-"; value = "99"; }
     ];
+    */
 
   }

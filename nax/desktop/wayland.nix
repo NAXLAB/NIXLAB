@@ -19,7 +19,7 @@
       slurp                             #select area screenshot
       gvfs                              #Gnome Filesystem Compatibility
 
-  ];
+    ];
 
   #Allow Apps to be managed by wayland compositors
   environment.sessionVariables = {
@@ -45,5 +45,4 @@
           Restart   = "on-failure";
         };
     };
-
   }

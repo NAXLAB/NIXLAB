@@ -56,7 +56,7 @@
   home.file =
     {
       ".gitconfig".source                       = ./git/config;
-      ".zshrc".source                           = ./zsh/zshrc;
+      ".zshrc".source                           = ./shell/zshrc;
       ".config/fastfetch/config.jsonc".source   = ./fastfetch/config.jsonc;
     };
   

@@ -17,7 +17,6 @@
   programs.steam.enable           = true;
   virtualisation.docker.enable    = true;
   hardware.keyboard.qmk.enable    = true;
-  services.punktfunk.host.enable  = true;
   
 
   #Nix Package manager

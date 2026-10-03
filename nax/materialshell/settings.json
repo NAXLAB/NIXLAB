@@ -280,6 +280,10 @@
     {
       "id": "settings",
       "enabled": true
+    },
+    {
+      "id": "wellbeing",
+      "enabled": false
     }
   ],
   "dashCards": [

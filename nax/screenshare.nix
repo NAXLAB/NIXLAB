@@ -6,14 +6,12 @@
 }:
 
 {
-  imports = [ inputs.punktfunk.nixosModules.default ];
 
-  nix.settings = {
-    extra-substituters = [ "https://nix.unom.io" ];
-    extra-trusted-public-keys = [
-      "punktfunk-cache-1:yhOJmHxzg6tzXpxSFzlYn6Pc6r0jHprsWqt8MZC654o="
-    ];
+  services.sunshine = {
+    enable = true;
+    autoStart = true;
+    capSysAdmin = true;   # needed for KMS capture
+    openFirewall = true;
   };
 
-  services.punktfunk.host.enable = true;
 }
