@@ -275,7 +275,7 @@
     },
     {
       "id": "notifications",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "settings",

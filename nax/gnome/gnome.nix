@@ -18,6 +18,9 @@
   #Manage Keyring
   security.pam.services.greetd.enableGnomeKeyring = true;
 
+  #Gnome Filesystem Support
+  services.gvfs.enable = true;
+
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
     gnome-user-docs
@@ -29,6 +32,7 @@
       pkgs.xdg-desktop-portal-gtk 
       ];
   };
+
 
   systemd.tmpfiles.rules = [
     "d /home/nax/.config/gtk-3.0 0755 nax users -"
