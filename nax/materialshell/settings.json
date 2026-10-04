@@ -169,15 +169,6 @@
       "row": 0
     },
     {
-      "id": "edit",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
-      "small": true,
-      "col": 6,
-      "row": 0
-    },
-    {
       "id": "volumeSlider",
       "enabled": true,
       "w": 4,
@@ -187,16 +178,26 @@
       "footerW": 4
     },
     {
-      "id": "power",
+      "id": "user",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 0,
+      "footerW": 4,
+      "background": true,
+      "footer": true
+    },
+    {
+      "id": "edit",
       "enabled": true,
       "w": 1,
       "h": 1,
-      "col": 4,
-      "row": 0,
       "small": true,
-      "footer": true,
+      "col": 7,
+      "row": 0,
       "footerW": 1,
-      "footerEnd": true
+      "footer": true
     },
     {
       "id": "lock",
@@ -206,8 +207,20 @@
       "col": 5,
       "row": 0,
       "small": true,
-      "footer": true,
       "footerW": 1,
+      "footer": true,
+      "footerEnd": true
+    },
+    {
+      "id": "power",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "col": 4,
+      "row": 0,
+      "small": true,
+      "footerW": 1,
+      "footer": true,
       "footerEnd": true
     },
     {
@@ -215,23 +228,11 @@
       "enabled": true,
       "w": 1,
       "h": 1,
-      "col": 7,
+      "col": 6,
       "row": 0,
       "small": true,
-      "footer": true,
       "footerW": 1,
-      "footerEnd": true
-    },
-    {
-      "id": "user",
-      "enabled": true,
-      "w": 4,
-      "h": 1,
-      "col": 0,
-      "row": 0,
-      "footer": true,
-      "footerW": 4,
-      "background": true
+      "footer": true
     }
   ],
   "scrollTitleEnabled": false,
@@ -823,5 +824,5 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 4,
-  "configVersion": 36
+  "configVersion": 37
 }
