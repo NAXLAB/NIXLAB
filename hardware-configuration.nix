@@ -48,6 +48,8 @@
 		    ];
     };
 
+
+#Replace this with new configuration when doing fresh install
 fileSystems."/" =
     { device = "/dev/disk/by-uuid/56f4064e-08de-4aba-8c97-bff99cd7b16c";
       fsType = "ext4";
