@@ -100,6 +100,7 @@
         ./nax/packages.nix
         ./nax/flatpak/flatpak.nix
         ./nax/plasticity/plasticity.nix
+        ./nax/mixxx/mixxx.nix
         nix-flatpak.nixosModules.nix-flatpak
         figma-desktop.nixosModules.default
         
