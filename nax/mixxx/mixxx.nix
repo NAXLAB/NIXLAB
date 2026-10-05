@@ -1,8 +1,7 @@
 { pkgs, ... }:
 
 {
-
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     (pkgs.symlinkJoin {
       name = "mixxx-wrapped";
       paths = [ pkgs.mixxx ];
@@ -13,6 +12,5 @@
           --prefix XDG_DATA_DIRS : ${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}
       '';
     })
-  ]
-
+  ];
 }

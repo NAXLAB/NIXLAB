@@ -1,10 +1,165 @@
 {
+  "lockScreenWidgetInstances": [
+    {
+      "id": "lock_clock",
+      "widgetType": "lockClock",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "style": "horizontal",
+        "weight": 200,
+        "twoTone": false,
+        "autoPosition": false,
+        "showAnalogNumbers": false,
+        "showAnalogSeconds": true,
+        "colorMode": "default",
+        "customColor": "#ffffff"
+      }
+    },
+    {
+      "id": "lock_date",
+      "widgetType": "lockDate",
+      "enabled": false,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "format": "short",
+        "colorMode": "default",
+        "customColor": "#ffffff"
+      }
+    },
+    {
+      "id": "lock_auth",
+      "widgetType": "lockAuth",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "style": "expressive",
+        "profileVisibility": "always",
+        "passwordVisibility": "always"
+      }
+    },
+    {
+      "id": "lock_notifications",
+      "widgetType": "lockNotifications",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "mode": 2
+      }
+    },
+    {
+      "id": "lock_status",
+      "widgetType": "lockStatus",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "showMediaPlayer": true,
+        "showWeather": true,
+        "background": false
+      }
+    },
+    {
+      "id": "lock_power",
+      "widgetType": "lockPower",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "shape": "round"
+      }
+    }
+  ],
+  "greeterWidgetInstances": [
+    {
+      "id": "lock_date",
+      "widgetType": "lockDate",
+      "enabled": false,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "format": "short",
+        "colorMode": "default",
+        "customColor": "#ffffff"
+      }
+    },
+    {
+      "id": "lock_auth",
+      "widgetType": "lockAuth",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "style": "expressive",
+        "profileVisibility": "always",
+        "passwordVisibility": "always"
+      }
+    },
+    {
+      "id": "lock_status",
+      "widgetType": "lockStatus",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "showMediaPlayer": true,
+        "showWeather": true,
+        "background": false
+      }
+    },
+    {
+      "id": "lock_power",
+      "widgetType": "lockPower",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true,
+        "shape": "round"
+      }
+    },
+    {
+      "id": "greeter_session",
+      "widgetType": "greeterSession",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "syncPositionAcrossScreens": true
+      }
+    }
+  ],
   "currentThemeName": "custom",
   "customThemeFile": "/home/nax/.config/DankMaterialShell/themes/naxlab/theme.json",
   "registryThemeVariants": {
     "gnomeAdwaita": "purple"
   },
-  "fixedRadius": 13,
+  "radiusMode": "fixed",
+  "fixedRadius": 16,
   "clockFormat": "12h",
   "padHours12Hour": true,
   "animationDuration": 150,
@@ -112,6 +267,7 @@
   "chipSurfaceNestedColor": "secondaryContainer",
   "chipSurfaceNestedCustomColor": "#332d43",
   "niriLayoutRadiusOverride": 30,
+  "mouseAccelProfile": "flat",
   "firstDayOfWeek": 2,
   "showWeekNumber": true,
   "calendarBackend": "khal",
@@ -824,92 +980,5 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 4,
-  "configVersion": 38,
-  "lockScreenWidgetInstances": [
-    {
-      "id": "lock_clock",
-      "widgetType": "lockClock",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "style": "expressive",
-        "weight": 0,
-        "twoTone": true,
-        "autoPosition": true,
-        "showAnalogNumbers": false,
-        "showAnalogSeconds": true,
-        "colorMode": "default",
-        "customColor": "#ffffff"
-      }
-    },
-    {
-      "id": "lock_date",
-      "widgetType": "lockDate",
-      "enabled": false,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "format": "short",
-        "colorMode": "default",
-        "customColor": "#ffffff"
-      }
-    },
-    {
-      "id": "lock_auth",
-      "widgetType": "lockAuth",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "style": "expressive",
-        "profileVisibility": "always",
-        "passwordVisibility": "always"
-      }
-    },
-    {
-      "id": "lock_notifications",
-      "widgetType": "lockNotifications",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "mode": 2
-      }
-    },
-    {
-      "id": "lock_status",
-      "widgetType": "lockStatus",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "showMediaPlayer": true,
-        "showWeather": true,
-        "background": false
-      }
-    },
-    {
-      "id": "lock_power",
-      "widgetType": "lockPower",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "shape": "round"
-      }
-    }
-  ]
+  "configVersion": 38
 }
