@@ -8,7 +8,9 @@
 
  #Declare the agenix secret for X Drive
   age.secrets.xdrive = {
+
     file = ../secrets/xdrive.age;
+    
   };
 
   #Mount X Drive NTFS

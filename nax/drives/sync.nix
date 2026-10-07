@@ -7,16 +7,15 @@
 
 {
 
-  imports = 
-    [ 
-      inputs.goodsync.nixosModules.default
-    ];
+  imports = [
+    inputs.goodsync.nixosModules.default
+  ];
 
   services.goodsync = 
     {
-      enable = true;
-      user = "nax";
-      package = inputs.goodsync.packages.${pkgs.stdenv.hostPlatform.system}.default;
+      enable        = true;
+      user          = "nax";
+      package       = inputs.goodsync.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
-    
+
 }

@@ -8,7 +8,10 @@
 {
 
   #Enable flakes & nix-command
-  nix.settings.experimental-features = [ "flakes" "nix-command" ];
+  nix.settings.experimental-features = [
+    "flakes" 
+    "nix-command"
+  ];
 
   #Time Zone
   time.timeZone = "America/New_York";
@@ -28,7 +31,7 @@
       LC_TIME           = "en_US.UTF-8";
     };
 
-  #Do not change this number for reasons I don't understand.
+  #Do not change this number for reasons I don't understand lol
   system.stateVersion = "25.11";
 
 }
