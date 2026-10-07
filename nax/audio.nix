@@ -13,21 +13,18 @@
     security.rtkit.enable       = true;
     services.pipewire = 
       {
-        enable = true;
-        pulse.enable = true;
+        enable                  = true;
+        pulse.enable            = true;
         alsa = 
           {
-            enable = true;
-            support32Bit = true;
+            enable              = true;
+            support32Bit        = true;
           };
       };
-
 
     #Power Profile Management
     services.power-profiles-daemon.enable = false;
     powerManagement.cpuFreqGovernor = lib.mkForce "performance";
-
-
 
     #Low Latency Configutation Tool
     imports = [ 
@@ -36,7 +33,7 @@
 
     musnix = {
       enable = true;
-      rtcqs.enable = true;               # analyzer that suggests audio-friendly tweaks
+      rtcqs.enable = true; # analyzer that suggests audio-friendly tweaks
     };
 
     #Audio Management Group

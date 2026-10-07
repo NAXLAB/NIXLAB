@@ -37,7 +37,6 @@
     platformTheme.name = "gtk3"; # make Qt apps follow GTK theme
   };
 
-
   #GTK Compatibility
   xdg.userDirs.setSessionVariables = true;
 

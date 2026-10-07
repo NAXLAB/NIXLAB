@@ -28,7 +28,7 @@
       LC_TIME           = "en_US.UTF-8";
     };
 
-#Do not change this number for reasons I don't understand.
-system.stateVersion = "25.11";
+  #Do not change this number for reasons I don't understand.
+  system.stateVersion = "25.11";
 
 }
