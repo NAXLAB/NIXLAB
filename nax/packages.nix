@@ -17,79 +17,75 @@
   programs.steam.enable           = true;
   virtualisation.docker.enable    = true;
   hardware.keyboard.qmk.enable    = true;
-  
 
   #Nix Package manager
   environment.systemPackages      = with pkgs; [
 	
   #Apps
-  nautilus                          # File Manager
-  gnome-console                     # Console
-  gnome-calculator                  # Calculator
   baobab                            # Disk usage (Disk Usage Analyzer)
-  ungoogled-chromium                # chrome
+  bazaar                            # Flatpak App store
   cine                              # Video Player
-  vesktop                           # Discord
-  parabolic                         # Media Downloader
-  crosspipe                         # Audio patch bay
-  signal-desktop                    # Signal Messages
-  loupe                             # Image viewer (modern GNOME image viewer)
+  crosspipe                         # Audio patch bay 
   dialect                           # Translation Tool
-  lmstudio                          # Language Model Studio
-  gnome-clocks                      # Clocks
+  dopamine                          # Music
   fragments                         # Torrent Client
+  gnome-calculator                  # Calculator
+  gnome-characters                  # Emojis
+  gnome-clocks                      # Clocks
+  gnome-console                     # Console
+  gnome-text-editor                 # Text Editor
+  gnome-tweaks                      # Gnome Tweaks
   iotas                             # Notes
+  keypunch                          # Typing Test
+  lmstudio                          # Language Model Studio
+  loupe                             # Image viewer (modern GNOME image viewer)
+  nautilus                          # File Manager
   nicotine-plus                     # soulseek music sharing
   obs-studio                        # Screen Recording
-  bazaar                            # Flatpak App store
-  dopamine                          # Music
-  libreoffice                       # Office Suite
+  parabolic                         # Media Downloader
   pdfarranger                       # PDF Editor
-  gnome-text-editor                 # Text Editor
+  signal-desktop                    # Signal Messages
   snapshot                          # webcam
-  keypunch                          # Typing Test
-  gnome-characters                  # Emojis
-  gnome-tweaks                      # Gnome Tweaks
-
+  ungoogled-chromium                # chrome
+  vesktop                           # Discord
 
   #Design Apps
-  upscayl                           #Image Upscale
-  gnome-decoder                     #Create QR Codes
-  eyedropper                        #Color Picker
-  gnome-font-viewer                 #Fonts
-  penpot-desktop                    #UI/UX Design
-  prusa-slicer                      #3D Print Utility
-  exhibit                           #View 3D Models
-  inkscape                          #2D Design 
-  krita                             #Raster Design
   blender                           #3D Design
   darktable                         #Photo Editing
+  exhibit                           #View 3D Models
+  eyedropper                        #Color Picker
+  gnome-decoder                     #Create QR Codes
+  gnome-font-viewer                 #Fonts
+  inkscape                          #2D Design
+  krita                             #Raster Design
+  penpot-desktop                    #UI/UX Design
+  prusa-slicer                      #3D Print Utility
+  upscayl                           #Image Upscale
 
   #Dev Utilities
-  git                               #Version Control
+  fastfetch                         #meme terminal widget    
   gh                                #Github
-  vscodium                          #Dev environment
-  fastfetch                         #meme terminal widget         
+  git                               #Version Control  
   inspector                         #Gnome App Debugger
   qmk                               #QMK keyboard
+  vscodium                          #Dev environment   
 
   #System Utilities
 	curl                              #data transfer utility
   unixtools.netstat                 #Network monitor
 
   #Themes
-  papirus-icon-theme                #Icon Packs
   adwaita-icon-theme                #Icon Packs
   capitaine-cursors                 #Cursor Packs
+  papirus-icon-theme                #Icon Packs
 
 ];
 
 fonts.packages = with pkgs; [
 
   nerd-fonts.jetbrains-mono
-
+  
 ];
-
 
 #Disable Flake Registry from DeterminateSystems
 nix.settings.flake-registry = pkgs.writeTextFile {

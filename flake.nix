@@ -56,6 +56,11 @@
       url                         = "github:musnix/musnix"; 
       inputs.nixpkgs.follows      = "nixpkgs";
     };
+
+    genoffice = {
+      url                         = "github:NAXLAB/genoffice-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
     
   };
 
@@ -72,6 +77,7 @@
       figma-desktop,
       goodsync,
       musnix,
+      genoffice,
       ...
     }:
   
@@ -101,6 +107,7 @@
         ./nax/flatpak/flatpak.nix
         ./nax/plasticity/plasticity.nix
         ./nax/mixxx/mixxx.nix
+        #genoffice.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
         figma-desktop.nixosModules.default
         

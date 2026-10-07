@@ -1,39 +1,6 @@
 {
   "lockScreenWidgetInstances": [
     {
-      "id": "lock_clock",
-      "widgetType": "lockClock",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "style": "horizontal",
-        "weight": 200,
-        "twoTone": false,
-        "autoPosition": false,
-        "showAnalogNumbers": false,
-        "showAnalogSeconds": true,
-        "colorMode": "default",
-        "customColor": "#ffffff"
-      }
-    },
-    {
-      "id": "lock_date",
-      "widgetType": "lockDate",
-      "enabled": false,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "format": "short",
-        "colorMode": "default",
-        "customColor": "#ffffff"
-      }
-    },
-    {
       "id": "lock_auth",
       "widgetType": "lockAuth",
       "enabled": true,
@@ -87,20 +54,6 @@
     }
   ],
   "greeterWidgetInstances": [
-    {
-      "id": "lock_date",
-      "widgetType": "lockDate",
-      "enabled": false,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "format": "short",
-        "colorMode": "default",
-        "customColor": "#ffffff"
-      }
-    },
     {
       "id": "lock_auth",
       "widgetType": "lockAuth",
