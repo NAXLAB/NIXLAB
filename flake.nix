@@ -57,8 +57,14 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    genoffice = {
-      url                         = "github:NAXLAB/genoffice-flake";
+    photocraft = {
+      url                         = "github:NAXLAB/photocraft-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
+    # flake.nix
+    solvecraft = {
+      url                         = "github:NAXLAB/solvecraft-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
     
@@ -77,7 +83,8 @@
       figma-desktop,
       goodsync,
       musnix,
-      genoffice,
+      photocraft,
+      solvecraft,
       ...
     }:
   
@@ -107,7 +114,6 @@
         ./nax/flatpak/flatpak.nix
         ./nax/plasticity/plasticity.nix
         ./nax/mixxx/mixxx.nix
-        #genoffice.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
         figma-desktop.nixosModules.default
         

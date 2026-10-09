@@ -61,6 +61,8 @@
   penpot-desktop                    #UI/UX Design
   prusa-slicer                      #3D Print Utility
   upscayl                           #Image Upscale
+  inputs.solvecraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #3D Modeling
+  inputs.photocraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Photoshop
 
   #Dev Utilities
   fastfetch                         #meme terminal widget    
@@ -73,6 +75,7 @@
   #System Utilities
 	curl                              #data transfer utility
   unixtools.netstat                 #Network monitor
+  lact                              #GPU Overclocking
 
   #Themes
   adwaita-icon-theme                #Icon Packs
