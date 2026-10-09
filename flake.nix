@@ -67,6 +67,11 @@
       url                         = "github:NAXLAB/solvecraft-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
+
+    vectorcraft = {
+      url = "github:NAXLAB/vectorcraft-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
   };
 

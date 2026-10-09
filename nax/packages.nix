@@ -63,6 +63,8 @@
   upscayl                           #Image Upscale
   inputs.solvecraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #3D Modeling
   inputs.photocraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Photoshop
+  inputs.vectorcraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Illustrator
+
 
   #Dev Utilities
   fastfetch                         #meme terminal widget    
