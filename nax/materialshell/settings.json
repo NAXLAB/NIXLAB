@@ -366,7 +366,7 @@
   "launcherStyle": "spotlight",
   "avatarRing": "none",
   "spotlightBarShowModeChips": true,
-  "dashTabPosition": "right",
+  "dashTabPosition": "auto",
   "dashTabs": [
     {
       "id": "overview",
@@ -933,9 +933,16 @@
   "frameThickness": 2,
   "frameRounding": 0,
   "frameBarSize": 24,
-  "frameBarInsetPadding": 4,
+  "frameBarInsetPadding": 0,
   "configVersion": 40,
   "connectedFrameBarStyleBackups": {},
   "frameEnabled": false,
-  "niriOverviewLauncherStyle": "spotlight"
+  "niriOverviewLauncherStyle": "spotlight",
+  "matugenSpec": "2025",
+  "matugenScheme": "scheme-tonal-spot",
+  "osdPosition": 4,
+  "osdVolumeEnabled": false,
+  "osdMediaPlaybackEnabled": true,
+  "osdMediaVolumeEnabled": false,
+  "osdBrightnessEnabled": false
 }
