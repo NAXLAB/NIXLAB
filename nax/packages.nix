@@ -52,7 +52,6 @@
   #Design Apps
   blender                           #3D Design
   darktable                         #Photo Editing
-  exhibit                           #View 3D Models
   eyedropper                        #Color Picker
   gnome-decoder                     #Create QR Codes
   gnome-font-viewer                 #Fonts

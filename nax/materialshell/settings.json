@@ -356,7 +356,7 @@
   "appDrawerSectionViewModes": {
     "apps": "grid"
   },
-  "niriOverviewOverlayEnabled": false,
+  "niriOverviewOverlayEnabled": true,
   "dankLauncherV2Size": "micro",
   "dankLauncherV2ShowSourceBadges": false,
   "dankLauncherV2BorderThickness": 6,
@@ -726,7 +726,8 @@
       "barInsetPadding": 12,
       "widgetStyle": "flat",
       "barLengthPadding": 0,
-      "widgetFollowInterfaceStyle": false
+      "widgetFollowInterfaceStyle": false,
+      "dot": false
     },
     {
       "id": "dot1790177799417",
@@ -933,5 +934,8 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 4,
-  "configVersion": 40
+  "configVersion": 40,
+  "connectedFrameBarStyleBackups": {},
+  "frameEnabled": false,
+  "niriOverviewLauncherStyle": "spotlight"
 }
