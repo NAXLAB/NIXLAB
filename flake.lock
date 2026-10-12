@@ -23,11 +23,11 @@
     "dank-qml-common": {
       "flake": false,
       "locked": {
-        "lastModified": 1791670308,
-        "narHash": "sha256-vcAOSK+6buTddG8sJi8JOnaFfxSztmL8nOzsnUTzGd0=",
+        "lastModified": 1791733765,
+        "narHash": "sha256-X5Nq0FON2n5z404z7SbqBOXh2OzVXnCMvonHbyMVWXY=",
         "owner": "AvengeMedia",
         "repo": "dank-qml-common",
-        "rev": "50ca5ccb4913098b0b67807d9ff7f642e79067b0",
+        "rev": "bd90e4b6f2ec36035fc2cb560acdc0e418f669ac",
         "type": "github"
       },
       "original": {
@@ -45,11 +45,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791685111,
-        "narHash": "sha256-3QlQ2x+c4jh9ZA5GQlZx8DQHZPmJJo0yRxpwA4eiMBk=",
+        "lastModified": 1791751661,
+        "narHash": "sha256-BIeIMaerX1fm/6+mQ1a/0om0sOTXeqaFaruZqObi8s0=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "3a48f5906749d9eb012c421234d9339339fa735e",
+        "rev": "6640a943b30d11407bc868469910dcb0800f3254",
         "type": "github"
       },
       "original": {
@@ -65,11 +65,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791687633,
-        "narHash": "sha256-RPGDUgqwN/VFBncZvdCuG2y0HxB67vpze0Lf6AgWkro=",
+        "lastModified": 1791775386,
+        "narHash": "sha256-+D5rbRYYZJwfNTGmtUy5aaB6seBqvP1L4+PdT033SA4=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "0af39503cb830db485148ce9fa30fcd65c6774e3",
+        "rev": "99b5ac5f61ee2fb122ff0efcc18cdeca7b6e8cda",
         "type": "github"
       },
       "original": {
@@ -289,44 +289,27 @@
         "nixpkgs": "nixpkgs",
         "photocraft": "photocraft",
         "quickshell": "quickshell",
-        "solvecraft": "solvecraft",
+        "solidcraft": "solidcraft",
         "vectorcraft": "vectorcraft"
       }
     },
-    "solvecraft": {
+    "solidcraft": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
-        ],
-        "solvecraft-src": "solvecraft-src"
+        ]
       },
       "locked": {
-        "lastModified": 1791691883,
-        "narHash": "sha256-sCW/CbU9R+lQwLsiCIr6XVVla6IO/UZolLoAFGxxwN8=",
+        "lastModified": 1791775529,
+        "narHash": "sha256-Hh7LXgCsRgSBX3t+6ZTJL4+WEvA09y8eR2uWc0vTfCU=",
         "owner": "NAXLAB",
-        "repo": "solvecraft-flake",
-        "rev": "a18838df0814da385962c68e549522492a14b8f5",
+        "repo": "solidcraft",
+        "rev": "733ddc452b75aceff074d881d3287acca8243064",
         "type": "github"
       },
       "original": {
         "owner": "NAXLAB",
-        "repo": "solvecraft-flake",
-        "type": "github"
-      }
-    },
-    "solvecraft-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1791688262,
-        "narHash": "sha256-NiSl8xZr85UXWIQzVsTfYKabEIw2mmCmAR8/d9SWP30=",
-        "owner": "bherbruck",
-        "repo": "solvecraft",
-        "rev": "22672585c9dff977de24887d37e1b43c3ba4ea54",
-        "type": "github"
-      },
-      "original": {
-        "owner": "bherbruck",
-        "repo": "solvecraft",
+        "repo": "solidcraft",
         "type": "github"
       }
     },

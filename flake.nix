@@ -42,35 +42,41 @@
       url                         = "github:gmodena/nix-flatpak/?ref=latest";
     };
 
+    #Figms
     figma-desktop = {
       url                         = "github:NAXLAB/figma-desktop-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
+    #Goodsync
     goodsync = {
       url                         = "github:NAXLAB/goodsync-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
+    #Musnix Low latency tools
      musnix  = { 
       url                         = "github:musnix/musnix"; 
       inputs.nixpkgs.follows      = "nixpkgs";
     };
-
+    
+    #PhotoCraft
     photocraft = {
       url                         = "github:NAXLAB/photocraft-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    # flake.nix
-    solvecraft = {
-      url                         = "github:NAXLAB/solvecraft-flake";
+    #Solidcraft
+    solidcraft = {
+      #url                         = "github:bherbruck/solidcraft";
+      url                         = "github:NAXLAB/solidcraft";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
-
+    
+    #VectorCraft
     vectorcraft = {
-      url = "github:NAXLAB/vectorcraft-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url                         = "github:NAXLAB/vectorcraft-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
     };
     
   };
@@ -89,7 +95,7 @@
       goodsync,
       musnix,
       photocraft,
-      solvecraft,
+      solidcraft,
       ...
     }:
   
