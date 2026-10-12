@@ -9,21 +9,9 @@
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "style": "expressive",
-        "profileVisibility": "always",
+        "style": "pill",
+        "profileVisibility": "never",
         "passwordVisibility": "always"
-      }
-    },
-    {
-      "id": "lock_notifications",
-      "widgetType": "lockNotifications",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true,
-        "mode": 2
       }
     },
     {
@@ -63,8 +51,8 @@
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "style": "expressive",
-        "profileVisibility": "always",
+        "style": "pill",
+        "profileVisibility": "never",
         "passwordVisibility": "always"
       }
     },
@@ -208,16 +196,16 @@
     }
   ],
   "currentThemeCategory": "custom",
-  "matugenSourceMode": "value",
+  "matugenSourceMode": "dominant",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
   "dmsWindowsFloatingSeeded": [
     "niri"
   ],
-  "hostSurfaceColor": "sc",
-  "cardSurfaceColor": "sch",
-  "chipSurfaceColor": "schh",
-  "chipSurfaceNestedColor": "secondaryContainer",
+  "hostSurfaceColor": "s",
+  "cardSurfaceColor": "sc",
+  "chipSurfaceColor": "sch",
+  "chipSurfaceNestedColor": "schh",
   "chipSurfaceNestedCustomColor": "#332d43",
   "niriLayoutRadiusOverride": 30,
   "mouseAccelProfile": "flat",
@@ -284,8 +272,7 @@
       "w": 4,
       "h": 1,
       "col": 4,
-      "row": 2,
-      "footerW": 4
+      "row": 2
     },
     {
       "id": "user",
@@ -293,10 +280,8 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 0,
-      "footerW": 4,
-      "background": true,
-      "footer": true
+      "row": 3,
+      "background": true
     },
     {
       "id": "edit",
@@ -304,45 +289,35 @@
       "w": 1,
       "h": 1,
       "small": true,
-      "col": 7,
-      "row": 0,
-      "footerW": 1,
-      "footer": true
-    },
-    {
-      "id": "lock",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
-      "col": 5,
-      "row": 0,
-      "small": true,
-      "footerW": 1,
-      "footer": true,
-      "footerEnd": true
-    },
-    {
-      "id": "power",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
       "col": 4,
-      "row": 0,
-      "small": true,
-      "footerW": 1,
-      "footer": true,
-      "footerEnd": true
+      "row": 3
     },
     {
       "id": "settings",
       "enabled": true,
       "w": 1,
       "h": 1,
+      "col": 5,
+      "row": 3,
+      "small": true
+    },
+    {
+      "id": "lock",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
       "col": 6,
-      "row": 0,
-      "small": true,
-      "footerW": 1,
-      "footer": true
+      "row": 3,
+      "small": true
+    },
+    {
+      "id": "power",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "col": 7,
+      "row": 3,
+      "small": true
     }
   ],
   "scrollTitleEnabled": false,
@@ -432,7 +407,8 @@
       "panelColumns": 3,
       "artStyle": "square",
       "playerStyle": "material",
-      "animatedArt": true
+      "animatedArt": true,
+      "albumArtAccent": false
     },
     "overview": {
       "panelRows": 4,
@@ -923,7 +899,7 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 0,
-  "configVersion": 40,
+  "configVersion": 41,
   "connectedFrameBarStyleBackups": {},
   "frameEnabled": false,
   "niriOverviewLauncherStyle": "spotlight",
@@ -933,5 +909,6 @@
   "osdVolumeEnabled": false,
   "osdMediaPlaybackEnabled": true,
   "osdMediaVolumeEnabled": false,
-  "osdBrightnessEnabled": false
+  "osdBrightnessEnabled": false,
+  "matugenContrast": 0
 }

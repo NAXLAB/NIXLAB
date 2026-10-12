@@ -49,6 +49,7 @@
   ungoogled-chromium                # chrome
   vesktop                           # Discord
 
+
   #Design Apps
   blender                           #3D Design
   darktable                         #Photo Editing
@@ -60,7 +61,7 @@
   penpot-desktop                    #UI/UX Design
   prusa-slicer                      #3D Print Utility
   upscayl                           #Image Upscale
-  inputs.solidcraft.packages.${pkgs.stdenv.hostPlatform.system}.default
+  inputs.solidcraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #3D Modelling
   inputs.photocraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Photoshop
   inputs.vectorcraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Illustrator
 
@@ -78,6 +79,7 @@
 	curl                              #data transfer utility
   unixtools.netstat                 #Network monitor
   lact                              #GPU Overclocking
+  mission-center                    #Task Manager
 
   #Themes
   adwaita-icon-theme                #Icon Packs

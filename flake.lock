@@ -23,11 +23,11 @@
     "dank-qml-common": {
       "flake": false,
       "locked": {
-        "lastModified": 1791733765,
-        "narHash": "sha256-X5Nq0FON2n5z404z7SbqBOXh2OzVXnCMvonHbyMVWXY=",
+        "lastModified": 1791820510,
+        "narHash": "sha256-aDpJTeAE89k0zN584vponqj99QgiHK9gNoTZo3qiLWM=",
         "owner": "AvengeMedia",
         "repo": "dank-qml-common",
-        "rev": "bd90e4b6f2ec36035fc2cb560acdc0e418f669ac",
+        "rev": "ea058153e7362c13585ec3af72f19b666dfffdc0",
         "type": "github"
       },
       "original": {
@@ -45,11 +45,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791751661,
-        "narHash": "sha256-BIeIMaerX1fm/6+mQ1a/0om0sOTXeqaFaruZqObi8s0=",
+        "lastModified": 1791823932,
+        "narHash": "sha256-8U61excswwfHh9RyXs4UJaZ66KAudi8fU6OCiy1q8j8=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "6640a943b30d11407bc868469910dcb0800f3254",
+        "rev": "4a8f1062becd88c90073ee55c2f7b3e51f56a749",
         "type": "github"
       },
       "original": {
@@ -300,15 +300,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1791775529,
-        "narHash": "sha256-Hh7LXgCsRgSBX3t+6ZTJL4+WEvA09y8eR2uWc0vTfCU=",
-        "owner": "NAXLAB",
+        "lastModified": 1791824329,
+        "narHash": "sha256-T9fndCu68QgiJIZUaDwvK6E0kbUlsGXYI7aRFPwkaLQ=",
+        "owner": "bherbruck",
         "repo": "solidcraft",
-        "rev": "733ddc452b75aceff074d881d3287acca8243064",
+        "rev": "e6252ae094f3695e898b5b4ec8e76050cd2955eb",
         "type": "github"
       },
       "original": {
-        "owner": "NAXLAB",
+        "owner": "bherbruck",
         "repo": "solidcraft",
         "type": "github"
       }

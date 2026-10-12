@@ -68,8 +68,8 @@
 
     #Solidcraft
     solidcraft = {
-      #url                         = "github:bherbruck/solidcraft";
-      url                         = "github:NAXLAB/solidcraft";
+      url                         = "github:bherbruck/solidcraft";
+      #url                         = "github:NAXLAB/solidcraft";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
     
