@@ -38,7 +38,7 @@ layout {
 
     gaps  8 // gap between windows and screen edges
 
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 1.0; }
 
     struts {
         left 48 
