@@ -324,7 +324,7 @@
   "audioVisualizerEnabled": false,
   "appIdSubstitutions": [],
   "clockDateFormat": "ddd d",
-  "appLauncherGridColumns": 5,
+  "appLauncherGridColumns": 6,
   "spotlightSectionViewModes": {
     "apps": "grid"
   },
