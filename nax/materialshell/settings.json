@@ -538,7 +538,7 @@
   "notificationPopupPosition": 3,
   "notificationHistoryMaxCount": 20,
   "notificationFocusedMonitor": true,
-  "osdPowerProfileEnabled": true,
+  "osdPowerProfileEnabled": false,
   "updaterCheckOnStart": true,
   "screenPreferences": {
     "wallpaper": [
@@ -571,12 +571,7 @@
           "launcherLogoSizeOffset": -2
         }
       ],
-      "centerWidgets": [
-        {
-          "id": "mediaActivity",
-          "enabled": true
-        }
-      ],
+      "centerWidgets": [],
       "rightWidgets": [
         {
           "id": "privacyIndicator",
@@ -909,10 +904,16 @@
   "niriOverviewLauncherStyle": "spotlight",
   "matugenSpec": "2025",
   "matugenScheme": "scheme-tonal-spot",
-  "osdPosition": 4,
+  "osdPosition": 5,
   "osdVolumeEnabled": false,
-  "osdMediaPlaybackEnabled": true,
+  "osdMediaPlaybackEnabled": false,
   "osdMediaVolumeEnabled": false,
   "osdBrightnessEnabled": false,
-  "matugenContrast": 0
+  "matugenContrast": 0,
+  "centeringMode": "geometric",
+  "osdIdleInhibitorEnabled": false,
+  "osdMicMuteEnabled": false,
+  "osdMicVolumeEnabled": false,
+  "osdCapsLockEnabled": false,
+  "osdAudioOutputEnabled": false
 }
