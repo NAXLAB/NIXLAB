@@ -78,7 +78,12 @@
       url                         = "github:NAXLAB/vectorcraft-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
-    
+
+    #FigCraft
+    figcraft = {
+      url                         = "github:NAXLAB/figcraft-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
   };
 
   outputs = inputs@  
@@ -96,6 +101,7 @@
       musnix,
       photocraft,
       solidcraft,
+      figcraft,
       ...
     }:
   

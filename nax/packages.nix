@@ -64,6 +64,7 @@
   inputs.solidcraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #3D Modelling
   inputs.photocraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Photoshop
   inputs.vectorcraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Illustrator
+  inputs.figcraft.packages.${pkgs.stdenv.hostPlatform.system}.default
 
 
   #Dev Utilities
@@ -78,7 +79,6 @@
   #System Utilities
 	curl                              #data transfer utility
   unixtools.netstat                 #Network monitor
-  lact                              #GPU Overclocking
   mission-center                    #Task Manager
 
   #Themes

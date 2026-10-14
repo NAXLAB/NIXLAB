@@ -94,7 +94,7 @@
       }
     }
   ],
-  "currentThemeName": "custom",
+  "currentThemeName": "dynamic",
   "customThemeFile": "/home/nax/.config/DankMaterialShell/themes/naxlab/theme.json",
   "registryThemeVariants": {
     "gnomeAdwaita": "purple"
@@ -195,7 +195,7 @@
       ]
     }
   ],
-  "currentThemeCategory": "custom",
+  "currentThemeCategory": "dynamic",
   "matugenSourceMode": "dominant",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
@@ -574,6 +574,10 @@
       "centerWidgets": [],
       "rightWidgets": [
         {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
           "id": "privacyIndicator",
           "enabled": true,
           "privacyShowMicIcon": false,
@@ -898,7 +902,7 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 0,
-  "configVersion": 41,
+  "configVersion": 42,
   "connectedFrameBarStyleBackups": {},
   "frameEnabled": false,
   "niriOverviewLauncherStyle": "spotlight",
