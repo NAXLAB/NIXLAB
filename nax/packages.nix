@@ -42,6 +42,7 @@
   nautilus                          # File Manager
   nicotine-plus                     # soulseek music sharing
   obs-studio                        # Screen Recording
+  onlyoffice-desktopeditors         # Office Suite
   parabolic                         # Media Downloader
   pdfarranger                       # PDF Editor
   signal-desktop                    # Signal Messages
@@ -75,6 +76,7 @@
   qmk                               #QMK keyboard
   vscodium                          #Dev environment   
   cargo                             #Cargo
+  nodejs_24                         #Node
 
   #System Utilities
 	curl                              #data transfer utility

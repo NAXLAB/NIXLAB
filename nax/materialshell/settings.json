@@ -196,7 +196,7 @@
     }
   ],
   "currentThemeCategory": "dynamic",
-  "matugenSourceMode": "dominant",
+  "matugenSourceMode": "colorful",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
   "dmsWindowsFloatingSeeded": [
@@ -324,14 +324,14 @@
   "audioVisualizerEnabled": false,
   "appIdSubstitutions": [],
   "clockDateFormat": "ddd d",
-  "appLauncherGridColumns": 6,
+  "appLauncherGridColumns": 5,
   "spotlightSectionViewModes": {
     "apps": "grid"
   },
   "appDrawerSectionViewModes": {
     "apps": "grid"
   },
-  "niriOverviewOverlayEnabled": true,
+  "niriOverviewOverlayEnabled": false,
   "dankLauncherV2Size": "micro",
   "dankLauncherV2ShowSourceBadges": false,
   "dankLauncherV2BorderThickness": 6,
