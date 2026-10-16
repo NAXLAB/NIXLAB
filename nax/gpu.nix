@@ -12,6 +12,11 @@
       "amdgpu"
     ];
 
+      boot.extraModulePackages = 
+    [
+      config.boot.kernelPackages.nct6687d
+    ];
+
   hardware.graphics = 
     {
       enable      = true;

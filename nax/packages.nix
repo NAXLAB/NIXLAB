@@ -37,12 +37,12 @@
   gnome-tweaks                      # Gnome Tweaks
   iotas                             # Notes
   keypunch                          # Typing Test
+  libreoffice                       # Office Suite
   lmstudio                          # Language Model Studio
   loupe                             # Image viewer (modern GNOME image viewer)
   nautilus                          # File Manager
   nicotine-plus                     # soulseek music sharing
   obs-studio                        # Screen Recording
-  onlyoffice-desktopeditors         # Office Suite
   parabolic                         # Media Downloader
   pdfarranger                       # PDF Editor
   signal-desktop                    # Signal Messages

@@ -39,8 +39,8 @@ layout {
     gaps  8 // gap between windows and screen edges
 
     preset-column-widths { 
-        proportion 0.5;
         proportion 1.0; 
+        proportion 0.5;
         }
 
     struts {
@@ -67,7 +67,7 @@ input {
 }
 
 overview {
-    zoom 0.4
+    zoom 0.28
     workspace-shadow {
         off
      }

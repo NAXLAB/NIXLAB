@@ -7,6 +7,9 @@
 }:
 
 {
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+    
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   boot.kernelParams = [ "amd_iommu=on" ];
 
@@ -28,32 +31,22 @@
       "i2c-dev"
     ];
 
-  boot.extraModulePackages = 
-    [
-      config.boot.kernelPackages.nct6687d
-    ];
-
-#Replace this with new configuration when doing fresh install
-fileSystems."/" =
-    { device = "/dev/disk/by-uuid/56f4064e-08de-4aba-8c97-bff99cd7b16c";
+  #Replace this with new configuration when doing fresh install
+  fileSystems."/" =
+    { 
+      device = "/dev/disk/by-uuid/56f4064e-08de-4aba-8c97-bff99cd7b16c";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/770D-0260";
+    { 
+      device = "/dev/disk/by-uuid/770D-0260";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  swapDevices = [ ];
-
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  imports =
-    [
-      (modulesPath + "/installer/scan/not-detected.nix")
-    ];
-
+    imports =
+      [
+        (modulesPath + "/installer/scan/not-detected.nix")
+      ];
 }

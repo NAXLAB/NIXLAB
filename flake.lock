@@ -39,11 +39,11 @@
     "dank-qml-common": {
       "flake": false,
       "locked": {
-        "lastModified": 1792107169,
-        "narHash": "sha256-+mPWgdixaqhYuKBfF1yNft+cdsGbE8TrUhOOnMjUztE=",
+        "lastModified": 1792156771,
+        "narHash": "sha256-mhJY/aO1R4kovs+uliO2EWIMOlYKCO7yLB7KO8FlzEo=",
         "owner": "AvengeMedia",
         "repo": "dank-qml-common",
-        "rev": "3e2e4a92d4d9395ce3892ff8dab23964b108b27c",
+        "rev": "2416d14b889d6dcba43d5ec010f7f7da1d3480ea",
         "type": "github"
       },
       "original": {
@@ -61,11 +61,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792107378,
-        "narHash": "sha256-cRYeCsLIk1asW01e0JZpG0w1gjr5wLjBA8+XkTtiCkw=",
+        "lastModified": 1792160582,
+        "narHash": "sha256-XLZEqCY7Z0ud9vGcSGq7s3gJF8BjykB1be7LoMJTb7s=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "b08f3f8ea19068c85e14b1fbf6f288520b61fd74",
+        "rev": "8e690022f1a7c47b73aef2def4ac8be97641ada8",
         "type": "github"
       },
       "original": {
@@ -355,15 +355,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1792121097,
-        "narHash": "sha256-V8XN11i2GVWec65vuwByNJzEjpmu7a/KD+nhzPPgcwM=",
-        "owner": "bherbruck",
+        "lastModified": 1792183199,
+        "narHash": "sha256-GIcB9LY2jHXefY816Ge920uiFmrBkflQ++37S85mQrU=",
+        "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "c01a7b9b37e64c3757101acc4409b4793bb6cc4c",
+        "rev": "d357bd2073b38d0f5c53b684fe7c54dd9fc5d26f",
         "type": "github"
       },
       "original": {
-        "owner": "bherbruck",
+        "owner": "tangency-labs",
         "repo": "solidcraft",
         "type": "github"
       }

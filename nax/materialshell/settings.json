@@ -378,28 +378,28 @@
       "w": 2,
       "h": 1,
       "col": 0,
-      "row": 0
+      "row": 3
     },
     {
       "id": "media",
       "w": 2,
       "h": 1,
       "col": 2,
-      "row": 0
+      "row": 3
     },
     {
       "id": "weather",
       "w": 1,
       "h": 3,
       "col": 0,
-      "row": 1
+      "row": 0
     },
     {
       "id": "calendar",
       "w": 3,
       "h": 3,
       "col": 1,
-      "row": 1
+      "row": 0
     }
   ],
   "dashOptions": {
@@ -527,7 +527,7 @@
   "matugenTemplateZed": false,
   "notificationOverlayEnabled": true,
   "notificationPopupBodyInvokesAction": true,
-  "modalDarkenBackground": true,
+  "modalDarkenBackground": false,
   "lockAtStartup": true,
   "lockPamExternallyManaged": true,
   "notificationTimeoutLow": 3000,
@@ -565,7 +565,7 @@
       "leftWidgets": [
         {
           "id": "launcherButton",
-          "enabled": true,
+          "enabled": false,
           "launcherLogoMode": "custom",
           "launcherLogoCustomPath": "/home/nax/.config/DankMaterialShell/themes/naxlab/icons/rest.png",
           "launcherLogoSizeOffset": -2
@@ -598,7 +598,7 @@
         },
         {
           "id": "separator",
-          "enabled": true
+          "enabled": false
         },
         {
           "id": "controlCenterButton",
@@ -632,12 +632,8 @@
           ]
         },
         {
-          "id": "separator",
-          "enabled": true
-        },
-        {
           "id": "clock",
-          "enabled": true,
+          "enabled": false,
           "clockCompactMode": false,
           "clockDateOrder": "timeFirst",
           "clockNotificationBadge": false
@@ -687,7 +683,7 @@
       "hoverPopouts": false,
       "hoverPopoutDelay": 0,
       "followInterfaceStyle": false,
-      "island": false,
+      "island": true,
       "surfaceColor": "s",
       "barLengthMode": "full",
       "barLengthPercent": 49,
@@ -695,7 +691,10 @@
       "widgetStyle": "flat",
       "barLengthPadding": 0,
       "widgetFollowInterfaceStyle": false,
-      "dot": false
+      "dot": false,
+      "islandFloating": false,
+      "islandPlacement": "free",
+      "islandNotch": true
     },
     {
       "id": "dot1790177799417",
@@ -905,7 +904,7 @@
   "configVersion": 42,
   "connectedFrameBarStyleBackups": {},
   "frameEnabled": false,
-  "niriOverviewLauncherStyle": "spotlight",
+  "niriOverviewLauncherStyle": "full",
   "matugenSpec": "2025",
   "matugenScheme": "scheme-tonal-spot",
   "osdPosition": 5,
