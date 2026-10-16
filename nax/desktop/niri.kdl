@@ -39,8 +39,8 @@ layout {
     gaps  8 // gap between windows and screen edges
 
     preset-column-widths { 
-        proportion 1.0; 
         proportion 0.5;
+        proportion 1.0; 
         }
 
     struts {
@@ -81,7 +81,7 @@ binds {
     Super+Shift+Q { quit; }
 
     Super+Space { switch-preset-column-width; }
-    Super+Return {fullscreen-window;}
+    Super+Return { maximize-window-to-edges;}
 
     Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
     Super+S { screenshot-screen; }
