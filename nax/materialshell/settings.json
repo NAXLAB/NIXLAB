@@ -489,7 +489,7 @@
     "theme": "capitaine-cursors",
     "size": 30,
     "niri": {
-      "hideWhenTyping": false,
+      "hideWhenTyping": true,
       "hideAfterInactiveMs": 0
     },
     "hyprland": {
@@ -921,5 +921,6 @@
   "osdCapsLockEnabled": false,
   "osdAudioOutputEnabled": false,
   "foregroundLayerTransparency": 1,
-  "osdTouchpadEnabled": false
+  "osdTouchpadEnabled": false,
+  "wellbeingAppLimits": {}
 }

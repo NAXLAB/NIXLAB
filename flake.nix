@@ -140,10 +140,10 @@
         ./nax/coolercontrol/coolercontrol.nix
         ./nax/openrgb/openrgb.nix
         ./nax/printer.nix
+        ./nax/gpu.nix
 
         #Desktop
-        ./nax/desktop/niri.nix
-        ./nax/desktop/wayland.nix
+        ./nax/desktop/desktop.nix
         ./nax/shortcuts/shortcuts.nix
         ./nax/materialshell/materialshell.nix
         ./nax/gnome/gnome.nix

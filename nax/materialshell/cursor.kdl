@@ -6,4 +6,5 @@
 cursor {
     xcursor-theme "capitaine-cursors"
     xcursor-size 30
+    hide-when-typing
 }
