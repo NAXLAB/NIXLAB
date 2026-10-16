@@ -38,7 +38,10 @@ layout {
 
     gaps  8 // gap between windows and screen edges
 
-    default-column-width { proportion 1.0; }
+    preset-column-widths { 
+        proportion 1.0; 
+        proportion 0.5;
+        }
 
     struts {
         left 48 
@@ -77,10 +80,16 @@ binds {
 
     Super+Shift+Q { quit; }
 
-    Super+Return { maximize-column; }
+    Super+Space { switch-preset-column-width; }
+    Super+Return {fullscreen-window;}
 
     Shift+Super+S { spawn "sh" "-c" "pgrep -x slurp > /dev/null && pkill -x slurp || grim -g \"$(slurp -b 0E0F11C8 -c 0070F0FF -s 0E0F1100 -w 2)\" - | wl-copy"; }
     Super+S { screenshot-screen; }
+
+    Super+Left  { focus-column-left; }
+    Super+Right { focus-column-right; }
+    Super+Up    { focus-workspace-up; }
+    Super+Down  { focus-workspace-down; }
 
 }
 
