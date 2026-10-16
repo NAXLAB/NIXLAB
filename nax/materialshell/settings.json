@@ -326,7 +326,7 @@
   "clockDateFormat": "ddd d",
   "appLauncherGridColumns": 5,
   "spotlightSectionViewModes": {
-    "apps": "grid"
+    "apps": "list"
   },
   "appDrawerSectionViewModes": {
     "apps": "grid"
@@ -527,7 +527,7 @@
   "matugenTemplateZed": false,
   "notificationOverlayEnabled": true,
   "notificationPopupBodyInvokesAction": true,
-  "modalDarkenBackground": false,
+  "modalDarkenBackground": true,
   "lockAtStartup": true,
   "lockPamExternallyManaged": true,
   "notificationTimeoutLow": 3000,
@@ -919,5 +919,7 @@
   "osdMicMuteEnabled": false,
   "osdMicVolumeEnabled": false,
   "osdCapsLockEnabled": false,
-  "osdAudioOutputEnabled": false
+  "osdAudioOutputEnabled": false,
+  "foregroundLayerTransparency": 1,
+  "osdTouchpadEnabled": false
 }
