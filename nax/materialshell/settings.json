@@ -196,7 +196,7 @@
     }
   ],
   "currentThemeCategory": "dynamic",
-  "matugenSourceMode": "colorful",
+  "matugenSourceMode": "dominant",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
   "dmsWindowsFloatingSeeded": [
