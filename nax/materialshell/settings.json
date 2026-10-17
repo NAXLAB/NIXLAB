@@ -196,7 +196,7 @@
     }
   ],
   "currentThemeCategory": "dynamic",
-  "matugenSourceMode": "dominant",
+  "matugenSourceMode": "value",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
   "dmsWindowsFloatingSeeded": [
@@ -326,7 +326,7 @@
   "clockDateFormat": "ddd d",
   "appLauncherGridColumns": 5,
   "spotlightSectionViewModes": {
-    "apps": "list"
+    "apps": "grid"
   },
   "appDrawerSectionViewModes": {
     "apps": "grid"
@@ -527,7 +527,7 @@
   "matugenTemplateZed": false,
   "notificationOverlayEnabled": true,
   "notificationPopupBodyInvokesAction": true,
-  "modalDarkenBackground": false,
+  "modalDarkenBackground": true,
   "lockAtStartup": true,
   "lockPamExternallyManaged": true,
   "notificationTimeoutLow": 3000,
@@ -565,7 +565,7 @@
       "leftWidgets": [
         {
           "id": "launcherButton",
-          "enabled": false,
+          "enabled": true,
           "launcherLogoMode": "custom",
           "launcherLogoCustomPath": "/home/nax/.config/DankMaterialShell/themes/naxlab/icons/rest.png",
           "launcherLogoSizeOffset": -2
@@ -598,7 +598,7 @@
         },
         {
           "id": "separator",
-          "enabled": false
+          "enabled": true
         },
         {
           "id": "controlCenterButton",
@@ -632,8 +632,12 @@
           ]
         },
         {
+          "id": "separator",
+          "enabled": true
+        },
+        {
           "id": "clock",
-          "enabled": false,
+          "enabled": true,
           "clockCompactMode": false,
           "clockDateOrder": "timeFirst",
           "clockNotificationBadge": false
@@ -683,7 +687,6 @@
       "hoverPopouts": false,
       "hoverPopoutDelay": 0,
       "followInterfaceStyle": false,
-      "island": true,
       "surfaceColor": "s",
       "barLengthMode": "full",
       "barLengthPercent": 49,
@@ -694,7 +697,28 @@
       "dot": false,
       "islandFloating": false,
       "islandPlacement": "free",
-      "islandNotch": true
+      "islandNotch": false,
+      "islandOuterGap": 4,
+      "islandRouteLauncher": "follow",
+      "islandRouteControlCenter": "follow",
+      "islandRouteNotificationCenter": "follow",
+      "islandRouteClipboard": "follow",
+      "islandRoutePowerMenu": "follow",
+      "islandRouteDash": "island",
+      "islandRouteMedia": "island",
+      "islandRouteWeather": "island",
+      "islandRouteWallpaper": "island",
+      "islandInteractionMode": "click",
+      "islandMediaClockVisible": true,
+      "islandSpringStiffness": 760,
+      "islandSpringDamping": 24,
+      "islandSpringMass": 0.25,
+      "islandMediaAutoSwitch": false,
+      "islandSharedRouting": "always",
+      "islandNotificationPopups": false,
+      "island": false,
+      "islandHighContrast": false,
+      "islandPalette": "default"
     },
     {
       "id": "dot1790177799417",
@@ -868,7 +892,6 @@
       "hoverPopouts": false,
       "hoverPopoutDelay": 0,
       "followInterfaceStyle": false,
-      "island": false,
       "surfaceColor": "default",
       "barLengthMode": "full",
       "barLengthPercent": 49,

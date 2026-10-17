@@ -67,7 +67,7 @@ input {
 }
 
 overview {
-    zoom 0.28
+    zoom 0.4
     workspace-shadow {
         off
      }
