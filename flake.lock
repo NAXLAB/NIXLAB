@@ -61,11 +61,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792206010,
-        "narHash": "sha256-ndty3yKSimePsT+rHaoPQ91JvXF68W0qoGGV0CyzIa0=",
+        "lastModified": 1792254046,
+        "narHash": "sha256-Kt1X29vOTC/BimZdpzGYQS1XtX594S1iaS5SB/QZejo=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "d8a87a8e13693b4e0a2a627e5e7ef6bb7248b311",
+        "rev": "47885e49815969c0e579e1885606b0ec1db27f63",
         "type": "github"
       },
       "original": {
@@ -103,11 +103,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792041090,
-        "narHash": "sha256-7IkO/S0qgium76gS8FuSAfU5mT9ik8yBhBJ00m4pPzo=",
+        "lastModified": 1792215552,
+        "narHash": "sha256-WlA062ncyLpN/6K3hrcqFnh7GzMm3iPhUKiONvdONcg=",
         "owner": "NAXLAB",
         "repo": "figcraft-flake",
-        "rev": "65eaf994933c4af53d11892b35123050390b1cb2",
+        "rev": "842c8e196cf2b2f3b4d8ddad75a6c5e1ad2ada64",
         "type": "github"
       },
       "original": {
@@ -119,11 +119,11 @@
     "figcraft_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1792036398,
-        "narHash": "sha256-4sGa4NyCMVyLaHh/paaHDbijqusUxwYUP5+ZlsNaLT8=",
+        "lastModified": 1792166938,
+        "narHash": "sha256-CZzec+gyJdGsh1taKPBNIEim9jSgKB3vdbZbzLrLMpE=",
         "owner": "storytold",
         "repo": "figcraft",
-        "rev": "8482c3e85bc5f2a430e2f3be2826674872f6d084",
+        "rev": "d1d8c3f652cea20bee02bdbc3ded9a2f5362ba08",
         "type": "github"
       },
       "original": {
@@ -281,11 +281,11 @@
         "photocraft-src": "photocraft-src"
       },
       "locked": {
-        "lastModified": 1792040092,
-        "narHash": "sha256-r+VDyROtOf3fE4WJ2nCMbHaY4UWQMjESi3FAG3QlZ9s=",
+        "lastModified": 1792263329,
+        "narHash": "sha256-y6ADIDfB1E1Lf8VWpHxWboQVyLl8sofiHFI2FzyLQ8U=",
         "owner": "NAXLAB",
         "repo": "photocraft-flake",
-        "rev": "a23d3f8b8b97f51bf5077f25026f7c98670a76f0",
+        "rev": "d6bc86ca70131e2ac2840f2e48734c8eaa4dc619",
         "type": "github"
       },
       "original": {
@@ -297,11 +297,11 @@
     "photocraft-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1792039897,
-        "narHash": "sha256-ImsskiYTk9QfrqpyOLvBfvILkV2fy8AYkewshR5/K0g=",
+        "lastModified": 1792260860,
+        "narHash": "sha256-Gu+IJtJVXtfHmQXe6tF0LdfvqOpX3mxj9kKjs7rOYMI=",
         "owner": "storytold",
         "repo": "photocraft",
-        "rev": "a7301f1db89b2f24b0fb6d1334b424da898faf0b",
+        "rev": "06ad0d5c9561d7499dc6f25ce8041b60db2ea1d3",
         "type": "github"
       },
       "original": {
@@ -317,11 +317,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792207289,
-        "narHash": "sha256-NBVMaJTTAUPDmEkoIUsJNeaNS5xAy8EZ0TcGj1xCPCE=",
+        "lastModified": 1792214446,
+        "narHash": "sha256-tq6x6CRG8Qikrjri59tzu9+b2gri8TjnShkGeh8kUgQ=",
         "ref": "refs/heads/master",
-        "rev": "95a1f9112504bcb7a008381987d224e091f5de10",
-        "revCount": 874,
+        "rev": "2b4501a282689792b62e94f3fb30d8f512324fe6",
+        "revCount": 875,
         "type": "git",
         "url": "https://git.outfoxxed.me/quickshell/quickshell/"
       },
@@ -355,11 +355,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792196831,
-        "narHash": "sha256-6bgmxsiQhtEBmFPzZJPrLRF9hxXeR5LT5MXQctmxESU=",
+        "lastModified": 1792260903,
+        "narHash": "sha256-Q3/+T/Bmn5HzowrGZiHrupDI4S2rmC3N30fKWmRS/RA=",
         "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "c59923865324cb487ff90def4361ad9c7d8a2556",
+        "rev": "cb857f1fa772359d955d232c5ea0a3e2a3eb3aa4",
         "type": "github"
       },
       "original": {
@@ -376,11 +376,11 @@
         "vectorcraft-src": "vectorcraft-src"
       },
       "locked": {
-        "lastModified": 1792040056,
-        "narHash": "sha256-m/gYkAh5LmuGvCRZHDnQT49ZnfpR6XzQngE0iy5FnzI=",
+        "lastModified": 1792215355,
+        "narHash": "sha256-TX5cv+o+uGTUITryfOZhIcnq9aBnCq40JlFNM/GtD4I=",
         "owner": "NAXLAB",
         "repo": "vectorcraft-flake",
-        "rev": "e830798d911e463314c703127c1cd8ae5613854f",
+        "rev": "828576f076368926e5f18ccd0ea950eb561acff1",
         "type": "github"
       },
       "original": {
@@ -392,11 +392,11 @@
     "vectorcraft-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1792039576,
-        "narHash": "sha256-VoAFTaEtGW7XehCC/WTXCdx9SWBADY51cVM5DQJqvLY=",
+        "lastModified": 1792150098,
+        "narHash": "sha256-8wlih5NQtcDBRBv7wJ+AQP3M5yHSAYpT+5xDEFiS4yY=",
         "owner": "storytold",
         "repo": "vectorcraft",
-        "rev": "b12a52f7249e0aa73f030587e05ed9ce0c73ab67",
+        "rev": "8bc65329286dc1b84aa392997bb205613c3e96cb",
         "type": "github"
       },
       "original": {

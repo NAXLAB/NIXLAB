@@ -202,10 +202,10 @@
   "dmsWindowsFloatingSeeded": [
     "niri"
   ],
-  "hostSurfaceColor": "s",
-  "cardSurfaceColor": "sc",
-  "chipSurfaceColor": "sch",
-  "chipSurfaceNestedColor": "schh",
+  "hostSurfaceColor": "sc",
+  "cardSurfaceColor": "sch",
+  "chipSurfaceColor": "schh",
+  "chipSurfaceNestedColor": "secondaryContainer",
   "chipSurfaceNestedCustomColor": "#332d43",
   "niriLayoutRadiusOverride": 30,
   "mouseAccelProfile": "flat",
