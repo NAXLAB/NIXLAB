@@ -104,7 +104,7 @@
   "clockFormat": "12h",
   "padHours12Hour": true,
   "animationDuration": 150,
-  "enableRippleEffects": false,
+  "enableRippleEffects": true,
   "blurBorderOpacity": 0.42,
   "wallpaperFillMode": "Stretch",
   "lockDateFormat": "ddd d MMM yyyy",
@@ -180,11 +180,6 @@
         {
           "id": "dock_launcher",
           "widgetId": "dockLauncher",
-          "enabled": true
-        },
-        {
-          "id": "dock_apps",
-          "widgetId": "appsDock",
           "enabled": true
         },
         {
@@ -675,7 +670,7 @@
       "popupGapsManual": 20,
       "maximizeDetection": false,
       "scrollEnabled": true,
-      "scrollXBehavior": "workspace",
+      "scrollXBehavior": "none",
       "scrollYBehavior": "workspace",
       "shadowIntensity": 0,
       "shadowOpacity": 60,
@@ -716,9 +711,12 @@
       "islandMediaAutoSwitch": false,
       "islandSharedRouting": "always",
       "islandNotificationPopups": false,
-      "island": false,
       "islandHighContrast": false,
-      "islandPalette": "default"
+      "islandPalette": "default",
+      "clickActionFollowMouse": false,
+      "middleClickAction": "control-center",
+      "rightClickAction": "none",
+      "island": false
     },
     {
       "id": "dot1790177799417",
@@ -944,5 +942,8 @@
   "osdAudioOutputEnabled": false,
   "foregroundLayerTransparency": 1,
   "osdTouchpadEnabled": false,
-  "wellbeingAppLimits": {}
+  "wellbeingAppLimits": {},
+  "springBounce": 0,
+  "reduceMotion": false,
+  "textRenderType": 0
 }
