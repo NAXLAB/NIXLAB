@@ -127,10 +127,8 @@
 
         #Packages
         ./nax/packages/packages.nix
-        ./nax/packages/flatpak.nix
-        ./nax/packages/plasticity.nix
-        ./nax/packages/mixxx.nix
         figma-desktop.nixosModules.default
+        nix-flatpak.nixosModules.nix-flatpak
         
         #Hardware
         ./nax/hardware.nix

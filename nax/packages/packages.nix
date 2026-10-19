@@ -18,6 +18,13 @@
   virtualisation.docker.enable    = true;
   hardware.keyboard.qmk.enable    = true;
 
+  #Custom Packages
+  imports = [
+    ./flatpak.nix
+    ./mixxx.nix
+    ./plasticity.nix
+  ];
+
   #Nix Package manager
   environment.systemPackages      = with pkgs; [
 	
