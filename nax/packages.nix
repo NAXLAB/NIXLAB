@@ -30,6 +30,7 @@
   dopamine                          # Music
   fragments                         # Torrent Client
   gnome-calculator                  # Calculator
+  gnome-calendar                    # Calendar
   gnome-characters                  # Emojis
   gnome-clocks                      # Clocks
   gnome-console                     # Console
