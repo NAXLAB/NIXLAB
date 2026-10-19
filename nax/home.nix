@@ -6,9 +6,17 @@
 
 {
 
-  home.username       = "nax";
-  home.homeDirectory  = "/home/nax";
-  home.stateVersion   = "26.11";
+  home = {
+    username       = "nax";
+    homeDirectory  = "/home/nax";
+    stateVersion   = "26.11";
+  };
+
+  home.file =
+    {
+      ".gitconfig".source                       = ./git/config;
+      ".config/fastfetch/config.jsonc".source   = ./fastfetch/config.jsonc;
+    };
 
   imports = [
     ./firefox/firefox.nix
@@ -36,34 +44,5 @@
     enable = true;
     platformTheme.name = "gtk3"; # make Qt apps follow GTK theme
   };
-
-  #GTK Compatibility
-  xdg.userDirs.setSessionVariables = true;
-
-  #App compatibility with symlinked home folders
-  xdg.userDirs =
-    {
-      enable            = true;
-      createDirectories = false;
-      desktop           = "${config.home.homeDirectory}/Desktop";
-      download          = "${config.home.homeDirectory}/Downloads";
-      music             = "${config.home.homeDirectory}/Music";
-      documents         = "${config.home.homeDirectory}/Documents";
-      pictures          = "${config.home.homeDirectory}/Pictures";
-    };
-
-  home.file =
-    {
-      ".gitconfig".source                       = ./git/config;
-      ".zshrc".source                           = ./shell/zshrc;
-      ".config/fastfetch/config.jsonc".source   = ./fastfetch/config.jsonc;
-    };
-  
-    dconf.settings."org/gnome/desktop/interface" = 
-    {
-      color-scheme        = "prefer-dark";
-      font-name           = "SF Pro Display 11";
-      monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
-    };
 
 }

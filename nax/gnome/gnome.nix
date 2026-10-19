@@ -1,12 +1,13 @@
 { pkgs, config, ... }:
 {
   services = {
-    displayManager.gdm.enable = false;
-    desktopManager.gnome.enable = true;
-    gnome.core-apps.enable = false;
+    displayManager.gdm.enable         = false;
+    desktopManager.gnome.enable       = true;
+    gnome.core-apps.enable            = false;
     gnome.core-developer-tools.enable = false;
-    gnome.games.enable = false;
-    gnome.gnome-keyring.enable = true;
+    gnome.games.enable                = false;
+    gnome.gnome-keyring.enable        = true;
+    gvfs.enable                       = true;
   };
 
   #Dconf
@@ -17,9 +18,6 @@
 
   #Manage Keyring
   security.pam.services.greetd.enableGnomeKeyring = true;
-
-  #Gnome Filesystem Support
-  services.gvfs.enable = true;
 
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
@@ -41,5 +39,10 @@
   ];
 
 
+  home-manager.users.nax.dconf.settings."org/gnome/desktop/interface" = {
+    color-scheme = "prefer-dark";
+    font-name = "SF Pro Display 11";
+    monospace-font-name = "JetBrainsMonoNL Nerd Font 11";
+  };
 
 }

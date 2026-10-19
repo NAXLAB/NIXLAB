@@ -122,15 +122,14 @@
         ./nax/screenshare.nix
         ./nax/networking.nix
         ./nax/user.nix
-        ./nax/shell/shell.nix
+        ./nax/shell.nix
         inputs.agenix.nixosModules.default
 
         #Packages
-        ./nax/packages.nix
-        ./nax/flatpak/flatpak.nix
-        ./nax/plasticity/plasticity.nix
-        ./nax/mixxx/mixxx.nix
-        nix-flatpak.nixosModules.nix-flatpak
+        ./nax/packages/packages.nix
+        ./nax/packages/flatpak.nix
+        ./nax/packages/plasticity.nix
+        ./nax/packages/mixxx.nix
         figma-desktop.nixosModules.default
         
         #Hardware
@@ -164,7 +163,7 @@
         ./nax/labshell/shell.nix
 
         #Themes
-        ./nax/tty/tty.nix
+        ./nax/tty.nix
         
       ];
     };

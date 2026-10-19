@@ -1,6 +1,13 @@
 { ... }:
 
 {
+
+    environment.systemPackages      = with pkgs; [
+
+    inputs.nix-flatpak.nixosModules.nix-flatpak
+
+    ];
+
     services.flatpak = {
         enable = true;
         packages = [

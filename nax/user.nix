@@ -23,6 +23,18 @@
         ];
   };
 
+  #App compatibility with symlinked home folders
+  home-manager.users.nax.xdg.userDirs = {
+    enable              = true;
+    setSessionVariables = true;
+    createDirectories   = false;
+    desktop             = "${config.users.users.nax.home}/Desktop";
+    download            = "${config.users.users.nax.home}/Downloads";
+    music               = "${config.users.users.nax.home}/Music";
+    documents           = "${config.users.users.nax.home}/Documents";
+    pictures            = "${config.users.users.nax.home}/Pictures";
+  };
+
   #File System Config
   systemd.tmpfiles.rules = [
 
