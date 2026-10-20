@@ -945,5 +945,6 @@
   "wellbeingAppLimits": {},
   "springBounce": 0,
   "reduceMotion": false,
-  "textRenderType": 0
+  "textRenderType": 0,
+  "osdAlwaysShowValue": false
 }

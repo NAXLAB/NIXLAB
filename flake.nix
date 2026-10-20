@@ -13,13 +13,13 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    #DankMaterialShell
+    #Dux Shell
     dms = {
       url                         = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    #Dank Plugins
+    #Dux Plugins
     dms-plugin-registry = {
       url                         = "github:AvengeMedia/dms-plugin-registry";
       inputs.nixpkgs.follows      = "nixpkgs";
@@ -83,6 +83,18 @@
       url                         = "github:NAXLAB/figcraft-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
+
+    #Adwair Icons
+    adwair = {
+      url                         = "github:NAXLAB/adwair-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
+    #MTSync
+    mtsync = {
+      url                         = "github:NAXLAB/mtsync-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
   };
 
   outputs = inputs@  
@@ -101,6 +113,8 @@
       photocraft,
       solidcraft,
       figcraft,
+      adwair,
+      mtsync,
       ...
     }:
   
@@ -119,7 +133,7 @@
         ./hardware-configuration.nix
         ./boot.nix
         ./configuration.nix
-        ./nax/screenshare.nix
+        #./nax/screenshare.nix
         ./nax/networking.nix
         ./nax/user.nix
         ./nax/shell.nix
@@ -162,6 +176,7 @@
 
         #Themes
         ./nax/tty.nix
+        adwair.nixosModules.default
         
       ];
     };
