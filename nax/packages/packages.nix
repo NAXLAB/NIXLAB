@@ -89,6 +89,7 @@
 	curl                              #data transfer utility
   unixtools.netstat                 #Network monitor
   mission-center                    #Task Manager
+  inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
 
   #Themes
   adwaita-icon-theme                #Icon Packs

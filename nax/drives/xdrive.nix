@@ -8,14 +8,11 @@
 
  #Declare the agenix secret for X Drive
   age.secrets.xdrive = {
-
-    file = ../secrets/xdrive.age;
-    
+    file = ../secrets/xdrive-decrypt.age;
   };
 
   #Mount X Drive NTFS
   systemd.tmpfiles.rules = [
-
       "d /mnt/xdrive 0755 nax wheel -"
       "d /mnt/.dislocker-sda2 0755 root root -"
   ];
@@ -67,5 +64,32 @@
     wantedBy = [ "multi-user.target" ];
     unitConfig.DefaultDependencies = "no";
   }];
+
+  #Share to Network
+  services.samba = {
+  enable = true;
+  openFirewall = true;
+  settings = {
+    global = {
+      "workgroup" = "blacksky";
+      "server string" = "nixos";
+      "security" = "user";
+      "map to guest" = "never";
+      # Only allow your LAN (adjust to your subnet)
+      "hosts allow" = "192.168.88. 127.0.0.1 localhost";
+      "hosts deny" = "0.0.0.0/0";
+    };
+    xdrive = {
+      path = "/mnt/xdrive";
+      browseable = "yes";
+      "read only" = "no";
+      "guest ok" = "no";
+      "valid users" = "youruser";
+      "create mask" = "0664";
+      "directory mask" = "0775";
+    };
+  };
+};
+
 
 }
