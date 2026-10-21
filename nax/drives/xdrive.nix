@@ -6,11 +6,6 @@
 
 {
 
- #Declare the agenix secret for X Drive
-  age.secrets.xdrive = {
-    file = ../secrets/xdrive-decrypt.age;
-  };
-
   #Mount X Drive NTFS
   systemd.tmpfiles.rules = [
       "d /mnt/xdrive 0755 nax wheel -"
@@ -38,7 +33,7 @@
       
       ExecStart = let
         script = pkgs.writeShellScript "dislocker-start" ''
-          password=$(cat ${config.age.secrets.xdrive.path})
+          password=$(cat ${config.age.secrets.xdrive-decrypt.path})
           ${pkgs.dislocker}/bin/dislocker \
             /dev/disk/by-uuid/cbf23126-f4aa-4938-b32b-ad21a09ca681 \
             --user-password="$password" \
@@ -46,6 +41,7 @@
           dislocker_pid=$!
           until [ -e /mnt/.dislocker-sda2/dislocker-file ]; do
             kill -0 $dislocker_pid 2>/dev/null || { echo "dislocker exited prematurely" >&2; exit 1; }
+            sleep 0.2
           done
         '';
       in "${script}";
@@ -58,7 +54,7 @@
     what     = "/mnt/.dislocker-sda2/dislocker-file";
     where    = "/mnt/xdrive";
     type     = "ntfs-3g";
-    options  = "defaults,uid=1000,gid=1,umask=022,loop,allow_other";
+    options  = "defaults,loop,allow_other,uid=1000,gid=100,umask=002";
     after    = [ "dislocker-sda2.service" ];
     requires = [ "dislocker-sda2.service" ];
     wantedBy = [ "multi-user.target" ];
@@ -66,30 +62,61 @@
   }];
 
   #Share to Network
+
+  systemd.services.samba-smbd = {
+    after = [ "mnt-xdrive.mount" ];
+    requires = [ "mnt-xdrive.mount" ];
+  };
+
   services.samba = {
-  enable = true;
-  openFirewall = true;
-  settings = {
-    global = {
-      "workgroup" = "blacksky";
-      "server string" = "nixos";
-      "security" = "user";
-      "map to guest" = "never";
-      # Only allow your LAN (adjust to your subnet)
-      "hosts allow" = "192.168.88. 127.0.0.1 localhost";
-      "hosts deny" = "0.0.0.0/0";
-    };
-    xdrive = {
-      path = "/mnt/xdrive";
-      browseable = "yes";
-      "read only" = "no";
-      "guest ok" = "no";
-      "valid users" = "youruser";
-      "create mask" = "0664";
-      "directory mask" = "0775";
+    enable = true;
+    openFirewall = true;
+    settings = {
+      global = {
+        "workgroup" = "blacksky";
+        "server string" = "nixos";
+        "security" = "user";
+        "map to guest" = "never";
+        # Only allow your LAN (adjust to your subnet)
+        "hosts allow" = "192.168.88. 127.0.0.1 localhost";
+        "hosts deny" = "0.0.0.0/0";
+      };
+      xdrive = {
+        path = "/mnt/xdrive";
+        browseable = "yes";
+        "read only" = "no";
+        "guest ok" = "no";
+        "valid users" = "nax";
+        "create mask" = "0664";
+        "directory mask" = "0775";
+      };
     };
   };
-};
 
+  #Declare SMB Password
+  systemd.services.samba-set-password-nax = {
+    description = "Set Samba password for nax from agenix secret";
+    wantedBy = [ "multi-user.target" ];
+    before = [ "samba-smbd.service" ];
+    wants = [ "samba-smbd.service" ];
+    restartTriggers = [ config.age.secrets.xdrive-share.file ];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+    };
+    script = ''
+      pw="$(cat ${config.age.secrets.xdrive-share.path})"
+      printf '%s\n%s\n' "$pw" "$pw" | ${config.services.samba.package}/bin/smbpasswd -a -s nax
+    '';
+  };
 
+ #Declare the agenix secret for X Drive
+  age.secrets = {
+    xdrive-decrypt.file = ../secrets/xdrive-decrypt.age;
+    xdrive-share = {
+      file              = ../secrets/xdrive-share.age;
+      owner             = "root";
+      mode              = "0400";
+    };
+  };
 }
