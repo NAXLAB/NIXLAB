@@ -251,7 +251,8 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 0
+      "row": 0,
+      "small": false
     },
     {
       "id": "builtin_vpn",
@@ -259,7 +260,8 @@
       "w": 4,
       "h": 1,
       "col": 4,
-      "row": 0
+      "row": 0,
+      "small": false
     },
     {
       "id": "volumeSlider",
@@ -339,7 +341,11 @@
   "dashTabPosition": "auto",
   "dashTabs": [
     {
-      "id": "overview",
+      "id": "media",
+      "enabled": true
+    },
+    {
+      "id": "weather",
       "enabled": true
     },
     {
@@ -347,24 +353,20 @@
       "enabled": true
     },
     {
-      "id": "weather",
+      "id": "overview",
       "enabled": true
-    },
-    {
-      "id": "media",
-      "enabled": false
     },
     {
       "id": "notifications",
       "enabled": false
     },
     {
-      "id": "settings",
-      "enabled": true
-    },
-    {
       "id": "wellbeing",
       "enabled": false
+    },
+    {
+      "id": "settings",
+      "enabled": true
     }
   ],
   "dashCards": [
@@ -372,28 +374,35 @@
       "id": "user",
       "w": 2,
       "h": 1,
-      "col": 0,
-      "row": 3
+      "col": 3,
+      "row": 0
     },
     {
       "id": "media",
       "w": 2,
       "h": 1,
-      "col": 2,
-      "row": 3
+      "col": 5,
+      "row": 0
     },
     {
       "id": "weather",
       "w": 1,
       "h": 3,
-      "col": 0,
-      "row": 0
+      "col": 6,
+      "row": 1
     },
     {
       "id": "calendar",
       "w": 3,
       "h": 3,
-      "col": 1,
+      "col": 3,
+      "row": 1
+    },
+    {
+      "id": "notifications",
+      "w": 3,
+      "h": 4,
+      "col": 0,
       "row": 0
     }
   ],
@@ -407,7 +416,7 @@
     },
     "overview": {
       "panelRows": 4,
-      "panelColumns": 4
+      "panelColumns": 7
     },
     "notifications": {
       "panelColumns": 3
@@ -569,10 +578,6 @@
       "centerWidgets": [],
       "rightWidgets": [
         {
-          "id": "notificationButton",
-          "enabled": true
-        },
-        {
           "id": "privacyIndicator",
           "enabled": true,
           "privacyShowMicIcon": false,
@@ -650,7 +655,7 @@
       "widgetPadding": 16,
       "gothCornersEnabled": true,
       "gothCornerRadiusOverride": true,
-      "gothCornerRadiusValue": 32,
+      "gothCornerRadiusValue": 24,
       "borderEnabled": false,
       "borderColor": "secondary",
       "borderOpacity": 1,

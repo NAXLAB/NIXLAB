@@ -72,6 +72,7 @@
   inputs.photocraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Photoshop
   inputs.vectorcraft.packages.${pkgs.stdenv.hostPlatform.system}.default #Illustrator
   inputs.figcraft.packages.${pkgs.stdenv.hostPlatform.system}.default    #Figma
+  inputs.effectcraft.packages.${pkgs.stdenv.hostPlatform.system}.default    #Figma
 
 
   #Dev Utilities

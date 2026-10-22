@@ -22,7 +22,7 @@
     ./firefox/firefox.nix
     ./discord/discord.nix
   ];
-
+  
   gtk = 
     {
       enable  = true;

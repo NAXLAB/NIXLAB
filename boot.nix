@@ -7,7 +7,7 @@
 
 {
 
-  boot.kernelPackages = pkgs.linuxPackages_7_2;
+  boot.kernelPackages = pkgs.linuxPackages_7_3;
 
   # Bootloader
   boot.loader = 
