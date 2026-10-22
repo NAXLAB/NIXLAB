@@ -108,17 +108,10 @@
     { 
       self,
       nixpkgs,
-      agenix,
       home-manager,
-      quickshell,
       nix-flatpak,
-      dms,
-      dms-plugin-registry,
       figma-desktop,
-      goodsync,
-      musnix,
       adwair,
-      mtsync,
       ...
     }:
   
