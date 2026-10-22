@@ -45,4 +45,5 @@
     platformTheme.name = "gtk3"; # make Qt apps follow GTK theme
   };
 
+
 }

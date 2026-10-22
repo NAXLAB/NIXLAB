@@ -42,7 +42,6 @@
   gnome-clocks                      # Clocks
   gnome-console                     # Console
   gnome-text-editor                 # Text Editor
-  gnome-tweaks                      # Gnome Tweaks
   iotas                             # Notes
   keypunch                          # Typing Test
   libreoffice                       # Office Suite
@@ -95,6 +94,7 @@
   adwaita-icon-theme                #Icon Packs
   capitaine-cursors                 #Cursor Packs
   papirus-icon-theme                #Icon Packs
+  inputs.adwair.packages.${pkgs.stdenv.hostPlatform.system}.default
 
 ];
 

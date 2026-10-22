@@ -78,6 +78,13 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
+    #EffectCraft
+    effectcraft = {
+      url                         = "github:NAXLAB/effectcraft-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
+
     #FigCraft
     figcraft = {
       url                         = "github:NAXLAB/figcraft-flake";
@@ -110,9 +117,6 @@
       figma-desktop,
       goodsync,
       musnix,
-      photocraft,
-      solidcraft,
-      figcraft,
       adwair,
       mtsync,
       ...

@@ -98,11 +98,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792605583,
-        "narHash": "sha256-1l7nWFGOx3vYPFSCw9Y0tHQxUz3kax6HCS8Ni6OGtgU=",
+        "lastModified": 1792634293,
+        "narHash": "sha256-RDk4oMEIGlRVcc072IQ4/b4DEAHnncHg+4IHsoAxlVI=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "1b59a474dd0d33f4aeb71d1f5b545629f80eef16",
+        "rev": "47c9d8d89bfbf70aa667ec90c1c5f30d9a726d6d",
         "type": "github"
       },
       "original": {
@@ -128,6 +128,44 @@
       "original": {
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
+        "type": "github"
+      }
+    },
+    "effectcraft": {
+      "inputs": {
+        "effectcraft-src": "effectcraft-src",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1792635737,
+        "narHash": "sha256-lQmyOm7FwG/qYiVboYHheAYak0Ij4fdmHW9vtppdo3Q=",
+        "owner": "NAXLAB",
+        "repo": "effectcraft-flake",
+        "rev": "5a34c0bad7680e01acadb819094e7b51c743c605",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NAXLAB",
+        "repo": "effectcraft-flake",
+        "type": "github"
+      }
+    },
+    "effectcraft-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792628021,
+        "narHash": "sha256-2Lqe/XmGu1t69/+U4qRYthY7xXQueijyBMpChxIOK7s=",
+        "owner": "storytold",
+        "repo": "effectcraft",
+        "rev": "f37f20ffd07d0f79e163eef1ad703b87db427dc3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "storytold",
+        "repo": "effectcraft",
         "type": "github"
       }
     },
@@ -243,11 +281,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792528898,
-        "narHash": "sha256-gdd2wV+9CAC+8TPFj/HMr3fcACZCIjW0zqaDflyTjhs=",
+        "lastModified": 1792616645,
+        "narHash": "sha256-sVksLa7rYlVOMwaqZ/feOd+oBYmJCxV9d8SZN73cpL0=",
         "owner": "NAXLAB",
         "repo": "goodsync-flake",
-        "rev": "6dd0e642dad99e6adf74ef3844d23639cbfcdf2d",
+        "rev": "1466b0b4a42ae22cee2b0d24ed132a39b9f1ca3d",
         "type": "github"
       },
       "original": {
@@ -411,11 +449,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792214446,
-        "narHash": "sha256-tq6x6CRG8Qikrjri59tzu9+b2gri8TjnShkGeh8kUgQ=",
+        "lastModified": 1792627910,
+        "narHash": "sha256-mThWar0V8JGMyiaEDgav48ROL94LZl5S9n6/s5lt9XE=",
         "ref": "refs/heads/master",
-        "rev": "2b4501a282689792b62e94f3fb30d8f512324fe6",
-        "revCount": 875,
+        "rev": "bf6302e33c34b2fd0a56bf542eb81e8f404ba876",
+        "revCount": 879,
         "type": "git",
         "url": "https://git.outfoxxed.me/quickshell/quickshell/"
       },
@@ -430,6 +468,7 @@
         "agenix": "agenix",
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
+        "effectcraft": "effectcraft",
         "figcraft": "figcraft",
         "figma-desktop": "figma-desktop",
         "goodsync": "goodsync",
@@ -444,6 +483,27 @@
         "vectorcraft": "vectorcraft"
       }
     },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "effectcraft",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792567368,
+        "narHash": "sha256-mrM+zFDRO1pI85t2SEq5R739BIq7Nv5XkFtVZK9nkZM=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "83dd732f2428827f35d997deae108a2ced5125f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
     "solidcraft": {
       "inputs": {
         "nixpkgs": [
@@ -451,11 +511,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792596618,
-        "narHash": "sha256-XgZv2J22ML/Lf6NxcNNOe4ZY0LaxocczmowHa7k4bSA=",
+        "lastModified": 1792633861,
+        "narHash": "sha256-bSqGBzeFoidFcUecE/3Bu6819qT106YDhMBrW762HtQ=",
         "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "728f753b8094e1a54c5cc8b7e453982afa028023",
+        "rev": "6c60f1a9ed1fe61bc5cd8390e49e74b0655e72d5",
         "type": "github"
       },
       "original": {

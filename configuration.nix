@@ -13,6 +13,12 @@
     "nix-command"
   ];
 
+  nix.gc = {
+  automatic = true;
+  dates = "weekly";
+  options = "--delete-older-than 14d";
+};
+
   #Time Zone
   time.timeZone = "America/New_York";
 
