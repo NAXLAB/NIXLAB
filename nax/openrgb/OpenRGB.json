@@ -1,18 +1,7 @@
 {
     "AutoStart": {
-        "client": "localhost:6742",
-        "custom": "",
+        "custom_arguments": "",
         "enabled": true,
-        "host": "0.0.0.0",
-        "port": "6742",
-        "profile": "naxlab",
-        "setclient": false,
-        "setcustom": false,
-        "setminimized": true,
-        "setprofile": true,
-        "setserver": false,
-        "setserverhost": false,
-        "setserverport": false,
         "start_minimized": true
     },
     "CorsairDominatorSettings": {
@@ -2090,31 +2079,18 @@
         "theme": "Dark"
     },
     "UserInterface": {
-        "autoload_profiles": {
-            "exit_profile": {
-                "enabled": false,
-                "name": ""
-            },
-            "resume_profile": {
-                "enabled": false,
-                "name": ""
-            },
-            "suspend_profile": {
-                "enabled": false,
-                "name": ""
-            }
-        },
         "geometry": {
             "height": 0,
             "load_geometry": false,
             "save_on_exit": false,
-            "width": 0,
+            "width": -1,
             "x": 0,
             "y": 0
         },
-        "greyscale_tray_icon": false,
         "language": "System Default",
         "minimize_on_close": false,
-        "run_zone_checks": false
+        "monochrome_tray_icon": false,
+        "run_zone_checks": false,
+        "tabs_on_top": false
     }
 }

@@ -102,6 +102,13 @@
       url                         = "github:NAXLAB/mtsync-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
+
+    #AppGlider
+    appglider = {
+      url                         = "github:NAXLAB/AppGlider";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
   };
 
   outputs = inputs@  
