@@ -105,7 +105,7 @@
 
     #AppGlider
     appglider = {
-      url                         = "github:NAXLAB/AppGlider";
+      url                         = "github:Vyrnexis/AppGlider";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 

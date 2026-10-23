@@ -6,7 +6,10 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-2",
+            "model": "MSI G241"
+          }
         ],
         "syncPositionAcrossScreens": true,
         "style": "pill",
@@ -15,29 +18,60 @@
       }
     },
     {
-      "id": "lock_status",
-      "widgetType": "lockStatus",
+      "id": "lw_1792730019198_t9zcqa3nx",
+      "widgetType": "desktopClock",
+      "name": "Clock",
       "enabled": true,
       "config": {
-        "displayPreferences": [
-          "all"
-        ],
         "syncPositionAcrossScreens": true,
-        "showMediaPlayer": true,
-        "showWeather": true,
-        "background": false
+        "style": "expressive",
+        "transparency": 0,
+        "colorMode": "default",
+        "customColor": "#ffffff",
+        "showDate": false,
+        "showAnalogNumbers": false,
+        "showAnalogSeconds": true,
+        "displayPreferences": [
+          {
+            "name": "DP-2",
+            "model": "MSI G241"
+          }
+        ],
+        "weight": 0,
+        "fontFamily": "Bai Jamjuree Light",
+        "showDigitalSeconds": false,
+        "autoPosition": false
       }
     },
     {
-      "id": "lock_power",
+      "id": "lw_1792730370919_nxto885sg",
       "widgetType": "lockPower",
+      "name": "Power",
       "enabled": true,
       "config": {
+        "syncPositionAcrossScreens": true,
         "displayPreferences": [
           "all"
         ],
-        "syncPositionAcrossScreens": true,
         "shape": "round"
+      }
+    },
+    {
+      "id": "lw_1792730430439_omh0pz60f",
+      "widgetType": "lockStatus",
+      "name": "Status",
+      "enabled": true,
+      "config": {
+        "syncPositionAcrossScreens": true,
+        "displayPreferences": [
+          {
+            "name": "DP-2",
+            "model": "MSI G241"
+          }
+        ],
+        "showMediaPlayer": true,
+        "showWeather": true,
+        "background": false
       }
     }
   ],
@@ -48,7 +82,10 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          "all"
+          {
+            "name": "DP-2",
+            "model": "MSI G241"
+          }
         ],
         "syncPositionAcrossScreens": true,
         "style": "pill",
@@ -57,29 +94,60 @@
       }
     },
     {
-      "id": "lock_status",
-      "widgetType": "lockStatus",
+      "id": "lw_1792730019198_t9zcqa3nx",
+      "widgetType": "desktopClock",
+      "name": "Clock",
       "enabled": true,
       "config": {
-        "displayPreferences": [
-          "all"
-        ],
         "syncPositionAcrossScreens": true,
-        "showMediaPlayer": true,
-        "showWeather": true,
-        "background": false
+        "style": "expressive",
+        "transparency": 0,
+        "colorMode": "default",
+        "customColor": "#ffffff",
+        "showDate": false,
+        "showAnalogNumbers": false,
+        "showAnalogSeconds": true,
+        "displayPreferences": [
+          {
+            "name": "DP-2",
+            "model": "MSI G241"
+          }
+        ],
+        "weight": 0,
+        "fontFamily": "Bai Jamjuree Light",
+        "showDigitalSeconds": false,
+        "autoPosition": false
       }
     },
     {
-      "id": "lock_power",
+      "id": "lw_1792730370919_nxto885sg",
       "widgetType": "lockPower",
+      "name": "Power",
       "enabled": true,
       "config": {
+        "syncPositionAcrossScreens": true,
         "displayPreferences": [
           "all"
         ],
-        "syncPositionAcrossScreens": true,
         "shape": "round"
+      }
+    },
+    {
+      "id": "lw_1792730430439_omh0pz60f",
+      "widgetType": "lockStatus",
+      "name": "Status",
+      "enabled": true,
+      "config": {
+        "syncPositionAcrossScreens": true,
+        "displayPreferences": [
+          {
+            "name": "DP-2",
+            "model": "MSI G241"
+          }
+        ],
+        "showMediaPlayer": true,
+        "showWeather": true,
+        "background": false
       }
     },
     {
@@ -114,7 +182,7 @@
   "fontWeight": 500,
   "textRenderQuality": 4,
   "lockScreenShowPowerActions": true,
-  "lockScreenFontFamily": "Bai Jamjuree Light",
+  "lockScreenFontFamily": "",
   "powerMenuActions": [
     "reboot",
     "poweroff",
@@ -272,47 +340,38 @@
       "row": 2
     },
     {
-      "id": "user",
-      "enabled": true,
-      "w": 4,
-      "h": 1,
-      "col": 0,
-      "row": 3,
-      "background": true
-    },
-    {
       "id": "edit",
       "enabled": true,
-      "w": 1,
+      "w": 2,
       "h": 1,
       "small": true,
-      "col": 4,
+      "col": 6,
       "row": 3
     },
     {
       "id": "settings",
       "enabled": true,
-      "w": 1,
+      "w": 2,
       "h": 1,
-      "col": 5,
+      "col": 4,
       "row": 3,
       "small": true
     },
     {
       "id": "lock",
       "enabled": true,
-      "w": 1,
+      "w": 2,
       "h": 1,
-      "col": 6,
+      "col": 2,
       "row": 3,
       "small": true
     },
     {
       "id": "power",
       "enabled": true,
-      "w": 1,
+      "w": 2,
       "h": 1,
-      "col": 7,
+      "col": 0,
       "row": 3,
       "small": true
     }
@@ -951,5 +1010,8 @@
   "springBounce": 0,
   "reduceMotion": false,
   "textRenderType": 0,
-  "osdAlwaysShowValue": false
+  "osdAlwaysShowValue": false,
+  "updaterNotify": true,
+  "desktopWidgetInstances": [],
+  "lockScreenPowerOffMonitorsOnLock": false
 }
