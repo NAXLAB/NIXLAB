@@ -84,6 +84,7 @@
   vscodium                          #Dev environment   
   cargo                             #Cargo
   nodejs_24                         #Node
+  rpi-imager                        #Raspberry Pi Imager
 
   #System Utilities
 	curl                              #data transfer utility

@@ -12,7 +12,7 @@
     services.upower.enable                  = true;
     hardware.bluetooth.enable               = false;
     hardware.keyboard.qmk.enable            = true;
-    hardware.spacenavd.enable             = true;
+    hardware.spacenavd.enable               = true;
 
     #Mouse Compatibility
     environment.etc."libinput/local-overrides.quirks".text = ''

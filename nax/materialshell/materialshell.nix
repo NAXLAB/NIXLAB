@@ -2,7 +2,7 @@
 {
 
     #Enable DMS Nixos module and supply package via flakes
-    programs.dms-shell = 
+    programs.dux-shell = 
         {
             enable  = true;
             package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
@@ -13,7 +13,7 @@
             };
 
             plugins = {
-                nixPackageRunner.enable     = true;
+                #nixPackageRunner.enable     = true;
             };
         };
 
@@ -29,14 +29,15 @@
     };
     
 
-
     environment.systemPackages = with pkgs; 
     [
-        dsearch   #dms file search
+        dux-search   #dms file search
     ];
 
     #Import DMS Plugin Module
-    imports = [ inputs.dms-plugin-registry.nixosModules.default ];
+    imports = [ 
+        inputs.dms-plugin-registry.nixosModules.default 
+    ];
 
     systemd.tmpfiles.rules = [
     #Symlink MaterialShell files to home
