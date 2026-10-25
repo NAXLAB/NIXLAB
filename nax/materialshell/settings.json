@@ -425,17 +425,17 @@
     },
     {
       "id": "media",
-      "w": 2,
-      "h": 1,
-      "col": 3,
-      "row": 0
-    },
-    {
-      "id": "weather",
       "w": 1,
       "h": 3,
       "col": 3,
       "row": 1
+    },
+    {
+      "id": "weather",
+      "w": 2,
+      "h": 1,
+      "col": 3,
+      "row": 0
     },
     {
       "id": "calendar",
