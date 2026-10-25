@@ -163,9 +163,9 @@
         ./nax/gnome/gnome.nix
 
         #Storage
-        ./nax/drives/xdrive.nix
         ./nax/drives/stax.nix
         ./nax/drives/sync.nix
+        ./nax/drives/xdrive.nix
 
         #Home Manager
         home-manager.nixosModules.home-manager

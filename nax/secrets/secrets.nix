@@ -5,7 +5,6 @@ let
   zaigomaat = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPkKtMA4MchOVFAgpMT5tDQTFywg4+ctfsOEtcFnTW+7 root@zaigomaat";
 in
 {
-  "xdrive-decrypt.age".publicKeys     = [ zaigomaat ];
-  "smb.age".publicKeys        = [ zaigomaat ];
-  "xdrive.age".publicKeys        = [ zaigomaat ];
+  "smb.age".publicKeys             = [ zaigomaat ];
+  "xdrive-share.age".publicKeys    = [ zaigomaat ];
 }

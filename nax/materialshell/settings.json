@@ -6,10 +6,7 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          {
-            "name": "DP-2",
-            "model": "MSI G241"
-          }
+          "all"
         ],
         "syncPositionAcrossScreens": true,
         "style": "pill",
@@ -32,10 +29,7 @@
         "showAnalogNumbers": false,
         "showAnalogSeconds": true,
         "displayPreferences": [
-          {
-            "name": "DP-2",
-            "model": "MSI G241"
-          }
+          "all"
         ],
         "weight": 0,
         "fontFamily": "Bai Jamjuree Light",
@@ -82,10 +76,7 @@
       "enabled": true,
       "config": {
         "displayPreferences": [
-          {
-            "name": "DP-2",
-            "model": "MSI G241"
-          }
+          "all"
         ],
         "syncPositionAcrossScreens": true,
         "style": "pill",
@@ -108,10 +99,7 @@
         "showAnalogNumbers": false,
         "showAnalogSeconds": true,
         "displayPreferences": [
-          {
-            "name": "DP-2",
-            "model": "MSI G241"
-          }
+          "all"
         ],
         "weight": 0,
         "fontFamily": "Bai Jamjuree Light",
@@ -187,7 +175,6 @@
     "reboot",
     "poweroff",
     "lock",
-    "restart",
     "logout"
   ],
   "powerMenuDefaultAction": "poweroff",
@@ -433,28 +420,28 @@
       "id": "user",
       "w": 2,
       "h": 1,
-      "col": 3,
+      "col": 5,
       "row": 0
     },
     {
       "id": "media",
       "w": 2,
       "h": 1,
-      "col": 5,
+      "col": 3,
       "row": 0
     },
     {
       "id": "weather",
       "w": 1,
       "h": 3,
-      "col": 6,
+      "col": 3,
       "row": 1
     },
     {
       "id": "calendar",
       "w": 3,
       "h": 3,
-      "col": 3,
+      "col": 4,
       "row": 1
     },
     {
@@ -463,6 +450,27 @@
       "h": 4,
       "col": 0,
       "row": 0
+    },
+    {
+      "id": "network",
+      "w": 3,
+      "h": 1,
+      "col": 4,
+      "row": 4
+    },
+    {
+      "id": "cpu",
+      "w": 2,
+      "h": 1,
+      "col": 0,
+      "row": 4
+    },
+    {
+      "id": "memory",
+      "w": 2,
+      "h": 1,
+      "col": 2,
+      "row": 4
     }
   ],
   "dashOptions": {
@@ -714,7 +722,7 @@
       "widgetPadding": 16,
       "gothCornersEnabled": true,
       "gothCornerRadiusOverride": true,
-      "gothCornerRadiusValue": 24,
+      "gothCornerRadiusValue": 32,
       "borderEnabled": false,
       "borderColor": "secondary",
       "borderOpacity": 1,
@@ -1009,9 +1017,13 @@
   "wellbeingAppLimits": {},
   "springBounce": 0,
   "reduceMotion": false,
-  "textRenderType": 0,
+  "textRenderType": 1,
   "osdAlwaysShowValue": false,
   "updaterNotify": true,
   "desktopWidgetInstances": [],
-  "lockScreenPowerOffMonitorsOnLock": false
+  "lockScreenPowerOffMonitorsOnLock": false,
+  "acLockTimeout": 1800,
+  "acMonitorTimeout": 3600,
+  "powerMenuGridLayout": false,
+  "powerMenuFirmwareSetup": false
 }

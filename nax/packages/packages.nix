@@ -17,6 +17,11 @@
   programs.steam.enable           = true;
   virtualisation.docker.enable    = true;
 
+  programs.appimage = {
+  enable = true;
+  binfmt = true;
+};
+
   #Custom Packages
   imports = [
     ./flatpak.nix
@@ -90,6 +95,7 @@
 	curl                              #data transfer utility
   unixtools.netstat                 #Network monitor
   mission-center                    #Task Manager
+  parted                            #Disk Utility
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
 
   #Themes

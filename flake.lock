@@ -64,11 +64,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792816736,
-        "narHash": "sha256-6AOmLiLruEun5M0AehR4xUeIdimBTe8S43bSgnijvdg=",
+        "lastModified": 1792907009,
+        "narHash": "sha256-zwViS2QjRLoyRnHwWV4aPzc79eiDL98v0CySrJc0utU=",
         "owner": "Vyrnexis",
         "repo": "AppGlider",
-        "rev": "7496cc82bd1f83d80ac4aeeb97f6eee1de4c9ee3",
+        "rev": "f876824295b081f96e66bcda7f40c0d7ec70ba60",
         "type": "github"
       },
       "original": {
@@ -138,11 +138,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792847535,
-        "narHash": "sha256-XXzhm2nFKB9VhVPoL1pLwWZ/41gdm6f558krvCsHDeY=",
+        "lastModified": 1792895078,
+        "narHash": "sha256-GInOfCKf01qodyr5Ea4/T/UN40qwRzQuDdAGpDsvJKo=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "7cc53b0fa6bfc05d9bdf6f9fccf9f6314818357e",
+        "rev": "51669fbf1b1dd6f623ba226df69984fe53037d22",
         "type": "github"
       },
       "original": {
@@ -301,11 +301,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792616645,
-        "narHash": "sha256-sVksLa7rYlVOMwaqZ/feOd+oBYmJCxV9d8SZN73cpL0=",
+        "lastModified": 1792907707,
+        "narHash": "sha256-ClVdNNcS3Dbv8bRRfdev7AWOv8QhgjXQo5JPn1uur8c=",
         "owner": "NAXLAB",
         "repo": "goodsync-flake",
-        "rev": "1466b0b4a42ae22cee2b0d24ed132a39b9f1ca3d",
+        "rev": "9acbb87dce36c0df0e44d6c48b9209d566b43eda",
         "type": "github"
       },
       "original": {
@@ -321,11 +321,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792818371,
-        "narHash": "sha256-yhEZAzZRNvzYpoAlyFY3wM75V9BmkIXJIueof8S5gOg=",
+        "lastModified": 1792896866,
+        "narHash": "sha256-/0tELNnhdSnP+bHSdWiEe6KpfSwi6WrTnT9cm/jNkjA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "2cd3234928f60bbff695a7ee56115ef7799c47cd",
+        "rev": "c216bf5a1f173b0481bd5c8c489ebe5595ecc68c",
         "type": "github"
       },
       "original": {
@@ -532,11 +532,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792878045,
-        "narHash": "sha256-ayt5QVuhI5vL9WGt8hSNEmDzqYsN6gYL5c+OT9Y9kpY=",
+        "lastModified": 1792892930,
+        "narHash": "sha256-LP66fRpK6sfr4C//2yCHXqrkgPpfp8ShecEP3Jcw9C8=",
         "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "c795a3f5815e8313a68953c5f18298b8b61e4949",
+        "rev": "16286249ed8b0b6642efc5f1c7282e14b746e67e",
         "type": "github"
       },
       "original": {

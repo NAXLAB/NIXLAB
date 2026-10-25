@@ -7,5 +7,4 @@ file:/// /
 file:///etc/nixos nixos
 file:///run/current-system/sw/share/icons/Papirus/64x64/apps Papirus Icons
 file:///etc/nixos/nax/themes/materialshell/wallpapers wallpapers
-file:///mnt/xdrive xdrive
 file:///mnt/zaigomaat zaigomaat

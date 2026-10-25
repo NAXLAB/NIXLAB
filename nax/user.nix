@@ -20,6 +20,7 @@
           "libvirt" 
           "qemu-libvirtd"
           "docker"
+          "xshare"
         ];
   };
 
@@ -42,11 +43,14 @@
     "Z /etc/nixos - nax wheel - -"
 
     #Mount ZaigoMaat SMB share
-    "d /mnt/zaigomaat 0755 nax wheel -"
+    "d /mnt/zaigomaat 0755 nax users -"
+
+    #Mount X Drive
+    "d /mnt/xdrive 0755 nax users -"
 
     #Create desktop folders manually
-    "d /home/nax/Desktop 0755 nax users -"
-    "d /home/nax/Downloads 0755 nax users -"
+    "d /home/nax/Desktop    0755 nax users -"
+    "d /home/nax/Downloads  0755 nax users -"
 
     #Symlink Desktop folders to X Drive
     "L+ /home/nax/Archives - - - - /mnt/xdrive/Archives"
