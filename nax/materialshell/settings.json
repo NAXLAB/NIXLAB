@@ -1025,5 +1025,7 @@
   "acLockTimeout": 1800,
   "acMonitorTimeout": 3600,
   "powerMenuGridLayout": false,
-  "powerMenuFirmwareSetup": false
+  "powerMenuFirmwareSetup": false,
+  "fadeToLockEnabled": true,
+  "fadeToDpmsEnabled": false
 }

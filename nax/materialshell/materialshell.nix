@@ -13,7 +13,7 @@
             };
 
             plugins = {
-                #nixPackageRunner.enable     = true;
+                nixPackageRunner.enable     = true;
             };
         };
 
