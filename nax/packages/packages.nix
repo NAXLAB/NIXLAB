@@ -72,12 +72,12 @@
   penpot-desktop                    #UI/UX Design
   prusa-slicer                      #3D Print Utility
   upscayl                           #Image Upscale
-  inputs.appglider.packages.${pkgs.stdenv.hostPlatform.system}.default  #3D Modelling
+  inputs.appglider.packages.${pkgs.stdenv.hostPlatform.system}.default    #3D Modelling
   inputs.solidcraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #3D Modelling
   inputs.photocraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Photoshop
   inputs.vectorcraft.packages.${pkgs.stdenv.hostPlatform.system}.default #Illustrator
   inputs.figcraft.packages.${pkgs.stdenv.hostPlatform.system}.default    #Figma
-  inputs.effectcraft.packages.${pkgs.stdenv.hostPlatform.system}.default    #Figma
+  inputs.effectcraft.packages.${pkgs.stdenv.hostPlatform.system}.default #Figma
 
 
   #Dev Utilities
