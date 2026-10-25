@@ -51,6 +51,7 @@
   libreoffice                       # Office Suite
   lmstudio                          # Language Model Studio
   loupe                             # Image viewer (modern GNOME image viewer)
+  lutris                            # Game Launcher
   nautilus                          # File Manager
   nicotine-plus                     # soulseek music sharing
   obs-studio                        # Screen Recording
@@ -58,6 +59,7 @@
   pdfarranger                       # PDF Editor
   signal-desktop                    # Signal Messages
   snapshot                          # webcam
+  steam                             # Steam Gaming Platform
   ungoogled-chromium                # chrome
   vesktop                           # Discord
 
@@ -76,7 +78,6 @@
   inputs.solidcraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #3D Modelling
   inputs.photocraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Photoshop
   inputs.vectorcraft.packages.${pkgs.stdenv.hostPlatform.system}.default #Illustrator
-  inputs.figcraft.packages.${pkgs.stdenv.hostPlatform.system}.default    #Figma
   inputs.effectcraft.packages.${pkgs.stdenv.hostPlatform.system}.default #Figma
 
 

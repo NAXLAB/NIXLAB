@@ -84,13 +84,6 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-
-    #FigCraft
-    figcraft = {
-      url                         = "github:NAXLAB/figcraft-flake";
-      inputs.nixpkgs.follows      = "nixpkgs";
-    };
-
     #Adwair Icons
     adwair = {
       url                         = "github:NAXLAB/adwair-flake";
