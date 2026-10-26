@@ -6,6 +6,14 @@
 
 {
 
+  #Custom Packages
+  imports = [
+    ./flatpak.nix
+    ./mixxx.nix
+    ./plasticity.nix
+    ./discord.nix
+  ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree      = true;
 
@@ -21,14 +29,6 @@
   enable = true;
   binfmt = true;
 };
-
-  #Custom Packages
-  imports = [
-    ./flatpak.nix
-    ./mixxx.nix
-    ./plasticity.nix
-    ./discord.nix
-  ];
 
   #Nix Package manager
   environment.systemPackages      = with pkgs; [

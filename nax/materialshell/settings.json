@@ -150,7 +150,7 @@
       }
     }
   ],
-  "currentThemeName": "dynamic",
+  "currentThemeName": "custom",
   "customThemeFile": "/home/nax/.config/DankMaterialShell/themes/naxlab/theme.json",
   "registryThemeVariants": {
     "gnomeAdwaita": "purple"
@@ -245,17 +245,17 @@
       ]
     }
   ],
-  "currentThemeCategory": "dynamic",
+  "currentThemeCategory": "custom",
   "matugenSourceMode": "value",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
   "dmsWindowsFloatingSeeded": [
     "niri"
   ],
-  "hostSurfaceColor": "sc",
-  "cardSurfaceColor": "sch",
-  "chipSurfaceColor": "schh",
-  "chipSurfaceNestedColor": "secondaryContainer",
+  "hostSurfaceColor": "default",
+  "cardSurfaceColor": "default",
+  "chipSurfaceColor": "default",
+  "chipSurfaceNestedColor": "default",
   "chipSurfaceNestedCustomColor": "#332d43",
   "niriLayoutRadiusOverride": 30,
   "mouseAccelProfile": "flat",
@@ -728,7 +728,7 @@
       "borderOpacity": 1,
       "borderThickness": 1,
       "widgetOutlineEnabled": false,
-      "widgetOutlineColor": "surfaceText",
+      "widgetOutlineColor": "secondary",
       "widgetOutlineOpacity": 0.2,
       "widgetOutlineThickness": 1,
       "fontScale": 1.2,
@@ -754,7 +754,7 @@
       "hoverPopouts": false,
       "hoverPopoutDelay": 0,
       "followInterfaceStyle": false,
-      "surfaceColor": "s",
+      "surfaceColor": "custom",
       "barLengthMode": "full",
       "barLengthPercent": 49,
       "barInsetPadding": 12,
@@ -788,7 +788,8 @@
       "clickActionFollowMouse": false,
       "middleClickAction": "control-center",
       "rightClickAction": "none",
-      "island": false
+      "island": false,
+      "surfaceCustomColor": "#0f0f12"
     },
     {
       "id": "dot1790177799417",
@@ -1027,5 +1028,7 @@
   "powerMenuGridLayout": false,
   "powerMenuFirmwareSetup": false,
   "fadeToLockEnabled": true,
-  "fadeToDpmsEnabled": false
+  "fadeToDpmsEnabled": false,
+  "widgetColorMode": "default",
+  "widgetBackgroundColor": "default"
 }

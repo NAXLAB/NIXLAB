@@ -19,5 +19,11 @@ home-manager.users.nax.home.file.".config/vesktop/settings/quickCss.css".text = 
   div[data-window-chrome="true"] {
     display: none !important;
   }
+
+  /* Push the left server column's contents down */
+  nav[aria-label="Servers sidebar"] {
+    padding-top: 8px !important;
+    box-sizing: border-box !important;
+  }
 '';
 }
