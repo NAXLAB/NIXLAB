@@ -7,6 +7,9 @@
 
 {
 
+  environment.systemPackages      = with pkgs; [
+	  vesktop                           # Discord
+  ];
   
 home-manager.users.nax.home.file.".config/vesktop/settings/quickCss.css".text = ''
   :root {

@@ -27,11 +27,11 @@
     ./flatpak.nix
     ./mixxx.nix
     ./plasticity.nix
+    ./discord.nix
   ];
 
   #Nix Package manager
   environment.systemPackages      = with pkgs; [
-	
   #Apps
   baobab                            # Disk usage (Disk Usage Analyzer)
   bazaar                            # Flatpak App store
@@ -61,7 +61,6 @@
   snapshot                          # webcam
   steam                             # Steam Gaming Platform
   ungoogled-chromium                # chrome
-  vesktop                           # Discord
 
 
   #Design Apps
@@ -122,7 +121,7 @@ nix.settings.flake-registry = pkgs.writeTextFile {
         "flakes": [
         {
           "from": {
-            "id": "nixpkgs",
+            "id": "nixpkgs", 
             "type": "indirect"
           },
           "to": {
