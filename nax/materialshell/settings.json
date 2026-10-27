@@ -639,7 +639,9 @@
           "enabled": true,
           "launcherLogoMode": "custom",
           "launcherLogoCustomPath": "/home/nax/.config/DankMaterialShell/themes/naxlab/icons/rest.png",
-          "launcherLogoSizeOffset": -2
+          "launcherLogoSizeOffset": -2,
+          "launcherLogoColorOverride": "",
+          "overflowMode": "section"
         }
       ],
       "centerWidgets": [],
@@ -998,7 +1000,7 @@
   "configVersion": 42,
   "connectedFrameBarStyleBackups": {},
   "frameEnabled": false,
-  "niriOverviewLauncherStyle": "full",
+  "niriOverviewLauncherStyle": "spotlight",
   "matugenSpec": "2025",
   "matugenScheme": "scheme-tonal-spot",
   "osdPosition": 5,
@@ -1032,5 +1034,10 @@
   "widgetColorMode": "default",
   "widgetBackgroundColor": "default",
   "matugenSeedColor": "",
-  "generateThemeAtStartup": true
+  "generateThemeAtStartup": true,
+  "launcherPluginVisibility": {
+    "dms_qr_generator": {
+      "allowWithoutTrigger": true
+    }
+  }
 }
