@@ -150,10 +150,10 @@
       }
     }
   ],
-  "currentThemeName": "custom",
+  "currentThemeName": "dynamic",
   "customThemeFile": "/home/nax/.config/DankMaterialShell/themes/naxlab/theme.json",
   "registryThemeVariants": {
-    "gnomeAdwaita": "purple"
+    "gnomeAdwaita": "blue"
   },
   "radiusMode": "fixed",
   "fixedRadius": 16,
@@ -245,8 +245,8 @@
       ]
     }
   ],
-  "currentThemeCategory": "custom",
-  "matugenSourceMode": "value",
+  "currentThemeCategory": "dynamic",
+  "matugenSourceMode": "dominant",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
   "dmsWindowsFloatingSeeded": [
@@ -1030,5 +1030,7 @@
   "fadeToLockEnabled": true,
   "fadeToDpmsEnabled": false,
   "widgetColorMode": "default",
-  "widgetBackgroundColor": "default"
+  "widgetBackgroundColor": "default",
+  "matugenSeedColor": "",
+  "generateThemeAtStartup": true
 }
