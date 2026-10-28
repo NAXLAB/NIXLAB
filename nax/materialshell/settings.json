@@ -277,7 +277,7 @@
     {
       "id": "inputVolumeSlider",
       "enabled": true,
-      "w": 4,
+      "w": 3,
       "h": 1,
       "col": 0,
       "row": 2
@@ -285,7 +285,7 @@
     {
       "id": "audioInput",
       "enabled": true,
-      "w": 4,
+      "w": 3,
       "h": 1,
       "col": 0,
       "row": 1,
@@ -294,16 +294,16 @@
     {
       "id": "audioOutput",
       "enabled": true,
-      "w": 4,
+      "w": 3,
       "h": 1,
-      "col": 4,
-      "row": 1,
+      "col": 3,
+      "row": 0,
       "small": false
     },
     {
       "id": "wifi",
       "enabled": true,
-      "w": 4,
+      "w": 3,
       "h": 1,
       "col": 0,
       "row": 0,
@@ -312,18 +312,18 @@
     {
       "id": "builtin_vpn",
       "enabled": true,
-      "w": 4,
+      "w": 3,
       "h": 1,
-      "col": 4,
-      "row": 0,
+      "col": 3,
+      "row": 1,
       "small": false
     },
     {
       "id": "volumeSlider",
       "enabled": true,
-      "w": 4,
+      "w": 3,
       "h": 1,
-      "col": 4,
+      "col": 3,
       "row": 2
     },
     {
@@ -332,17 +332,8 @@
       "w": 2,
       "h": 1,
       "small": true,
-      "col": 6,
-      "row": 3
-    },
-    {
-      "id": "settings",
-      "enabled": true,
-      "w": 2,
-      "h": 1,
       "col": 4,
-      "row": 3,
-      "small": true
+      "row": 3
     },
     {
       "id": "lock",
@@ -387,8 +378,12 @@
   "dashTabPosition": "auto",
   "dashTabs": [
     {
-      "id": "media",
+      "id": "overview",
       "enabled": true
+    },
+    {
+      "id": "media",
+      "enabled": false
     },
     {
       "id": "weather",
@@ -396,10 +391,6 @@
     },
     {
       "id": "wallpaper",
-      "enabled": true
-    },
-    {
-      "id": "overview",
       "enabled": true
     },
     {
@@ -1039,5 +1030,6 @@
     "dms_qr_generator": {
       "allowWithoutTrigger": true
     }
-  }
+  },
+  "controlCenterColumns": 6
 }
