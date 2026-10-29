@@ -279,7 +279,7 @@
       "enabled": true,
       "w": 3,
       "h": 1,
-      "col": 0,
+      "col": 3,
       "row": 1,
       "small": false
     },
@@ -288,8 +288,8 @@
       "enabled": true,
       "w": 3,
       "h": 1,
-      "col": 3,
-      "row": 0,
+      "col": 0,
+      "row": 1,
       "small": false
     },
     {
@@ -307,7 +307,7 @@
       "w": 3,
       "h": 1,
       "col": 3,
-      "row": 1,
+      "row": 0,
       "small": false
     },
     {
