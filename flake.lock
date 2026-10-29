@@ -64,11 +64,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793176474,
-        "narHash": "sha256-mja8EusQJpjgiFfTpT4dWevj78TxB/LsRxT2FygNOxg=",
+        "lastModified": 1793236023,
+        "narHash": "sha256-Z3o4dCVUVGUut0CfImOHGLaHiCFh8KkxGlOckYxmm9A=",
         "owner": "Vyrnexis",
         "repo": "AppGlider",
-        "rev": "fea7cd0fc9616930362c619a043b669a43de71cf",
+        "rev": "3f12fe0fc9faf718fc92bd4a28595f3311a0642d",
         "type": "github"
       },
       "original": {
@@ -80,11 +80,11 @@
     "dank-qml-common": {
       "flake": false,
       "locked": {
-        "lastModified": 1793216848,
-        "narHash": "sha256-EpHDdsF/PZq370xCGSceSx49UqM8Hj+XTfGiBmbMfCE=",
+        "lastModified": 1793224384,
+        "narHash": "sha256-mJaCE9rdBd/HyYSCPomQM/uX+1YNmFfV64bMIdUSiL0=",
         "owner": "duxlabs-dev",
         "repo": "dux-qml-common",
-        "rev": "f1c3e1dec547b051f9490d54d89770e90a6270ba",
+        "rev": "09ac4aba511f10636c273e11028fe092196c78ba",
         "type": "github"
       },
       "original": {
@@ -102,11 +102,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793219664,
-        "narHash": "sha256-KubYtg9bwVk4+lz1Mgz2TX8NOgkvmvsFDHwP3vZ1rz4=",
+        "lastModified": 1793224525,
+        "narHash": "sha256-4LR9bymAbhQcumTlBGJJe2udVFLIt1sbKDEoBOlw79E=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "0b174e070244041b88a253ada9c5fdbb58125d6d",
+        "rev": "df8b1d85ca6709b42e35d89bb7e8353bb38381ba",
         "type": "github"
       },
       "original": {
@@ -122,11 +122,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793156972,
-        "narHash": "sha256-H+HzU0rnqNEgACisaGfBR5CqU0jatBAO0lexFr6cEl8=",
+        "lastModified": 1793230595,
+        "narHash": "sha256-T8v/HNq+sII4j/3zgfjiWfCf5y+43BA3fWFwDwyC5dQ=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "0fb79ce25b21a6dabac87f4211bf65becab68ae3",
+        "rev": "9dd94f2e6b0dc81ffc9d746623bfc7a48c88a7ea",
         "type": "github"
       },
       "original": {
@@ -477,11 +477,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793219830,
-        "narHash": "sha256-cmUQnrxlS1o8buuFhpGEnFwJ9iIDM+sBuYjWsO9LWlQ=",
+        "lastModified": 1793236041,
+        "narHash": "sha256-c37/hK4zST4Nk4PcuEN/oCUhajnoci8ksCZ1lyMmh0k=",
         "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "6ef3d71e0240b42059117257acaf47e59545372d",
+        "rev": "066de1b005a3f3eaded4d8e4a977dcdc4a7d89e8",
         "type": "github"
       },
       "original": {
