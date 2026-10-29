@@ -164,7 +164,7 @@
   "blurBorderOpacity": 0.42,
   "wallpaperFillMode": "Stretch",
   "lockDateFormat": "ddd d MMM yyyy",
-  "fontFamily": "SF Pro",
+  "fontFamily": "SF Pro Text",
   "monoFontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "displayFontFamily": "SF Pro Display",
   "fontWeight": 500,
@@ -317,7 +317,7 @@
       "h": 1,
       "small": true,
       "col": 4,
-      "row": 3
+      "row": 5
     },
     {
       "id": "lock",
@@ -325,7 +325,7 @@
       "w": 2,
       "h": 1,
       "col": 2,
-      "row": 3,
+      "row": 5,
       "small": true
     },
     {
@@ -334,7 +334,7 @@
       "w": 2,
       "h": 1,
       "col": 0,
-      "row": 3,
+      "row": 5,
       "small": true
     },
     {
@@ -413,7 +413,7 @@
       "id": "user",
       "w": 2,
       "h": 1,
-      "col": 5,
+      "col": 0,
       "row": 0
     },
     {
@@ -427,29 +427,22 @@
       "id": "weather",
       "w": 2,
       "h": 1,
-      "col": 3,
+      "col": 2,
       "row": 0
     },
     {
       "id": "calendar",
       "w": 3,
       "h": 3,
-      "col": 4,
+      "col": 0,
       "row": 1
     },
     {
       "id": "notifications",
       "w": 3,
-      "h": 4,
-      "col": 0,
-      "row": 0
-    },
-    {
-      "id": "network",
-      "w": 3,
-      "h": 1,
+      "h": 5,
       "col": 4,
-      "row": 4
+      "row": 0
     },
     {
       "id": "cpu",
@@ -701,7 +694,8 @@
           "enabled": true,
           "clockCompactMode": false,
           "clockDateOrder": "timeFirst",
-          "clockNotificationBadge": false
+          "clockNotificationBadge": false,
+          "overflowMode": "section"
         }
       ],
       "spacing": 0,
@@ -1032,5 +1026,6 @@
       "allowWithoutTrigger": true
     }
   },
-  "controlCenterColumns": 6
+  "controlCenterColumns": 6,
+  "showSeconds": false
 }

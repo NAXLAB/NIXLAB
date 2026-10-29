@@ -25,10 +25,16 @@
   programs.steam.enable           = true;
   virtualisation.docker.enable    = true;
 
-  programs.appimage = {
-  enable = true;
-  binfmt = true;
-};
+  programs.craftapps = {
+    enable                  = true;
+    apps.photocraft.enable  = true;
+    apps.vectorcraft.enable = true;
+    apps.pdfcraft.enable    = true;
+    apps.effectcraft.enable = true;
+    apps.filmcraft.enable   = true;
+    apps.wordcraft.enable   = true;
+    apps.gridcraft.enable   = true;
+  };
 
   #Nix Package manager
   environment.systemPackages      = with pkgs; [
@@ -71,11 +77,7 @@
   gnome-font-viewer                 #Fonts
   prusa-slicer                      #3D Print Utility
   upscayl                           #Image Upscale
-  inputs.appglider.packages.${pkgs.stdenv.hostPlatform.system}.default    #3D Modelling
   inputs.solidcraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #3D Modelling
-  inputs.photocraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #Photoshop
-  inputs.vectorcraft.packages.${pkgs.stdenv.hostPlatform.system}.default #Illustrator
-  inputs.effectcraft.packages.${pkgs.stdenv.hostPlatform.system}.default #Figma
 
 
   #Dev Utilities

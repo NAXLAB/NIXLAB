@@ -39,8 +39,6 @@
     };
   };
 
-  systemd.services.samba-smbd.unitConfig.RequiresMountsFor = "/mnt/xdrive";
-
 
   age.secrets.xdrive-share = {
     file = ../secrets/xdrive-share.age;

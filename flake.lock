@@ -57,34 +57,14 @@
         "type": "github"
       }
     },
-    "appglider": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1793236023,
-        "narHash": "sha256-Z3o4dCVUVGUut0CfImOHGLaHiCFh8KkxGlOckYxmm9A=",
-        "owner": "Vyrnexis",
-        "repo": "AppGlider",
-        "rev": "3f12fe0fc9faf718fc92bd4a28595f3311a0642d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Vyrnexis",
-        "repo": "AppGlider",
-        "type": "github"
-      }
-    },
     "dank-qml-common": {
       "flake": false,
       "locked": {
-        "lastModified": 1793224384,
-        "narHash": "sha256-mJaCE9rdBd/HyYSCPomQM/uX+1YNmFfV64bMIdUSiL0=",
+        "lastModified": 1793296417,
+        "narHash": "sha256-gCK9N6GPq+3HdCXrikVSRcE3/u7HWRJHJpcfE2cpH3Q=",
         "owner": "duxlabs-dev",
         "repo": "dux-qml-common",
-        "rev": "09ac4aba511f10636c273e11028fe092196c78ba",
+        "rev": "2065795d9382b03c71e6f316b4955c6a74051934",
         "type": "github"
       },
       "original": {
@@ -102,11 +82,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793224525,
-        "narHash": "sha256-4LR9bymAbhQcumTlBGJJe2udVFLIt1sbKDEoBOlw79E=",
+        "lastModified": 1793296516,
+        "narHash": "sha256-VWAub4f89MQFWPn+twVn6Ia376F2voSMepL7NF1i+pk=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "df8b1d85ca6709b42e35d89bb7e8353bb38381ba",
+        "rev": "e48c1221e743c36eecd203a6c2808f50a40af223",
         "type": "github"
       },
       "original": {
@@ -339,6 +319,26 @@
         "type": "github"
       }
     },
+    "nix-craftapps": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793251511,
+        "narHash": "sha256-vd8oYQN3cqg9dq0NGsl9Vzxqum2vL1gsao3gZ5sRVLA=",
+        "owner": "olafkfreund",
+        "repo": "nix-craftapps",
+        "rev": "4a9e69c6c1e196d86e39b33516544c11bb6dfb5b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "olafkfreund",
+        "repo": "nix-craftapps",
+        "type": "github"
+      }
+    },
     "nix-flatpak": {
       "locked": {
         "lastModified": 1790428548,
@@ -371,43 +371,6 @@
         "type": "github"
       }
     },
-    "photocraft": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "photocraft-src": "photocraft-src"
-      },
-      "locked": {
-        "lastModified": 1792947350,
-        "narHash": "sha256-xdfn3JRnWCWwnEBzm0k4NIj2OkkneF6a1yCR83a3wcY=",
-        "owner": "NAXLAB",
-        "repo": "photocraft-flake",
-        "rev": "8f222f657f366b151a3771cc16456881f5c55082",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NAXLAB",
-        "repo": "photocraft-flake",
-        "type": "github"
-      }
-    },
-    "photocraft-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792945930,
-        "narHash": "sha256-PUn5oxczTAoR3wriRGenlTNW6oLbHkvfQ0ABk+e+y5g=",
-        "owner": "storytold",
-        "repo": "photocraft",
-        "rev": "938542c78b5cdd6600ef70c3eb72a536a5d6c797",
-        "type": "github"
-      },
-      "original": {
-        "owner": "storytold",
-        "repo": "photocraft",
-        "type": "github"
-      }
-    },
     "quickshell": {
       "inputs": {
         "nixpkgs": [
@@ -432,7 +395,6 @@
       "inputs": {
         "adwair": "adwair",
         "agenix": "agenix",
-        "appglider": "appglider",
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
         "effectcraft": "effectcraft",
@@ -441,12 +403,11 @@
         "home-manager": "home-manager",
         "mtsync": "mtsync",
         "musnix": "musnix",
+        "nix-craftapps": "nix-craftapps",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
-        "photocraft": "photocraft",
         "quickshell": "quickshell",
-        "solidcraft": "solidcraft",
-        "vectorcraft": "vectorcraft"
+        "solidcraft": "solidcraft"
       }
     },
     "rust-overlay": {
@@ -477,11 +438,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793236041,
-        "narHash": "sha256-c37/hK4zST4Nk4PcuEN/oCUhajnoci8ksCZ1lyMmh0k=",
+        "lastModified": 1793295779,
+        "narHash": "sha256-SDqHEg6BbJo0tK3czDwhwBk80E6hB7kuAVkKNj65kt0=",
         "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "066de1b005a3f3eaded4d8e4a977dcdc4a7d89e8",
+        "rev": "a7048f41ab4d3ca0982ebf86660177f8b0f80ee8",
         "type": "github"
       },
       "original": {
@@ -502,43 +463,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "vectorcraft": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "vectorcraft-src": "vectorcraft-src"
-      },
-      "locked": {
-        "lastModified": 1792947500,
-        "narHash": "sha256-lPklISb111Zzsyty9UYLuOHUUwRy6QBDlkAqeB74WRY=",
-        "owner": "NAXLAB",
-        "repo": "vectorcraft-flake",
-        "rev": "86ccf4997d46ddb03f4d4eecfc00a13b72e520e1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NAXLAB",
-        "repo": "vectorcraft-flake",
-        "type": "github"
-      }
-    },
-    "vectorcraft-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792945965,
-        "narHash": "sha256-X3QAO6+bmkc3gF/NY5WHnpvp2ZfdtJm8GyqHaYJh0Bg=",
-        "owner": "storytold",
-        "repo": "vectorcraft",
-        "rev": "f05c33cdfc0de6bd3f7d71e2a1628622af9a50f8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "storytold",
-        "repo": "vectorcraft",
         "type": "github"
       }
     }

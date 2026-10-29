@@ -59,22 +59,15 @@
       url                         = "github:musnix/musnix"; 
       inputs.nixpkgs.follows      = "nixpkgs";
     };
-    
-    #PhotoCraft
-    photocraft = {
-      url                         = "github:NAXLAB/photocraft-flake";
+
+    nix-craftapps = {
+      url                         = "github:olafkfreund/nix-craftapps";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
     #Solidcraft
     solidcraft = {
       url                         = "github:tangency-labs/solidcraft";
-      inputs.nixpkgs.follows      = "nixpkgs";
-    };
-    
-    #VectorCraft
-    vectorcraft = {
-      url                         = "github:NAXLAB/vectorcraft-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
@@ -96,12 +89,6 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    #AppGlider
-    appglider = {
-      url                         = "github:Vyrnexis/AppGlider";
-      inputs.nixpkgs.follows      = "nixpkgs";
-    };
-
   };
 
   outputs = inputs@  
@@ -112,6 +99,7 @@
       nix-flatpak,
       figma-desktop,
       adwair,
+      nix-craftapps,
       ...
     }:
   
@@ -140,6 +128,7 @@
         ./nax/packages/packages.nix
         figma-desktop.nixosModules.default
         nix-flatpak.nixosModules.nix-flatpak
+        nix-craftapps.nixosModules.default
         
         #Hardware
         ./nax/hardware.nix
