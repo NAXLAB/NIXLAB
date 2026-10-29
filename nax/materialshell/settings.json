@@ -540,7 +540,6 @@
       "tone": ""
     },
     "sysmon": {
-      "tone": "secondary",
       "temperature": false
     },
     "calendar": {
