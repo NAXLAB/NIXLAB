@@ -1037,7 +1037,7 @@
   "fadeToDpmsEnabled": false,
   "widgetColorMode": "default",
   "widgetBackgroundColor": "default",
-  "matugenSeedColor": "",
+  "matugenSeedColor": "#2196f3",
   "generateThemeAtStartup": true,
   "launcherPluginVisibility": {
     "dms_qr_generator": {
@@ -1053,5 +1053,6 @@
   "blurBorderEnabled": false,
   "blurLayerOutlineOpacity": 0,
   "floatingWindowTitleBars": true,
-  "floatingWindowSyncGlobal": true
+  "floatingWindowSyncGlobal": true,
+  "tooltipSurfaceColor": "secondaryContainer"
 }
