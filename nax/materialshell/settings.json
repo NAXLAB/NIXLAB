@@ -155,7 +155,7 @@
   "registryThemeVariants": {
     "gnomeAdwaita": "blue"
   },
-  "radiusMode": "fixed",
+  "radiusMode": "scale",
   "fixedRadius": 16,
   "clockFormat": "12h",
   "padHours12Hour": true,
@@ -191,8 +191,8 @@
       "mode": "compact",
       "taskbarAlign": "center",
       "widgetExpansion": "popout",
-      "iconSize": 36,
-      "spacing": 10,
+      "iconSize": 42,
+      "spacing": 8,
       "itemSpacing": 5,
       "margin": 6,
       "bottomGap": -24,
@@ -280,7 +280,7 @@
       "w": 3,
       "h": 1,
       "col": 3,
-      "row": 1,
+      "row": 2,
       "small": false
     },
     {
@@ -289,7 +289,7 @@
       "w": 3,
       "h": 1,
       "col": 0,
-      "row": 1,
+      "row": 2,
       "small": false
     },
     {
@@ -298,7 +298,7 @@
       "w": 3,
       "h": 1,
       "col": 0,
-      "row": 0,
+      "row": 1,
       "small": false
     },
     {
@@ -307,7 +307,7 @@
       "w": 3,
       "h": 1,
       "col": 3,
-      "row": 0,
+      "row": 1,
       "small": false
     },
     {
@@ -317,7 +317,7 @@
       "h": 1,
       "small": true,
       "col": 4,
-      "row": 5
+      "row": 4
     },
     {
       "id": "lock",
@@ -325,7 +325,7 @@
       "w": 2,
       "h": 1,
       "col": 2,
-      "row": 5,
+      "row": 4,
       "small": true
     },
     {
@@ -334,7 +334,7 @@
       "w": 2,
       "h": 1,
       "col": 0,
-      "row": 5,
+      "row": 4,
       "small": true
     },
     {
@@ -344,7 +344,7 @@
       "h": 1,
       "small": true,
       "col": 0,
-      "row": 2
+      "row": 3
     },
     {
       "id": "inputVolumeSlider",
@@ -353,7 +353,23 @@
       "h": 1,
       "small": true,
       "col": 3,
-      "row": 2
+      "row": 3
+    },
+    {
+      "id": "idleInhibitor",
+      "enabled": true,
+      "w": 3,
+      "h": 1,
+      "col": 0,
+      "row": 0
+    },
+    {
+      "id": "doNotDisturb",
+      "enabled": true,
+      "w": 3,
+      "h": 1,
+      "col": 3,
+      "row": 0
     }
   ],
   "scrollTitleEnabled": false,
@@ -958,7 +974,9 @@
       "widgetStyle": "flat",
       "barLengthPadding": 0,
       "dot": true,
-      "widgetFollowInterfaceStyle": false
+      "widgetFollowInterfaceStyle": false,
+      "islandCompactThickness": 38,
+      "islandSatelliteGap": 12
     }
   ],
   "builtInPluginSettings": {
@@ -1027,5 +1045,13 @@
     }
   },
   "controlCenterColumns": 6,
-  "showSeconds": false
+  "showSeconds": false,
+  "density": "comfortable",
+  "interfaceStyle": "expressive",
+  "sectionDividerOpacity": 0.2,
+  "popupTransparency": 1,
+  "blurBorderEnabled": false,
+  "blurLayerOutlineOpacity": 0,
+  "floatingWindowTitleBars": true,
+  "floatingWindowSyncGlobal": true
 }
