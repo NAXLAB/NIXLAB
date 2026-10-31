@@ -390,7 +390,7 @@
   "dankLauncherV2BorderColor": "outline",
   "dankLauncherV2ShowFooter": false,
   "launcherUseOverlayLayer": true,
-  "launcherStyle": "spotlight",
+  "launcherStyle": "full",
   "avatarRing": "none",
   "spotlightBarShowModeChips": true,
   "dashTabPosition": "auto",
@@ -434,10 +434,10 @@
     },
     {
       "id": "media",
-      "w": 1,
-      "h": 3,
-      "col": 3,
-      "row": 1
+      "w": 3,
+      "h": 1,
+      "col": 4,
+      "row": 0
     },
     {
       "id": "weather",
@@ -448,7 +448,7 @@
     },
     {
       "id": "calendar",
-      "w": 3,
+      "w": 4,
       "h": 3,
       "col": 0,
       "row": 1
@@ -456,9 +456,9 @@
     {
       "id": "notifications",
       "w": 3,
-      "h": 5,
+      "h": 4,
       "col": 4,
-      "row": 0
+      "row": 1
     },
     {
       "id": "cpu",
