@@ -82,11 +82,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793399970,
-        "narHash": "sha256-O0HCnjUvVA8IEyNJnP0LW8XKm5ZSCImL2Zt09D+R6cg=",
+        "lastModified": 1793423765,
+        "narHash": "sha256-On65im82/AFI7nkztQ/Pku5dE+/HTc3tB6TVikMsDrU=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "d43999121912d4ffd131a2b231ae7d4cf38ed578",
+        "rev": "bd7dd5db819d6ec646cd70b579b962cfddae2f42",
         "type": "github"
       },
       "original": {
@@ -102,11 +102,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793377084,
-        "narHash": "sha256-+Hb/LlZUqF08owSaASN2oXQUH1H59p5S4KpEQfwzQPQ=",
+        "lastModified": 1793422891,
+        "narHash": "sha256-8oBvDXaHARvWL9KE+sVkKM1uz5bHPPlVbDiybf/ILoo=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "7e0fba8c8756c9af18df5fb5d8a3d0bf2abaddaf",
+        "rev": "3c65216153782490dd85dd8a5826826d7c003391",
         "type": "github"
       },
       "original": {
@@ -438,11 +438,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793402166,
-        "narHash": "sha256-YRhrASU0kFBDxg+SJT5PqjlA6htaL1720URxTC+bytI=",
+        "lastModified": 1793431704,
+        "narHash": "sha256-al3lVKYYmP/OibtneDTHTn9Dt6xmD1pMprP6aCC/Ia8=",
         "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "c29bd18190c9346f375d36ae53a3169055b848d9",
+        "rev": "3c0d4e120ef6718cb15b3fcfec408ebde60a8d3b",
         "type": "github"
       },
       "original": {

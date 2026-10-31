@@ -20,10 +20,9 @@
   # Nixos Modules
   programs.zsh.enable             = true;
   programs.starship.enable        = true;
-  programs.dconf.enable           = true;
   programs.gamemode.enable        = true;
   programs.steam.enable           = true;
-  virtualisation.docker.enable    = true;
+  #virtualisation.docker.enable    = true;
 
   programs.craftapps = {
     enable                  = true;
@@ -32,8 +31,6 @@
     apps.pdfcraft.enable    = true;
     apps.effectcraft.enable = true;
     apps.filmcraft.enable   = true;
-    apps.wordcraft.enable   = true;
-    apps.gridcraft.enable   = true;
   };
 
   #Nix Package manager
