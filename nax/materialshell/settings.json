@@ -504,16 +504,16 @@
           "w": 1,
           "h": 2,
           "tone": "",
-          "col": 0,
-          "row": 2
+          "col": 2,
+          "row": 0
         },
         {
           "id": "moon",
           "w": 1,
           "h": 2,
           "tone": "",
-          "col": 1,
-          "row": 2
+          "col": 3,
+          "row": 0
         },
         {
           "id": "precipitation",
@@ -521,8 +521,8 @@
           "h": 2,
           "graphics": true,
           "tone": "",
-          "col": 2,
-          "row": 2
+          "col": 0,
+          "row": 0
         },
         {
           "id": "humidity",
@@ -530,8 +530,8 @@
           "h": 2,
           "graphics": true,
           "tone": "",
-          "col": 3,
-          "row": 2
+          "col": 1,
+          "row": 0
         },
         {
           "id": "hourly",
@@ -539,7 +539,15 @@
           "h": 2,
           "forecast": "chart",
           "col": 0,
-          "row": 0
+          "row": 2
+        },
+        {
+          "id": "daily",
+          "w": 4,
+          "h": 2,
+          "forecast": "chart",
+          "col": 0,
+          "row": 4
         }
       ],
       "panelColumns": 4,
