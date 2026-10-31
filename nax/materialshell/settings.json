@@ -159,7 +159,7 @@
   "fixedRadius": 16,
   "clockFormat": "12h",
   "padHours12Hour": true,
-  "animationDuration": 150,
+  "animationDuration": 260,
   "enableRippleEffects": true,
   "blurBorderOpacity": 0.42,
   "wallpaperFillMode": "Stretch",
@@ -1037,7 +1037,7 @@
   "fadeToDpmsEnabled": false,
   "widgetColorMode": "default",
   "widgetBackgroundColor": "default",
-  "matugenSeedColor": "#2196f3",
+  "matugenSeedColor": "",
   "generateThemeAtStartup": true,
   "launcherPluginVisibility": {
     "dms_qr_generator": {

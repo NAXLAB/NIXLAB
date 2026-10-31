@@ -54,7 +54,6 @@
   libreoffice                       # Office Suite
   lmstudio                          # Language Model Studio
   loupe                             # Image viewer (modern GNOME image viewer)
-  lutris                            # Game Launcher
   nautilus                          # File Manager
   nicotine-plus                     # soulseek music sharing
   obs-studio                        # Screen Recording
