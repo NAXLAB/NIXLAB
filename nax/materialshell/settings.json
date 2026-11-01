@@ -564,7 +564,7 @@
     }
   },
   "networkPreference": "ethernet",
-  "iconThemeDark": "Papirus-Dark",
+  "iconThemeDark": "Adwaita",
   "cursorSettings": {
     "theme": "capitaine-cursors",
     "size": 32,
