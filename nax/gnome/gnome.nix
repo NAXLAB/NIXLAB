@@ -11,13 +11,9 @@
     gvfs.enable                       = true;
   };
 
-  #Dconf
+
   programs.dconf.enable = true;
-
-  #Policy Kit
   security.polkit.enable = true;  
-
-  #Manage Keyring
   security.pam.services.greetd.enableGnomeKeyring = true;
 
   environment.gnome.excludePackages = with pkgs; [
