@@ -162,7 +162,7 @@
   "animationDuration": 260,
   "enableRippleEffects": true,
   "blurBorderOpacity": 0.42,
-  "wallpaperFillMode": "Stretch",
+  "wallpaperFillMode": "Fit",
   "lockDateFormat": "ddd d MMM yyyy",
   "fontFamily": "SF Pro Text",
   "monoFontFamily": "JetBrainsMonoNL Nerd Font Mono",
@@ -564,10 +564,10 @@
     }
   },
   "networkPreference": "ethernet",
-  "iconThemeDark": "Adwaita",
+  "iconThemeDark": "Adwair-dark",
   "cursorSettings": {
     "theme": "capitaine-cursors",
-    "size": 30,
+    "size": 32,
     "niri": {
       "hideWhenTyping": true,
       "hideAfterInactiveMs": 0
@@ -1062,5 +1062,6 @@
   "blurLayerOutlineOpacity": 0,
   "floatingWindowTitleBars": true,
   "floatingWindowSyncGlobal": true,
-  "tooltipSurfaceColor": "secondaryContainer"
+  "tooltipSurfaceColor": "secondaryContainer",
+  "blurWallpaperOnOverview": false
 }
