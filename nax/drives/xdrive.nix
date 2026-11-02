@@ -12,6 +12,8 @@
     options = [ "defaults" "noatime" "nofail" "x-gvfs-show" "x-gvfs-name=XDRIVE" ];
   };
 
+
+  /*
   services.samba = {
     enable = true;
     openFirewall = true;
@@ -62,5 +64,6 @@
       printf '%s\n%s\n' "$pw" "$pw" | ${config.services.samba.package}/bin/smbpasswd -a -s nax
     '';
   };
+  */
 
 }
