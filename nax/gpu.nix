@@ -27,6 +27,8 @@
 		    ];
     };
 
+
+    /*
     #AMD Overclocking
     environment.systemPackages = with pkgs; [
       lact
@@ -47,7 +49,6 @@
       ppfeaturemask = "0xffffffff";  # default; unlocks all PowerPlay features
     };
 
-  
-
-
+    */
+    
 }
