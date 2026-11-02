@@ -256,7 +256,7 @@
   "cardSurfaceColor": "default",
   "chipSurfaceColor": "default",
   "chipSurfaceNestedColor": "default",
-  "chipSurfaceNestedCustomColor": "#332d43",
+  "chipSurfaceNestedCustomColor": "#6750A4",
   "niriLayoutRadiusOverride": 30,
   "mouseAccelProfile": "flat",
   "firstDayOfWeek": 1,
@@ -1062,7 +1062,7 @@
   "blurLayerOutlineOpacity": 0,
   "floatingWindowTitleBars": true,
   "floatingWindowSyncGlobal": true,
-  "tooltipSurfaceColor": "secondaryContainer",
+  "tooltipSurfaceColor": "default",
   "blurWallpaperOnOverview": false,
   "terminalPalette": "default"
 }

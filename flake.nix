@@ -77,12 +77,6 @@
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
-    #Adwair Icons
-    adwair = {
-      url                         = "github:NAXLAB/adwair-flake";
-      inputs.nixpkgs.follows      = "nixpkgs";
-    };
-
     #MTSync
     mtsync = {
       url                         = "github:NAXLAB/mtsync-flake";
@@ -98,7 +92,6 @@
       home-manager,
       nix-flatpak,
       figma-desktop,
-      adwair,
       nix-craftapps,
       ...
     }:
@@ -162,7 +155,6 @@
 
         #Themes
         ./nax/tty.nix
-        adwair.nixosModules.default
         
       ];
     };

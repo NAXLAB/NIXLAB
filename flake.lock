@@ -1,42 +1,5 @@
 {
   "nodes": {
-    "adwair": {
-      "inputs": {
-        "adwair-src": "adwair-src",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792510288,
-        "narHash": "sha256-7BDwP7EUWXYWthQcBK3OGQ1gp4VptDV95myas7gJCeA=",
-        "owner": "NAXLAB",
-        "repo": "adwair-flake",
-        "rev": "367f0c8d1b0b31a122cfce7396b5f4e08a3b2379",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NAXLAB",
-        "repo": "adwair-flake",
-        "type": "github"
-      }
-    },
-    "adwair-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792447334,
-        "narHash": "sha256-ovlbOKl5ZNM0HQ4Vm38vo40wT7R9xuQzTpYMNQvMvys=",
-        "owner": "kusaida",
-        "repo": "Adwair",
-        "rev": "a227449df880cfcbf1a44d443354a97d81b88bdc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kusaida",
-        "repo": "Adwair",
-        "type": "github"
-      }
-    },
     "agenix": {
       "inputs": {
         "nixpkgs": [
@@ -82,11 +45,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793585682,
-        "narHash": "sha256-v0mY5FH0TpSKstBUrq80CdkXIiUYT+JSQeCa2aP1Cgs=",
+        "lastModified": 1793595407,
+        "narHash": "sha256-x8MQSTHrAeO0K52X5L4whQ0b7d+xTEGGEMJ0gHaLIF0=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "f7441609909bcc58c55c7f74536af0fcb83c320f",
+        "rev": "ead09fd5f26508b46015aba26c68422d4a0c1c3c",
         "type": "github"
       },
       "original": {
@@ -393,7 +356,6 @@
     },
     "root": {
       "inputs": {
-        "adwair": "adwair",
         "agenix": "agenix",
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
@@ -438,11 +400,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793578209,
-        "narHash": "sha256-YqWqsmGhC6keurcI4HlYnMWYZfI09T1c5EOTJ/Ev9Aw=",
+        "lastModified": 1793579794,
+        "narHash": "sha256-vIXIp1bmjGTlgFq7rbmDDRPPvveChm16JE8r+7kwzjA=",
         "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "27951f40c374b2495c1cf4648a87410179fa76cf",
+        "rev": "2ae13ba9cffe44991f095b3fa5d7c6404f2f1824",
         "type": "github"
       },
       "original": {

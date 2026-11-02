@@ -17,7 +17,6 @@
             "re.sonny.Workbench"                #Build Gnome Apps
             "io.github.shonebinu.Brief"         #Command Line Cheatsheets
             "org.gnome.Papers"                  #Document Viewer
-            "io.github.screwys.Rufin"           #Music
         ];
 
         update.auto = {

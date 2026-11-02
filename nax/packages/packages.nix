@@ -98,7 +98,6 @@
   adwaita-icon-theme                #Icon Packs
   capitaine-cursors                 #Cursor Packs
   papirus-icon-theme                #Icon Packs
-  inputs.adwair.packages.${pkgs.stdenv.hostPlatform.system}.default
 
 ];
 
@@ -107,6 +106,7 @@ fonts.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
   
 ];
+
 
 #Disable Flake Registry from DeterminateSystems
 nix.settings.flake-registry = pkgs.writeTextFile {
