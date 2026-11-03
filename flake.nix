@@ -67,13 +67,7 @@
 
     #Solidcraft
     solidcraft = {
-      url                         = "github:tangency-labs/solidcraft";
-      inputs.nixpkgs.follows      = "nixpkgs";
-    };
-
-    #EffectCraft
-    effectcraft = {
-      url                         = "github:NAXLAB/effectcraft-flake";
+      url                         = "github:NAXLAB/solidcraft";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
