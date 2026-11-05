@@ -67,7 +67,7 @@
 
     #Solidcraft
     solidcraft = {
-      url                         = "github:NAXLAB/solidcraft";
+      url                         = "github:tangency-labs/solidcraft";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
