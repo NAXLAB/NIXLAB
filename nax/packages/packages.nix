@@ -6,17 +6,16 @@
 
 {
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree      = true;
+
   #Custom Packages
   imports = [
     ./flatpak.nix
     ./mixxx.nix
     ./plasticity.nix
     ./discord.nix
-    ./fontforge.nix
   ];
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree      = true;
 
   # Nixos Modules
   programs.zsh.enable             = true;
