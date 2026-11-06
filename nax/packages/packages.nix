@@ -92,6 +92,7 @@
   unixtools.netstat                 #Network monitor
   mission-center                    #Task Manager
   parted                            #Disk Utility
+  gnome-disk-utility                #Disk Management
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
 
   #Themes

@@ -189,6 +189,7 @@
       "showOnLastDisplay": true,
       "position": 0,
       "mode": "compact",
+      "middleClickAction": "close",
       "taskbarAlign": "center",
       "widgetExpansion": "popout",
       "iconSize": 42,
@@ -550,8 +551,8 @@
           "row": 4
         }
       ],
-      "panelColumns": 4,
-      "city": true
+      "city": true,
+      "panelColumns": 5
     },
     "clock": {
       "tone": ""
