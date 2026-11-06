@@ -12,6 +12,7 @@
     ./mixxx.nix
     ./plasticity.nix
     ./discord.nix
+    ./fontforge.nix
   ];
 
   # Allow unfree packages

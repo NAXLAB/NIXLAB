@@ -5,4 +5,5 @@
     (pkgs.callPackage ./vesktop.nix { })
     (pkgs.callPackage ./signal.nix { })
   ];
+
 }
