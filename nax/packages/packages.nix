@@ -33,6 +33,13 @@
     apps.filmcraft.enable   = true;
   };
 
+/*
+  services.foldingathome = {
+  enable = true;
+  team = 236565; # Default NixOS team ID
+};
+*/
+
   #Nix Package manager
   environment.systemPackages      = with pkgs; [
   #Apps
@@ -42,6 +49,7 @@
   crosspipe                         # Audio patch bay 
   dialect                           # Translation Tool
   dopamine                          # Music
+  fahclient                         # Folding@Home
   fragments                         # Torrent Client
   gnome-calculator                  # Calculator
   gnome-calendar                    # Calendar
