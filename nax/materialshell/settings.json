@@ -391,7 +391,7 @@
   "dankLauncherV2BorderColor": "outline",
   "dankLauncherV2ShowFooter": false,
   "launcherUseOverlayLayer": true,
-  "launcherStyle": "full",
+  "launcherStyle": "spotlight",
   "avatarRing": "none",
   "spotlightBarShowModeChips": true,
   "dashTabPosition": "auto",

@@ -93,6 +93,7 @@
   mission-center                    #Task Manager
   parted                            #Disk Utility
   gnome-disk-utility                #Disk Management
+  pstree                            #Process Tree Analysis
   inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
 
   #Themes
