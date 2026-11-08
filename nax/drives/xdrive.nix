@@ -6,6 +6,11 @@
 
 {
 
+  services = {
+    udisks2.enable                    = true;
+    gvfs.enable                       = true;
+  };
+
   fileSystems."/mnt/xdrive" = {
     device = "/dev/disk/by-uuid/b3c268d4-d8d0-4d69-af63-c8f4358b5066";
     fsType = "ext4";

@@ -129,7 +129,6 @@
         ./nax/desktop/desktop.nix
         ./nax/shortcuts/shortcuts.nix
         ./nax/materialshell/materialshell.nix
-        ./nax/gnome/gnome.nix
 
         #Storage
         ./nax/drives/stax.nix
