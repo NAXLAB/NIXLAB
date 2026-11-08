@@ -1065,5 +1065,6 @@
   "floatingWindowSyncGlobal": true,
   "tooltipSurfaceColor": "default",
   "blurWallpaperOnOverview": false,
-  "terminalPalette": "default"
+  "terminalPalette": "default",
+  "wallpaperBackgroundColorMode": "black"
 }
