@@ -6,11 +6,13 @@
 
 {
 
+  #Gnome Disk Compatibility
   services = {
     udisks2.enable                    = true;
     gvfs.enable                       = true;
   };
 
+  #Stage XDrive
   fileSystems."/mnt/xdrive" = {
     device = "/dev/disk/by-uuid/b3c268d4-d8d0-4d69-af63-c8f4358b5066";
     fsType = "ext4";
@@ -18,6 +20,7 @@
   };
 
 
+  #Stupid Vibe coded SMB config
   /*
   services.samba = {
     enable = true;
