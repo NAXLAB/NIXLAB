@@ -17,7 +17,7 @@
 
     #Stage Bookmarks Config File
     "d /home/nax/.config/gtk-3.0 0755 nax users -"
-    "L+ /home/nax/.config/gtk-3.0/bookmarks - - - - /etc/nixos/nax/gnome/bookmarks"
+    "L+ /home/nax/.config/gtk-3.0/bookmarks - - - - /etc/nixos/nax/desktop/bookmarks"
   ];
 
   #Desktop Utilities
