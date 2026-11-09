@@ -28,6 +28,7 @@ fb7c8060ec8a8a6f71c84972bdb15935dc68d6853e42ab92686f8bb2ce731fae = "AMD Ryzen 7 
 647bda746a605c26efab1e25da9c96e9ab72245442fe00ec35a8d84ea2edcbf8 = "kraken2"
 14a768415d135968de51dde15945a3589ac360ca9117573e6d7df9b66e9ef784 = "spd5118"
 b217789264f56bd9539aabdbfb3c8d735ebe0bb625d3408b1a51181dc70f06b5 = "spd5118"
+1a1f27e4c9a6f31abd2493cf107df416caa9c9605d453cc9e83e4d32cf7572b1 = "spd5118"
 
 
 # Legacy690 Option for devices
@@ -253,11 +254,11 @@ disable = true
 
 [settings.647bda746a605c26efab1e25da9c96e9ab72245442fe00ec35a8d84ea2edcbf8.channel_settings]
 
-[settings.14a768415d135968de51dde15945a3589ac360ca9117573e6d7df9b66e9ef784]
+[settings.1a1f27e4c9a6f31abd2493cf107df416caa9c9605d453cc9e83e4d32cf7572b1]
 name = "DDR5"
 disable = false
 
-[settings.14a768415d135968de51dde15945a3589ac360ca9117573e6d7df9b66e9ef784.channel_settings]
+[settings.1a1f27e4c9a6f31abd2493cf107df416caa9c9605d453cc9e83e4d32cf7572b1.channel_settings]
 
 # TLS/HTTPS Configuration:
 # TLS to secure the REST API with HTTPS. (enabled by default)

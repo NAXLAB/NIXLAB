@@ -50,7 +50,7 @@
 
     #Goodsync
     goodsync = {
-      url                         = "github:NAXLAB/goodsync-flake";
+      url                         = "path:/mnt/xdrive/Documents/Projects/goodsync-flake";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
