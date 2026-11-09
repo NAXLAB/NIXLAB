@@ -253,7 +253,7 @@
   "dmsWindowsFloatingSeeded": [
     "niri"
   ],
-  "hostSurfaceColor": "default",
+  "hostSurfaceColor": "s",
   "cardSurfaceColor": "default",
   "chipSurfaceColor": "default",
   "chipSurfaceNestedColor": "default",
