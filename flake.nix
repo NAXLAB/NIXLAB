@@ -105,11 +105,11 @@
         ./hardware-configuration.nix
         ./boot.nix
         ./configuration.nix
-        #./nax/screenshare.nix
         ./nax/networking.nix
         ./nax/user.nix
         ./nax/shell.nix
         inputs.agenix.nixosModules.default
+        #./nax/screenshare.nix
 
         #Packages
         ./nax/packages/packages.nix
