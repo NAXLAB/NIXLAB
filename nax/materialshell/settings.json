@@ -150,7 +150,7 @@
       }
     }
   ],
-  "currentThemeName": "dynamic",
+  "currentThemeName": "custom",
   "customThemeFile": "/home/nax/.config/DankMaterialShell/themes/naxlab/theme.json",
   "registryThemeVariants": {
     "gnomeAdwaita": "blue"
@@ -246,7 +246,7 @@
       ]
     }
   ],
-  "currentThemeCategory": "dynamic",
+  "currentThemeCategory": "custom",
   "matugenSourceMode": "dominant",
   "runUserMatugenTemplates": false,
   "matugenTargetMonitor": "DP-2",
@@ -570,7 +570,7 @@
     "theme": "capitaine-cursors",
     "size": 32,
     "niri": {
-      "hideWhenTyping": true,
+      "hideWhenTyping": false,
       "hideAfterInactiveMs": 0
     },
     "hyprland": {
