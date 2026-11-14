@@ -1066,5 +1066,6 @@
   "tooltipSurfaceColor": "default",
   "blurWallpaperOnOverview": false,
   "terminalPalette": "default",
-  "wallpaperBackgroundColorMode": "black"
+  "wallpaperBackgroundColorMode": "black",
+  "radiusStrength": 50
 }
