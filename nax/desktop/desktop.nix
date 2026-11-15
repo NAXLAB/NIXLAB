@@ -21,7 +21,7 @@
   ];
 
   #Desktop Utilities
-  #services.desktopManager.gnome.enable            = true;
+  services.desktopManager.gnome.enable            = true;
   services.gnome.gnome-keyring.enable             = true;
   programs.dconf.enable                           = true;
   security.polkit.enable                          = true;  
@@ -57,10 +57,6 @@
         xdg-desktop-portal-gtk
     ];
 
-    config.niri = {
-      default = [ "gnome" "gtk" ];
-      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
-    };
   };
   
   #Clipboard configuration
