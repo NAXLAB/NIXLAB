@@ -21,8 +21,14 @@
   ];
 
   #Desktop Utilities
-  services.desktopManager.gnome.enable            = true;
-  services.gnome.gnome-keyring.enable             = true;
+  services = {
+    displayManager.gdm.enable = false;
+    desktopManager.gnome.enable = true;
+    gnome.core-apps.enable = false;
+    gnome.core-developer-tools.enable = false;
+    gnome.games.enable = false;
+    gnome.gnome-keyring.enable = true;
+  };
   programs.dconf.enable                           = true;
   security.polkit.enable                          = true;  
   security.pam.services.greetd.enableGnomeKeyring = true;
@@ -45,19 +51,21 @@
     MOZ_ENABLE_WAYLAND    = "1";              # Firefox
     QT_QPA_PLATFORM       = "wayland";        # Qt apps
     QT_WAYLAND_DECORATION = "adwaita";        # QT apps
-    GDK_BACKEND           = "wayland,x11";    # GTK apps
+    #GDK_BACKEND           = "wayland,x11";    # GTK apps
     SDL_VIDEODRIVER       = "wayland";        # SDL apps
     CLUTTER_BACKEND       = "wayland";        # Clutter apps
   };
 
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [
-        xdg-desktop-portal-gnome
-        xdg-desktop-portal-gtk
+    extraPortals = [ 
+      pkgs.xdg-desktop-portal-gnome 
+      pkgs.xdg-desktop-portal-gtk 
     ];
-
+    config.common.default = [ "gnome" "gtk" ];
   };
+
+  
   
   #Clipboard configuration
     systemd.user.services.wl-clip-persist = {
