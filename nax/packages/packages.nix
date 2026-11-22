@@ -79,6 +79,7 @@
   eyedropper                        #Color Picker
   gnome-decoder                     #Create QR Codes
   gnome-font-viewer                 #Fonts
+  icon-library                      #Gnome Icons
   prusa-slicer                      #3D Print Utility
   typography                        #Gnome Type Styles
   upscayl                           #Image Upscale
