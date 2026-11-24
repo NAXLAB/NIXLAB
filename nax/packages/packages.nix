@@ -15,6 +15,7 @@
     ./mixxx.nix
     ./plasticity.nix
     ./discord.nix
+    ./update.nix
   ];
 
   # Nixos Modules
@@ -79,9 +80,7 @@
   eyedropper                        #Color Picker
   gnome-decoder                     #Create QR Codes
   gnome-font-viewer                 #Fonts
-  icon-library                      #Gnome Icons
   prusa-slicer                      #3D Print Utility
-  typography                        #Gnome Type Styles
   upscayl                           #Image Upscale
   inputs.solidcraft.packages.${pkgs.stdenv.hostPlatform.system}.default  #3D Modelling
 

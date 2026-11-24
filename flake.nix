@@ -67,13 +67,18 @@
 
     #Solidcraft
     solidcraft = {
-      url                         = "github:tangency-labs/solidcraft";
+      url                         = "github:NAXLAB/solidcraft";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 
     #MTSync
     mtsync = {
       url                         = "github:NAXLAB/mtsync-flake";
+      inputs.nixpkgs.follows      = "nixpkgs";
+    };
+
+    nixos-updater = {
+      url                         = "github:NAXLAB/nixos-updater";
       inputs.nixpkgs.follows      = "nixpkgs";
     };
 

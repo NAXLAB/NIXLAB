@@ -564,7 +564,7 @@
     }
   },
   "networkPreference": "ethernet",
-  "iconThemeDark": "Adwaita",
+  "iconThemeDark": "System Default",
   "cursorSettings": {
     "theme": "capitaine-cursors",
     "size": 32,
@@ -1009,7 +1009,7 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 0,
-  "configVersion": 46,
+  "configVersion": 47,
   "connectedFrameBarStyleBackups": {},
   "frameEnabled": false,
   "niriOverviewLauncherStyle": "spotlight",
@@ -1067,5 +1067,6 @@
   "terminalPalette": "default",
   "wallpaperBackgroundColorMode": "black",
   "radiusStrength": 50,
-  "motionDuration": 0
+  "motionDuration": 0,
+  "scrollbarsEnabled": false
 }

@@ -17,6 +17,9 @@
             "re.sonny.Workbench"                #Build Gnome Apps
             "io.github.shonebinu.Brief"         #Command Line Cheatsheets
             "org.gnome.Papers"                  #Document Viewer
+            "org.gnome.design.IconLibrary"      #Gnome Icons
+            "org.gnome.design.Typography"       #Gnome Typography
+            "org.gnome.design.AppIconPreview"   #Gnome App Icon Preview
         ];
 
         update.auto = {
