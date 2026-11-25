@@ -306,11 +306,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795571611,
-        "narHash": "sha256-VdmbFZ8PzYyQhi4Qz+b5HFZLxdu+0atMD9lngPp+uTs=",
+        "lastModified": 1795573844,
+        "narHash": "sha256-f3UMkB+s/fZwCeGdciyIF6dPs2I+6RLm0k7up7VLpQg=",
         "owner": "NAXLAB",
         "repo": "nixos-updater",
-        "rev": "857a58d29bdfc0e9e370763e5c2e7595c46350fc",
+        "rev": "ad1b9141bad5cdbbd1e488f197c4152211a6c89b",
         "type": "github"
       },
       "original": {
@@ -380,15 +380,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1795568782,
-        "narHash": "sha256-OG+G2ZvV8aq51XI6srd9kFSgxTyL/GinRwNW4as2fAk=",
-        "owner": "NAXLAB",
+        "lastModified": 1795569986,
+        "narHash": "sha256-3yqgOyNnkIKlNU19SOCZmeBOR++D6XFScTIsd2LAl9Q=",
+        "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "b199ad8545966428e087e24669caa1c05c64fc30",
+        "rev": "b57f0e0323c9d0e42e8eb78937de08f8a8d979cf",
         "type": "github"
       },
       "original": {
-        "owner": "NAXLAB",
+        "owner": "tangency-labs",
         "repo": "solidcraft",
         "type": "github"
       }

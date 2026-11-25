@@ -3,11 +3,10 @@
 #agenix -e secret.age
 let
   zaigomaat = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPkKtMA4MchOVFAgpMT5tDQTFywg4+ctfsOEtcFnTW+7 root@zaigomaat";
-  nax       = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPYLrYKmICyDBAN43nqKymk5qaYLHpwtyXWZzGojtfU2 jamesmcdowell@naxlab.net";
 in
 {
-  "smb.age".publicKeys             = [ zaigomaat ];
-  "xdrive-share.age".publicKeys    = [ zaigomaat ];
-  "nix-access-token.age".publicKeys    = [nax];
+  "smb.age".publicKeys                = [ zaigomaat ];
+  "xdrive-share.age".publicKeys       = [ zaigomaat ];
+  "nix-access-token.age".publicKeys   = [ zaigomaat ];
 
 }
