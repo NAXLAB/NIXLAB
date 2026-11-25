@@ -5,8 +5,8 @@
 }:
 
 {
-imports = [ inputs.nixos-updater.nixosModules.default ];
 
+imports = [ inputs.nixos-updater.nixosModules.default ];
 programs.nixos-updater = {
   enable = true;
   autoBuild = false;
