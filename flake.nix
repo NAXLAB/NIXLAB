@@ -113,7 +113,7 @@
         ./nax/networking.nix
         ./nax/user.nix
         ./nax/shell.nix
-        ./nax/secrets/nix-access-token.nix
+        #./nax/secrets/nix-access-token.nix
         inputs.agenix.nixosModules.default
         #./nax/screenshare.nix
 

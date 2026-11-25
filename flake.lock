@@ -121,7 +121,7 @@
       },
       "locked": {
         "lastModified": 1792292823,
-        "narHash": "sha256-0mOS5Cv+Iq7shNeBgzx/TdggdRZe2Nfsw1Wrdoa/21A=",
+        "narHash": "sha256-Hl208O79qWNMnaUAtDG5M/WyajGXhbHulNhaH1/GL5s=",
         "owner": "NAXLAB",
         "repo": "figma-desktop-flake",
         "rev": "21255fc2b0e966fd3c4acbe6dbd0206ff7e4200b",
@@ -380,11 +380,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795569986,
-        "narHash": "sha256-3yqgOyNnkIKlNU19SOCZmeBOR++D6XFScTIsd2LAl9Q=",
+        "lastModified": 1795575176,
+        "narHash": "sha256-45Qa4rvMTanMtX/+jxhWtS+CNmZ+aPzaK1Cefbt8QtQ=",
         "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "b57f0e0323c9d0e42e8eb78937de08f8a8d979cf",
+        "rev": "dd955acde523ef8aac6f4176e1dd914bb044c020",
         "type": "github"
       },
       "original": {
