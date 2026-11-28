@@ -21,3 +21,8 @@ window-rule {
     tiled-state true
     draw-border-with-background false
 }
+
+layer-rule {
+    match namespace="^dms:notification-popup$"
+    block-out-from "screencast"
+}

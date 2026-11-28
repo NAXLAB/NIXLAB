@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792507013,
-        "narHash": "sha256-8tKjSQajD3mUND1GaAuaWTcuyUpgcGsh5V+l4ibzC7U=",
+        "lastModified": 1795823210,
+        "narHash": "sha256-yPlK2RCDORlzdflKxIudPZ1fspEGTvHxrdUl54R1mOk=",
         "owner": "ryantm",
         "repo": "agenix",
-        "rev": "5e5b88a0c8e56f291a108c2fe9934054d9745b2e",
+        "rev": "60b6a60f2503f93d131b74c2f7f8600dc6ffbb28",
         "type": "github"
       },
       "original": {
@@ -23,11 +23,11 @@
     "dank-qml-common": {
       "flake": false,
       "locked": {
-        "lastModified": 1795443720,
-        "narHash": "sha256-PNc4vXmHEng0cpxDbpD1VqvJ6OmpBhVvv2z987b/ke0=",
+        "lastModified": 1795803062,
+        "narHash": "sha256-LoYIjf+0kQ10FSg1Qvdr3aEoA4SBI/rmsrTZUMuIe9Q=",
         "owner": "duxlabs-dev",
         "repo": "dux-qml-common",
-        "rev": "73bd713f8603bd65864c76dc820f2120b7b82f22",
+        "rev": "140e4c2dc2137fa536874db9b2782fe6be71cdaa",
         "type": "github"
       },
       "original": {
@@ -46,11 +46,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795556203,
-        "narHash": "sha256-H5pxeE8FGA06s57O+LO819JKKTa7PDtoAqKdFeUsARA=",
+        "lastModified": 1795836957,
+        "narHash": "sha256-qcHc3y/9PcSp6eyt3OHzWVZnOvxSFrHqTLBUTqFywus=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "b92033799aa33166aa919b9d183fe7764992df4d",
+        "rev": "d106a8f7111cb536005b4bc1976b0ffd4f890cac",
         "type": "github"
       },
       "original": {
@@ -66,11 +66,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795570585,
-        "narHash": "sha256-Pm9m9yvVExTJm+719HLKPPcIt/Ki1y9wgfNAKG431Qc=",
+        "lastModified": 1795844083,
+        "narHash": "sha256-oe81tAxracOhwlAWB8e88hy6kgezG+9cE5bQPyl00CI=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "f5166d605b13f5a961d915844722862a49f474cf",
+        "rev": "a53d88c62246bd75838ba0348d1a910b8e8019f6",
         "type": "github"
       },
       "original": {
@@ -87,11 +87,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795538649,
-        "narHash": "sha256-3UpeTixe9NFABM3NA/Y6tU+0GwZn706++27PkrH6S3o=",
+        "lastModified": 1795774145,
+        "narHash": "sha256-Vzjb2NN6ya+K1ff1uW+ShxeXuTpDaoolJQf4lgIO1WY=",
         "owner": "duxlabs-dev",
         "repo": "dux-qt-base",
-        "rev": "1f768a313e9813e505e17d9436403fdcbce02c64",
+        "rev": "1ac5206575a823d5ad8458a8a2de45133d86d3e6",
         "type": "github"
       },
       "original": {
@@ -121,7 +121,7 @@
       },
       "locked": {
         "lastModified": 1792292823,
-        "narHash": "sha256-Hl208O79qWNMnaUAtDG5M/WyajGXhbHulNhaH1/GL5s=",
+        "narHash": "sha256-0mOS5Cv+Iq7shNeBgzx/TdggdRZe2Nfsw1Wrdoa/21A=",
         "owner": "NAXLAB",
         "repo": "figma-desktop-flake",
         "rev": "21255fc2b0e966fd3c4acbe6dbd0206ff7e4200b",
@@ -191,11 +191,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795534022,
-        "narHash": "sha256-xkRZ+PcPWaAyf9YrEBszYD5w2S6/Ac2tIfsufzd4dEQ=",
+        "lastModified": 1795827905,
+        "narHash": "sha256-Udjs2j0EkvK+qGXKHRIQwXWRgzNBIl4oXSUktuOzbmQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b56bcd042b5e69ad188eca20d9bec1bfbf3dd453",
+        "rev": "5f5abf5eb8de62d954232f3797b5bf4505656b91",
         "type": "github"
       },
       "original": {
@@ -270,11 +270,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795497716,
-        "narHash": "sha256-2nelhAMuIc5cuV/P+sy4TCOlLq1qxgzdJL/egSXNFiQ=",
+        "lastModified": 1795705861,
+        "narHash": "sha256-sdEpXJRvZ9sKT9rZtMWCXUOMlJi7aYfIDVt5MFoAq7U=",
         "owner": "olafkfreund",
         "repo": "nix-craftapps",
-        "rev": "42e2f8d6c045bbe507774b4e20ecc754ffbf25e1",
+        "rev": "fd52bfbcd592ca8b03c95631d9736a3b16b2c257",
         "type": "github"
       },
       "original": {
@@ -380,11 +380,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795575176,
-        "narHash": "sha256-45Qa4rvMTanMtX/+jxhWtS+CNmZ+aPzaK1Cefbt8QtQ=",
+        "lastModified": 1795843626,
+        "narHash": "sha256-hE/jwP3KPts1dztAsWpLksZbwB32DcQrEOghnpTVbqE=",
         "owner": "tangency-labs",
         "repo": "solidcraft",
-        "rev": "dd955acde523ef8aac6f4176e1dd914bb044c020",
+        "rev": "2b7debcb04219621960efbe2c7096fbf1c83060a",
         "type": "github"
       },
       "original": {

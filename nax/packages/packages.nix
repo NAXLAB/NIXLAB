@@ -32,6 +32,7 @@
     apps.pdfcraft.enable    = true;
     apps.effectcraft.enable = true;
     apps.filmcraft.enable   = true;
+    apps.figcraft.enable    = true;
   };
 
 /*

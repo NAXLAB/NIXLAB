@@ -461,18 +461,51 @@
       "row": 1
     },
     {
-      "id": "cpu",
+      "id": "sysmon",
       "w": 2,
       "h": 1,
       "col": 0,
-      "row": 4
+      "row": 4,
+      "instanceId": "cpu-5",
+      "config": {
+        "layout": "tiles",
+        "style": "icon",
+        "graphInterval": 300,
+        "metrics": [
+          {
+            "device": "cpu",
+            "vals": [
+              "usage",
+              "temp"
+            ],
+            "graph": true,
+            "on": true
+          }
+        ]
+      }
     },
     {
-      "id": "memory",
+      "id": "sysmon",
       "w": 2,
       "h": 1,
       "col": 2,
-      "row": 4
+      "row": 4,
+      "instanceId": "memory-6",
+      "config": {
+        "layout": "tiles",
+        "style": "icon",
+        "graphInterval": 300,
+        "metrics": [
+          {
+            "device": "memory",
+            "vals": [
+              "used"
+            ],
+            "graph": true,
+            "on": true
+          }
+        ]
+      }
     }
   ],
   "dashOptions": {
@@ -555,9 +588,6 @@
     },
     "clock": {
       "tone": ""
-    },
-    "sysmon": {
-      "temperature": false
     },
     "calendar": {
       "weekends": true
@@ -663,16 +693,30 @@
           "privacyShowScreenShareIcon": false
         },
         {
-          "id": "cpuTemp",
+          "id": "sysmon",
           "enabled": true,
-          "minimumWidth": true
+          "popout": "processes",
+          "metrics": [
+            {
+              "device": "cpu",
+              "vals": [
+                "temp"
+              ]
+            }
+          ]
         },
         {
-          "id": "gpuTemp",
+          "id": "sysmon",
           "enabled": true,
-          "selectedGpuIndex": 0,
-          "pciId": "1002:7550",
-          "minimumWidth": true
+          "popout": "processes",
+          "metrics": [
+            {
+              "device": "gpu:0000:03:00.0",
+              "vals": [
+                "temp"
+              ]
+            }
+          ]
         },
         {
           "id": "separator",
@@ -854,16 +898,30 @@
           "size": 5
         },
         {
-          "id": "cpuTemp",
+          "id": "sysmon",
           "enabled": true,
-          "minimumWidth": true
+          "popout": "processes",
+          "metrics": [
+            {
+              "device": "cpu",
+              "vals": [
+                "temp"
+              ]
+            }
+          ]
         },
         {
-          "id": "gpuTemp",
+          "id": "sysmon",
           "enabled": true,
-          "selectedGpuIndex": 0,
-          "pciId": "1002:7550",
-          "minimumWidth": true
+          "popout": "processes",
+          "metrics": [
+            {
+              "device": "gpu:0000:03:00.0",
+              "vals": [
+                "temp"
+              ]
+            }
+          ]
         },
         {
           "id": "spacer",
@@ -1009,7 +1067,7 @@
   "frameRounding": 0,
   "frameBarSize": 24,
   "frameBarInsetPadding": 0,
-  "configVersion": 47,
+  "configVersion": 49,
   "connectedFrameBarStyleBackups": {},
   "frameEnabled": false,
   "niriOverviewLauncherStyle": "spotlight",
